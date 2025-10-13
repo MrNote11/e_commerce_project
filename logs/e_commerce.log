@@ -1,0 +1,2444 @@
+[10-10-2025 10:06:54] INFO autoreload 1444 - Watching for file changes with StatReloader
+[10-10-2025 10:06:54] INFO autoreload 1444 - Watching for file changes with StatReloader
+[10-10-2025 10:07:20] INFO autoreload 1444 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[10-10-2025 10:07:20] INFO autoreload 1444 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[10-10-2025 10:07:22] INFO autoreload 7808 - Watching for file changes with StatReloader
+[10-10-2025 10:07:22] INFO autoreload 7808 - Watching for file changes with StatReloader
+[10-10-2025 10:09:38] INFO autoreload 12768 - Watching for file changes with StatReloader
+[10-10-2025 10:09:38] INFO autoreload 12768 - Watching for file changes with StatReloader
+[10-10-2025 10:10:06] INFO autoreload 12768 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[10-10-2025 10:10:06] INFO autoreload 12768 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[10-10-2025 10:10:08] INFO autoreload 7840 - Watching for file changes with StatReloader
+[10-10-2025 10:10:08] INFO autoreload 7840 - Watching for file changes with StatReloader
+[10-10-2025 10:10:22] INFO autoreload 7840 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[10-10-2025 10:10:22] INFO autoreload 7840 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[10-10-2025 10:10:24] INFO autoreload 11892 - Watching for file changes with StatReloader
+[10-10-2025 10:10:24] INFO autoreload 11892 - Watching for file changes with StatReloader
+[10-10-2025 10:10:32] INFO autoreload 11892 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[10-10-2025 10:10:32] INFO autoreload 11892 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[10-10-2025 10:10:35] INFO autoreload 3316 - Watching for file changes with StatReloader
+[10-10-2025 10:10:35] INFO autoreload 3316 - Watching for file changes with StatReloader
+[10-10-2025 10:10:42] INFO autoreload 3316 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[10-10-2025 10:10:42] INFO autoreload 3316 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[10-10-2025 10:10:44] INFO autoreload 15184 - Watching for file changes with StatReloader
+[10-10-2025 10:10:44] INFO autoreload 15184 - Watching for file changes with StatReloader
+[10-10-2025 10:12:36] INFO autoreload 4120 - Watching for file changes with StatReloader
+[10-10-2025 10:12:36] INFO autoreload 4120 - Watching for file changes with StatReloader
+[10-10-2025 10:12:53] INFO autoreload 9176 - Watching for file changes with StatReloader
+[10-10-2025 10:12:53] INFO autoreload 9176 - Watching for file changes with StatReloader
+[10-10-2025 11:33:26] INFO autoreload 7240 - Watching for file changes with StatReloader
+[10-10-2025 11:33:26] INFO autoreload 7240 - Watching for file changes with StatReloader
+[10-10-2025 11:34:42] INFO autoreload 7240 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[10-10-2025 11:34:42] INFO autoreload 7240 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[10-10-2025 11:34:45] INFO autoreload 10000 - Watching for file changes with StatReloader
+[10-10-2025 11:34:45] INFO autoreload 10000 - Watching for file changes with StatReloader
+[10-10-2025 11:34:54] INFO autoreload 10000 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[10-10-2025 11:34:54] INFO autoreload 10000 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[10-10-2025 11:34:57] INFO autoreload 11404 - Watching for file changes with StatReloader
+[10-10-2025 11:34:57] INFO autoreload 11404 - Watching for file changes with StatReloader
+[10-10-2025 11:35:12] ERROR log 7292 - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\middleware.py", line 97, in __call__
+    rendered = toolbar.render_toolbar()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\toolbar.py", line 84, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+[10-10-2025 11:35:12] ERROR log 7292 - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\middleware.py", line 97, in __call__
+    rendered = toolbar.render_toolbar()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\toolbar.py", line 84, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+[10-10-2025 11:35:12] ERROR log 7292 - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\middleware.py", line 97, in __call__
+    rendered = toolbar.render_toolbar()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\toolbar.py", line 84, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+[10-10-2025 11:35:12] ERROR basehttp 7292 - "GET / HTTP/1.1" 500 145
+[10-10-2025 11:35:12] ERROR basehttp 7292 - "GET / HTTP/1.1" 500 145
+[10-10-2025 11:35:12] ERROR basehttp 7292 - "GET / HTTP/1.1" 500 145
+[10-10-2025 11:35:13] ERROR log 7292 - Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\middleware.py", line 97, in __call__
+    rendered = toolbar.render_toolbar()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\toolbar.py", line 84, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+[10-10-2025 11:35:13] ERROR log 7292 - Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\middleware.py", line 97, in __call__
+    rendered = toolbar.render_toolbar()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\toolbar.py", line 84, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+[10-10-2025 11:35:13] ERROR log 7292 - Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\middleware.py", line 97, in __call__
+    rendered = toolbar.render_toolbar()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\toolbar.py", line 84, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+[10-10-2025 11:35:13] ERROR basehttp 7292 - "GET /favicon.ico HTTP/1.1" 500 145
+[10-10-2025 11:35:13] ERROR basehttp 7292 - "GET /favicon.ico HTTP/1.1" 500 145
+[10-10-2025 11:35:13] ERROR basehttp 7292 - "GET /favicon.ico HTTP/1.1" 500 145
+[10-10-2025 11:36:21] ERROR log 7292 - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\middleware.py", line 97, in __call__
+    rendered = toolbar.render_toolbar()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\toolbar.py", line 84, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+[10-10-2025 11:36:21] ERROR log 7292 - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\middleware.py", line 97, in __call__
+    rendered = toolbar.render_toolbar()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\toolbar.py", line 84, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+[10-10-2025 11:36:21] ERROR log 7292 - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\middleware.py", line 97, in __call__
+    rendered = toolbar.render_toolbar()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\toolbar.py", line 84, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+[10-10-2025 11:36:21] ERROR basehttp 7292 - "GET / HTTP/1.1" 500 145
+[10-10-2025 11:36:21] ERROR basehttp 7292 - "GET / HTTP/1.1" 500 145
+[10-10-2025 11:36:21] ERROR basehttp 7292 - "GET / HTTP/1.1" 500 145
+[10-10-2025 11:36:21] ERROR log 7292 - Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\middleware.py", line 97, in __call__
+    rendered = toolbar.render_toolbar()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\toolbar.py", line 84, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+[10-10-2025 11:36:21] ERROR log 7292 - Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\middleware.py", line 97, in __call__
+    rendered = toolbar.render_toolbar()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\toolbar.py", line 84, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+[10-10-2025 11:36:21] ERROR log 7292 - Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\middleware.py", line 97, in __call__
+    rendered = toolbar.render_toolbar()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\toolbar.py", line 84, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+[10-10-2025 11:36:21] ERROR basehttp 7292 - "GET /favicon.ico HTTP/1.1" 500 145
+[10-10-2025 11:36:21] ERROR basehttp 7292 - "GET /favicon.ico HTTP/1.1" 500 145
+[10-10-2025 11:36:21] ERROR basehttp 7292 - "GET /favicon.ico HTTP/1.1" 500 145
+[10-10-2025 11:36:22] ERROR log 7292 - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\middleware.py", line 97, in __call__
+    rendered = toolbar.render_toolbar()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\toolbar.py", line 84, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+[10-10-2025 11:36:22] ERROR log 7292 - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\middleware.py", line 97, in __call__
+    rendered = toolbar.render_toolbar()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\toolbar.py", line 84, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+[10-10-2025 11:36:22] ERROR log 7292 - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\middleware.py", line 97, in __call__
+    rendered = toolbar.render_toolbar()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\toolbar.py", line 84, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+[10-10-2025 11:36:22] ERROR basehttp 7292 - "GET / HTTP/1.1" 500 145
+[10-10-2025 11:36:22] ERROR basehttp 7292 - "GET / HTTP/1.1" 500 145
+[10-10-2025 11:36:22] ERROR basehttp 7292 - "GET / HTTP/1.1" 500 145
+[10-10-2025 11:36:23] ERROR log 7292 - Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\middleware.py", line 97, in __call__
+    rendered = toolbar.render_toolbar()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\toolbar.py", line 84, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+[10-10-2025 11:36:23] ERROR log 7292 - Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\middleware.py", line 97, in __call__
+    rendered = toolbar.render_toolbar()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\toolbar.py", line 84, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+[10-10-2025 11:36:23] ERROR log 7292 - Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\middleware.py", line 97, in __call__
+    rendered = toolbar.render_toolbar()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\toolbar.py", line 84, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+[10-10-2025 11:36:23] ERROR basehttp 7292 - "GET /favicon.ico HTTP/1.1" 500 145
+[10-10-2025 11:36:23] ERROR basehttp 7292 - "GET /favicon.ico HTTP/1.1" 500 145
+[10-10-2025 11:36:23] ERROR basehttp 7292 - "GET /favicon.ico HTTP/1.1" 500 145
+[10-10-2025 11:36:23] ERROR log 7292 - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\middleware.py", line 97, in __call__
+    rendered = toolbar.render_toolbar()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\toolbar.py", line 84, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+[10-10-2025 11:36:23] ERROR log 7292 - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\middleware.py", line 97, in __call__
+    rendered = toolbar.render_toolbar()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\toolbar.py", line 84, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+[10-10-2025 11:36:23] ERROR log 7292 - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\middleware.py", line 97, in __call__
+    rendered = toolbar.render_toolbar()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\toolbar.py", line 84, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+[10-10-2025 11:36:23] ERROR basehttp 7292 - "GET / HTTP/1.1" 500 145
+[10-10-2025 11:36:23] ERROR basehttp 7292 - "GET / HTTP/1.1" 500 145
+[10-10-2025 11:36:23] ERROR basehttp 7292 - "GET / HTTP/1.1" 500 145
+[10-10-2025 11:36:23] ERROR log 7292 - Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\middleware.py", line 97, in __call__
+    rendered = toolbar.render_toolbar()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\toolbar.py", line 84, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+[10-10-2025 11:36:23] ERROR log 7292 - Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\middleware.py", line 97, in __call__
+    rendered = toolbar.render_toolbar()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\toolbar.py", line 84, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+[10-10-2025 11:36:23] ERROR log 7292 - Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\middleware.py", line 97, in __call__
+    rendered = toolbar.render_toolbar()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\toolbar.py", line 84, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+[10-10-2025 11:36:23] ERROR basehttp 7292 - "GET /favicon.ico HTTP/1.1" 500 145
+[10-10-2025 11:36:23] ERROR basehttp 7292 - "GET /favicon.ico HTTP/1.1" 500 145
+[10-10-2025 11:36:23] ERROR basehttp 7292 - "GET /favicon.ico HTTP/1.1" 500 145
+[10-10-2025 11:36:47] INFO autoreload 1656 - Watching for file changes with StatReloader
+[10-10-2025 11:36:47] INFO autoreload 1656 - Watching for file changes with StatReloader
+[10-10-2025 11:37:08] ERROR log 14444 - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\middleware.py", line 97, in __call__
+    rendered = toolbar.render_toolbar()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\toolbar.py", line 84, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+[10-10-2025 11:37:08] ERROR log 14444 - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\middleware.py", line 97, in __call__
+    rendered = toolbar.render_toolbar()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\toolbar.py", line 84, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+[10-10-2025 11:37:08] ERROR log 14444 - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\middleware.py", line 97, in __call__
+    rendered = toolbar.render_toolbar()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\toolbar.py", line 84, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+[10-10-2025 11:37:08] ERROR basehttp 14444 - "GET / HTTP/1.1" 500 153216
+[10-10-2025 11:37:08] ERROR basehttp 14444 - "GET / HTTP/1.1" 500 153216
+[10-10-2025 11:37:08] ERROR basehttp 14444 - "GET / HTTP/1.1" 500 153216
+[10-10-2025 11:37:12] ERROR log 14444 - Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\middleware.py", line 97, in __call__
+    rendered = toolbar.render_toolbar()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\toolbar.py", line 84, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+[10-10-2025 11:37:12] ERROR log 14444 - Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\middleware.py", line 97, in __call__
+    rendered = toolbar.render_toolbar()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\toolbar.py", line 84, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+[10-10-2025 11:37:12] ERROR log 14444 - Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\middleware.py", line 97, in __call__
+    rendered = toolbar.render_toolbar()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\toolbar.py", line 84, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+[10-10-2025 11:37:12] ERROR basehttp 14444 - "GET /favicon.ico HTTP/1.1" 500 153074
+[10-10-2025 11:37:12] ERROR basehttp 14444 - "GET /favicon.ico HTTP/1.1" 500 153074
+[10-10-2025 11:37:12] ERROR basehttp 14444 - "GET /favicon.ico HTTP/1.1" 500 153074
+[10-10-2025 11:38:01] INFO autoreload 1656 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\urls.py changed, reloading.
+[10-10-2025 11:38:01] INFO autoreload 1656 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\urls.py changed, reloading.
+[10-10-2025 11:38:10] INFO autoreload 15252 - Watching for file changes with StatReloader
+[10-10-2025 11:38:10] INFO autoreload 15252 - Watching for file changes with StatReloader
+[10-10-2025 11:39:32] INFO autoreload 11344 - Watching for file changes with StatReloader
+[10-10-2025 11:39:32] INFO autoreload 11344 - Watching for file changes with StatReloader
+[10-10-2025 11:39:51] INFO basehttp 3828 - "GET / HTTP/1.1" 200 41
+[10-10-2025 11:39:51] INFO basehttp 3828 - "GET / HTTP/1.1" 200 41
+[10-10-2025 11:39:51] INFO basehttp 3828 - "GET / HTTP/1.1" 200 41
+[10-10-2025 11:39:52] WARNING log 3828 - Not Found: /favicon.ico
+[10-10-2025 11:39:52] WARNING log 3828 - Not Found: /favicon.ico
+[10-10-2025 11:39:52] WARNING log 3828 - Not Found: /favicon.ico
+[10-10-2025 11:39:52] WARNING basehttp 3828 - "GET /favicon.ico HTTP/1.1" 404 17795
+[10-10-2025 11:39:52] WARNING basehttp 3828 - "GET /favicon.ico HTTP/1.1" 404 17795
+[10-10-2025 11:39:52] WARNING basehttp 3828 - "GET /favicon.ico HTTP/1.1" 404 17795
+[10-10-2025 11:40:02] WARNING log 3828 - Method Not Allowed: /signup
+[10-10-2025 11:40:02] WARNING log 3828 - Method Not Allowed: /signup
+[10-10-2025 11:40:02] WARNING log 3828 - Method Not Allowed: /signup
+[10-10-2025 11:40:02] WARNING basehttp 3828 - "GET /signup HTTP/1.1" 405 23497
+[10-10-2025 11:40:02] WARNING basehttp 3828 - "GET /signup HTTP/1.1" 405 23497
+[10-10-2025 11:40:02] WARNING basehttp 3828 - "GET /signup HTTP/1.1" 405 23497
+[10-10-2025 11:40:02] INFO basehttp 3828 - "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+[10-10-2025 11:40:02] INFO basehttp 3828 - "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+[10-10-2025 11:40:02] INFO basehttp 3828 - "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+[10-10-2025 11:40:02] INFO basehttp 10708 - "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+[10-10-2025 11:40:02] INFO basehttp 10708 - "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+[10-10-2025 11:40:02] INFO basehttp 10708 - "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+[10-10-2025 11:40:02] INFO basehttp 2692 - "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+[10-10-2025 11:40:02] INFO basehttp 2692 - "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+[10-10-2025 11:40:02] INFO basehttp 2692 - "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+[10-10-2025 11:40:02] INFO basehttp 6204 - "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+[10-10-2025 11:40:02] INFO basehttp 6204 - "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+[10-10-2025 11:40:02] INFO basehttp 6204 - "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+[10-10-2025 11:40:02] INFO basehttp 9128 - "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+[10-10-2025 11:40:02] INFO basehttp 9128 - "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+[10-10-2025 11:40:02] INFO basehttp 9128 - "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+[10-10-2025 11:40:02] INFO basehttp 3828 - "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 16675
+[10-10-2025 11:40:02] INFO basehttp 3828 - "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 16675
+[10-10-2025 11:40:02] INFO basehttp 3828 - "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 16675
+[10-10-2025 11:40:02] INFO basehttp 10708 - "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+[10-10-2025 11:40:02] INFO basehttp 10708 - "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+[10-10-2025 11:40:02] INFO basehttp 10708 - "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+[10-10-2025 11:40:02] INFO basehttp 14664 - "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+[10-10-2025 11:40:02] INFO basehttp 14664 - "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+[10-10-2025 11:40:02] INFO basehttp 14664 - "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+[10-10-2025 11:40:02] INFO basehttp 2692 - "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+[10-10-2025 11:40:02] INFO basehttp 2692 - "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+[10-10-2025 11:40:02] INFO basehttp 3828 - "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+[10-10-2025 11:40:02] INFO basehttp 3828 - "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+[10-10-2025 11:40:02] INFO basehttp 3828 - "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+[10-10-2025 11:40:02] INFO basehttp 2692 - "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+[10-10-2025 11:40:02] INFO basehttp 6204 - "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+[10-10-2025 11:40:02] INFO basehttp 6204 - "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+[10-10-2025 11:40:02] INFO basehttp 6204 - "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+[10-10-2025 11:40:02] INFO basehttp 9128 - "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+[10-10-2025 11:40:02] INFO basehttp 9128 - "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+[10-10-2025 11:40:02] INFO basehttp 9128 - "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+[10-10-2025 11:40:02] INFO basehttp 3828 - "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+[10-10-2025 11:40:02] INFO basehttp 3828 - "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+[10-10-2025 11:40:02] INFO basehttp 3828 - "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+[10-10-2025 11:40:02] INFO basehttp 10708 - "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 14601
+[10-10-2025 11:40:02] INFO basehttp 10708 - "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 14601
+[10-10-2025 11:40:02] INFO basehttp 10708 - "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 14601
+[10-10-2025 11:40:03] INFO basehttp 3828 - "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+[10-10-2025 11:40:03] INFO basehttp 3828 - "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+[10-10-2025 11:40:03] INFO basehttp 3828 - "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+[10-10-2025 11:40:03] INFO basehttp 10708 - "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4742
+[10-10-2025 11:40:03] INFO basehttp 10708 - "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4742
+[10-10-2025 11:40:03] INFO basehttp 10708 - "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4742
+[10-10-2025 11:40:30] INFO basehttp 10708 - "GET /swagger HTTP/1.1" 301 0
+[10-10-2025 11:40:30] INFO basehttp 10708 - "GET /swagger HTTP/1.1" 301 0
+[10-10-2025 11:40:30] INFO basehttp 10708 - "GET /swagger HTTP/1.1" 301 0
+[10-10-2025 11:40:31] INFO basehttp 3828 - "GET /swagger/ HTTP/1.1" 200 14829
+[10-10-2025 11:40:31] INFO basehttp 3828 - "GET /swagger/ HTTP/1.1" 200 14829
+[10-10-2025 11:40:31] INFO basehttp 3828 - "GET /swagger/ HTTP/1.1" 200 14829
+[10-10-2025 11:40:31] INFO basehttp 3828 - "GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+[10-10-2025 11:40:31] INFO basehttp 3828 - "GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+[10-10-2025 11:40:31] INFO basehttp 3828 - "GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+[10-10-2025 11:40:31] INFO basehttp 14664 - "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+[10-10-2025 11:40:31] INFO basehttp 14664 - "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+[10-10-2025 11:40:31] INFO basehttp 14664 - "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+[10-10-2025 11:40:31] INFO basehttp 6876 - "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 200 56904
+[10-10-2025 11:40:31] INFO basehttp 6876 - "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 200 56904
+[10-10-2025 11:40:31] INFO basehttp 6876 - "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 200 56904
+[10-10-2025 11:40:31] INFO basehttp 9128 - "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 145206
+[10-10-2025 11:40:31] INFO basehttp 9128 - "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 145206
+[10-10-2025 11:40:31] INFO basehttp 9128 - "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 145206
+[10-10-2025 11:40:31] INFO basehttp 3828 - "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 200 15480
+[10-10-2025 11:40:31] INFO basehttp 3828 - "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 200 15480
+[10-10-2025 11:40:31] INFO basehttp 3828 - "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 200 15480
+[10-10-2025 11:40:31] INFO basehttp 2692 - "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 200 322863
+[10-10-2025 11:40:31] INFO basehttp 2692 - "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 200 322863
+[10-10-2025 11:40:31] INFO basehttp 2692 - "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 200 322863
+[10-10-2025 11:40:31] INFO basehttp 6204 - "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1046583
+[10-10-2025 11:40:31] INFO basehttp 6204 - "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1046583
+[10-10-2025 11:40:31] INFO basehttp 6204 - "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1046583
+[10-10-2025 11:40:31] INFO basehttp 2692 - "GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 200 628
+[10-10-2025 11:40:31] INFO basehttp 2692 - "GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 200 628
+[10-10-2025 11:40:31] INFO basehttp 2692 - "GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 200 628
+[10-10-2025 11:40:31] INFO basehttp 6204 - "GET /swagger/?format=openapi HTTP/1.1" 200 6441
+[10-10-2025 11:40:31] INFO basehttp 6204 - "GET /swagger/?format=openapi HTTP/1.1" 200 6441
+[10-10-2025 11:40:31] INFO basehttp 6204 - "GET /swagger/?format=openapi HTTP/1.1" 200 6441
+[10-10-2025 11:40:31] INFO basehttp 6204 - "GET /__debug__/history_sidebar/?store_id=743c0242775b4550981579985eb54218 HTTP/1.1" 200 9811
+[10-10-2025 11:40:31] INFO basehttp 6204 - "GET /__debug__/history_sidebar/?store_id=743c0242775b4550981579985eb54218 HTTP/1.1" 200 9811
+[10-10-2025 11:40:31] INFO basehttp 6204 - "GET /__debug__/history_sidebar/?store_id=743c0242775b4550981579985eb54218 HTTP/1.1" 200 9811
+[10-10-2025 12:00:04] INFO basehttp 9300 - "GET / HTTP/1.1" 200 41
+[10-10-2025 12:00:04] INFO basehttp 9300 - "GET / HTTP/1.1" 200 41
+[10-10-2025 12:00:04] INFO basehttp 9300 - "GET / HTTP/1.1" 200 41
+[10-10-2025 12:01:48] WARNING log 15748 - Method Not Allowed: /signup
+[10-10-2025 12:01:48] WARNING log 15748 - Method Not Allowed: /signup
+[10-10-2025 12:01:48] WARNING log 15748 - Method Not Allowed: /signup
+[10-10-2025 12:01:48] WARNING basehttp 15748 - "GET /signup HTTP/1.1" 405 40
+[10-10-2025 12:01:48] WARNING basehttp 15748 - "GET /signup HTTP/1.1" 405 40
+[10-10-2025 12:01:48] WARNING basehttp 15748 - "GET /signup HTTP/1.1" 405 40
+[10-10-2025 12:01:54] INFO utils 15748 - {'requestTime': datetime.datetime(2025, 10, 10, 11, 1, 54, 706826, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': 'ffec690cbea7a2f78c7f45ace97fec07156b10f24c5a252af0f3e05064ca', 'status': False, 'message': "'Settings' object has no attribute 'X_API_KEY'", 'data': {}}
+[10-10-2025 12:01:54] WARNING log 15748 - Bad Request: /signup
+[10-10-2025 12:01:54] WARNING log 15748 - Bad Request: /signup
+[10-10-2025 12:01:54] WARNING log 15748 - Bad Request: /signup
+[10-10-2025 12:01:54] WARNING basehttp 15748 - "POST /signup HTTP/1.1" 400 231
+[10-10-2025 12:01:54] WARNING basehttp 15748 - "POST /signup HTTP/1.1" 400 231
+[10-10-2025 12:01:54] WARNING basehttp 15748 - "POST /signup HTTP/1.1" 400 231
+[10-10-2025 12:05:39] INFO utils 11988 - {'requestTime': datetime.datetime(2025, 10, 10, 11, 5, 39, 542151, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': '34621c85f288b5b83d1ecf438f45e8d6283a949a27e18881c27d0ae8775c', 'status': False, 'message': "'Settings' object has no attribute 'X_API_KEY'", 'data': {}}
+[10-10-2025 12:05:39] WARNING log 11988 - Bad Request: /signup
+[10-10-2025 12:05:39] WARNING log 11988 - Bad Request: /signup
+[10-10-2025 12:05:39] WARNING log 11988 - Bad Request: /signup
+[10-10-2025 12:05:39] WARNING basehttp 11988 - "POST /signup HTTP/1.1" 400 231
+[10-10-2025 12:05:39] WARNING basehttp 11988 - "POST /signup HTTP/1.1" 400 231
+[10-10-2025 12:05:39] WARNING basehttp 11988 - "POST /signup HTTP/1.1" 400 231
+[10-10-2025 12:09:18] INFO utils 10744 - {'requestTime': datetime.datetime(2025, 10, 10, 11, 9, 18, 607779, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': 'fdf3f80ff4efe28de03cf283e900437f07fe1ecd82b5816adc96e6a722a1', 'status': False, 'message': "'Settings' object has no attribute 'X_API_KEY'", 'data': {}}
+[10-10-2025 12:09:18] WARNING log 10744 - Bad Request: /signup
+[10-10-2025 12:09:18] WARNING log 10744 - Bad Request: /signup
+[10-10-2025 12:09:18] WARNING log 10744 - Bad Request: /signup
+[10-10-2025 12:09:18] WARNING basehttp 10744 - "POST /signup HTTP/1.1" 400 231
+[10-10-2025 12:09:18] WARNING basehttp 10744 - "POST /signup HTTP/1.1" 400 231
+[10-10-2025 12:09:18] WARNING basehttp 10744 - "POST /signup HTTP/1.1" 400 231
+[10-10-2025 12:11:05] INFO utils 15296 - {'requestTime': datetime.datetime(2025, 10, 10, 11, 11, 5, 521035, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': '74c82bee41960b894f04c482900153488c0ecff623f868d61c59175b990b', 'status': False, 'message': "'Settings' object has no attribute 'X_API_KEY'", 'data': {}}
+[10-10-2025 12:11:05] WARNING log 15296 - Bad Request: /signup
+[10-10-2025 12:11:05] WARNING log 15296 - Bad Request: /signup
+[10-10-2025 12:11:05] WARNING log 15296 - Bad Request: /signup
+[10-10-2025 12:11:05] WARNING basehttp 15296 - "POST /signup HTTP/1.1" 400 231
+[10-10-2025 12:11:05] WARNING basehttp 15296 - "POST /signup HTTP/1.1" 400 231
+[10-10-2025 12:11:05] WARNING basehttp 15296 - "POST /signup HTTP/1.1" 400 231
+[10-10-2025 12:11:20] INFO utils 15296 - {'requestTime': datetime.datetime(2025, 10, 10, 11, 11, 20, 421771, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': 'd08baf2a9cc9bce76b73baa076e9c780846966b3636a6f8e28b9d563074b', 'status': False, 'message': "'Settings' object has no attribute 'X_API_KEY'", 'data': {}}
+[10-10-2025 12:11:21] WARNING log 15296 - Bad Request: /signup
+[10-10-2025 12:11:21] WARNING log 15296 - Bad Request: /signup
+[10-10-2025 12:11:21] WARNING log 15296 - Bad Request: /signup
+[10-10-2025 12:11:21] WARNING basehttp 15296 - "POST /signup HTTP/1.1" 400 231
+[10-10-2025 12:11:21] WARNING basehttp 15296 - "POST /signup HTTP/1.1" 400 231
+[10-10-2025 12:11:21] WARNING basehttp 15296 - "POST /signup HTTP/1.1" 400 231
+[10-10-2025 12:12:01] INFO autoreload 11144 - Watching for file changes with StatReloader
+[10-10-2025 12:12:01] INFO autoreload 11144 - Watching for file changes with StatReloader
+[10-10-2025 12:12:25] INFO utils 16088 - {'requestTime': datetime.datetime(2025, 10, 10, 11, 12, 25, 669188, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': 'da10a5ad02198d116b4a919525bbd2868e05d8c3b1dc9511fe80e18e9052', 'status': False, 'message': "Invalid value for Request-Header field 'X-Api-Key'", 'data': {}}
+[10-10-2025 12:12:25] WARNING log 16088 - Bad Request: /signup
+[10-10-2025 12:12:25] WARNING log 16088 - Bad Request: /signup
+[10-10-2025 12:12:25] WARNING log 16088 - Bad Request: /signup
+[10-10-2025 12:12:25] WARNING basehttp 16088 - "POST /signup HTTP/1.1" 400 235
+[10-10-2025 12:12:25] WARNING basehttp 16088 - "POST /signup HTTP/1.1" 400 235
+[10-10-2025 12:12:25] WARNING basehttp 16088 - "POST /signup HTTP/1.1" 400 235
+[10-10-2025 12:26:06] INFO autoreload 13604 - Watching for file changes with StatReloader
+[10-10-2025 12:26:06] INFO autoreload 13604 - Watching for file changes with StatReloader
+[10-10-2025 12:31:46] INFO basehttp 14104 - "GET / HTTP/1.1" 200 41
+[10-10-2025 12:31:46] INFO basehttp 14104 - "GET / HTTP/1.1" 200 41
+[10-10-2025 12:31:46] INFO basehttp 14104 - "GET / HTTP/1.1" 200 41
+[10-10-2025 12:31:46] WARNING log 14104 - Not Found: /favicon.ico
+[10-10-2025 12:31:46] WARNING log 14104 - Not Found: /favicon.ico
+[10-10-2025 12:31:46] WARNING log 14104 - Not Found: /favicon.ico
+[10-10-2025 12:31:46] WARNING basehttp 14104 - "GET /favicon.ico HTTP/1.1" 404 17808
+[10-10-2025 12:31:46] WARNING basehttp 14104 - "GET /favicon.ico HTTP/1.1" 404 17808
+[10-10-2025 12:31:46] WARNING basehttp 14104 - "GET /favicon.ico HTTP/1.1" 404 17808
+[10-10-2025 12:31:56] WARNING log 15288 - Method Not Allowed: /signup
+[10-10-2025 12:31:56] WARNING log 15288 - Method Not Allowed: /signup
+[10-10-2025 12:31:56] WARNING log 15288 - Method Not Allowed: /signup
+[10-10-2025 12:31:56] WARNING basehttp 15288 - "GET /signup HTTP/1.1" 405 23497
+[10-10-2025 12:31:56] WARNING basehttp 15288 - "GET /signup HTTP/1.1" 405 23497
+[10-10-2025 12:31:56] WARNING basehttp 15288 - "GET /signup HTTP/1.1" 405 23497
+[10-10-2025 12:31:58] INFO basehttp 15288 - "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+[10-10-2025 12:31:58] INFO basehttp 15288 - "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+[10-10-2025 12:31:58] INFO basehttp 15288 - "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+[10-10-2025 12:31:59] INFO basehttp 664 - "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+[10-10-2025 12:31:59] INFO basehttp 664 - "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+[10-10-2025 12:31:59] INFO basehttp 664 - "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+[10-10-2025 12:31:59] INFO basehttp 13180 - "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+[10-10-2025 12:31:59] INFO basehttp 13180 - "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+[10-10-2025 12:31:59] INFO basehttp 13180 - "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+[10-10-2025 12:31:59] INFO basehttp 15348 - "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+[10-10-2025 12:31:59] INFO basehttp 15348 - "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+[10-10-2025 12:31:59] INFO basehttp 15348 - "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+[10-10-2025 12:31:59] INFO basehttp 1028 - "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+[10-10-2025 12:31:59] INFO basehttp 1028 - "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+[10-10-2025 12:31:59] INFO basehttp 1028 - "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+[10-10-2025 12:31:59] INFO basehttp 7224 - "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+[10-10-2025 12:31:59] INFO basehttp 7224 - "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+[10-10-2025 12:31:59] INFO basehttp 7224 - "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+[10-10-2025 12:31:59] INFO basehttp 3752 - "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+[10-10-2025 12:31:59] INFO basehttp 3752 - "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+[10-10-2025 12:31:59] INFO basehttp 3752 - "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+[10-10-2025 12:31:59] INFO basehttp 11992 - "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+[10-10-2025 12:31:59] INFO basehttp 11992 - "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+[10-10-2025 12:31:59] INFO basehttp 11992 - "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+[10-10-2025 12:31:59] INFO basehttp 11592 - "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+[10-10-2025 12:31:59] INFO basehttp 11592 - "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+[10-10-2025 12:31:59] INFO basehttp 11592 - "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+[10-10-2025 12:31:59] INFO basehttp 5500 - "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+[10-10-2025 12:31:59] INFO basehttp 5500 - "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+[10-10-2025 12:31:59] INFO basehttp 5500 - "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+[10-10-2025 12:31:59] INFO basehttp 14756 - "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+[10-10-2025 12:31:59] INFO basehttp 14756 - "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+[10-10-2025 12:31:59] INFO basehttp 14756 - "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+[10-10-2025 12:32:00] INFO basehttp 4408 - "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 14601
+[10-10-2025 12:32:00] INFO basehttp 4408 - "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 14601
+[10-10-2025 12:32:00] INFO basehttp 4408 - "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 14601
+[10-10-2025 12:32:00] INFO basehttp 14148 - "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 16675
+[10-10-2025 12:32:00] INFO basehttp 14148 - "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 16675
+[10-10-2025 12:32:00] INFO basehttp 14148 - "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 16675
+[10-10-2025 12:32:03] INFO basehttp 664 - "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+[10-10-2025 12:32:03] INFO basehttp 664 - "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+[10-10-2025 12:32:03] INFO basehttp 664 - "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+[10-10-2025 12:32:06] INFO basehttp 5500 - "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+[10-10-2025 12:32:06] INFO basehttp 5500 - "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+[10-10-2025 12:32:06] INFO basehttp 5500 - "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+[10-10-2025 12:32:06] INFO basehttp 15288 - "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4742
+[10-10-2025 12:32:06] INFO basehttp 15288 - "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4742
+[10-10-2025 12:32:06] INFO basehttp 15288 - "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4742
+[10-10-2025 12:34:33] INFO basehttp 3224 - "GET / HTTP/1.1" 200 41
+[10-10-2025 12:34:33] INFO basehttp 3224 - "GET / HTTP/1.1" 200 41
+[10-10-2025 12:34:33] INFO basehttp 3224 - "GET / HTTP/1.1" 200 41
+[10-10-2025 12:34:51] INFO basehttp 13224 - "GET / HTTP/1.1" 200 41
+[10-10-2025 12:34:51] INFO basehttp 13224 - "GET / HTTP/1.1" 200 41
+[10-10-2025 12:34:51] INFO basehttp 13224 - "GET / HTTP/1.1" 200 41
+[10-10-2025 12:34:52] INFO basehttp 13768 - "GET / HTTP/1.1" 200 41
+[10-10-2025 12:34:52] INFO basehttp 13768 - "GET / HTTP/1.1" 200 41
+[10-10-2025 12:34:52] INFO basehttp 13768 - "GET / HTTP/1.1" 200 41
+[10-10-2025 12:34:52] WARNING log 13224 - Not Found: /favicon.ico
+[10-10-2025 12:34:52] WARNING log 13224 - Not Found: /favicon.ico
+[10-10-2025 12:34:52] WARNING log 13224 - Not Found: /favicon.ico
+[10-10-2025 12:34:52] WARNING basehttp 13224 - "GET /favicon.ico HTTP/1.1" 404 17808
+[10-10-2025 12:34:52] WARNING basehttp 13224 - "GET /favicon.ico HTTP/1.1" 404 17808
+[10-10-2025 12:34:52] WARNING basehttp 13224 - "GET /favicon.ico HTTP/1.1" 404 17808
+[10-10-2025 12:34:53] INFO basehttp 14736 - "GET / HTTP/1.1" 200 41
+[10-10-2025 12:34:53] INFO basehttp 14736 - "GET / HTTP/1.1" 200 41
+[10-10-2025 12:34:53] INFO basehttp 14736 - "GET / HTTP/1.1" 200 41
+[10-10-2025 12:34:53] INFO basehttp 7796 - "GET / HTTP/1.1" 200 41
+[10-10-2025 12:34:53] INFO basehttp 7796 - "GET / HTTP/1.1" 200 41
+[10-10-2025 12:34:53] INFO basehttp 7796 - "GET / HTTP/1.1" 200 41
+[10-10-2025 12:36:28] INFO basehttp 12932 - "GET /swagger/ HTTP/1.1" 200 14831
+[10-10-2025 12:36:28] INFO basehttp 12932 - "GET /swagger/ HTTP/1.1" 200 14831
+[10-10-2025 12:36:28] INFO basehttp 12932 - "GET /swagger/ HTTP/1.1" 200 14831
+[10-10-2025 12:36:29] INFO basehttp 12932 - "GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+[10-10-2025 12:36:29] INFO basehttp 12932 - "GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+[10-10-2025 12:36:29] INFO basehttp 12932 - "GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+[10-10-2025 12:36:29] INFO basehttp 3224 - "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 145206
+[10-10-2025 12:36:29] INFO basehttp 3224 - "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 145206
+[10-10-2025 12:36:29] INFO basehttp 3224 - "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 145206
+[10-10-2025 12:36:29] INFO basehttp 6312 - "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1046583
+[10-10-2025 12:36:29] INFO basehttp 6312 - "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1046583
+[10-10-2025 12:36:29] INFO basehttp 6312 - "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1046583
+[10-10-2025 12:36:29] INFO basehttp 6312 - "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 16675
+[10-10-2025 12:36:29] INFO basehttp 6312 - "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 16675
+[10-10-2025 12:36:29] INFO basehttp 6312 - "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 16675
+[10-10-2025 12:36:29] INFO basehttp 3224 - "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 200 322863
+[10-10-2025 12:36:29] INFO basehttp 3224 - "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 200 322863
+[10-10-2025 12:36:29] INFO basehttp 3224 - "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 200 322863
+[10-10-2025 12:36:29] INFO basehttp 3224 - "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+[10-10-2025 12:36:29] INFO basehttp 3224 - "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+[10-10-2025 12:36:29] INFO basehttp 3224 - "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+[10-10-2025 12:36:29] INFO basehttp 3224 - "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 200 56904
+[10-10-2025 12:36:29] INFO basehttp 3224 - "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 200 56904
+[10-10-2025 12:36:29] INFO basehttp 3224 - "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 200 56904
+[10-10-2025 12:36:29] INFO basehttp 3224 - "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 200 15480
+[10-10-2025 12:36:29] INFO basehttp 3224 - "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 200 15480
+[10-10-2025 12:36:29] INFO basehttp 3224 - "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 200 15480
+[10-10-2025 12:36:29] INFO basehttp 3224 - "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 14601
+[10-10-2025 12:36:29] INFO basehttp 3224 - "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 14601
+[10-10-2025 12:36:29] INFO basehttp 3224 - "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 14601
+[10-10-2025 12:36:29] INFO basehttp 3224 - "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+[10-10-2025 12:36:29] INFO basehttp 3224 - "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+[10-10-2025 12:36:29] INFO basehttp 3224 - "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+[10-10-2025 12:36:30] INFO basehttp 3224 - "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4742
+[10-10-2025 12:36:30] INFO basehttp 3224 - "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4742
+[10-10-2025 12:36:30] INFO basehttp 3224 - "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4742
+[10-10-2025 12:36:30] INFO basehttp 3224 - "GET /swagger/?format=openapi HTTP/1.1" 200 6441
+[10-10-2025 12:36:30] INFO basehttp 3224 - "GET /swagger/?format=openapi HTTP/1.1" 200 6441
+[10-10-2025 12:36:30] INFO basehttp 3224 - "GET /swagger/?format=openapi HTTP/1.1" 200 6441
+[10-10-2025 12:36:31] INFO basehttp 3224 - "GET /__debug__/history_sidebar/?store_id=24d33049617d4a7796d9747ad80b946e HTTP/1.1" 200 9811
+[10-10-2025 12:36:31] INFO basehttp 3224 - "GET /__debug__/history_sidebar/?store_id=24d33049617d4a7796d9747ad80b946e HTTP/1.1" 200 9811
+[10-10-2025 12:36:31] INFO basehttp 3224 - "GET /__debug__/history_sidebar/?store_id=24d33049617d4a7796d9747ad80b946e HTTP/1.1" 200 9811
+[10-10-2025 12:38:01] INFO utils 8488 - {'requestTime': datetime.datetime(2025, 10, 10, 11, 38, 1, 789628, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': '31ffcf3ff72b84d85d7d2722e8a9eb449191eee4b4dff2d070bea7dec8e2', 'status': False, 'message': "Invalid value for Request-Header field 'X-Api-Key'", 'data': {}}
+[10-10-2025 12:38:01] WARNING log 8488 - Bad Request: /signup
+[10-10-2025 12:38:01] WARNING log 8488 - Bad Request: /signup
+[10-10-2025 12:38:01] WARNING log 8488 - Bad Request: /signup
+[10-10-2025 12:38:01] WARNING basehttp 8488 - "POST /signup HTTP/1.1" 400 235
+[10-10-2025 12:38:01] WARNING basehttp 8488 - "POST /signup HTTP/1.1" 400 235
+[10-10-2025 12:38:01] WARNING basehttp 8488 - "POST /signup HTTP/1.1" 400 235
+[10-10-2025 12:40:09] INFO basehttp 17752 - "GET / HTTP/1.1" 200 41
+[10-10-2025 12:40:09] INFO basehttp 17752 - "GET / HTTP/1.1" 200 41
+[10-10-2025 12:40:09] INFO basehttp 17752 - "GET / HTTP/1.1" 200 41
+[10-10-2025 12:40:11] WARNING log 17752 - Not Found: /favicon.ico
+[10-10-2025 12:40:11] WARNING log 17752 - Not Found: /favicon.ico
+[10-10-2025 12:40:11] WARNING log 17752 - Not Found: /favicon.ico
+[10-10-2025 12:40:11] WARNING basehttp 17752 - "GET /favicon.ico HTTP/1.1" 404 17807
+[10-10-2025 12:40:11] WARNING basehttp 17752 - "GET /favicon.ico HTTP/1.1" 404 17807
+[10-10-2025 12:40:11] WARNING basehttp 17752 - "GET /favicon.ico HTTP/1.1" 404 17807
+[10-10-2025 15:23:10] INFO utils 7968 - {'requestTime': datetime.datetime(2025, 10, 10, 14, 23, 10, 605180, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': 'e59ce53e1ca77d109072c5cec0cabe5b242daba933f0c1ccf411ae70c2ca', 'status': False, 'message': "Invalid value for Request-Header field 'X-Api-Key'", 'data': {}}
+[10-10-2025 15:23:10] WARNING log 7968 - Bad Request: /signup
+[10-10-2025 15:23:10] WARNING log 7968 - Bad Request: /signup
+[10-10-2025 15:23:10] WARNING log 7968 - Bad Request: /signup
+[10-10-2025 15:23:10] WARNING basehttp 7968 - "POST /signup HTTP/1.1" 400 235
+[10-10-2025 15:23:10] WARNING basehttp 7968 - "POST /signup HTTP/1.1" 400 235
+[10-10-2025 15:23:10] WARNING basehttp 7968 - "POST /signup HTTP/1.1" 400 235
+[10-10-2025 15:24:41] INFO utils 17760 - {'requestTime': datetime.datetime(2025, 10, 10, 14, 24, 41, 372194, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': '638452801aa8a82169e85c154a62f579cda2ffc0ed05601e3b91b123ce66', 'status': False, 'message': "Invalid value for Request-Header field 'X-Api-Key'", 'data': {}}
+[10-10-2025 15:24:41] WARNING log 17760 - Bad Request: /signup
+[10-10-2025 15:24:41] WARNING log 17760 - Bad Request: /signup
+[10-10-2025 15:24:41] WARNING log 17760 - Bad Request: /signup
+[10-10-2025 15:24:41] WARNING basehttp 17760 - "POST /signup HTTP/1.1" 400 235
+[10-10-2025 15:24:41] WARNING basehttp 17760 - "POST /signup HTTP/1.1" 400 235
+[10-10-2025 15:24:41] WARNING basehttp 17760 - "POST /signup HTTP/1.1" 400 235
+[10-10-2025 15:25:30] INFO autoreload 13604 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\utils.py changed, reloading.
+[10-10-2025 15:25:30] INFO autoreload 13604 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\utils.py changed, reloading.
+[10-10-2025 15:25:34] INFO autoreload 4704 - Watching for file changes with StatReloader
+[10-10-2025 15:25:34] INFO autoreload 4704 - Watching for file changes with StatReloader
+[10-10-2025 15:25:38] INFO autoreload 4704 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\utils.py changed, reloading.
+[10-10-2025 15:25:38] INFO autoreload 4704 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\utils.py changed, reloading.
+[10-10-2025 15:25:41] INFO autoreload 16440 - Watching for file changes with StatReloader
+[10-10-2025 15:25:41] INFO autoreload 16440 - Watching for file changes with StatReloader
+[10-10-2025 15:25:53] INFO autoreload 16440 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\utils.py changed, reloading.
+[10-10-2025 15:25:53] INFO autoreload 16440 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\utils.py changed, reloading.
+[10-10-2025 15:25:55] INFO autoreload 18408 - Watching for file changes with StatReloader
+[10-10-2025 15:25:55] INFO autoreload 18408 - Watching for file changes with StatReloader
+[10-10-2025 15:26:38] INFO utils 20976 - {'requestTime': datetime.datetime(2025, 10, 10, 14, 26, 38, 994790, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': '888c339650ec9e05218e69b63b7a020cc89f1c25ac9ccb171be5ddac7aee', 'status': False, 'message': "Invalid value for Request-Header field 'X-Api-Key'", 'data': {}}
+[10-10-2025 15:26:39] WARNING log 20976 - Bad Request: /signup
+[10-10-2025 15:26:39] WARNING log 20976 - Bad Request: /signup
+[10-10-2025 15:26:39] WARNING log 20976 - Bad Request: /signup
+[10-10-2025 15:26:39] WARNING basehttp 20976 - "POST /signup HTTP/1.1" 400 235
+[10-10-2025 15:26:39] WARNING basehttp 20976 - "POST /signup HTTP/1.1" 400 235
+[10-10-2025 15:26:39] WARNING basehttp 20976 - "POST /signup HTTP/1.1" 400 235
+[10-10-2025 15:27:14] INFO autoreload 10432 - Watching for file changes with StatReloader
+[10-10-2025 15:27:14] INFO autoreload 10432 - Watching for file changes with StatReloader
+[10-10-2025 15:28:09] INFO utils 18944 - {'requestTime': datetime.datetime(2025, 10, 10, 14, 28, 9, 724105, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': '14b47c5519b28404cb0af268627b7eaef2fe9442bc9bdcc0a3b750d54570', 'status': False, 'message': "Invalid value for Request-Header field 'X-Api-Key'", 'data': {}}
+[10-10-2025 15:28:09] WARNING log 18944 - Bad Request: /signup
+[10-10-2025 15:28:09] WARNING log 18944 - Bad Request: /signup
+[10-10-2025 15:28:09] WARNING log 18944 - Bad Request: /signup
+[10-10-2025 15:28:09] WARNING basehttp 18944 - "POST /signup HTTP/1.1" 400 235
+[10-10-2025 15:28:09] WARNING basehttp 18944 - "POST /signup HTTP/1.1" 400 235
+[10-10-2025 15:28:09] WARNING basehttp 18944 - "POST /signup HTTP/1.1" 400 235
+[10-10-2025 15:30:54] INFO autoreload 21404 - Watching for file changes with StatReloader
+[10-10-2025 15:30:54] INFO autoreload 21404 - Watching for file changes with StatReloader
+[10-10-2025 15:31:34] INFO utils 20000 - {'requestTime': datetime.datetime(2025, 10, 10, 14, 31, 34, 664559, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': '81079a818560291b095dc346dbb0a56216f2a047151b7f1724f1c25f1956', 'status': False, 'message': "Invalid value for Request-Header field 'X-Api-Key'", 'data': {}}
+[10-10-2025 15:31:34] WARNING log 20000 - Bad Request: /signup
+[10-10-2025 15:31:34] WARNING log 20000 - Bad Request: /signup
+[10-10-2025 15:31:34] WARNING log 20000 - Bad Request: /signup
+[10-10-2025 15:31:34] WARNING basehttp 20000 - "POST /signup HTTP/1.1" 400 235
+[10-10-2025 15:31:34] WARNING basehttp 20000 - "POST /signup HTTP/1.1" 400 235
+[10-10-2025 15:31:34] WARNING basehttp 20000 - "POST /signup HTTP/1.1" 400 235
+[10-10-2025 15:33:04] INFO utils 9132 - {'requestTime': datetime.datetime(2025, 10, 10, 14, 33, 4, 945471, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': '6d16f74292b3646601fd662a3518688eafe331aab2fca5af41716a3e33a5', 'status': False, 'message': "Invalid value for Request-Header field 'X-Api-Key'", 'data': {}}
+[10-10-2025 15:33:05] WARNING log 9132 - Bad Request: /signup
+[10-10-2025 15:33:05] WARNING log 9132 - Bad Request: /signup
+[10-10-2025 15:33:05] WARNING log 9132 - Bad Request: /signup
+[10-10-2025 15:33:05] WARNING basehttp 9132 - "POST /signup HTTP/1.1" 400 235
+[10-10-2025 15:33:05] WARNING basehttp 9132 - "POST /signup HTTP/1.1" 400 235
+[10-10-2025 15:33:05] WARNING basehttp 9132 - "POST /signup HTTP/1.1" 400 235
+[10-10-2025 15:34:26] INFO autoreload 10664 - Watching for file changes with StatReloader
+[10-10-2025 15:34:26] INFO autoreload 10664 - Watching for file changes with StatReloader
+[10-10-2025 15:34:57] INFO utils 11208 - {'requestTime': datetime.datetime(2025, 10, 10, 14, 34, 57, 612810, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': 'b9b7f7a2097110ae1bb12bffa34136995191cdf3aea8f557a10f4435af3a', 'status': False, 'message': "Invalid value for Request-Header field 'X-Api-Key'", 'data': {}}
+[10-10-2025 15:34:57] WARNING log 11208 - Bad Request: /signup
+[10-10-2025 15:34:57] WARNING log 11208 - Bad Request: /signup
+[10-10-2025 15:34:57] WARNING log 11208 - Bad Request: /signup
+[10-10-2025 15:34:57] WARNING basehttp 11208 - "POST /signup HTTP/1.1" 400 235
+[10-10-2025 15:34:57] WARNING basehttp 11208 - "POST /signup HTTP/1.1" 400 235
+[10-10-2025 15:34:57] WARNING basehttp 11208 - "POST /signup HTTP/1.1" 400 235
+[10-10-2025 15:36:25] INFO autoreload 10372 - Watching for file changes with StatReloader
+[10-10-2025 15:36:25] INFO autoreload 10372 - Watching for file changes with StatReloader
+[10-10-2025 15:36:56] INFO autoreload 4184 - Watching for file changes with StatReloader
+[10-10-2025 15:36:56] INFO autoreload 4184 - Watching for file changes with StatReloader
+[10-10-2025 15:37:58] INFO utils 20188 - {'requestTime': datetime.datetime(2025, 10, 10, 14, 37, 58, 992690, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': '270407bd6cbb6b69d1a576b3478349eacc59f88c69aa6bb69711d0eebbf1', 'status': False, 'message': "Invalid value for Request-Header field 'X-Api-Key'", 'data': {}}
+[10-10-2025 15:37:59] WARNING log 20188 - Bad Request: /signup
+[10-10-2025 15:37:59] WARNING log 20188 - Bad Request: /signup
+[10-10-2025 15:37:59] WARNING log 20188 - Bad Request: /signup
+[10-10-2025 15:37:59] WARNING basehttp 20188 - "POST /signup HTTP/1.1" 400 235
+[10-10-2025 15:37:59] WARNING basehttp 20188 - "POST /signup HTTP/1.1" 400 235
+[10-10-2025 15:37:59] WARNING basehttp 20188 - "POST /signup HTTP/1.1" 400 235
+[10-10-2025 15:45:10] INFO autoreload 4184 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\base.py changed, reloading.
+[10-10-2025 15:45:10] INFO autoreload 4184 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\base.py changed, reloading.
+[10-10-2025 16:11:52] INFO autoreload 15740 - Watching for file changes with StatReloader
+[10-10-2025 16:11:52] INFO autoreload 15740 - Watching for file changes with StatReloader
+[10-10-2025 16:13:01] INFO autoreload 9132 - Watching for file changes with StatReloader
+[10-10-2025 16:13:01] INFO autoreload 9132 - Watching for file changes with StatReloader
+[10-10-2025 16:13:38] INFO utils 16468 - Welcome email queued in background thread for user 1 (john.doe@example.com)
+[10-10-2025 16:13:38] INFO utils 16468 - {'requestTime': datetime.datetime(2025, 10, 10, 15, 13, 38, 394428, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': '9c101e5b50c32ff6574dbeb86e66de2940b2160e3a263412ef6cfdb8e9df', 'status': True, 'message': 'Onboarding process completed', 'data': {}}
+[10-10-2025 16:13:38] ERROR email_utils 19504 - Template rendering failed for user 1: home/emails/welcome.html
+[10-10-2025 16:13:38] ERROR email_utils 19504 - Failed to send welcome email to user 1: No module named 'config'
+[10-10-2025 16:13:38] ERROR email_utils 19504 - Welcome email traceback: Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py", line 142, in _send
+    email_obj.send()
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\mail\message.py", line 299, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\mail\message.py", line 256, in get_connection
+    self.connection = get_connection(fail_silently=fail_silently)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\mail\__init__.py", line 50, in get_connection
+    klass = import_string(backend or settings.EMAIL_BACKEND)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\utils\module_loading.py", line 30, in import_string
+    return cached_import(module_path, class_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\utils\module_loading.py", line 15, in cached_import
+    module = import_module(module_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1126, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'config'
+
+[10-10-2025 16:13:38] INFO basehttp 16468 - "POST /signup HTTP/1.1" 200 212
+[10-10-2025 16:13:38] INFO basehttp 16468 - "POST /signup HTTP/1.1" 200 212
+[10-10-2025 16:13:38] INFO basehttp 16468 - "POST /signup HTTP/1.1" 200 212
+[13-10-2025 12:43:37] INFO autoreload 11372 - Watching for file changes with StatReloader
+[13-10-2025 12:43:37] INFO autoreload 11372 - Watching for file changes with StatReloader
+[13-10-2025 12:44:29] INFO utils 448 - {'requestTime': datetime.datetime(2025, 10, 13, 11, 44, 29, 757994, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': 'b9ec14dd3d343584a106da08bdddbd49e76a42cca7ba1ac269451c4e044d', 'status': False, 'message': 'User with this email already exists', 'data': {}}
+[13-10-2025 12:44:29] WARNING log 448 - Bad Request: /signup
+[13-10-2025 12:44:29] WARNING log 448 - Bad Request: /signup
+[13-10-2025 12:44:29] WARNING log 448 - Bad Request: /signup
+[13-10-2025 12:44:29] WARNING basehttp 448 - "POST /signup HTTP/1.1" 400 227
+[13-10-2025 12:44:29] WARNING basehttp 448 - "POST /signup HTTP/1.1" 400 227
+[13-10-2025 12:44:29] WARNING basehttp 448 - "POST /signup HTTP/1.1" 400 227
+[13-10-2025 12:46:10] INFO utils 18916 - {'requestTime': datetime.datetime(2025, 10, 13, 11, 46, 10, 569517, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': '1f501ee7342477daf0be0ac5b1aa9e77e8eca08ab34697b1c85177692206', 'status': False, 'message': "'requestType' field is required", 'data': {}}
+[13-10-2025 12:46:10] WARNING log 18916 - Bad Request: /login
+[13-10-2025 12:46:10] WARNING log 18916 - Bad Request: /login
+[13-10-2025 12:46:10] WARNING log 18916 - Bad Request: /login
+[13-10-2025 12:46:10] WARNING basehttp 18916 - "POST /login HTTP/1.1" 400 216
+[13-10-2025 12:46:10] WARNING basehttp 18916 - "POST /login HTTP/1.1" 400 216
+[13-10-2025 12:46:10] WARNING basehttp 18916 - "POST /login HTTP/1.1" 400 216
+[13-10-2025 12:47:30] INFO utils 19420 - {'requestTime': datetime.datetime(2025, 10, 13, 11, 47, 30, 937005, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': 'f9f7c45b22a3146e5cab513456bf7ebbaa6a87081a46f00f39010f3eb2c8', 'status': False, 'message': "'requestType' field is required", 'data': {}}
+[13-10-2025 12:47:30] WARNING log 19420 - Bad Request: /login
+[13-10-2025 12:47:30] WARNING log 19420 - Bad Request: /login
+[13-10-2025 12:47:30] WARNING log 19420 - Bad Request: /login
+[13-10-2025 12:47:30] WARNING basehttp 19420 - "POST /login HTTP/1.1" 400 216
+[13-10-2025 12:47:30] WARNING basehttp 19420 - "POST /login HTTP/1.1" 400 216
+[13-10-2025 12:47:30] WARNING basehttp 19420 - "POST /login HTTP/1.1" 400 216
+[13-10-2025 12:48:29] ERROR log 19420 - Internal Server Error: /login
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py", line 143, in post
+    user = serializer.save()
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\serializers.py", line 210, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py", line 113, in create
+    user = authenticate(username=user.username, password=password)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\decorators\debug.py", line 42, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\contrib\auth\__init__.py", line 68, in authenticate
+    for backend, backend_path in _get_backends(return_tuples=True):
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\contrib\auth\__init__.py", line 27, in _get_backends
+    backend = load_backend(backend_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\contrib\auth\__init__.py", line 21, in load_backend
+    return import_string(path)()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\utils\module_loading.py", line 30, in import_string
+    return cached_import(module_path, class_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\utils\module_loading.py", line 15, in cached_import
+    module = import_module(module_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'account.authentication'
+[13-10-2025 12:48:29] ERROR log 19420 - Internal Server Error: /login
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py", line 143, in post
+    user = serializer.save()
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\serializers.py", line 210, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py", line 113, in create
+    user = authenticate(username=user.username, password=password)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\decorators\debug.py", line 42, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\contrib\auth\__init__.py", line 68, in authenticate
+    for backend, backend_path in _get_backends(return_tuples=True):
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\contrib\auth\__init__.py", line 27, in _get_backends
+    backend = load_backend(backend_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\contrib\auth\__init__.py", line 21, in load_backend
+    return import_string(path)()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\utils\module_loading.py", line 30, in import_string
+    return cached_import(module_path, class_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\utils\module_loading.py", line 15, in cached_import
+    module = import_module(module_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'account.authentication'
+[13-10-2025 12:48:29] ERROR log 19420 - Internal Server Error: /login
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py", line 143, in post
+    user = serializer.save()
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\serializers.py", line 210, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py", line 113, in create
+    user = authenticate(username=user.username, password=password)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\decorators\debug.py", line 42, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\contrib\auth\__init__.py", line 68, in authenticate
+    for backend, backend_path in _get_backends(return_tuples=True):
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\contrib\auth\__init__.py", line 27, in _get_backends
+    backend = load_backend(backend_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\contrib\auth\__init__.py", line 21, in load_backend
+    return import_string(path)()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\utils\module_loading.py", line 30, in import_string
+    return cached_import(module_path, class_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\utils\module_loading.py", line 15, in cached_import
+    module = import_module(module_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'account.authentication'
+[13-10-2025 12:48:29] ERROR basehttp 19420 - "POST /login HTTP/1.1" 500 165289
+[13-10-2025 12:48:29] ERROR basehttp 19420 - "POST /login HTTP/1.1" 500 165289
+[13-10-2025 12:48:29] ERROR basehttp 19420 - "POST /login HTTP/1.1" 500 165289
+[13-10-2025 12:51:43] INFO autoreload 11372 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\base.py changed, reloading.
+[13-10-2025 12:51:43] INFO autoreload 11372 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\base.py changed, reloading.
+[13-10-2025 12:51:46] INFO autoreload 9032 - Watching for file changes with StatReloader
+[13-10-2025 12:51:46] INFO autoreload 9032 - Watching for file changes with StatReloader
+[13-10-2025 12:52:43] INFO utils 16860 - {'requestTime': datetime.datetime(2025, 10, 13, 11, 52, 43, 478988, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': 'a73ba2635782ceeff3beab2120f7a40029de1b7f6f73a48bc904da12a195', 'status': True, 'message': 'Login successful', 'data': {'userData': {'id': 1, 'profilePicture': None, 'profileDetail': {'id': 1, 'username': 'john.doe@example.com', 'full_name': 'John Doe', 'phone_number': '7012345678', 'email': 'john.doe@example.com', 'gender': 'Male', 'otherName': None, 'dob': None, 'phoneNumber': '2347012345678', 'address': None, 'city': None, 'state': None, 'country': None, 'active': False, 'dateCreated': '2025-10-10T16:13:38.370138+01:00', 'failed_login_attempts': 0, 'locked_until': None, 'last_failed_login': None}, 'last_login': None, 'username': 'john.doe@example.com', 'first_name': 'John', 'last_name': 'Doe', 'email': 'john.doe@example.com', 'date_joined': '2025-10-10T16:13:36.846582+01:00', 'groups': [], 'user_permissions': []}, 'accessToken': 'gAAAAABo7OgLi02Od6c0W6Hd91nPH1IGLkwwHqLHjrAWfMXcjwGm6Al3bA-z5q37KEX9mPDZzbUcNDdicdAiX_YuZ0RcJKKkW6x7-HmF3oRqFFKmRlrr6BtWHWQD7IW24zB7cHtINoYotg3YlHtFyVWNu_ghCznfBceu4ovVyYziYfWsWyd4Lln30CwYHEkYdKBUAGLIqmGo-cJXV05mqqE3kv_eTJ18DcuQjTcWlLH_kM8VKcSbK2y8xiNQjb--yeKbIoRP5o0N6L7VPEjj7OT9GyIyE0bHe_INqbjkz7T2f05UPPBEpafSk6IZCWtqTHRsa_OXYygGDpDWSyvH3P85EMWMJLuM5zlnZjrwifbDpIF9jgOEJkepbtIKzMc0qae0yT9Wd3D1'}}
+[13-10-2025 12:52:43] INFO basehttp 16860 - "POST /login HTTP/1.1" 200 1098
+[13-10-2025 12:52:43] INFO basehttp 16860 - "POST /login HTTP/1.1" 200 1098
+[13-10-2025 12:52:43] INFO basehttp 16860 - "POST /login HTTP/1.1" 200 1098
+[13-10-2025 13:02:35] INFO basehttp 13480 - "GET / HTTP/1.1" 200 41
+[13-10-2025 13:02:35] INFO basehttp 13480 - "GET / HTTP/1.1" 200 41
+[13-10-2025 13:02:35] INFO basehttp 13480 - "GET / HTTP/1.1" 200 41
