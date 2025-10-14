@@ -1,10 +1,5 @@
 print('dev.py')
 
-
-ALLOWED_HOSTS = ['*']
-DEBUG = True
-
-
 from .base import * # noqa
 import ssl  # noqa: E402
 import os  # noqa: E402
@@ -13,13 +8,44 @@ from .base import env
 SECRET_KEY = "django-insecure-uwlel0vl1i5zsjo@z!z-*0m_k#zpb%cp!_75ge_t*!a(b6%e_r"
 # SECURITY WARNING: don't run with debug turned on in production!
 
+VERCEL_APP_URL = 'https://tm30-ecom-web-app-beta.vercel.app'
+
+ENNIE_LOCALHOST_1 =  'http://localhost:5173'
+
+ENNIE_LOCALHOST_2 =  'http://localhost:5174'
+
 X_API_KEY = env('X_API_KEY')
 print(X_API_KEY)
-ALLOWED_HOSTS = ['*'] # noqa
 # X_API_KEY = os.environ.get('X_API_KEY') # noqa
 
 # CORS settings
 CORS_ALLOW_ALL_ORIGINS = True  # Only for development
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_ALLOWED_ORIGINS =[
+    "http://localhost",
+    VERCEL_APP_URL,
+    ENNIE_LOCALHOST_1,
+    ENNIE_LOCALHOST_2
+]
+
+
+
+CSRF_TRUSTED_ORIGINS = CORS_ALLOWED_ORIGINS
+
+ALLOWED_HOSTS = ['681155ad6458.ngrok-free.app', VERCEL_APP_URL, 'localhost', '127.0.0.1', ENNIE_LOCALHOST_1, ENNIE_LOCALHOST_2]
+DEBUG = True
+
+
+CORS_ALLOW_HEADERS = [
+    "content-type",
+    "authorization",
+    "x-csrftoken",
+    "ngrok-skip-browser-warning",
+    "x-api-key"
+    # add other headers if needed
+]
+
 CORS_ALLOW_CREDENTIALS = True
 
 # Email settings for development

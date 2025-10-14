@@ -2442,3 +2442,351 @@ ModuleNotFoundError: No module named 'account.authentication'
 [13-10-2025 13:02:35] INFO basehttp 13480 - "GET / HTTP/1.1" 200 41
 [13-10-2025 13:02:35] INFO basehttp 13480 - "GET / HTTP/1.1" 200 41
 [13-10-2025 13:02:35] INFO basehttp 13480 - "GET / HTTP/1.1" 200 41
+[14-10-2025 10:14:14] INFO autoreload 5172 - Watching for file changes with StatReloader
+[14-10-2025 10:14:14] INFO autoreload 5172 - Watching for file changes with StatReloader
+[14-10-2025 10:15:42] INFO autoreload 10636 - Watching for file changes with StatReloader
+[14-10-2025 10:15:42] INFO autoreload 10636 - Watching for file changes with StatReloader
+[14-10-2025 10:16:11] INFO basehttp 10300 - "GET / HTTP/1.1" 200 41
+[14-10-2025 10:16:11] INFO basehttp 10300 - "GET / HTTP/1.1" 200 41
+[14-10-2025 10:16:11] INFO basehttp 10300 - "GET / HTTP/1.1" 200 41
+[14-10-2025 10:19:13] INFO basehttp 6332 - "OPTIONS /login HTTP/1.1" 200 0
+[14-10-2025 10:19:13] INFO basehttp 6332 - "OPTIONS /login HTTP/1.1" 200 0
+[14-10-2025 10:19:13] INFO basehttp 6332 - "OPTIONS /login HTTP/1.1" 200 0
+[14-10-2025 10:20:15] INFO basehttp 17044 - "OPTIONS /login HTTP/1.1" 200 0
+[14-10-2025 10:20:15] INFO basehttp 17044 - "OPTIONS /login HTTP/1.1" 200 0
+[14-10-2025 10:20:15] INFO basehttp 17044 - "OPTIONS /login HTTP/1.1" 200 0
+[14-10-2025 10:23:19] INFO autoreload 10636 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 10:23:19] INFO autoreload 10636 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 10:23:21] INFO autoreload 2668 - Watching for file changes with StatReloader
+[14-10-2025 10:23:21] INFO autoreload 2668 - Watching for file changes with StatReloader
+[14-10-2025 10:23:26] ERROR log 4320 - Invalid HTTP_HOST header: '681155ad6458.ngrok-free.app'. You may need to add '681155ad6458.ngrok-free.app' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '681155ad6458.ngrok-free.app'. You may need to add '681155ad6458.ngrok-free.app' to ALLOWED_HOSTS.
+[14-10-2025 10:23:26] ERROR log 4320 - Invalid HTTP_HOST header: '681155ad6458.ngrok-free.app'. You may need to add '681155ad6458.ngrok-free.app' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '681155ad6458.ngrok-free.app'. You may need to add '681155ad6458.ngrok-free.app' to ALLOWED_HOSTS.
+[14-10-2025 10:23:26] WARNING basehttp 4320 - "GET / HTTP/1.1" 400 86093
+[14-10-2025 10:23:26] WARNING basehttp 4320 - "GET / HTTP/1.1" 400 86093
+[14-10-2025 10:23:26] WARNING basehttp 4320 - "GET / HTTP/1.1" 400 86093
+[14-10-2025 10:23:28] ERROR log 19360 - Invalid HTTP_HOST header: '681155ad6458.ngrok-free.app'. You may need to add '681155ad6458.ngrok-free.app' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '681155ad6458.ngrok-free.app'. You may need to add '681155ad6458.ngrok-free.app' to ALLOWED_HOSTS.
+[14-10-2025 10:23:28] ERROR log 19360 - Invalid HTTP_HOST header: '681155ad6458.ngrok-free.app'. You may need to add '681155ad6458.ngrok-free.app' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '681155ad6458.ngrok-free.app'. You may need to add '681155ad6458.ngrok-free.app' to ALLOWED_HOSTS.
+[14-10-2025 10:23:28] WARNING basehttp 19360 - "GET /favicon.ico HTTP/1.1" 400 85796
+[14-10-2025 10:23:28] WARNING basehttp 19360 - "GET /favicon.ico HTTP/1.1" 400 85796
+[14-10-2025 10:23:28] WARNING basehttp 19360 - "GET /favicon.ico HTTP/1.1" 400 85796
+[14-10-2025 10:23:29] INFO autoreload 2668 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 10:23:29] INFO autoreload 2668 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 10:23:32] INFO autoreload 11868 - Watching for file changes with StatReloader
+[14-10-2025 10:23:32] INFO autoreload 11868 - Watching for file changes with StatReloader
+[14-10-2025 10:23:39] INFO autoreload 11868 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 10:23:39] INFO autoreload 11868 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 10:23:41] INFO autoreload 17972 - Watching for file changes with StatReloader
+[14-10-2025 10:23:41] INFO autoreload 17972 - Watching for file changes with StatReloader
+[14-10-2025 10:27:52] INFO autoreload 17972 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 10:27:52] INFO autoreload 17972 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 10:27:54] INFO autoreload 14440 - Watching for file changes with StatReloader
+[14-10-2025 10:27:54] INFO autoreload 14440 - Watching for file changes with StatReloader
+[14-10-2025 10:28:22] INFO autoreload 14440 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 10:28:22] INFO autoreload 14440 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 10:28:25] INFO autoreload 15852 - Watching for file changes with StatReloader
+[14-10-2025 10:28:25] INFO autoreload 15852 - Watching for file changes with StatReloader
+[14-10-2025 10:28:41] INFO autoreload 600 - Watching for file changes with StatReloader
+[14-10-2025 10:28:41] INFO autoreload 600 - Watching for file changes with StatReloader
+[14-10-2025 10:30:33] INFO basehttp 14044 - "OPTIONS /login HTTP/1.1" 200 0
+[14-10-2025 10:30:33] INFO basehttp 14044 - "OPTIONS /login HTTP/1.1" 200 0
+[14-10-2025 10:30:33] INFO basehttp 14044 - "OPTIONS /login HTTP/1.1" 200 0
+[14-10-2025 10:52:40] INFO basehttp 16620 - "GET / HTTP/1.1" 200 41
+[14-10-2025 10:52:40] INFO basehttp 16620 - "GET / HTTP/1.1" 200 41
+[14-10-2025 10:52:40] INFO basehttp 16620 - "GET / HTTP/1.1" 200 41
+[14-10-2025 10:52:40] WARNING log 16620 - Not Found: /favicon.ico
+[14-10-2025 10:52:40] WARNING log 16620 - Not Found: /favicon.ico
+[14-10-2025 10:52:40] WARNING log 16620 - Not Found: /favicon.ico
+[14-10-2025 10:52:40] WARNING basehttp 16620 - "GET /favicon.ico HTTP/1.1" 404 17815
+[14-10-2025 10:52:40] WARNING basehttp 16620 - "GET /favicon.ico HTTP/1.1" 404 17815
+[14-10-2025 10:52:40] WARNING basehttp 16620 - "GET /favicon.ico HTTP/1.1" 404 17815
+[14-10-2025 11:07:22] WARNING log 8336 - Not Found: /docs
+[14-10-2025 11:07:22] WARNING log 8336 - Not Found: /docs
+[14-10-2025 11:07:22] WARNING log 8336 - Not Found: /docs
+[14-10-2025 11:07:22] WARNING basehttp 8336 - "GET /docs HTTP/1.1" 404 17787
+[14-10-2025 11:07:22] WARNING basehttp 8336 - "GET /docs HTTP/1.1" 404 17787
+[14-10-2025 11:07:22] WARNING basehttp 8336 - "GET /docs HTTP/1.1" 404 17787
+[14-10-2025 11:07:26] INFO basehttp 8336 - "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+[14-10-2025 11:07:26] INFO basehttp 8336 - "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+[14-10-2025 11:07:26] INFO basehttp 8336 - "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+[14-10-2025 11:07:26] INFO basehttp 1800 - "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 16675
+[14-10-2025 11:07:26] INFO basehttp 1800 - "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 16675
+[14-10-2025 11:07:26] INFO basehttp 1800 - "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 16675
+[14-10-2025 11:07:27] INFO basehttp 17788 - "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 14601
+[14-10-2025 11:07:27] INFO basehttp 17788 - "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 14601
+[14-10-2025 11:07:27] INFO basehttp 17788 - "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 14601
+[14-10-2025 11:07:29] INFO basehttp 1800 - "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4742
+[14-10-2025 11:07:29] INFO basehttp 1800 - "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4742
+[14-10-2025 11:07:29] INFO basehttp 1800 - "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4742
+[14-10-2025 11:07:39] INFO basehttp 1800 - "GET /swagger HTTP/1.1" 301 0
+[14-10-2025 11:07:39] INFO basehttp 1800 - "GET /swagger HTTP/1.1" 301 0
+[14-10-2025 11:07:39] INFO basehttp 1800 - "GET /swagger HTTP/1.1" 301 0
+[14-10-2025 11:07:41] INFO basehttp 8336 - "GET /swagger/ HTTP/1.1" 200 14839
+[14-10-2025 11:07:41] INFO basehttp 8336 - "GET /swagger/ HTTP/1.1" 200 14839
+[14-10-2025 11:07:41] INFO basehttp 8336 - "GET /swagger/ HTTP/1.1" 200 14839
+[14-10-2025 11:07:42] INFO basehttp 8336 - "GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+[14-10-2025 11:07:42] INFO basehttp 8336 - "GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+[14-10-2025 11:07:42] INFO basehttp 8336 - "GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+[14-10-2025 11:07:42] INFO basehttp 11312 - "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 200 56904
+[14-10-2025 11:07:42] INFO basehttp 11312 - "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 200 56904
+[14-10-2025 11:07:42] INFO basehttp 11312 - "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 200 56904
+[14-10-2025 11:07:42] INFO basehttp 18048 - "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+[14-10-2025 11:07:42] INFO basehttp 18048 - "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+[14-10-2025 11:07:42] INFO basehttp 18048 - "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+[14-10-2025 11:07:42] INFO basehttp 8540 - "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 145206
+[14-10-2025 11:07:42] INFO basehttp 8540 - "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 145206
+[14-10-2025 11:07:42] INFO basehttp 8540 - "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 145206
+[14-10-2025 11:07:42] INFO basehttp 18564 - "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 200 322863
+[14-10-2025 11:07:42] INFO basehttp 18564 - "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 200 322863
+[14-10-2025 11:07:42] INFO basehttp 18564 - "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 200 322863
+[14-10-2025 11:07:42] INFO basehttp 16600 - "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1046583
+[14-10-2025 11:07:42] INFO basehttp 16600 - "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1046583
+[14-10-2025 11:07:42] INFO basehttp 16600 - "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1046583
+[14-10-2025 11:07:42] INFO basehttp 11396 - "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 200 15480
+[14-10-2025 11:07:42] INFO basehttp 11396 - "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 200 15480
+[14-10-2025 11:07:42] INFO basehttp 11396 - "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 200 15480
+[14-10-2025 11:07:50] INFO basehttp 8336 - "GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 200 628
+[14-10-2025 11:07:50] INFO basehttp 8336 - "GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 200 628
+[14-10-2025 11:07:50] INFO basehttp 8336 - "GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 200 628
+[14-10-2025 11:07:50] INFO basehttp 11312 - "GET /swagger/?format=openapi HTTP/1.1" 200 6454
+[14-10-2025 11:07:50] INFO basehttp 11312 - "GET /swagger/?format=openapi HTTP/1.1" 200 6454
+[14-10-2025 11:07:50] INFO basehttp 11312 - "GET /swagger/?format=openapi HTTP/1.1" 200 6454
+[14-10-2025 11:07:51] INFO basehttp 11312 - "GET /__debug__/history_sidebar/?store_id=6deb662470a94f5b9afbd076c2e688d3 HTTP/1.1" 200 9821
+[14-10-2025 11:07:51] INFO basehttp 11312 - "GET /__debug__/history_sidebar/?store_id=6deb662470a94f5b9afbd076c2e688d3 HTTP/1.1" 200 9821
+[14-10-2025 11:07:51] INFO basehttp 11312 - "GET /__debug__/history_sidebar/?store_id=6deb662470a94f5b9afbd076c2e688d3 HTTP/1.1" 200 9821
+[14-10-2025 11:08:43] WARNING log 11312 - Not Found: /swagger/json
+[14-10-2025 11:08:43] WARNING log 11312 - Not Found: /swagger/json
+[14-10-2025 11:08:43] WARNING log 11312 - Not Found: /swagger/json
+[14-10-2025 11:08:43] WARNING basehttp 11312 - "GET /swagger/json HTTP/1.1" 404 17820
+[14-10-2025 11:08:43] WARNING basehttp 11312 - "GET /swagger/json HTTP/1.1" 404 17820
+[14-10-2025 11:08:43] WARNING basehttp 11312 - "GET /swagger/json HTTP/1.1" 404 17820
+[14-10-2025 11:10:07] INFO autoreload 600 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 11:10:07] INFO autoreload 600 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 11:10:10] INFO autoreload 2448 - Watching for file changes with StatReloader
+[14-10-2025 11:10:10] INFO autoreload 2448 - Watching for file changes with StatReloader
+[14-10-2025 11:15:03] INFO autoreload 2448 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 11:15:03] INFO autoreload 2448 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 11:26:46] INFO autoreload 10520 - Watching for file changes with StatReloader
+[14-10-2025 11:26:46] INFO autoreload 10520 - Watching for file changes with StatReloader
+[14-10-2025 11:27:19] INFO autoreload 10520 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 11:27:19] INFO autoreload 10520 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 11:27:21] INFO autoreload 5076 - Watching for file changes with StatReloader
+[14-10-2025 11:27:21] INFO autoreload 5076 - Watching for file changes with StatReloader
+[14-10-2025 11:27:25] INFO autoreload 5076 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 11:27:25] INFO autoreload 5076 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 11:27:27] INFO autoreload 14136 - Watching for file changes with StatReloader
+[14-10-2025 11:27:27] INFO autoreload 14136 - Watching for file changes with StatReloader
+[14-10-2025 11:28:45] INFO autoreload 14136 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 11:28:45] INFO autoreload 14136 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 11:29:06] INFO autoreload 17292 - Watching for file changes with StatReloader
+[14-10-2025 11:29:06] INFO autoreload 17292 - Watching for file changes with StatReloader
+[14-10-2025 11:30:10] INFO autoreload 17292 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 11:30:10] INFO autoreload 17292 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 11:30:12] INFO autoreload 3084 - Watching for file changes with StatReloader
+[14-10-2025 11:30:12] INFO autoreload 3084 - Watching for file changes with StatReloader
+[14-10-2025 11:30:20] INFO autoreload 3084 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 11:30:20] INFO autoreload 3084 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 11:30:23] INFO autoreload 17584 - Watching for file changes with StatReloader
+[14-10-2025 11:30:23] INFO autoreload 17584 - Watching for file changes with StatReloader
+[14-10-2025 11:30:34] INFO autoreload 17584 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 11:30:34] INFO autoreload 17584 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 11:30:36] INFO autoreload 3936 - Watching for file changes with StatReloader
+[14-10-2025 11:30:36] INFO autoreload 3936 - Watching for file changes with StatReloader
+[14-10-2025 11:31:04] INFO autoreload 3936 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 11:31:04] INFO autoreload 3936 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 11:31:07] INFO autoreload 16292 - Watching for file changes with StatReloader
+[14-10-2025 11:31:07] INFO autoreload 16292 - Watching for file changes with StatReloader
+[14-10-2025 11:31:10] INFO autoreload 16292 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 11:31:10] INFO autoreload 16292 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 11:31:13] INFO autoreload 18012 - Watching for file changes with StatReloader
+[14-10-2025 11:31:13] INFO autoreload 18012 - Watching for file changes with StatReloader
+[14-10-2025 11:31:17] INFO autoreload 18012 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 11:31:17] INFO autoreload 18012 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 11:31:19] INFO autoreload 14112 - Watching for file changes with StatReloader
+[14-10-2025 11:31:19] INFO autoreload 14112 - Watching for file changes with StatReloader
+[14-10-2025 11:31:23] INFO autoreload 14112 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 11:31:23] INFO autoreload 14112 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 11:31:26] INFO autoreload 5256 - Watching for file changes with StatReloader
+[14-10-2025 11:31:26] INFO autoreload 5256 - Watching for file changes with StatReloader
+[14-10-2025 11:31:39] INFO basehttp 13828 - "GET / HTTP/1.1" 200 41
+[14-10-2025 11:31:39] INFO basehttp 13828 - "GET / HTTP/1.1" 200 41
+[14-10-2025 11:31:39] INFO basehttp 13828 - "GET / HTTP/1.1" 200 41
+[14-10-2025 11:40:05] INFO basehttp 1284 - "OPTIONS /signup HTTP/1.1" 200 0
+[14-10-2025 11:40:05] INFO basehttp 1284 - "OPTIONS /signup HTTP/1.1" 200 0
+[14-10-2025 11:40:05] INFO basehttp 1284 - "OPTIONS /signup HTTP/1.1" 200 0
+[14-10-2025 11:40:17] INFO basehttp 12624 - "OPTIONS /signup HTTP/1.1" 200 0
+[14-10-2025 11:40:17] INFO basehttp 12624 - "OPTIONS /signup HTTP/1.1" 200 0
+[14-10-2025 11:40:17] INFO basehttp 12624 - "OPTIONS /signup HTTP/1.1" 200 0
+[14-10-2025 11:41:07] INFO basehttp 2708 - "OPTIONS /signup HTTP/1.1" 200 0
+[14-10-2025 11:41:07] INFO basehttp 2708 - "OPTIONS /signup HTTP/1.1" 200 0
+[14-10-2025 11:41:07] INFO basehttp 2708 - "OPTIONS /signup HTTP/1.1" 200 0
+[14-10-2025 11:41:40] INFO basehttp 18364 - "OPTIONS /signup HTTP/1.1" 200 0
+[14-10-2025 11:41:40] INFO basehttp 18364 - "OPTIONS /signup HTTP/1.1" 200 0
+[14-10-2025 11:41:40] INFO basehttp 18364 - "OPTIONS /signup HTTP/1.1" 200 0
+[14-10-2025 11:42:58] INFO basehttp 11728 - "OPTIONS /signup HTTP/1.1" 200 0
+[14-10-2025 11:42:58] INFO basehttp 11728 - "OPTIONS /signup HTTP/1.1" 200 0
+[14-10-2025 11:42:58] INFO basehttp 11728 - "OPTIONS /signup HTTP/1.1" 200 0
+[14-10-2025 11:43:04] INFO basehttp 11728 - "OPTIONS /signup HTTP/1.1" 200 0
+[14-10-2025 11:43:04] INFO basehttp 11728 - "OPTIONS /signup HTTP/1.1" 200 0
+[14-10-2025 11:43:04] INFO basehttp 11728 - "OPTIONS /signup HTTP/1.1" 200 0
+[14-10-2025 11:43:08] INFO basehttp 16132 - "OPTIONS /signup HTTP/1.1" 200 0
+[14-10-2025 11:43:08] INFO basehttp 16132 - "OPTIONS /signup HTTP/1.1" 200 0
+[14-10-2025 11:43:08] INFO basehttp 16132 - "OPTIONS /signup HTTP/1.1" 200 0
+[14-10-2025 11:45:42] INFO autoreload 5256 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 11:45:42] INFO autoreload 5256 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 11:45:46] INFO autoreload 4260 - Watching for file changes with StatReloader
+[14-10-2025 11:45:46] INFO autoreload 4260 - Watching for file changes with StatReloader
+[14-10-2025 11:45:51] INFO basehttp 16788 - "OPTIONS /signup HTTP/1.1" 200 0
+[14-10-2025 11:45:51] INFO basehttp 16788 - "OPTIONS /signup HTTP/1.1" 200 0
+[14-10-2025 11:45:51] INFO basehttp 16788 - "OPTIONS /signup HTTP/1.1" 200 0
+[14-10-2025 11:46:23] INFO basehttp 18500 - "OPTIONS /signup HTTP/1.1" 200 0
+[14-10-2025 11:46:23] INFO basehttp 18500 - "OPTIONS /signup HTTP/1.1" 200 0
+[14-10-2025 11:46:23] INFO basehttp 18500 - "OPTIONS /signup HTTP/1.1" 200 0
+[14-10-2025 11:49:44] INFO autoreload 4260 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 11:49:44] INFO autoreload 4260 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 11:49:46] INFO autoreload 7968 - Watching for file changes with StatReloader
+[14-10-2025 11:49:46] INFO autoreload 7968 - Watching for file changes with StatReloader
+[14-10-2025 11:49:52] INFO autoreload 7968 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 11:49:52] INFO autoreload 7968 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 11:49:54] INFO autoreload 7756 - Watching for file changes with StatReloader
+[14-10-2025 11:49:54] INFO autoreload 7756 - Watching for file changes with StatReloader
+[14-10-2025 11:50:04] INFO autoreload 7756 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 11:50:04] INFO autoreload 7756 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 11:50:07] INFO autoreload 9392 - Watching for file changes with StatReloader
+[14-10-2025 11:50:07] INFO autoreload 9392 - Watching for file changes with StatReloader
+[14-10-2025 11:50:20] INFO autoreload 9392 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 11:50:20] INFO autoreload 9392 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 11:50:22] INFO autoreload 3336 - Watching for file changes with StatReloader
+[14-10-2025 11:50:22] INFO autoreload 3336 - Watching for file changes with StatReloader
+[14-10-2025 11:50:31] INFO autoreload 17504 - Watching for file changes with StatReloader
+[14-10-2025 11:50:31] INFO autoreload 17504 - Watching for file changes with StatReloader
+[14-10-2025 11:50:52] INFO basehttp 16892 - "OPTIONS /signup HTTP/1.1" 200 0
+[14-10-2025 11:50:52] INFO basehttp 16892 - "OPTIONS /signup HTTP/1.1" 200 0
+[14-10-2025 11:50:52] INFO basehttp 16892 - "OPTIONS /signup HTTP/1.1" 200 0
+[14-10-2025 11:51:05] INFO autoreload 17504 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 11:51:05] INFO autoreload 17504 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 11:51:10] INFO autoreload 1564 - Watching for file changes with StatReloader
+[14-10-2025 11:51:10] INFO autoreload 1564 - Watching for file changes with StatReloader
+[14-10-2025 11:51:34] INFO basehttp 5952 - "OPTIONS /signup HTTP/1.1" 200 0
+[14-10-2025 11:51:34] INFO basehttp 5952 - "OPTIONS /signup HTTP/1.1" 200 0
+[14-10-2025 11:51:34] INFO basehttp 5952 - "OPTIONS /signup HTTP/1.1" 200 0
+[14-10-2025 11:51:35] INFO utils 5952 - Password Validation Error:
+Error: ['This password is too short. It must contain at least 8 characters.']
+[14-10-2025 11:51:35] INFO utils 5952 - {'requestTime': datetime.datetime(2025, 10, 14, 10, 51, 35, 551545, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': '0e7def8008c5cf2e5df71450e6e9df7769f88f3a871d12a8adf663a5a642', 'status': False, 'message': ValidationError(['This password is too short. It must contain at least 8 characters.']), 'data': {}}
+[14-10-2025 11:51:35] WARNING log 5952 - Bad Request: /signup
+[14-10-2025 11:51:35] WARNING log 5952 - Bad Request: /signup
+[14-10-2025 11:51:35] WARNING log 5952 - Bad Request: /signup
+[14-10-2025 11:51:35] WARNING basehttp 5952 - "POST /signup HTTP/1.1" 400 262
+[14-10-2025 11:51:35] WARNING basehttp 5952 - "POST /signup HTTP/1.1" 400 262
+[14-10-2025 11:51:35] WARNING basehttp 5952 - "POST /signup HTTP/1.1" 400 262
+[14-10-2025 11:51:48] INFO utils 17156 - Welcome email queued in background thread for user 2 (enithatdancer@gmail.com)
+[14-10-2025 11:51:48] INFO utils 17156 - {'requestTime': datetime.datetime(2025, 10, 14, 10, 51, 48, 675960, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': '6f48cb6bea55f4cbc7fa0ea262f4885c0753265599dc7604288a49a8a00f', 'status': True, 'message': 'Onboarding process completed', 'data': {}}
+[14-10-2025 11:51:48] INFO basehttp 17156 - "POST /signup HTTP/1.1" 200 212
+[14-10-2025 11:51:48] INFO basehttp 17156 - "POST /signup HTTP/1.1" 200 212
+[14-10-2025 11:51:48] INFO basehttp 17156 - "POST /signup HTTP/1.1" 200 212
+[14-10-2025 11:51:48] ERROR email_utils 16288 - Template rendering failed for user 2: home/emails/welcome.html
+[14-10-2025 11:51:48] ERROR email_utils 16288 - Failed to send welcome email to user 2: No module named 'config'
+[14-10-2025 11:51:48] ERROR email_utils 16288 - Welcome email traceback: Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py", line 142, in _send
+    email_obj.send()
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\mail\message.py", line 299, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\mail\message.py", line 256, in get_connection
+    self.connection = get_connection(fail_silently=fail_silently)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\mail\__init__.py", line 50, in get_connection
+    klass = import_string(backend or settings.EMAIL_BACKEND)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\utils\module_loading.py", line 30, in import_string
+    return cached_import(module_path, class_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\utils\module_loading.py", line 15, in cached_import
+    module = import_module(module_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1126, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'config'
+
+[14-10-2025 11:53:14] INFO basehttp 18636 - "OPTIONS /login HTTP/1.1" 200 0
+[14-10-2025 11:53:14] INFO basehttp 18636 - "OPTIONS /login HTTP/1.1" 200 0
+[14-10-2025 11:53:14] INFO basehttp 18636 - "OPTIONS /login HTTP/1.1" 200 0
+[14-10-2025 11:53:15] INFO utils 18636 - {'requestTime': datetime.datetime(2025, 10, 14, 10, 53, 15, 871399, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': 'b4721b498741bfe951c4a8d57e4b9205a7ef60514241f6a0159a94c9e57b', 'status': True, 'message': 'Login successful', 'data': {'userData': {'id': 2, 'profilePicture': None, 'profileDetail': {'id': 2, 'username': 'enithatdancer@gmail.com', 'full_name': 'Famade Eniola', 'phone_number': '9059294952', 'email': 'enithatdancer@gmail.com', 'gender': 'male', 'otherName': None, 'dob': None, 'phoneNumber': '2349059294952', 'address': None, 'city': None, 'state': None, 'country': None, 'active': False, 'dateCreated': '2025-10-14T11:51:48.663762+01:00', 'failed_login_attempts': 0, 'locked_until': None, 'last_failed_login': None}, 'last_login': None, 'username': 'enithatdancer@gmail.com', 'first_name': 'Famade', 'last_name': 'Eniola', 'email': 'enithatdancer@gmail.com', 'date_joined': '2025-10-14T11:51:47.878567+01:00', 'groups': [], 'user_permissions': []}, 'accessToken': 'gAAAAABo7iubi3JSeNfH2F6kjf_hqrLKknWuaT44xxPExD-1EthfYVHT-nNSVlTbFN95UX6jNOA5TKifKW8e57hZKXoERVsOJxrwSQbVWBx-BMxA5zh5NBDyAauWANPqKJrXfdjRwdEmg4rJ0BrQ7ozGqsu31UHzcC_GAbYUQeATHb6qaxfZkCtTspvtZcLyN45f9ufKQuzTKySeJABHleDLJvdlUaQgk67rvhGnU1fYw7LPQ6bdWtBwBLqepfZaOsz92XZk89dZQ70snT5iy5C0B2HHWGcVpIEXTWDxbyO7EO-mI9Ls1oeE1GQ9ceEAHQJq1OFJxhLuagh5FzMcG4MH5c6t7vUa-iBVPeAnMgEx9ZW226UHNAR3QrTTHe3_0TnhLiJUVG79'}}
+[14-10-2025 11:53:16] INFO basehttp 18636 - "POST /login HTTP/1.1" 200 1120
+[14-10-2025 11:53:16] INFO basehttp 18636 - "POST /login HTTP/1.1" 200 1120
+[14-10-2025 11:53:16] INFO basehttp 18636 - "POST /login HTTP/1.1" 200 1120
+[14-10-2025 12:02:05] INFO utils 13100 - {'requestTime': datetime.datetime(2025, 10, 14, 11, 2, 5, 574212, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': 'fccbb418b9de570b7d5e318e188f49e7637128dc319cf27b5458d3591ee9', 'status': True, 'message': 'Login successful', 'data': {'userData': {'id': 2, 'profilePicture': None, 'profileDetail': {'id': 2, 'username': 'enithatdancer@gmail.com', 'full_name': 'Famade Eniola', 'phone_number': '9059294952', 'email': 'enithatdancer@gmail.com', 'gender': 'male', 'otherName': None, 'dob': None, 'phoneNumber': '2349059294952', 'address': None, 'city': None, 'state': None, 'country': None, 'active': False, 'dateCreated': '2025-10-14T11:51:48.663762+01:00', 'failed_login_attempts': 0, 'locked_until': None, 'last_failed_login': None}, 'last_login': None, 'username': 'enithatdancer@gmail.com', 'first_name': 'Famade', 'last_name': 'Eniola', 'email': 'enithatdancer@gmail.com', 'date_joined': '2025-10-14T11:51:47.878567+01:00', 'groups': [], 'user_permissions': []}, 'accessToken': 'gAAAAABo7i2tidprvMsuFwN8JvdrrN2j2No4dNDLX9imKkA77pV9AFbt03wJFikaHMSn0eH2o295DE0REx_Q_7vKfW4rYhWklDU04ADE9nRasXruup0AVStp6XNHCUT1gSf5oqN_J8qFr0MGsF2YEYkFf-7OBb2II3QpW8wVTz_34Q54_nlmlVKD9CAkPW0nj5NqVH9rbIYRATkyzZHLsQe7Gg5TAsmE3advb35X4nHk--NU8UNC1Wu5dre86PqtXXlsaEYiO2ZEx_hPP2AeQAcqReyJfl2btZTZdSwOqVzj5HyL_pgiYBhqAzCPAdnOPrNtwx_uypTHWHOXNoTQePKEedt7u2Rc8psjl-wnENsqQb1Pv8MvoJn0GG8dhfsEzO7kmby46d-d'}}
+[14-10-2025 12:02:05] INFO basehttp 13100 - "POST /login HTTP/1.1" 200 1120
+[14-10-2025 12:02:05] INFO basehttp 13100 - "POST /login HTTP/1.1" 200 1120
+[14-10-2025 12:02:05] INFO basehttp 13100 - "POST /login HTTP/1.1" 200 1120
+[14-10-2025 12:05:21] INFO autoreload 1564 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 12:05:21] INFO autoreload 1564 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 12:05:23] INFO autoreload 18788 - Watching for file changes with StatReloader
+[14-10-2025 12:05:23] INFO autoreload 18788 - Watching for file changes with StatReloader
+[14-10-2025 12:05:28] INFO autoreload 18788 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 12:05:28] INFO autoreload 18788 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 12:08:09] INFO autoreload 14116 - Watching for file changes with StatReloader
+[14-10-2025 12:08:09] INFO autoreload 14116 - Watching for file changes with StatReloader
+[14-10-2025 12:28:25] INFO autoreload 14116 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\wsgi.py changed, reloading.
+[14-10-2025 12:28:25] INFO autoreload 14116 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\wsgi.py changed, reloading.
+[14-10-2025 12:28:34] INFO autoreload 16408 - Watching for file changes with StatReloader
+[14-10-2025 12:28:34] INFO autoreload 16408 - Watching for file changes with StatReloader
