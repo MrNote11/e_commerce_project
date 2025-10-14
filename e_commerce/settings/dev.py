@@ -113,26 +113,36 @@ POSTGRESS = True
 
 # Database Configuration - FIXED
 try:
-    # Try to get Supabase database URL first
-    DB_SUPABASE_ENGINE = env('DB_SUPABASE_ENGINE', default=None)
-    
+ # Database Configuration
+    DB_SUPABASE_ENGINE = {
+        'default': dj_database_url.config(
+            default=env('DB_SUPABASE_ENGINE'),  # Your Supabase URL
+            conn_max_age=600,
+            conn_health_checks=True,
+        )
+    }
     if DB_SUPABASE_ENGINE:
-        print("Using Supabase database...")
-        # Clean and ensure it's a string
-        DB_SUPABASE_ENGINE = DB_SUPABASE_ENGINE.strip()
-        
-        # Ensure it's a string, not bytes
-        if isinstance(DB_SUPABASE_ENGINE, bytes):
-            DB_SUPABASE_ENGINE = DB_SUPABASE_ENGINE.decode('utf-8')
+            print("Supabase database configured successfully")
             
-        DATABASES = {
-            "default": dj_database_url.parse(DB_SUPABASE_ENGINE)
-        }
-        print("Supabase database configured successfully")
+    elif not DB_SUPABASE_ENGINE:
+         DB_SUPABASE_ENGINE_MANUAL_CONFIG= {
+                'default': {
+                    'ENGINE': 'django.db.backends.postgresql',
+                    'NAME': 'postgres',  # Default Supabase database name
+                    'USER': 'postgres',  # Default Supabase user
+                    'PASSWORD': env('SUPABASE_PASSWORD'),
+                    'HOST': env('SUPABASE_HOST'),  # db.your-ref.supabase.co
+                    'PORT': '5432',
+                    'OPTIONS': {
+                        'sslmode': 'require',  # Important for Supabase
+                    },
+                }
+            }
     else:
-        # Fallback to local PostgreSQL
-        print("Using local PostgreSQL database...")
-        DATABASES = {
+            # Fallback to local PostgreSQL
+            print("Using local PostgreSQL database...")
+            
+    DATABASES = {
             'default': {
                 'ENGINE': 'django.db.backends.postgresql_psycopg2',
                 'NAME': 'e_commerce',
