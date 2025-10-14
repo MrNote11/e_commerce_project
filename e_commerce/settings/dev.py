@@ -34,7 +34,7 @@ CORS_ALLOWED_ORIGINS =[
 
 CSRF_TRUSTED_ORIGINS = CORS_ALLOWED_ORIGINS
 
-ALLOWED_HOSTS = ['https://9ad2bd0fd479.ngrok-free.app', VERCEL_APP_URL, 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['https://9ad2bd0fd479.ngrok-free.app', VERCEL_APP_URL, 'https://e-commerce-project-603j.onrender.com/', 'localhost', '127.0.0.1']
 DEBUG = True
 
 
