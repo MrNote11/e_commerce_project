@@ -118,7 +118,7 @@ try:
         'default': dj_database_url.config(
             default=env('DB_SUPABASE_ENGINE'),  # Your Supabase URL
             conn_max_age=600,
-            conn_health_checks=True,
+            ssl_require=True# conn_health_checks=True,
         )
     }
     if DB_SUPABASE_ENGINE:
@@ -140,18 +140,16 @@ try:
             }
     else:
             # Fallback to local PostgreSQL
-            print("Using local PostgreSQL database...")
-            
-    DATABASES = {
-            'default': {
-                'ENGINE': 'django.db.backends.postgresql_psycopg2',
-                'NAME': 'e_commerce',
-                'USER': 'postgres',
-                'PASSWORD': 'MrNote11',
-                'HOST': 'localhost',
-                'PORT': '5432',
+        DATABASES = {
+                'default': {
+                    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+                    'NAME': 'e_commerce',
+                    'USER': 'postgres',
+                    'PASSWORD': 'MrNote11',
+                    'HOST': 'localhost',
+                    'PORT': '5432',
+                }
             }
-        }
         
 except Exception as e:
     print(f"Database configuration error: {e}")
