@@ -3,7 +3,8 @@ print('dev.py')
 from .base import * # noqa
 import ssl  # noqa: E402
 import os  # noqa: E402
-from .base import env 
+from .base import env
+import dj_database_url
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = "django-insecure-uwlel0vl1i5zsjo@z!z-*0m_k#zpb%cp!_75ge_t*!a(b6%e_r"
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -33,7 +34,7 @@ CORS_ALLOWED_ORIGINS =[
 
 CSRF_TRUSTED_ORIGINS = CORS_ALLOWED_ORIGINS
 
-ALLOWED_HOSTS = ['681155ad6458.ngrok-free.app', VERCEL_APP_URL, 'localhost', '127.0.0.1', ENNIE_LOCALHOST_1, ENNIE_LOCALHOST_2]
+ALLOWED_HOSTS = ['https://9ad2bd0fd479.ngrok-free.app', VERCEL_APP_URL, 'localhost', '127.0.0.1']
 DEBUG = True
 
 
@@ -103,8 +104,21 @@ LOGGING = {
     },
 }
 
+ENVIRONMENT_VARIABLE = True
+POSTGRESS = True
+
+# database_url = os.environ.get('DB_SUPABASE_ENGINE ')
+# if database_url:
+#     database_url = database_url.strip()  # Remove extra spaces/newlines
+#     database_url = database_url.decode("utf-8") if isinstance(database_url, bytes) else database_url
 
 
+# DB_SUPABASE_ENGINE =  env('DB_SUPABASE_ENGINE')
+
+# if DB_SUPABASE_ENGINE:
+#      DATABASES ={
+#         "default": dj_database_url.parse(os.environ.get('DATABASE_URL'))
+#                 }
 DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',

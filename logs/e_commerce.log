@@ -2790,3 +2790,115 @@ ModuleNotFoundError: No module named 'config'
 [14-10-2025 12:28:25] INFO autoreload 14116 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\wsgi.py changed, reloading.
 [14-10-2025 12:28:34] INFO autoreload 16408 - Watching for file changes with StatReloader
 [14-10-2025 12:28:34] INFO autoreload 16408 - Watching for file changes with StatReloader
+[14-10-2025 12:38:19] INFO autoreload 16408 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 12:38:19] INFO autoreload 16408 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 12:38:23] INFO autoreload 18656 - Watching for file changes with StatReloader
+[14-10-2025 12:38:23] INFO autoreload 18656 - Watching for file changes with StatReloader
+[14-10-2025 12:38:30] INFO autoreload 18656 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 12:38:30] INFO autoreload 18656 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 12:47:41] INFO autoreload 5808 - Watching for file changes with StatReloader
+[14-10-2025 12:47:41] INFO autoreload 5808 - Watching for file changes with StatReloader
+[14-10-2025 12:48:32] INFO autoreload 3024 - Watching for file changes with StatReloader
+[14-10-2025 12:48:32] INFO autoreload 3024 - Watching for file changes with StatReloader
+[14-10-2025 12:48:51] INFO autoreload 11884 - Watching for file changes with StatReloader
+[14-10-2025 12:48:51] INFO autoreload 11884 - Watching for file changes with StatReloader
+[14-10-2025 12:50:35] INFO autoreload 11884 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 12:50:35] INFO autoreload 11884 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 12:50:36] INFO autoreload 5808 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 12:50:36] INFO autoreload 5808 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 12:51:03] INFO autoreload 11688 - Watching for file changes with StatReloader
+[14-10-2025 12:51:03] INFO autoreload 11688 - Watching for file changes with StatReloader
+[14-10-2025 12:51:08] INFO autoreload 9940 - Watching for file changes with StatReloader
+[14-10-2025 12:51:08] INFO autoreload 9940 - Watching for file changes with StatReloader
+[14-10-2025 12:53:01] INFO autoreload 9940 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\base.py changed, reloading.
+[14-10-2025 12:53:01] INFO autoreload 9940 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\base.py changed, reloading.
+[14-10-2025 12:53:01] INFO autoreload 11688 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\base.py changed, reloading.
+[14-10-2025 12:53:01] INFO autoreload 11688 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\base.py changed, reloading.
+[14-10-2025 12:53:13] INFO autoreload 10556 - Watching for file changes with StatReloader
+[14-10-2025 12:53:13] INFO autoreload 10556 - Watching for file changes with StatReloader
+[14-10-2025 12:53:13] INFO autoreload 16572 - Watching for file changes with StatReloader
+[14-10-2025 12:53:13] INFO autoreload 16572 - Watching for file changes with StatReloader
+[14-10-2025 12:58:02] INFO autoreload 16572 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 12:58:02] INFO autoreload 16572 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 12:58:02] INFO autoreload 10556 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 12:58:02] INFO autoreload 10556 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 12:58:05] INFO autoreload 14916 - Watching for file changes with StatReloader
+[14-10-2025 12:58:05] INFO autoreload 14916 - Watching for file changes with StatReloader
+[14-10-2025 12:58:05] INFO autoreload 12524 - Watching for file changes with StatReloader
+[14-10-2025 12:58:05] INFO autoreload 12524 - Watching for file changes with StatReloader
+[14-10-2025 13:00:34] INFO autoreload 14916 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 13:00:34] INFO autoreload 14916 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 13:00:34] INFO autoreload 12524 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 13:00:34] INFO autoreload 12524 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 13:00:37] INFO autoreload 7784 - Watching for file changes with StatReloader
+[14-10-2025 13:00:37] INFO autoreload 7784 - Watching for file changes with StatReloader
+[14-10-2025 13:00:37] INFO autoreload 11004 - Watching for file changes with StatReloader
+[14-10-2025 13:00:37] INFO autoreload 11004 - Watching for file changes with StatReloader
+[14-10-2025 13:01:22] INFO autoreload 7784 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\wsgi.py changed, reloading.
+[14-10-2025 13:01:22] INFO autoreload 7784 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\wsgi.py changed, reloading.
+[14-10-2025 13:01:22] INFO autoreload 11004 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\wsgi.py changed, reloading.
+[14-10-2025 13:01:22] INFO autoreload 11004 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\wsgi.py changed, reloading.
+[14-10-2025 13:01:25] INFO autoreload 17780 - Watching for file changes with StatReloader
+[14-10-2025 13:01:25] INFO autoreload 17780 - Watching for file changes with StatReloader
+[14-10-2025 13:01:25] INFO autoreload 18700 - Watching for file changes with StatReloader
+[14-10-2025 13:01:25] INFO autoreload 18700 - Watching for file changes with StatReloader
+[14-10-2025 13:01:35] INFO autoreload 1344 - Watching for file changes with StatReloader
+[14-10-2025 13:01:35] INFO autoreload 1344 - Watching for file changes with StatReloader
+[14-10-2025 13:02:42] INFO autoreload 18700 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\urls.py changed, reloading.
+[14-10-2025 13:02:42] INFO autoreload 18700 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\urls.py changed, reloading.
+[14-10-2025 13:02:42] INFO autoreload 1344 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\urls.py changed, reloading.
+[14-10-2025 13:02:42] INFO autoreload 1344 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\urls.py changed, reloading.
+[14-10-2025 13:02:45] INFO autoreload 14012 - Watching for file changes with StatReloader
+[14-10-2025 13:02:45] INFO autoreload 14012 - Watching for file changes with StatReloader
+[14-10-2025 13:02:45] INFO autoreload 11028 - Watching for file changes with StatReloader
+[14-10-2025 13:02:45] INFO autoreload 11028 - Watching for file changes with StatReloader
+[14-10-2025 13:03:18] INFO autoreload 8660 - Watching for file changes with StatReloader
+[14-10-2025 13:03:18] INFO autoreload 8660 - Watching for file changes with StatReloader
+[14-10-2025 13:03:59] INFO autoreload 8660 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\urls.py changed, reloading.
+[14-10-2025 13:03:59] INFO autoreload 8660 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\urls.py changed, reloading.
+[14-10-2025 13:03:59] INFO autoreload 14012 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\urls.py changed, reloading.
+[14-10-2025 13:03:59] INFO autoreload 14012 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\urls.py changed, reloading.
+[14-10-2025 13:04:02] INFO autoreload 14628 - Watching for file changes with StatReloader
+[14-10-2025 13:04:02] INFO autoreload 14628 - Watching for file changes with StatReloader
+[14-10-2025 13:04:02] INFO autoreload 18180 - Watching for file changes with StatReloader
+[14-10-2025 13:04:02] INFO autoreload 18180 - Watching for file changes with StatReloader
+[14-10-2025 13:05:16] INFO autoreload 18180 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 13:05:16] INFO autoreload 18180 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 13:05:17] INFO autoreload 14628 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 13:05:17] INFO autoreload 14628 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 13:05:23] INFO autoreload 17532 - Watching for file changes with StatReloader
+[14-10-2025 13:05:23] INFO autoreload 17532 - Watching for file changes with StatReloader
+[14-10-2025 13:05:23] INFO autoreload 2420 - Watching for file changes with StatReloader
+[14-10-2025 13:05:23] INFO autoreload 2420 - Watching for file changes with StatReloader
+[14-10-2025 13:06:24] INFO autoreload 2420 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 13:06:24] INFO autoreload 2420 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 13:06:24] INFO autoreload 17532 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 13:06:24] INFO autoreload 17532 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 13:06:27] INFO autoreload 3292 - Watching for file changes with StatReloader
+[14-10-2025 13:06:27] INFO autoreload 3292 - Watching for file changes with StatReloader
+[14-10-2025 13:06:28] INFO autoreload 16420 - Watching for file changes with StatReloader
+[14-10-2025 13:06:28] INFO autoreload 16420 - Watching for file changes with StatReloader
+[14-10-2025 13:07:24] INFO autoreload 16420 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 13:07:24] INFO autoreload 16420 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 13:07:24] INFO autoreload 3292 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 13:07:24] INFO autoreload 3292 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 13:07:29] INFO autoreload 2448 - Watching for file changes with StatReloader
+[14-10-2025 13:07:29] INFO autoreload 2448 - Watching for file changes with StatReloader
+[14-10-2025 13:07:41] INFO autoreload 5692 - Watching for file changes with StatReloader
+[14-10-2025 13:07:41] INFO autoreload 5692 - Watching for file changes with StatReloader
+[14-10-2025 13:59:02] INFO autoreload 18860 - Watching for file changes with StatReloader
+[14-10-2025 13:59:02] INFO autoreload 18860 - Watching for file changes with StatReloader
+[14-10-2025 13:59:33] INFO autoreload 18860 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 13:59:33] INFO autoreload 18860 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 13:59:33] INFO autoreload 2448 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 13:59:33] INFO autoreload 2448 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[14-10-2025 13:59:35] INFO autoreload 21188 - Watching for file changes with StatReloader
+[14-10-2025 13:59:35] INFO autoreload 21188 - Watching for file changes with StatReloader
+[14-10-2025 13:59:36] INFO autoreload 10200 - Watching for file changes with StatReloader
+[14-10-2025 13:59:36] INFO autoreload 10200 - Watching for file changes with StatReloader
+[14-10-2025 13:59:47] INFO autoreload 8536 - Watching for file changes with StatReloader
+[14-10-2025 13:59:47] INFO autoreload 8536 - Watching for file changes with StatReloader
+[14-10-2025 14:02:52] INFO autoreload 8536 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\wsgi.py changed, reloading.
+[14-10-2025 14:02:52] INFO autoreload 8536 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\wsgi.py changed, reloading.
+[14-10-2025 14:02:54] INFO autoreload 23512 - Watching for file changes with StatReloader
+[14-10-2025 14:02:54] INFO autoreload 23512 - Watching for file changes with StatReloader
