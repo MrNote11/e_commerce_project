@@ -107,18 +107,18 @@ LOGGING = {
 ENVIRONMENT_VARIABLE = True
 POSTGRESS = True
 
-# database_url = os.environ.get('DB_SUPABASE_ENGINE ')
-# if database_url:
-#     database_url = database_url.strip()  # Remove extra spaces/newlines
-#     database_url = database_url.decode("utf-8") if isinstance(database_url, bytes) else database_url
+database_url = os.environ.get('DB_SUPABASE_ENGINE ')
+if database_url:
+    database_url = database_url.strip()  # Remove extra spaces/newlines
+    database_url = database_url.decode("utf-8") if isinstance(database_url, bytes) else database_url
 
 
-# DB_SUPABASE_ENGINE =  env('DB_SUPABASE_ENGINE')
+DB_SUPABASE_ENGINE =  env('DB_SUPABASE_ENGINE')
 
-# if DB_SUPABASE_ENGINE:
-#      DATABASES ={
-#         "default": dj_database_url.parse(os.environ.get('DATABASE_URL'))
-#                 }
+if DB_SUPABASE_ENGINE:
+     DATABASES ={
+        "default": dj_database_url.parse(os.environ.get('DATABASE_URL'))
+                }
 DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
