@@ -6,7 +6,9 @@ import os  # noqa: E402
 from .base import env
 import dj_database_url
 # SECURITY WARNING: keep the secret key used in production secret!
+
 SECRET_KEY = "django-insecure-uwlel0vl1i5zsjo@z!z-*0m_k#zpb%cp!_75ge_t*!a(b6%e_r"
+
 # SECURITY WARNING: don't run with debug turned on in production!
 
 VERCEL_APP_URL = 'https://tm30-ecom-web-app-beta.vercel.app'
@@ -152,71 +154,71 @@ except Exception as e:
         }
     }
 
-REDIS_HOST = 'localhost'
-REDIS_PORT = 6379
-REDIS_DB = 0
+# REDIS_HOST = 'localhost'
+# REDIS_PORT = 6379
+# REDIS_DB = 0
 
-# Celery Configuration Options
-CELERY_TIMEZONE = "UTC"
-CELERY_TASK_TRACK_STARTED = True
-CELERY_TASK_TIME_LIMIT = 30 * 60
+# # Celery Configuration Options
+# CELERY_TIMEZONE = "UTC"
+# CELERY_TASK_TRACK_STARTED = True
+# CELERY_TASK_TIME_LIMIT = 30 * 60
 
-CELERY_BROKER_URL = f'redis://{REDIS_HOST}:{REDIS_PORT}/1'
-CELERY_RESULT_BACKEND = f'redis://{REDIS_HOST}:{REDIS_PORT}/1'
-CELERY_ACCEPT_CONTENT = ['application/json']
+# CELERY_BROKER_URL = f'redis://{REDIS_HOST}:{REDIS_PORT}/1'
+# CELERY_RESULT_BACKEND = f'redis://{REDIS_HOST}:{REDIS_PORT}/1'
+# CELERY_ACCEPT_CONTENT = ['application/json']
 
 
-CELERY_ACCEPT_CONTENT = ["json"]
-CELERY_TASK_SERIALIZER = "json"
-CELERY_RESULT_SERIALIZER = "json"
+# CELERY_ACCEPT_CONTENT = ["json"]
+# CELERY_TASK_SERIALIZER = "json"
+# CELERY_RESULT_SERIALIZER = "json"
 
-# Email settings
-EMAIL_BACKEND = 'config.email_config.CustomEmailBackend'
+# # Email settings
+# EMAIL_BACKEND = 'config.email_config.CustomEmailBackend'
 
-EMAIL_HOST = os.environ.get('EMAIL_HOST', 'smtp.mailgun.org') # noqa
-EMAIL_PORT = int(os.environ.get('EMAIL_PORT', 587)) # noqa
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
-DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', EMAIL_HOST_USER) # noqa
-EMAIL_HOST = os.environ.get('EMAIL_HOST', 'smtp.gmail.com')
-EMAIL_PORT = int(os.environ.get('EMAIL_PORT', 587))
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
-DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', EMAIL_HOST_USER)
+# EMAIL_HOST = os.environ.get('EMAIL_HOST', 'smtp.mailgun.org') # noqa
+# EMAIL_PORT = int(os.environ.get('EMAIL_PORT', 587)) # noqa
+# EMAIL_USE_TLS = True
+# EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+# EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+# DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', EMAIL_HOST_USER) # noqa
+# EMAIL_HOST = os.environ.get('EMAIL_HOST', 'smtp.gmail.com')
+# EMAIL_PORT = int(os.environ.get('EMAIL_PORT', 587))
+# EMAIL_USE_TLS = True
+# EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+# EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+# DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', EMAIL_HOST_USER)
 
-EMAIL_SSL_CONTEXT = ssl._create_unverified_context()
+# EMAIL_SSL_CONTEXT = ssl._create_unverified_context()
 
-# Cache settings
-CACHES = {
-    'default': {
-        'BACKEND': 'django_redis.cache.RedisCache',
-        'LOCATION': f'redis://{REDIS_HOST}:{REDIS_PORT}/{REDIS_DB}',
-        'OPTIONS': {
-            'CLIENT_CLASS': 'django_redis.client.DefaultClient',
-            'SOCKET_CONNECT_TIMEOUT': 5,
-            'SOCKET_TIMEOUT': 5,
-            'RETRY_ON_TIMEOUT': True,
-            'MAX_CONNECTIONS': 1000,
-            'CONNECTION_POOL_KWARGS': {'max_connections': 100},
-        }
-    }
-}
+# # Cache settings
+# CACHES = {
+#     'default': {
+#         'BACKEND': 'django_redis.cache.RedisCache',
+#         'LOCATION': f'redis://{REDIS_HOST}:{REDIS_PORT}/{REDIS_DB}',
+#         'OPTIONS': {
+#             'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+#             'SOCKET_CONNECT_TIMEOUT': 5,
+#             'SOCKET_TIMEOUT': 5,
+#             'RETRY_ON_TIMEOUT': True,
+#             'MAX_CONNECTIONS': 1000,
+#             'CONNECTION_POOL_KWARGS': {'max_connections': 100},
+#         }
+#     }
+# }
 
-# Cache timeouts
-CACHE_TIMEOUT_SHORT = 300  # 5 minutes for frequently changing data
-CACHE_TIMEOUT_MEDIUM = 1800  # 30 minutes for moderately changing data
-CACHE_TIMEOUT_LONG = 3600  # 1 hour for analytics and rarely changing data
-CACHE_TIMEOUT_VERY_LONG = 86400  # 24 hours for static data
+# # Cache timeouts
+# CACHE_TIMEOUT_SHORT = 300  # 5 minutes for frequently changing data
+# CACHE_TIMEOUT_MEDIUM = 1800  # 30 minutes for moderately changing data
+# CACHE_TIMEOUT_LONG = 3600  # 1 hour for analytics and rarely changing data
+# CACHE_TIMEOUT_VERY_LONG = 86400  # 24 hours for static data
 
-# Use Redis for session storage
-SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
-SESSION_CACHE_ALIAS = 'default'
+# # Use Redis for session storage
+# SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
+# SESSION_CACHE_ALIAS = 'default'
 
-# Payment integration
-PAYSTACK_SECRET_KEY = os.getenv('PAYSTACK_SECRET_KEY', '') # noqa
-PAYSTACK_PUBLIC_KEY = os.getenv('PAYSTACK_PUBLIC_KEY', '') # noqa
-PAYSTACK_API_URL = 'https://api.paystack.co'
+# # Payment integration
+# PAYSTACK_SECRET_KEY = os.getenv('PAYSTACK_SECRET_KEY', '') # noqa
+# PAYSTACK_PUBLIC_KEY = os.getenv('PAYSTACK_PUBLIC_KEY', '') # noqa
+# PAYSTACK_API_URL = 'https://api.paystack.co'
 
-ADMIN_URL = os.environ.get('ADMIN_URL') # noqa
+# ADMIN_URL = os.environ.get('ADMIN_URL') # noqa
