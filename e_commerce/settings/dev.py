@@ -107,29 +107,48 @@ LOGGING = {
 ENVIRONMENT_VARIABLE = True
 POSTGRESS = True
 
-database_url = os.environ.get('DB_SUPABASE_ENGINE ')
-if database_url:
-    database_url = database_url.strip()  # Remove extra spaces/newlines
-    database_url = database_url.decode("utf-8") if isinstance(database_url, bytes) else database_url
-
-
-DB_SUPABASE_ENGINE =  env('DB_SUPABASE_ENGINE')
-
-if DB_SUPABASE_ENGINE:
-     DATABASES ={
-        "default": dj_database_url.parse(os.environ.get('DATABASE_URL'))
-                }
-DATABASES = {
+# Database Configuration - FIXED
+try:
+    # Try to get Supabase database URL first
+    DB_SUPABASE_ENGINE = env('DB_SUPABASE_ENGINE', default=None)
+    
+    if DB_SUPABASE_ENGINE:
+        print("Using Supabase database...")
+        # Clean and ensure it's a string
+        DB_SUPABASE_ENGINE = DB_SUPABASE_ENGINE.strip()
+        
+        # Ensure it's a string, not bytes
+        if isinstance(DB_SUPABASE_ENGINE, bytes):
+            DB_SUPABASE_ENGINE = DB_SUPABASE_ENGINE.decode('utf-8')
+            
+        DATABASES = {
+            "default": dj_database_url.parse(DB_SUPABASE_ENGINE)
+        }
+        print("Supabase database configured successfully")
+    else:
+        # Fallback to local PostgreSQL
+        print("Using local PostgreSQL database...")
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.postgresql_psycopg2',
+                'NAME': 'e_commerce',
+                'USER': 'postgres',
+                'PASSWORD': 'MrNote11',
+                'HOST': 'localhost',
+                'PORT': '5432',
+            }
+        }
+        
+except Exception as e:
+    print(f"Database configuration error: {e}")
+    print("Falling back to SQLite...")
+    # Ultimate fallback to SQLite
+    DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'e_commerce',
-            'USER': 'postgres',
-            'PASSWORD': 'MrNote11',
-            'HOST': 'localhost',
-            'PORT': '5432',
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
-
 
 REDIS_HOST = 'localhost'
 REDIS_PORT = 6379
