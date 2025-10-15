@@ -4293,3 +4293,11 @@ django.core.exceptions.ImproperlyConfigured: settings.DATABASES is improperly co
 [15-10-2025 10:58:31] WARNING basehttp 22476 - "GET /favicon.ico HTTP/1.1" 404 17802
 [15-10-2025 10:58:31] WARNING basehttp 22476 - "GET /favicon.ico HTTP/1.1" 404 17802
 [15-10-2025 10:58:31] WARNING basehttp 22476 - "GET /favicon.ico HTTP/1.1" 404 17802
+[15-10-2025 11:17:15] INFO autoreload 20068 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[15-10-2025 11:17:15] INFO autoreload 20068 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[15-10-2025 11:17:17] INFO autoreload 3232 - Watching for file changes with StatReloader
+[15-10-2025 11:17:17] INFO autoreload 3232 - Watching for file changes with StatReloader
+[15-10-2025 11:17:47] INFO autoreload 3232 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[15-10-2025 11:17:47] INFO autoreload 3232 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[15-10-2025 11:17:49] INFO autoreload 15108 - Watching for file changes with StatReloader
+[15-10-2025 11:17:49] INFO autoreload 15108 - Watching for file changes with StatReloader
