@@ -211,7 +211,7 @@ class SignupSerializerIn(serializers.Serializer):
             # Log the error but don't fail the registration
             log_request(f"Warning: Failed to queue welcome email for user {user.id}: {email_error}")
         
-        return "Onboarding process completed"
+        return "Registered Successful"
 
 
 

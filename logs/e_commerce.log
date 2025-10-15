@@ -4363,3 +4363,19 @@ ConnectionRefusedError: [WinError 10061] No connection could be made because the
 [15-10-2025 12:26:59] INFO autoreload 1532 - Watching for file changes with StatReloader
 [15-10-2025 12:28:00] INFO autoreload 16548 - Watching for file changes with StatReloader
 [15-10-2025 12:28:00] INFO autoreload 16548 - Watching for file changes with StatReloader
+[15-10-2025 12:50:35] INFO autoreload 16548 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[15-10-2025 12:50:35] INFO autoreload 16548 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[15-10-2025 12:50:38] INFO autoreload 17624 - Watching for file changes with StatReloader
+[15-10-2025 12:50:38] INFO autoreload 17624 - Watching for file changes with StatReloader
+[15-10-2025 12:50:45] INFO autoreload 17624 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[15-10-2025 12:50:45] INFO autoreload 17624 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[15-10-2025 12:50:46] INFO autoreload 20344 - Watching for file changes with StatReloader
+[15-10-2025 12:50:46] INFO autoreload 20344 - Watching for file changes with StatReloader
+[15-10-2025 12:50:49] INFO autoreload 20344 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[15-10-2025 12:50:49] INFO autoreload 20344 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[15-10-2025 12:50:50] INFO autoreload 13140 - Watching for file changes with StatReloader
+[15-10-2025 12:50:50] INFO autoreload 13140 - Watching for file changes with StatReloader
+[15-10-2025 12:50:54] INFO autoreload 13140 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[15-10-2025 12:50:54] INFO autoreload 13140 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[15-10-2025 12:50:55] INFO autoreload 14412 - Watching for file changes with StatReloader
+[15-10-2025 12:50:55] INFO autoreload 14412 - Watching for file changes with StatReloader
