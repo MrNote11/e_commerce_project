@@ -4301,3 +4301,54 @@ django.core.exceptions.ImproperlyConfigured: settings.DATABASES is improperly co
 [15-10-2025 11:17:47] INFO autoreload 3232 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
 [15-10-2025 11:17:49] INFO autoreload 15108 - Watching for file changes with StatReloader
 [15-10-2025 11:17:49] INFO autoreload 15108 - Watching for file changes with StatReloader
+[15-10-2025 11:43:53] INFO autoreload 19420 - Watching for file changes with StatReloader
+[15-10-2025 11:43:53] INFO autoreload 19420 - Watching for file changes with StatReloader
+[15-10-2025 11:45:15] INFO autoreload 11988 - Watching for file changes with StatReloader
+[15-10-2025 11:45:15] INFO autoreload 11988 - Watching for file changes with StatReloader
+[15-10-2025 11:45:58] INFO autoreload 20088 - Watching for file changes with StatReloader
+[15-10-2025 11:45:58] INFO autoreload 20088 - Watching for file changes with StatReloader
+[15-10-2025 11:46:12] INFO basehttp 19716 - "GET / HTTP/1.1" 200 41
+[15-10-2025 11:46:12] INFO basehttp 19716 - "GET / HTTP/1.1" 200 41
+[15-10-2025 11:46:12] INFO basehttp 19716 - "GET / HTTP/1.1" 200 41
+[15-10-2025 11:49:12] INFO utils 22232 - Welcome email queued in background thread for user 1 (john.doe@example.com)
+[15-10-2025 11:49:12] INFO utils 22232 - {'requestTime': datetime.datetime(2025, 10, 15, 10, 49, 12, 19365, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': 'e10b1358eeedc23cbd5c8203cd32964313c633bca18a44f7a954b5ce22ac', 'status': True, 'message': 'Onboarding process completed', 'data': {}}
+[15-10-2025 11:49:12] INFO basehttp 22232 - "POST /signup HTTP/1.1" 200 212
+[15-10-2025 11:49:12] INFO basehttp 22232 - "POST /signup HTTP/1.1" 200 212
+[15-10-2025 11:49:12] INFO basehttp 22232 - "POST /signup HTTP/1.1" 200 212
+[15-10-2025 11:49:14] ERROR email_utils 12928 - Template rendering failed for user 1: home/emails/welcome.html
+[15-10-2025 11:49:19] ERROR email_utils 12928 - Failed to send welcome email to user 1: [WinError 10061] No connection could be made because the target machine actively refused it
+[15-10-2025 11:49:19] ERROR email_utils 12928 - Welcome email traceback: Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py", line 142, in _send
+    email_obj.send()
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\mail\message.py", line 299, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\mail\backends\smtp.py", line 127, in send_messages
+    new_conn_created = self.open()
+                       ^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\mail\backends\smtp.py", line 85, in open
+    self.connection = self.connection_class(
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\smtplib.py", line 255, in __init__
+    (code, msg) = self.connect(host, port)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\smtplib.py", line 341, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\smtplib.py", line 312, in _get_socket
+    return socket.create_connection((host, port), timeout,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 851, in create_connection
+    raise exceptions[0]
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 836, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+[15-10-2025 11:54:43] INFO autoreload 20088 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[15-10-2025 11:54:43] INFO autoreload 20088 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[15-10-2025 11:54:49] INFO autoreload 19376 - Watching for file changes with StatReloader
+[15-10-2025 11:54:49] INFO autoreload 19376 - Watching for file changes with StatReloader
+[15-10-2025 11:55:06] INFO autoreload 19376 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[15-10-2025 11:55:06] INFO autoreload 19376 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[15-10-2025 11:55:07] INFO autoreload 8508 - Watching for file changes with StatReloader
+[15-10-2025 11:55:07] INFO autoreload 8508 - Watching for file changes with StatReloader
