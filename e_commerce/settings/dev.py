@@ -110,39 +110,57 @@ LOGGING = {
 
 ENVIRONMENT_VARIABLE = True
 POSTGRESS = True
-
-# Database Configuration - FIXED
+# Database Configuration - CORRECTED
 try:
- # Database Configuration
-    DB_SUPABASE_ENGINE = {
-        'default': dj_database_url.config(
-            default=env('DB_SUPABASE_ENGINE'),  # Your Supabase URL
-            conn_max_age=600,
-            ssl_require=True# conn_health_checks=True,
-        )
-    }
-    if DB_SUPABASE_ENGINE:
-            print("Supabase database configured successfully")
-            
-    elif not DB_SUPABASE_ENGINE:
-         DB_SUPABASE_ENGINE_MANUAL_CONFIG= {
+    # Get the Supabase URL from environment
+    supabase_url = env('DB_SUPABASE_ENGINE', default=None)
+    
+    print(f"Supabase URL from env: {supabase_url}")
+    
+    if supabase_url:
+        print("🔄 Configuring Supabase database...")
+        # Clean the URL
+        supabase_url = str(supabase_url).strip()
+        
+        # Use dj_database_url to parse the URL
+        DATABASES = {
+            'default': dj_database_url.parse(supabase_url)
+        }
+        
+        # Add SSL requirement for Supabase
+        DATABASES['default']['OPTIONS'] = {'sslmode': 'require'}
+        DATABASES['default']['CONN_MAX_AGE'] = 600
+        
+        print("✅ Supabase database configured successfully")
+        
+    else:
+        print("🔄 Supabase not available, trying manual Supabase config...")
+        
+        # Try manual Supabase configuration
+        supabase_host = env('SUPABASE_HOST', default=None)
+        supabase_password = env('SUPABASE_PASSWORD', default=None)
+        
+        if supabase_host and supabase_password:
+            DATABASES = {
                 'default': {
                     'ENGINE': 'django.db.backends.postgresql',
-                    'NAME': 'postgres',  # Default Supabase database name
-                    'USER': 'postgres',  # Default Supabase user
-                    'PASSWORD': env('SUPABASE_PASSWORD'),
-                    'HOST': env('SUPABASE_HOST'),  # db.your-ref.supabase.co
+                    'NAME': 'postgres',
+                    'USER': 'postgres',
+                    'PASSWORD': supabase_password,
+                    'HOST': supabase_host,
                     'PORT': '5432',
                     'OPTIONS': {
-                        'sslmode': 'require',  # Important for Supabase
+                        'sslmode': 'require',
                     },
                 }
             }
-    else:
+            print("✅ Manual Supabase configuration successful")
+        else:
             # Fallback to local PostgreSQL
-        DATABASES = {
+            print("🔄 Using local PostgreSQL database...")
+            DATABASES = {
                 'default': {
-                    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+                    'ENGINE': 'django.db.backends.postgresql',
                     'NAME': 'e_commerce',
                     'USER': 'postgres',
                     'PASSWORD': 'MrNote11',
@@ -150,10 +168,13 @@ try:
                     'PORT': '5432',
                 }
             }
-        
+            print("✅ Local PostgreSQL configured successfully")
+            
 except Exception as e:
-    print(f"Database configuration error: {e}")
-    print("Falling back to SQLite...")
+    print(f"❌ Database configuration error: {e}")
+    import traceback
+    traceback.print_exc()
+    print("🔄 Falling back to SQLite...")
     # Ultimate fallback to SQLite
     DATABASES = {
         'default': {
@@ -161,6 +182,11 @@ except Exception as e:
             'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
+    print("✅ SQLite fallback configured")
+
+# FINAL VERIFICATION - This is crucial!
+print(f"🎯 FINAL DATABASES config: {DATABASES}")
+print(f"🎯 Database ENGINE: {DATABASES['default'].get('ENGINE', 'MISSING ENGINE!')}")
 
 # REDIS_HOST = 'localhost'
 # REDIS_PORT = 6379
