@@ -4352,3 +4352,10 @@ ConnectionRefusedError: [WinError 10061] No connection could be made because the
 [15-10-2025 11:55:06] INFO autoreload 19376 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
 [15-10-2025 11:55:07] INFO autoreload 8508 - Watching for file changes with StatReloader
 [15-10-2025 11:55:07] INFO autoreload 8508 - Watching for file changes with StatReloader
+[15-10-2025 11:56:53] INFO utils 18928 - {'requestTime': datetime.datetime(2025, 10, 15, 10, 56, 53, 683902, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': '367e4c6c4d6800387ab9c5ee3e9dc271dda324e34b55502eedee8ef14b78', 'status': False, 'message': 'User with this email already exists', 'data': {}}
+[15-10-2025 11:56:53] WARNING log 18928 - Bad Request: /signup
+[15-10-2025 11:56:53] WARNING log 18928 - Bad Request: /signup
+[15-10-2025 11:56:53] WARNING log 18928 - Bad Request: /signup
+[15-10-2025 11:56:53] WARNING basehttp 18928 - "POST /signup HTTP/1.1" 400 227
+[15-10-2025 11:56:53] WARNING basehttp 18928 - "POST /signup HTTP/1.1" 400 227
+[15-10-2025 11:56:53] WARNING basehttp 18928 - "POST /signup HTTP/1.1" 400 227
