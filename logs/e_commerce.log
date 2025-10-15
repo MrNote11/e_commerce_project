@@ -4359,3 +4359,7 @@ ConnectionRefusedError: [WinError 10061] No connection could be made because the
 [15-10-2025 11:56:53] WARNING basehttp 18928 - "POST /signup HTTP/1.1" 400 227
 [15-10-2025 11:56:53] WARNING basehttp 18928 - "POST /signup HTTP/1.1" 400 227
 [15-10-2025 11:56:53] WARNING basehttp 18928 - "POST /signup HTTP/1.1" 400 227
+[15-10-2025 12:26:59] INFO autoreload 1532 - Watching for file changes with StatReloader
+[15-10-2025 12:26:59] INFO autoreload 1532 - Watching for file changes with StatReloader
+[15-10-2025 12:28:00] INFO autoreload 16548 - Watching for file changes with StatReloader
+[15-10-2025 12:28:00] INFO autoreload 16548 - Watching for file changes with StatReloader

@@ -148,7 +148,7 @@ try:
                     'USER': 'postgres',
                     'PASSWORD': supabase_password,
                     'HOST': supabase_host,
-                    'PORT': '5432',
+                    'PORT': '6543',
                     'OPTIONS': {
                         'sslmode': 'require',
                     },
