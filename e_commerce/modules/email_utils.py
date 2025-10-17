@@ -174,14 +174,14 @@ def send_verification_email(user_id, first_name, email, verification_url):
         html_message = render_to_string('templates/home/emails/verification_email.html', {
             'first_name': first_name,
             'verification_url': verification_url,
-            'support_email': 'support@yourapp.com'
+            'support_email': settings.EMAIL_HOST_USER
         })
         
         plain_message = strip_tags(html_message)
         
         send_mail(
             subject=subject,
-            message=plain_message,
+            message=f"This is your link",
             from_email=settings.EMAIL_HOST_USER,
             recipient_list=[email],
             html_message=html_message,

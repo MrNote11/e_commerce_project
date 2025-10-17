@@ -11,7 +11,7 @@ GENDER_TYPE_CHOICES = (
 
 # class User(AbstractUser):
 #     is_active = models.BooleanField(default=False)  # Important: default=False
-    
+   
 #     class Meta:
 #         db_table = 'home_user'  # Explicitly set the table name
 
