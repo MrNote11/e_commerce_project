@@ -28,9 +28,9 @@ schema_view = get_schema_view(
     openapi.Info(
         title="HiYield API",
         default_version="v1",
-        description="API documentation for HiYield",
-        terms_of_service="https://www.hiyield.com/terms/",
-        contact=openapi.Contact(email="contact@hiyield.com"),
+        description="API documentation for e_commerce",
+        terms_of_service="https://www.e_commerce.com/terms/",
+        contact=openapi.Contact(email="contact@e_commerce.com"),
         license=openapi.License(name="BSD License"),
     ),
     public=True,

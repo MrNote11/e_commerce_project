@@ -169,21 +169,6 @@ class SignupSerializerIn(serializers.Serializer):
                
         phone = format_phone_number(phone_no)
 
-        # Compare OTP
-        # Decrypt OTP
-        # if not UserOTP.objects.filter(phoneNumber=phone).exists():
-        #     raise InvalidRequestException(
-        #         api_response(message="Please request new OTP", status=False)
-        #     )
-
-        # user_otp = UserOTP.objects.filter(phoneNumber=phone).last()
-        # new_otp = decrypt_text(user_otp.otp)
-        # if new_otp != str(otp):
-        #     raise InvalidRequestException(
-        #         api_response(message="You have submitted an invalid OTP", status=False)
-        #     )
-
-        # Create User with email as username
         user = User.objects.create_user(
             username=email,  # Use email as username
             email=email,
@@ -193,25 +178,37 @@ class SignupSerializerIn(serializers.Serializer):
         user.set_password(raw_password=pword)
         user.save()
 
-        UserProfile.objects.create(
+        user_profile = UserProfile.objects.create(
             user=user,      
             gender=gender,
-            phoneNumber=phone, 
-        )   
+            phoneNumber=phone,
+            email=email,
+            is_verified=False
+
+        )
         
-        # Send welcome email asynchronously in background thread (non-blocking)
+         # Generate verification token and send email
+        verification_token = user_profile.generate_verification_token()
+        
+        # Send verification email
+        verification_url = f"https://e-commerce-project-603j.onrender.com/verify-email/{verification_token}/"
+        
         try:
             send_welcome_email_threaded(
                 user_id=user.id,
                 first_name=first_name,
-                email=email
+                email=email,
+                verification_url=verification_url
             )
             log_request(f"Welcome email queued in background thread for user {user.id} ({email})")
+
+        
         except Exception as email_error:
             # Log the error but don't fail the registration
+            log_request(f"Warning: Failed to send welcome email: {email_error}")
             log_request(f"Warning: Failed to queue welcome email for user {user.id}: {email_error}")
         
-        return "Registered Successful"
+        return "Registered Successful, click on link sent to your mail.."
 
 
 
@@ -252,6 +249,8 @@ class SignupSerializerIn(serializers.Serializer):
 #             "otp": random_otp,
 #             "hint": "data object containing OTP will be removed when sms service start working",
 #         }
+
+
 
 
 class RequestEmailOTPSerializerIn(serializers.Serializer):

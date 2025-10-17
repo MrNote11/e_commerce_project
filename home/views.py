@@ -2,8 +2,10 @@
 # from admin_panel.utils import log_activity
 
 # Imports request validation, standardized API response formatting
+from django.shortcuts import redirect
 from e_commerce.modules.utils import incoming_request_checks, api_response
 
+from e_commerce.modules.utils import log_request
 # Imports custom exception handler for serializer errors
 from e_commerce.modules.exceptions import raise_serializer_error_msg
 
@@ -60,7 +62,7 @@ from datetime import timedelta
 
 # Imports custom throttling classes for rate limiting
 from e_commerce.modules.throttling import AuthRateThrottle, SignupThrottle
-
+from django.conf import settings
 # Imports Python logging for error/activity logging
 import logging
 
@@ -72,7 +74,7 @@ from django.contrib.auth.models import User
 
 # Imports Decimal for precise financial calculations
 from decimal import Decimal 
-
+from e_commerce.modules.email_utils import send_welcome_email_threaded
 
 
 
@@ -271,29 +273,139 @@ class SignupAPIView(APIView):
         return Response(api_response(message=response, status=True))
 
 
-# class RequestOTPView(APIView):
-#     permission_classes = []
-#     @swagger_auto_schema(
-#         request_body=RequestOTPSerializerIn,
-#         responses={200: openapi.Response(description="OTP sent to your phone number")},
-#     )
-#     def post(self, request):
-#         status_, data = incoming_request_checks(request)
-#         if not status_:
-#             return Response(
-#                 api_response(message=data, status=False),
-#                 status=status.HTTP_400_BAD_REQUEST,
-#             )
+# views.py
+class VerifyEmailAPIView(APIView):
+    permission_classes = []
+    
+    @swagger_auto_schema(
+        manual_parameters=[
+            openapi.Parameter(
+                'token',
+                openapi.IN_QUERY,
+                description="Email verification token",
+                type=openapi.TYPE_STRING,
+                required=True
+            )
+        ],
+        responses={
+            200: openapi.Response(description="Email verified successfully"),
+            400: openapi.Response(description="Invalid or expired token")
+        }
+    )
+    def get(self, request):
+        """Verify email via token (for email links)"""
+        token = request.GET.get('token')
+        
+        if not token:
+            return Response(
+                api_response(message="Verification token is required", status=False),
+                status=status.HTTP_400_BAD_REQUEST
+            )
+        
+        try:
+            # Find user profile with this token
+            user_profile = UserProfile.objects.get(verification_token=token)
+            
+            # Check if token is expired
+            if user_profile.is_verification_token_expired():
+                return Response(
+                    api_response(message="Verification link has expired. Please request a new one.", status=False),
+                    status=status.HTTP_400_BAD_REQUEST
+                )
+            
+            
+            # Activate the user
+            user = user_profile.user
+            user.is_active = True
+            user.save()
+            
+            user_profile.is_verified = True
+            user_profile.verification_token = None  # Clear the used token
+            user_profile.save()
+            
+            redirect_url = f"{settings.VERCEL_APP_URL}/?verified=true&email={user.email}"
+            return redirect(redirect_url)
+            
+        except UserProfile.DoesNotExist:
+            return Response(
+                api_response(message="Invalid verification token", status=False),
+                status=status.HTTP_400_BAD_REQUEST
+            )
+        except Exception as e:
+            log_request(f"Email verification error: {e}")
+            return Response(
+                api_response(message="Error verifying email", status=False),
+                status=status.HTTP_400_BAD_REQUEST
+            )
 
-#         serializer = RequestOTPSerializerIn(data=data, context={"request": request})
-#         serializer.is_valid() or raise_serializer_error_msg(errors=serializer.errors)
-#         response = serializer.save()
-#         return Response(
-#             api_response(
-#                 message="OTP sent to you phone number", data=response, status=True
-#             )
-#         )
+class ResendVerificationAPIView(APIView):
+    permission_classes = []
+    
+    @swagger_auto_schema(
+        request_body=openapi.Schema(
+            type=openapi.TYPE_OBJECT,
+            properties={
+                'email': openapi.Schema(type=openapi.TYPE_STRING)
+            }
+        ),
+        responses={200: openapi.Response(description="Verification email sent")}
+    )
+    def post(self, request):
+        """Resend verification email"""
+        status_, data = incoming_request_checks(request)
+        if not status_:
+            return Response(
+                api_response(message=data, status=False),
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+        
+        email = data.get('email')
+        
+        try:
+            user = User.objects.get(email=email)
+            user_profile = user.userprofile
+            
+            # Check if already verified
+            if user.is_active and user_profile.is_verified:
+                return Response(
+                    api_response(message="Account is already verified", status=False),
+                    status=status.HTTP_400_BAD_REQUEST
+                )
+            
+            # Generate new verification token
+            verification_token = user_profile.generate_verification_token()
+            
+            # Build verification URL
+            verification_url = f"https://yourapp.com/verify-email/{verification_token}/"
+            
+            try:
+                send_welcome_email_threaded(
+                    user_id=user.id,
+                    first_name=user.first_name,
+                    email=email,
+                    verification_url=verification_url
+                )
+                log_request(f"Welcome email queued in background thread for user {user.id} ({email})")
 
+        
+            except Exception as email_error:
+                # Log the error but don't fail the registration
+                log_request(f"Warning: Failed to send welcome email: {email_error}")
+                log_request(f"Warning: Failed to queue welcome email for user {user.id}: {email_error}")
+            
+            
+            return Response(
+                api_response(
+                    message="Verification email sent successfully. Please check your inbox.",
+                    status=True
+                )
+            )
+            
+        except User.DoesNotExist:
+            return Response(
+                api_response(message="User with this email not found", status=False),
+                status=status.HTTP_400_BAD_REQUEST
+            )
 
 class RequestEmailOTPView(APIView):
     permission_classes = []

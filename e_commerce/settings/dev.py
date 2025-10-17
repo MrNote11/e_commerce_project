@@ -11,7 +11,7 @@ SECRET_KEY = "django-insecure-uwlel0vl1i5zsjo@z!z-*0m_k#zpb%cp!_75ge_t*!a(b6%e_r
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-VERCEL_APP_URL = 'https://tm30-ecom-web-app-beta.vercel.app'
+VERCEL_APP_URL = env('VERCEL_APP_URL')
 
 ENNIE_LOCALHOST_1 =  'http://localhost:5173'
 
@@ -33,7 +33,6 @@ CORS_ALLOWED_ORIGINS =[
 ]
 
 
-'e-commerce-project-603j.onrender.com'
 
 CSRF_TRUSTED_ORIGINS = CORS_ALLOWED_ORIGINS
 
@@ -108,8 +107,14 @@ LOGGING = {
     },
 }
 
-ENVIRONMENT_VARIABLE = True
-POSTGRESS = True
+#Email
+EMAIL_BACKEND = env('EMAIL_BACKEND')
+EMAIL_HOST = env('EMAIL_HOST')
+EMAIL_PORT = env('EMAIL_PORT')
+EMAIL_USE_TLS = env('EMAIL_USE_TLS')
+EMAIL_HOST_USER  = env('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+
 # Database Configuration - CORRECTED
 try:
     # Get the Supabase URL from environment
@@ -119,75 +124,47 @@ try:
     
     if supabase_url:
         print("🔄 Configuring Supabase database...")
-        # Clean the URL
-        supabase_url = str(supabase_url).strip()
         
-        # Use dj_database_url to parse the URL
-        DATABASES = {
-            'default': dj_database_url.parse(supabase_url)
+        # Parse the URL with specific options for Supabase
+        db_config = dj_database_url.parse(supabase_url)
+        
+        # Add SSL configuration that works with Supabase
+        db_config['OPTIONS'] = {
+            'sslmode': 'require',
+            'sslrootcert': None,  # Let psycopg2 handle SSL automatically
         }
+        db_config['CONN_MAX_AGE'] = 600
+        db_config['DISABLE_SERVER_SIDE_CURSORS'] = True
         
-        # Add SSL requirement for Supabase
-        DATABASES['default']['OPTIONS'] = {'sslmode': 'require'}
-        DATABASES['default']['CONN_MAX_AGE'] = 600
+        DATABASES = {
+            'default': db_config
+        }
         
         print("✅ Supabase database configured successfully")
         
     else:
-        print("🔄 Supabase not available, trying manual Supabase config...")
-        
-        # Try manual Supabase configuration
-        supabase_host = env('SUPABASE_HOST', default=None)
-        supabase_password = env('SUPABASE_PASSWORD', default=None)
-        
-        if supabase_host and supabase_password:
-            DATABASES = {
-                'default': {
-                    'ENGINE': 'django.db.backends.postgresql',
-                    'NAME': 'postgres',
-                    'USER': 'postgres',
-                    'PASSWORD': supabase_password,
-                    'HOST': supabase_host,
-                    'PORT': '6543',
-                    'OPTIONS': {
-                        'sslmode': 'require',
-                    },
-                }
+        print("❌ No Supabase URL found, falling back to SQLite...")
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.sqlite3',
+                'NAME': BASE_DIR / 'db.sqlite3',
             }
-            print("✅ Manual Supabase configuration successful")
-        else:
-            # Fallback to local PostgreSQL
-            print("🔄 Using local PostgreSQL database...")
-            DATABASES = {
-                'default': {
-                    'ENGINE': 'django.db.backends.postgresql',
-                    'NAME': 'e_commerce',
-                    'USER': 'postgres',
-                    'PASSWORD': 'MrNote11',
-                    'HOST': 'localhost',
-                    'PORT': '5432',
-                }
-            }
-            print("✅ Local PostgreSQL configured successfully")
-            
+        }
+        
 except Exception as e:
     print(f"❌ Database configuration error: {e}")
     import traceback
     traceback.print_exc()
     print("🔄 Falling back to SQLite...")
-    # Ultimate fallback to SQLite
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
-    print("✅ SQLite fallback configured")
 
-# FINAL VERIFICATION - This is crucial!
 print(f"🎯 FINAL DATABASES config: {DATABASES}")
 print(f"🎯 Database ENGINE: {DATABASES['default'].get('ENGINE', 'MISSING ENGINE!')}")
-
 # REDIS_HOST = 'localhost'
 # REDIS_PORT = 6379
 # REDIS_DB = 0

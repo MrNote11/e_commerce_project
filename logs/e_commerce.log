@@ -4379,3 +4379,13 @@ ConnectionRefusedError: [WinError 10061] No connection could be made because the
 [15-10-2025 12:50:54] INFO autoreload 13140 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
 [15-10-2025 12:50:55] INFO autoreload 14412 - Watching for file changes with StatReloader
 [15-10-2025 12:50:55] INFO autoreload 14412 - Watching for file changes with StatReloader
+[15-10-2025 13:45:09] INFO autoreload 14412 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[15-10-2025 13:45:09] INFO autoreload 14412 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[15-10-2025 13:45:13] INFO autoreload 21772 - Watching for file changes with StatReloader
+[15-10-2025 13:45:13] INFO autoreload 21772 - Watching for file changes with StatReloader
+[17-10-2025 10:38:23] INFO autoreload 10844 - Watching for file changes with StatReloader
+[17-10-2025 10:38:23] INFO autoreload 10844 - Watching for file changes with StatReloader
+[17-10-2025 11:01:30] INFO autoreload 18124 - Watching for file changes with StatReloader
+[17-10-2025 11:01:30] INFO autoreload 18124 - Watching for file changes with StatReloader
+[17-10-2025 11:09:54] INFO autoreload 10148 - Watching for file changes with StatReloader
+[17-10-2025 11:09:54] INFO autoreload 10148 - Watching for file changes with StatReloader

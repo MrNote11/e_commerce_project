@@ -36,7 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-           #Third parties app
+    
+    #Third parties app
     "rest_framework",
     "rest_framework_simplejwt",
     "rest_framework_simplejwt.token_blacklist",
@@ -73,7 +74,7 @@ ROOT_URLCONF = "e_commerce.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [os.path.join(BASE_DIR, "templates")],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -182,9 +183,14 @@ REST_FRAMEWORK = {
         # "investment": "30/hour",  # Investment operations
         "admin": "1000/hour",  # Admin operations
     },
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
 }
 
-
+SPECTACULAR_SETTINGS = {
+    "TITLE": "e_commerce API",
+    "DESCRIPTION": "API documentation for the Networking application",
+    "VERSION": "1.0.0",
+}
 # Swagger settings for drf_yasg
 SWAGGER_SETTINGS = {
     "SECURITY_DEFINITIONS": {
@@ -242,3 +248,6 @@ SIMPLE_JWT = {
 
 # Add this setting for django.contrib.sites
 SITE_ID = 1
+
+
+# AUTH_USER_MODEL = 'home.User'

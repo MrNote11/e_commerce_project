@@ -8,6 +8,7 @@ from django.core.mail import send_mail, EmailMultiAlternatives
 from django.template.loader import render_to_string
 from django.conf import settings
 from django.contrib.auth.models import User
+from django.utils.html import strip_tags
 import django
 # from investments.models import (
 #         HiVaultInvestment, HiWealthInvestment, EarlyStarterInvestment,
@@ -97,7 +98,7 @@ def send_template_mail_in_thread(subject, template_name, context, from_email, re
 
 
 # Specific email functions for your app 
-def send_welcome_email_threaded(user_id, first_name, email):
+def send_welcome_email_threaded(user_id, first_name, email, verification_url):
     """Send welcome email in background thread"""
     def _send():
         try:
@@ -109,8 +110,8 @@ def send_welcome_email_threaded(user_id, first_name, email):
             subject = "Welcome to e_commerce_app! 🎉"
             context = {
                 "user_name": first_name,
+                "verification_url": verification_url,
                 "user_email": email,
-                "company_name": "HiYield",
             }
             
             # Try to render template, fallback to simple HTML if it fails
@@ -126,16 +127,17 @@ def send_welcome_email_threaded(user_id, first_name, email):
                     <p>Hi {first_name}!</p>
                     <p>We're excited to have you on board!</p>
                     <p>Your account ({email}) has been successfully created.</p>
-                    <p>Best regards,<br>The HiYield Team</p>
+                    <p>This is your link to be activate ({verification_url})
+                    <p>Best regards,<br>The e_commerce_app! Team</p>
                 </div>
                 """
             
-            plain_message = f"Welcome to HiYield, {first_name}! We're excited to have you on board."
+            plain_message = f"Welcome to e_commerce_app, {first_name}! We're excited to have you on board."
             
             email_obj = EmailMultiAlternatives(
                 subject=subject,
                 body=plain_message,
-                from_email=settings.DEFAULT_FROM_EMAIL,
+                from_email=settings.EMAIL_HOST_USER,
                 to=[email]
             )
             email_obj.attach_alternative(html_message, "text/html")
