@@ -9,7 +9,7 @@ from django.shortcuts import get_object_or_404
 from e_commerce.modules.exceptions import InvalidRequestException ,raise_serializer_error_msg
 from django.contrib.auth.password_validation import validate_password 
 # from withdrawals.payment_gateway import PaymentGateway, PaymentGatewayError
-from e_commerce.modules.email_utils import send_welcome_email_threaded
+from e_commerce.modules.email_utils import send_welcome_email_threaded, send_verification_email, send_verification_email_threaded
 
 
 class UserProfileSerializerOut(serializers.ModelSerializer):
@@ -118,21 +118,18 @@ class LoginSerializerIn(serializers.Serializer):
         
         return user
 
-
+# serializers.py
 class SignupSerializerIn(serializers.Serializer):
     password = serializers.CharField()
     phoneNo = serializers.CharField(required=False)
-    # otp = serializers.IntegerField()
     first_name = serializers.CharField()
     last_name = serializers.CharField()
     email = serializers.EmailField()
     gender = serializers.CharField(required=False)
-    
 
     def create(self, validated_data):
         pword = validated_data.get("password")
         phone_no = validated_data.get("phoneNo")
-        # otp = validated_data.get("otp")
         first_name = validated_data.get("first_name")
         last_name = validated_data.get("last_name")
         email = validated_data.get("email")
@@ -141,20 +138,16 @@ class SignupSerializerIn(serializers.Serializer):
         # Check if user with this email already exists
         if User.objects.filter(username=email).exists():
             raise InvalidRequestException(
-                api_response(
-                    message="User with this email already exists", status=False
-                )
+                api_response(message="User with this email already exists", status=False)
             )
 
         if UserProfile.objects.filter(email=email).exists():
             raise InvalidRequestException(
-                api_response(
-                    message="Customer with this email already registered", status=False
-                )
+                api_response(message="Customer with this email already registered", status=False)
             )
         
         # Check if user with this phone number already exists
-        if UserProfile.objects.filter(phoneNumber=phone_no).exists():
+        if phone_no and UserProfile.objects.filter(phoneNumber=phone_no).exists():
             raise InvalidRequestException(
                 api_response(
                     message="Customer with this phone number already registered", status=False
@@ -167,51 +160,59 @@ class SignupSerializerIn(serializers.Serializer):
             log_request(f"Password Validation Error:\nError: {err}")
             raise InvalidRequestException(api_response(message=err, status=False))
                
-        phone = format_phone_number(phone_no)
+        phone = format_phone_number(phone_no) if phone_no else None
 
+        # Create User but mark as inactive
         user = User.objects.create_user(
-            username=email,  # Use email as username
+            username=email,
             email=email,
             first_name=first_name,
-            last_name=last_name
+            last_name=last_name,
+            is_active=False  # User cannot login until verified
         )
         user.set_password(raw_password=pword)
         user.save()
 
+        # Create UserProfile
         user_profile = UserProfile.objects.create(
             user=user,      
             gender=gender,
             phoneNumber=phone,
             email=email,
             is_verified=False
-
         )
         
-         # Generate verification token and send email
+        # Generate verification token and send email
         verification_token = user_profile.generate_verification_token()
         
         # Send verification email
-        verification_url = f"https://e-commerce-project-603j.onrender.com/verify-email/{verification_token}/"
+        self.send_verification_email(user, verification_token, email)
         
+        return {
+            "message": "Registration successful! Please check your email to verify your account.",
+            "user_id": user.id,
+            "email": email
+        }
+
+    def send_verification_email(self, user, verification_token, email):
+        """Send verification email with activation link"""
+        from django.urls import reverse
+        from e_commerce.modules.email_utils import send_verification_email_threaded
+        
+        # Build verification URL
+        verification_url = f"https://yourapp.com/verify-email/{verification_token}/"
+        
+        # Send email asynchronously
         try:
-            send_welcome_email_threaded(
+            send_verification_email_threaded(
                 user_id=user.id,
-                first_name=first_name,
+                first_name=user.first_name,
                 email=email,
                 verification_url=verification_url
             )
-            log_request(f"Welcome email queued in background thread for user {user.id} ({email})")
-
-        
+            log_request(f"Verification email queued for user {user.id} ({email})")
         except Exception as email_error:
-            # Log the error but don't fail the registration
-            log_request(f"Warning: Failed to send welcome email: {email_error}")
-            log_request(f"Warning: Failed to queue welcome email for user {user.id}: {email_error}")
-        
-        return "Registered Successful, click on link sent to your mail.."
-
-
-
+            log_request(f"Warning: Failed to queue verification email for user {user.id}: {email_error}")
 # class RequestOTPSerializerIn(serializers.Serializer):
 #     phone_number = serializers.CharField(required=True)
 

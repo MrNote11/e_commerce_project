@@ -98,7 +98,7 @@ def send_template_mail_in_thread(subject, template_name, context, from_email, re
 
 
 # Specific email functions for your app 
-def send_welcome_email_threaded(user_id, first_name, email, verification_url):
+def send_welcome_email_threaded(user_id, first_name, email):
     """Send welcome email in background thread"""
     def _send():
         try:
@@ -110,13 +110,12 @@ def send_welcome_email_threaded(user_id, first_name, email, verification_url):
             subject = "Welcome to e_commerce_app! 🎉"
             context = {
                 "user_name": first_name,
-                "verification_url": verification_url,
                 "user_email": email,
             }
             
             # Try to render template, fallback to simple HTML if it fails
             try:
-                html_message = render_to_string("home/emails/welcome.html", context)
+                html_message = render_to_string("templates/home/emails/welcome.html", context)
                 logger.info(f"Welcome template rendered successfully for user {user_id}")
             except Exception as template_error:
                 logger.error(f"Template rendering failed for user {user_id}: {template_error}")
@@ -127,7 +126,6 @@ def send_welcome_email_threaded(user_id, first_name, email, verification_url):
                     <p>Hi {first_name}!</p>
                     <p>We're excited to have you on board!</p>
                     <p>Your account ({email}) has been successfully created.</p>
-                    <p>This is your link to be activate ({verification_url})
                     <p>Best regards,<br>The e_commerce_app! Team</p>
                 </div>
                 """
@@ -151,6 +149,50 @@ def send_welcome_email_threaded(user_id, first_name, email, verification_url):
     
     threading.Thread(target=_send, daemon=True).start()
 
+
+# email_utils.py
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
+from django.utils.html import strip_tags
+from threading import Thread
+import logging
+
+logger = logging.getLogger(__name__)
+
+def send_verification_email_threaded(user_id, first_name, email, verification_url):
+    """Send verification email in background thread"""
+    thread = Thread(target=send_verification_email, args=(user_id, first_name, email, verification_url))
+    thread.daemon = True
+    thread.start()
+
+def send_verification_email(user_id, first_name, email, verification_url):
+    """Send account verification email"""
+    try:
+        subject = "Verify Your Account - Welcome to Our Platform!"
+        
+        # HTML email content
+        html_message = render_to_string('templates/home/emails/verification_email.html', {
+            'first_name': first_name,
+            'verification_url': verification_url,
+            'support_email': 'support@yourapp.com'
+        })
+        
+        plain_message = strip_tags(html_message)
+        
+        send_mail(
+            subject=subject,
+            message=plain_message,
+            from_email=settings.EMAIL_HOST_USER,
+            recipient_list=[email],
+            html_message=html_message,
+            fail_silently=False,
+        )
+        
+        logger.info(f"Verification email sent to {email} for user {user_id}")
+        
+    except Exception as e:
+        logger.error(f"Failed to send verification email to {email}: {str(e)}")
+        raise
 
 # #investment created email
 # def send_investment_created_email_threaded(user_id, investment_id, investment_type, transaction_reference):

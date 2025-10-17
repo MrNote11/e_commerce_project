@@ -323,6 +323,16 @@ class VerifyEmailAPIView(APIView):
             user_profile.verification_token = None  # Clear the used token
             user_profile.save()
             
+             # Send welcome email
+            try:
+                send_welcome_email_threaded(
+                    user_id=user.id,
+                    first_name=user.first_name,
+                    email=user.email
+                )
+            except Exception as email_error:
+                log_request(f"Warning: Failed to send welcome email: {email_error}")
+            
             redirect_url = f"{settings.VERCEL_APP_URL}/?verified=true&email={user.email}"
             return redirect(redirect_url)
             
