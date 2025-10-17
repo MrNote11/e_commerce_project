@@ -4389,3 +4389,9 @@ ConnectionRefusedError: [WinError 10061] No connection could be made because the
 [17-10-2025 11:01:30] INFO autoreload 18124 - Watching for file changes with StatReloader
 [17-10-2025 11:09:54] INFO autoreload 10148 - Watching for file changes with StatReloader
 [17-10-2025 11:09:54] INFO autoreload 10148 - Watching for file changes with StatReloader
+[17-10-2025 11:17:58] INFO autoreload 6484 - Watching for file changes with StatReloader
+[17-10-2025 11:17:58] INFO autoreload 6484 - Watching for file changes with StatReloader
+[17-10-2025 11:23:34] INFO autoreload 6484 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[17-10-2025 11:23:34] INFO autoreload 6484 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\settings\dev.py changed, reloading.
+[17-10-2025 11:23:36] INFO autoreload 7544 - Watching for file changes with StatReloader
+[17-10-2025 11:23:36] INFO autoreload 7544 - Watching for file changes with StatReloader
