@@ -26,7 +26,7 @@ from drf_yasg import openapi
 
 schema_view = get_schema_view(
     openapi.Info(
-        title="HiYield API",
+        title="e_commerce API",
         default_version="v1",
         description="API documentation for e_commerce",
         terms_of_service="https://www.e_commerce.com/terms/",

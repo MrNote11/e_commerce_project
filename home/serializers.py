@@ -11,7 +11,8 @@ from e_commerce.modules.exceptions import InvalidRequestException ,raise_seriali
 from django.contrib.auth.password_validation import validate_password 
 # from withdrawals.payment_gateway import PaymentGateway, PaymentGatewayError
 from e_commerce.modules.email_utils import send_welcome_email_threaded, send_verification_email
-
+   # Import the email function
+from e_commerce.modules.email_utils import send_verification_email
 
 class UserProfileSerializerOut(serializers.ModelSerializer):
     username = serializers.SerializerMethodField()
@@ -189,11 +190,11 @@ class SignupSerializerIn(serializers.Serializer):
         verification_token = user_profile.generate_verification_token()
         verification_url = f"{request.build_absolute_uri('/')}verify-email/?token={verification_token}"
         
+        print(f"verification url: {verification_url}")
         
           # Send verification email - FIXED
         try:
-            # Import the email function
-            from e_commerce.modules.email_utils import send_verification_email
+         
             
             # Send email in thread
             threading.Thread(

@@ -164,22 +164,22 @@ def send_verification_email(user_id, email, verification_url):
         
         If you didn't create an account, please ignore this email.
         """
-        
+        print(f"subjects:{subject},\nmessage:{plain_message},\nfrom:{settings.EMAIL_HOST_USER},\nrecipient:{email},\nhtml message:{html_message}")
         # Send the email
         send_mail(
-            subject=subject,
-            message=plain_message,
-            from_email=settings.EMAIL_HOST_USER,
-            recipient_list=[email],
-            html_message=html_message,
-            fail_silently=False,
+            subject,
+            plain_message,
+            settings.DEFAULT_FROM_EMAIL,
+            [email],
+            html_message,
+            False,
         )
         
-        logger.info(f"✅ Verification email sent successfully to {email}")
+        logger.info(f" Verification email sent successfully to {email}")
         return True
         
     except Exception as e:
-        logger.error(f"❌ Failed to send verification email to {email}: {str(e)}")
+        logger.error(f" Failed to send verification email to {email}: {str(e)}")
         return False
 
 def send_welcome_email_threaded(user_id, first_name, email):
@@ -223,6 +223,7 @@ def send_welcome_email_threaded(user_id, first_name, email):
             Best regards,
             The E-Commerce Team
             """
+            print(f"subjects:{subject},\nmessage:{plain_message},\nfrom:{settings.EMAIL_HOST_USER},\nrecipient:{email},\nhtml message:{html_message}")
             
             send_mail(
                 subject=subject,
@@ -233,9 +234,9 @@ def send_welcome_email_threaded(user_id, first_name, email):
                 fail_silently=False,
             )
             
-            logger.info(f"✅ Welcome email sent successfully to user {user_id} ({email})")
+            logger.info(f" Welcome email sent successfully to user {user_id} ({email})")
         except Exception as e:
-            logger.error(f"❌ Failed to send welcome email to user {user_id}: {e}")
+            logger.error(f" Failed to send welcome email to user {user_id}: {e}")
     
     # Start the thread
     thread = threading.Thread(target=_send, daemon=True)
