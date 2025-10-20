@@ -184,35 +184,26 @@ class SignupSerializerIn(serializers.Serializer):
         
         # Generate verification token and send email
         verification_token = user_profile.generate_verification_token()
+        verification_url = f"https://yourapp.com/verify-email/{verification_token}/"
+        
         
         # Send verification email
-        self.send_verification_email(user, verification_token, email)
+        try:
+            # Build verification URL
+            self.send_verification_email(user, verification_url, email)
         
+            log_request(f"Verification email queued for user {user.id} ({email})")
+        except Exception as email_error:
+            log_request(f"Warning: Failed to queue verification email for user {user.id}: {email_error}")
+            
         return {
             "message": "Registration successful! Please check your email to verify your account.",
             "user_id": user.id,
             "email": email
         }
 
-    def send_verification_email(self, user, verification_token, email):
-        """Send verification email with activation link"""
-        from django.urls import reverse
-        from e_commerce.modules.email_utils import send_verification_email_threaded
-        
-        # Build verification URL
-        verification_url = f"https://yourapp.com/verify-email/{verification_token}/"
-        
-        # Send email asynchronously
-        try:
-            send_verification_email_threaded(
-                user_id=user.id,
-                first_name=user.first_name,
-                email=email,
-                verification_url=verification_url
-            )
-            log_request(f"Verification email queued for user {user.id} ({email})")
-        except Exception as email_error:
-            log_request(f"Warning: Failed to queue verification email for user {user.id}: {email_error}")
+       
+            
 # class RequestOTPSerializerIn(serializers.Serializer):
 #     phone_number = serializers.CharField(required=True)
 

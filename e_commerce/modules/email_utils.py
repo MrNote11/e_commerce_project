@@ -159,33 +159,43 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-def send_verification_email_threaded(user_id, first_name, email, verification_url):
-    """Send verification email in background thread"""
-    thread = Thread(target=send_verification_email, args=(user_id, first_name, email, verification_url))
-    thread.daemon = True
-    thread.start()
+# def send_verification_email_threaded(user_id, first_name, email, verification_url):
+#     """Send verification email in background thread"""
+#     thread = Thread(target=send_verification_email, args=(user_id, first_name, email, verification_url))
+#     thread.daemon = True
+#     thread.start()
 
-def send_verification_email(user_id, first_name, email, verification_url):
+def send_verification_email(user_id, email, verification_url):
     """Send account verification email"""
     try:
         subject = "Verify Your Account - Welcome to Our Platform!"
         
+        django.setup()  # Ensure Django is properly initialized in thread
+            
+        user = User.objects.get(id=user_id)
         # HTML email content
         html_message = render_to_string('templates/home/emails/verification_email.html', {
-            'first_name': first_name,
+            'first_name': user.first_name,
             'verification_url': verification_url,
             'support_email': settings.EMAIL_HOST_USER
         })
         
         plain_message = strip_tags(html_message)
         
+        # send_mail(
+        #     subject=subject,
+        #     message=f"This is your link",
+        #     from_email=settings.EMAIL_HOST_USER,
+        #     recipient_list=[email],
+        #     html_message=html_message,
+        #     fail_silently=False,
+        # )
         send_mail(
-            subject=subject,
-            message=f"This is your link",
-            from_email=settings.EMAIL_HOST_USER,
-            recipient_list=[email],
-            html_message=html_message,
-            fail_silently=False,
+            'Verify Your Account',
+            f'Click the following link within 10 minutes to verify your account: {verification_url}',
+            settings.EMAIL_HOST_USER,
+            [email],
+            fail_silently=False
         )
         
         logger.info(f"Verification email sent to {email} for user {user_id}")
