@@ -174,13 +174,13 @@ def send_verification_email(user_id, email, verification_url):
             
         user = User.objects.get(id=user_id)
         # HTML email content
-        html_message = render_to_string("home/emails/verification_email.html", {
-            'first_name': user.first_name,
-            'verification_url': verification_url,
-            'support_email': settings.EMAIL_HOST_USER
-        })
+        # html_message = render_to_string("home/emails/verification_email.html", {
+        #     'first_name': user.first_name,
+        #     'verification_url': verification_url,
+        #     'support_email': settings.EMAIL_HOST_USER
+        # })
         
-        plain_message = strip_tags(html_message)
+        # plain_message = strip_tags(html_message)
         
         # send_mail(
         #     subject=subject,
