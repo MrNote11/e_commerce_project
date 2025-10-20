@@ -10,6 +10,10 @@ from django.conf import settings
 from django.contrib.auth.models import User
 from django.utils.html import strip_tags
 import django
+from django.template.loader import render_to_string
+from threading import Thread
+import logging
+
 # from investments.models import (
 #         HiVaultInvestment, HiWealthInvestment, EarlyStarterInvestment,
 #         HalalInvestment, ReliefInvestment, SeniorsInvestment, VacayInvestment)
@@ -97,113 +101,146 @@ def send_template_mail_in_thread(subject, template_name, context, from_email, re
     threading.Thread(target=_send, daemon=True).start()
 
 
-# Specific email functions for your app 
-def send_welcome_email_threaded(user_id, first_name, email):
-    """Send welcome email in background thread"""
-    def _send():
-        try:
-           
-            django.setup()  # Ensure Django is properly initialized in thread
-            
-            user = User.objects.get(id=user_id)
-            
-            subject = "Welcome to e_commerce_app! 🎉"
-            context = {
-                "user_name": first_name,
-                "user_email": email,
-            }
-            
-            # Try to render template, fallback to simple HTML if it fails
-            try:
-                html_message = render_to_string("templates/home/emails/welcome.html", context)
-                logger.info(f"Welcome template rendered successfully for user {user_id}")
-            except Exception as template_error:
-                logger.error(f"Template rendering failed for user {user_id}: {template_error}")
-                # Fallback to simple HTML
-                html_message = f"""
-                <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-                    <h1 style="color: #2c3e50;">Welcome to HiYield! 🎉</h1>
-                    <p>Hi {first_name}!</p>
-                    <p>We're excited to have you on board!</p>
-                    <p>Your account ({email}) has been successfully created.</p>
-                    <p>Best regards,<br>The e_commerce_app! Team</p>
-                </div>
-                """
-            
-            plain_message = f"Welcome to e_commerce_app, {first_name}! We're excited to have you on board."
-            
-            email_obj = EmailMultiAlternatives(
-                subject=subject,
-                body=plain_message,
-                from_email=settings.EMAIL_HOST_USER,
-                to=[email]
-            )
-            email_obj.attach_alternative(html_message, "text/html")
-            email_obj.send()
-            
-            logger.info(f"Welcome email sent successfully to user {user_id} ({email})")
-        except Exception as e:
-            logger.error(f"Failed to send welcome email to user {user_id}: {e}")
-            import traceback
-            logger.error(f"Welcome email traceback: {traceback.format_exc()}")
-    
-    threading.Thread(target=_send, daemon=True).start()
-
-
-# email_utils.py
+import logging
+import threading
 from django.core.mail import send_mail
+from django.conf import settings
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
-from threading import Thread
-import logging
+import django
 
 logger = logging.getLogger(__name__)
-
-# def send_verification_email_threaded(user_id, first_name, email, verification_url):
-#     """Send verification email in background thread"""
-#     thread = Thread(target=send_verification_email, args=(user_id, first_name, email, verification_url))
-#     thread.daemon = True
-#     thread.start()
 
 def send_verification_email(user_id, email, verification_url):
     """Send account verification email"""
     try:
-        subject = "Verify Your Account - Welcome to Our Platform!"
+        # Initialize Django for thread safety
+        django.setup()
         
-        django.setup()  # Ensure Django is properly initialized in thread
-            
-        user = User.objects.get(id=user_id)
-        # HTML email content
-        # html_message = render_to_string("home/emails/verification_email.html", {
-        #     'first_name': user.first_name,
-        #     'verification_url': verification_url,
-        #     'support_email': settings.EMAIL_HOST_USER
-        # })
+        subject = "Verify Your Email Address - Action Required"
         
-        # plain_message = strip_tags(html_message)
+        # Create both HTML and plain text versions
+        html_message = f"""
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <style>
+                body {{ font-family: Arial, sans-serif; line-height: 1.6; color: #333; }}
+                .container {{ max-width: 600px; margin: 0 auto; padding: 20px; }}
+                .button {{ display: inline-block; padding: 12px 24px; background: #007bff; 
+                         color: white; text-decoration: none; border-radius: 4px; }}
+                .footer {{ margin-top: 20px; padding-top: 20px; border-top: 1px solid #eee; 
+                         font-size: 12px; color: #666; }}
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <h2>Verify Your Email Address</h2>
+                <p>Thank you for registering with our e-commerce platform!</p>
+                <p>Please click the button below to verify your email address:</p>
+                <p>
+                    <a href="{verification_url}" class="button">Verify Email Address</a>
+                </p>
+                <p>Or copy and paste this link in your browser:</p>
+                <p><a href="{verification_url}">{verification_url}</a></p>
+                <p>This link will expire in 24 hours.</p>
+                <div class="footer">
+                    <p>If you didn't create an account, please ignore this email.</p>
+                </div>
+            </div>
+        </body>
+        </html>
+        """
         
-        # send_mail(
-        #     subject=subject,
-        #     message=f"This is your link",
-        #     from_email=settings.EMAIL_HOST_USER,
-        #     recipient_list=[email],
-        #     html_message=html_message,
-        #     fail_silently=False,
-        # )
+        plain_message = f"""
+        Verify Your Email Address
+        
+        Thank you for registering with our e-commerce platform!
+        
+        Please click the following link to verify your email address:
+        {verification_url}
+        
+        This link will expire in 24 hours.
+        
+        If you didn't create an account, please ignore this email.
+        """
+        
+        # Send the email
         send_mail(
-            'Verify Your Account',
-            f'Click the following link within 10 minutes to verify your account: {verification_url}',
-            settings.EMAIL_HOST_USER,
-            [email],
-            fail_silently=False
+            subject=subject,
+            message=plain_message,
+            from_email=settings.EMAIL_HOST_USER,
+            recipient_list=[email],
+            html_message=html_message,
+            fail_silently=False,
         )
         
-        logger.info(f"Verification email sent to {email} for user {user_id}")
+        logger.info(f"✅ Verification email sent successfully to {email}")
+        return True
         
     except Exception as e:
-        logger.error(f"Failed to send verification email to {email}: {str(e)}")
-        raise
+        logger.error(f"❌ Failed to send verification email to {email}: {str(e)}")
+        return False
 
+def send_welcome_email_threaded(user_id, first_name, email):
+    """Send welcome email in background thread"""
+    def _send():
+        try:
+            django.setup()  # Ensure Django is properly initialized in thread
+            
+            subject = "Welcome to Our E-Commerce Store! 🎉"
+            
+            html_message = f"""
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <style>
+                    body {{ font-family: Arial, sans-serif; line-height: 1.6; color: #333; }}
+                    .container {{ max-width: 600px; margin: 0 auto; padding: 20px; }}
+                </style>
+            </head>
+            <body>
+                <div class="container">
+                    <h1 style="color: #2c3e50;">Welcome to Our Store! 🎉</h1>
+                    <p>Hi <strong>{first_name}</strong>!</p>
+                    <p>We're excited to have you on board!</p>
+                    <p>Your account <strong>({email})</strong> has been successfully verified.</p>
+                    <p>You can now login and start shopping!</p>
+                    <p>Best regards,<br>The E-Commerce Team</p>
+                </div>
+            </body>
+            </html>
+            """
+            
+            plain_message = f"""
+            Welcome to Our E-Commerce Store, {first_name}!
+            
+            We're excited to have you on board!
+            Your account ({email}) has been successfully verified.
+            
+            You can now login and start shopping!
+            
+            Best regards,
+            The E-Commerce Team
+            """
+            
+            send_mail(
+                subject=subject,
+                message=plain_message,
+                from_email=settings.DEFAULT_FROM_EMAIL,
+                recipient_list=[email],
+                html_message=html_message,
+                fail_silently=False,
+            )
+            
+            logger.info(f"✅ Welcome email sent successfully to user {user_id} ({email})")
+        except Exception as e:
+            logger.error(f"❌ Failed to send welcome email to user {user_id}: {e}")
+    
+    # Start the thread
+    thread = threading.Thread(target=_send, daemon=True)
+    thread.start()
+    
 # #investment created email
 # def send_investment_created_email_threaded(user_id, investment_id, investment_type, transaction_reference):
 #     """Send investment created email in background thread"""

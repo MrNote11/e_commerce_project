@@ -1,3 +1,4 @@
+import threading
 from rest_framework import serializers
 from .models import UserProfile, User, UserOTP #, SiteSetting, AccountTier, FinancialTransaction, UserFinancialSummary, BVNVerificationAttempt, BankAccount
 from django.contrib.auth.hashers import check_password, make_password
@@ -118,6 +119,7 @@ class LoginSerializerIn(serializers.Serializer):
         
         return user
 
+
 # serializers.py
 class SignupSerializerIn(serializers.Serializer):
     password = serializers.CharField()
@@ -182,15 +184,23 @@ class SignupSerializerIn(serializers.Serializer):
             is_verified=False
         )
         
+        request = self.context.get('request')
         # Generate verification token and send email
         verification_token = user_profile.generate_verification_token()
-        verification_url = f"https://yourapp.com/verify-email/{verification_token}/"
+        verification_url = f"{request.build_absolute_uri('/')}verify-email/?token={verification_token}"
         
         
-        # Send verification email
+          # Send verification email - FIXED
         try:
-            # Build verification URL
-            self.send_verification_email(user, verification_url, email)
+            # Import the email function
+            from e_commerce.modules.email_utils import send_verification_email
+            
+            # Send email in thread
+            threading.Thread(
+                target=send_verification_email,
+                args=(user.id, user.email, verification_url),
+                daemon=True
+            ).start()
         
             log_request(f"Verification email queued for user {user.id} ({email})")
         except Exception as email_error:
