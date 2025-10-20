@@ -9,7 +9,7 @@ from django.shortcuts import get_object_or_404
 from e_commerce.modules.exceptions import InvalidRequestException ,raise_serializer_error_msg
 from django.contrib.auth.password_validation import validate_password 
 # from withdrawals.payment_gateway import PaymentGateway, PaymentGatewayError
-from e_commerce.modules.email_utils import send_welcome_email_threaded, send_verification_email, send_verification_email_threaded
+from e_commerce.modules.email_utils import send_welcome_email_threaded, send_verification_email
 
 
 class UserProfileSerializerOut(serializers.ModelSerializer):
