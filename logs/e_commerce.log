@@ -5587,3 +5587,139 @@ django.contrib.auth.models.User.DoesNotExist: User matching query does not exist
 [21-10-2025 18:21:14] WARNING basehttp 20524 - "POST /signup HTTP/1.1" 400 227
 [21-10-2025 18:21:14] WARNING basehttp 20524 - "POST /signup HTTP/1.1" 400 227
 [21-10-2025 18:21:14] WARNING basehttp 20524 - "POST /signup HTTP/1.1" 400 227
+[21-10-2025 18:22:18] INFO autoreload 15184 - Watching for file changes with StatReloader
+[21-10-2025 18:22:18] INFO autoreload 15184 - Watching for file changes with StatReloader
+[21-10-2025 18:28:03] INFO utils 19960 - Verification email queued for user 32 (alidsulaiman11@gmail.com)
+[21-10-2025 18:28:03] ERROR email_utils 16492 -  Failed to send verification email to alidsulaiman11@gmail.com: API key is required. Either pass it as 'api_key' parameter or set the 'MAILERSEND_API_KEY' environment variable.
+[21-10-2025 18:28:03] INFO utils 19960 - {'requestTime': datetime.datetime(2025, 10, 21, 17, 28, 3, 710355, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': 'efed60a4cc2b341de379d267abecb986d5de363cf5b6c802d79f7cb4e2c4', 'status': True, 'message': {'message': 'Registration successful! Please check your email to verify your account.', 'user_id': 32, 'email': 'alidsulaiman11@gmail.com'}, 'data': {}}
+[21-10-2025 18:28:04] INFO basehttp 19960 - "POST /signup HTTP/1.1" 200 316
+[21-10-2025 18:28:04] INFO basehttp 19960 - "POST /signup HTTP/1.1" 200 316
+[21-10-2025 18:28:04] INFO basehttp 19960 - "POST /signup HTTP/1.1" 200 316
+[21-10-2025 18:28:36] INFO basehttp 18984 - "GET /verify-email/?token=eQf0qbj0ZHYAx34XPDaSZFopW3veg4LQeysvc7iGz9M HTTP/1.1" 302 0
+[21-10-2025 18:28:36] INFO basehttp 18984 - "GET /verify-email/?token=eQf0qbj0ZHYAx34XPDaSZFopW3veg4LQeysvc7iGz9M HTTP/1.1" 302 0
+[21-10-2025 18:28:36] INFO basehttp 18984 - "GET /verify-email/?token=eQf0qbj0ZHYAx34XPDaSZFopW3veg4LQeysvc7iGz9M HTTP/1.1" 302 0
+[21-10-2025 18:28:40] INFO email_utils 20536 -  Welcome email sent successfully to user 32 (alidsulaiman11@gmail.com)
+[21-10-2025 18:35:52] INFO autoreload 15184 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[21-10-2025 18:35:52] INFO autoreload 15184 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[21-10-2025 18:36:01] INFO autoreload 4040 - Watching for file changes with StatReloader
+[21-10-2025 18:36:01] INFO autoreload 4040 - Watching for file changes with StatReloader
+[21-10-2025 18:37:09] INFO autoreload 4040 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[21-10-2025 18:37:09] INFO autoreload 4040 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[21-10-2025 18:37:13] INFO autoreload 15668 - Watching for file changes with StatReloader
+[21-10-2025 18:37:13] INFO autoreload 15668 - Watching for file changes with StatReloader
+[21-10-2025 18:37:58] INFO autoreload 15668 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 18:37:58] INFO autoreload 15668 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 18:38:00] INFO autoreload 20336 - Watching for file changes with StatReloader
+[21-10-2025 18:38:00] INFO autoreload 20336 - Watching for file changes with StatReloader
+[21-10-2025 18:38:08] INFO autoreload 20336 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 18:38:08] INFO autoreload 20336 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 18:38:10] INFO autoreload 1100 - Watching for file changes with StatReloader
+[21-10-2025 18:38:10] INFO autoreload 1100 - Watching for file changes with StatReloader
+[21-10-2025 18:38:20] INFO autoreload 1100 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 18:38:20] INFO autoreload 1100 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 18:38:22] INFO autoreload 804 - Watching for file changes with StatReloader
+[21-10-2025 18:38:22] INFO autoreload 804 - Watching for file changes with StatReloader
+[21-10-2025 18:38:44] INFO autoreload 804 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 18:38:44] INFO autoreload 804 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 18:38:58] INFO autoreload 17928 - Watching for file changes with StatReloader
+[21-10-2025 18:38:58] INFO autoreload 17928 - Watching for file changes with StatReloader
+[21-10-2025 18:39:19] INFO autoreload 17928 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 18:39:19] INFO autoreload 17928 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 18:39:24] INFO autoreload 19644 - Watching for file changes with StatReloader
+[21-10-2025 18:39:24] INFO autoreload 19644 - Watching for file changes with StatReloader
+[21-10-2025 18:40:33] INFO autoreload 19644 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[21-10-2025 18:40:33] INFO autoreload 19644 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[21-10-2025 18:40:37] INFO autoreload 12392 - Watching for file changes with StatReloader
+[21-10-2025 18:40:37] INFO autoreload 12392 - Watching for file changes with StatReloader
+[21-10-2025 18:41:18] INFO autoreload 12392 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[21-10-2025 18:41:18] INFO autoreload 12392 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[21-10-2025 18:41:20] INFO autoreload 16572 - Watching for file changes with StatReloader
+[21-10-2025 18:41:20] INFO autoreload 16572 - Watching for file changes with StatReloader
+[21-10-2025 18:42:47] INFO autoreload 16572 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 18:42:47] INFO autoreload 16572 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 18:42:51] INFO autoreload 5216 - Watching for file changes with StatReloader
+[21-10-2025 18:42:51] INFO autoreload 5216 - Watching for file changes with StatReloader
+[21-10-2025 18:42:56] INFO autoreload 5216 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 18:42:56] INFO autoreload 5216 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 18:42:57] INFO autoreload 13424 - Watching for file changes with StatReloader
+[21-10-2025 18:42:57] INFO autoreload 13424 - Watching for file changes with StatReloader
+[21-10-2025 18:43:05] INFO autoreload 13424 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 18:43:05] INFO autoreload 13424 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 18:43:08] INFO autoreload 10076 - Watching for file changes with StatReloader
+[21-10-2025 18:43:08] INFO autoreload 10076 - Watching for file changes with StatReloader
+[21-10-2025 18:43:13] INFO autoreload 10076 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 18:43:13] INFO autoreload 10076 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 18:43:14] INFO autoreload 21112 - Watching for file changes with StatReloader
+[21-10-2025 18:43:14] INFO autoreload 21112 - Watching for file changes with StatReloader
+[21-10-2025 18:43:21] INFO autoreload 21112 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 18:43:21] INFO autoreload 21112 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 18:43:32] INFO autoreload 16068 - Watching for file changes with StatReloader
+[21-10-2025 18:43:32] INFO autoreload 16068 - Watching for file changes with StatReloader
+[21-10-2025 18:43:42] INFO autoreload 16068 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 18:43:42] INFO autoreload 16068 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 18:43:45] INFO autoreload 16476 - Watching for file changes with StatReloader
+[21-10-2025 18:43:45] INFO autoreload 16476 - Watching for file changes with StatReloader
+[21-10-2025 18:43:52] INFO autoreload 16476 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 18:43:52] INFO autoreload 16476 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 18:43:54] INFO autoreload 17704 - Watching for file changes with StatReloader
+[21-10-2025 18:43:54] INFO autoreload 17704 - Watching for file changes with StatReloader
+[21-10-2025 18:44:02] INFO autoreload 17704 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 18:44:02] INFO autoreload 17704 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 18:44:04] INFO autoreload 456 - Watching for file changes with StatReloader
+[21-10-2025 18:44:04] INFO autoreload 456 - Watching for file changes with StatReloader
+[21-10-2025 18:44:08] INFO autoreload 456 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 18:44:08] INFO autoreload 456 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 18:44:10] INFO autoreload 19704 - Watching for file changes with StatReloader
+[21-10-2025 18:44:10] INFO autoreload 19704 - Watching for file changes with StatReloader
+[21-10-2025 18:44:20] INFO autoreload 19704 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 18:44:20] INFO autoreload 19704 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 18:44:22] INFO autoreload 14316 - Watching for file changes with StatReloader
+[21-10-2025 18:44:22] INFO autoreload 14316 - Watching for file changes with StatReloader
+[21-10-2025 18:44:29] INFO autoreload 14316 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 18:44:29] INFO autoreload 14316 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 18:44:30] INFO autoreload 10780 - Watching for file changes with StatReloader
+[21-10-2025 18:44:30] INFO autoreload 10780 - Watching for file changes with StatReloader
+[21-10-2025 18:44:58] INFO autoreload 10780 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[21-10-2025 18:44:58] INFO autoreload 10780 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[21-10-2025 18:45:04] INFO autoreload 11076 - Watching for file changes with StatReloader
+[21-10-2025 18:45:04] INFO autoreload 11076 - Watching for file changes with StatReloader
+[21-10-2025 18:45:14] INFO autoreload 11076 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[21-10-2025 18:45:14] INFO autoreload 11076 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[21-10-2025 18:45:18] INFO autoreload 21480 - Watching for file changes with StatReloader
+[21-10-2025 18:45:18] INFO autoreload 21480 - Watching for file changes with StatReloader
+[21-10-2025 18:45:33] INFO autoreload 21480 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[21-10-2025 18:45:33] INFO autoreload 21480 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[21-10-2025 18:45:38] INFO autoreload 18448 - Watching for file changes with StatReloader
+[21-10-2025 18:45:38] INFO autoreload 18448 - Watching for file changes with StatReloader
+[21-10-2025 18:45:51] INFO autoreload 18448 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[21-10-2025 18:45:51] INFO autoreload 18448 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[21-10-2025 18:45:56] INFO autoreload 15128 - Watching for file changes with StatReloader
+[21-10-2025 18:45:56] INFO autoreload 15128 - Watching for file changes with StatReloader
+[21-10-2025 18:46:01] INFO autoreload 15128 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[21-10-2025 18:46:01] INFO autoreload 15128 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[21-10-2025 18:46:03] INFO autoreload 17600 - Watching for file changes with StatReloader
+[21-10-2025 18:46:03] INFO autoreload 17600 - Watching for file changes with StatReloader
+[21-10-2025 18:46:29] WARNING log 8832 - Not Found: /api/
+[21-10-2025 18:46:29] WARNING log 8832 - Not Found: /api/
+[21-10-2025 18:46:29] WARNING log 8832 - Not Found: /api/
+[21-10-2025 18:46:29] WARNING basehttp 8832 - "GET /api/ HTTP/1.1" 404 17956
+[21-10-2025 18:46:29] WARNING basehttp 8832 - "GET /api/ HTTP/1.1" 404 17956
+[21-10-2025 18:46:29] WARNING basehttp 8832 - "GET /api/ HTTP/1.1" 404 17956
+[21-10-2025 18:46:29] INFO basehttp 8832 - "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 16675
+[21-10-2025 18:46:29] INFO basehttp 8832 - "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 16675
+[21-10-2025 18:46:29] INFO basehttp 8832 - "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 16675
+[21-10-2025 18:46:29] INFO basehttp 18632 - "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 14601
+[21-10-2025 18:46:29] INFO basehttp 18632 - "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 14601
+[21-10-2025 18:46:29] INFO basehttp 18632 - "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 14601
+[21-10-2025 18:46:30] INFO basehttp 18632 - "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+[21-10-2025 18:46:30] INFO basehttp 18632 - "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+[21-10-2025 18:46:30] INFO basehttp 18632 - "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+[21-10-2025 18:46:30] INFO basehttp 18632 - "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4742
+[21-10-2025 18:46:30] INFO basehttp 18632 - "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4742
+[21-10-2025 18:46:30] INFO basehttp 18632 - "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4742
+[21-10-2025 19:28:46] ERROR email_utils 17556 -  Failed to send verification email to alidsulaiman11@gmail.com: API key is required. Either pass it as 'api_key' parameter or set the 'MAILERSEND_API_KEY' environment variable.
+[21-10-2025 19:28:46] INFO utils 18508 - Verification email queued for user 33 (alidsulaiman11@gmail.com)
+[21-10-2025 19:28:46] INFO utils 18508 - {'requestTime': datetime.datetime(2025, 10, 21, 18, 28, 46, 53026, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': 'bea4e3dd14d7998ed39267c38be51cf7f0c9fb2c5a5836d81c770715ce49', 'status': True, 'message': {'message': 'Registration successful! Please check your email to verify your account.', 'user_id': 33, 'email': 'alidsulaiman11@gmail.com'}, 'data': {}}
+[21-10-2025 19:28:46] INFO basehttp 18508 - "POST /signup HTTP/1.1" 200 316
+[21-10-2025 19:28:46] INFO basehttp 18508 - "POST /signup HTTP/1.1" 200 316
+[21-10-2025 19:28:46] INFO basehttp 18508 - "POST /signup HTTP/1.1" 200 316

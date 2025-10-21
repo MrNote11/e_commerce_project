@@ -195,14 +195,7 @@ class SignupSerializerIn(serializers.Serializer):
           # Send verification email - FIXED
         try:
          
-            
-            # Send email in thread
-            threading.Thread(
-                target=send_verification_email,
-                args=(user.id, user.email, verification_url),
-                daemon=True
-            ).start()
-        
+            send_verification_email(user.id, user.email, verification_url)
             log_request(f"Verification email queued for user {user.id} ({email})")
         except Exception as email_error:
             log_request(f"Warning: Failed to queue verification email for user {user.id}: {email_error}")
