@@ -12,13 +12,13 @@ import django
 from django.template.loader import render_to_string
 from threading import Thread
 import logging
-from mailersend import emails
+# from mailersend. import emails
 from home.models import UserProfile, User
 from django.utils.html import strip_tags
 import django
 from home.models import UserProfile
 from django.contrib.auth import get_user_model
-from mailersend.new_emails import NewEmail
+# from mailersend.new_emails import NewEmail
 from mailersend import MailerSendClient
 from dotenv import load_dotenv
 
@@ -98,7 +98,7 @@ def send_template_mail_in_thread(subject, template_name, context, from_email, re
         try:
             # Render the HTML template
             html_message = render_to_string(template_name, context)
-            ms = MailerSendClient()
+            # ms = MailerSendClient()
             # Create plain text version (simple strip of HTML tags)
             plain_message = html_message
             
@@ -124,23 +124,23 @@ def send_verification_email(user_id, email, verification_url):
         # Initialize Django for thread safety
         django.setup()
         ms = MailerSendClient()
-        mailer = emails.NewEmail(settings.MAILSEND_API_KEY)
+        # mailer = emails.NewEmail(settings.MAILSEND_API_KEY)
         subject = "Verify Your Email Address - Action Required"
         
         user_email = User.objects.get(email=email)
         user_email.first_name
-        mail_from = {
-        "email": 'joyoge5897@datoinf.com',
-        "name": 'e_commerce',
-    }
+    #     mail_from = {
+    #     "email": 'joyoge5897@datoinf.com',
+    #     "name": 'e_commerce',
+    # }
 
         # Recipient list
-        recipients = [
-            {
-                "email": email,
-                "name": user_email,
-            }
-        ]
+        # recipients = [
+        #     {
+        #         "email": email,
+        #         "name": user_email,
+        #     }
+        # ]
 
         # Subject and body
         subject = "Welcome to Our Platform!"
@@ -194,13 +194,13 @@ def send_verification_email(user_id, email, verification_url):
         If you didn't create an account, please ignore this email.
         """
         
-        # Build and send
-        mailer.set_mail_from(mail_from)
-        mailer.set_mail_to(recipients)
-        mailer.set_subject(subject)
-        mailer.set_html_content(html_message)
-        mailer.set_plaintext_content(plain_message)
-        response=mailer.send()
+        # # Build and send
+        # mailer.set_mail_from(mail_from)
+        # mailer.set_mail_to(recipients)
+        # mailer.set_subject(subject)
+        # mailer.set_html_content(html_message)
+        # mailer.set_plaintext_content(plain_message)
+        # response=mailer.send()
         print(f"subjects:{subject},\nmessage:{plain_message},\nfrom:{settings.EMAIL_HOST_USER},\nrecipient:{email},\nhtml message:{html_message}")
         # Send the email
         send_mail(

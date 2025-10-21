@@ -420,6 +420,39 @@ class ResendVerificationAPIView(APIView):
                 status=status.HTTP_400_BAD_REQUEST
             )
 
+
+# views.py
+class TestEmailView(APIView):
+    permission_classes = []
+    
+    def post(self, request):
+        try:
+            email = request.data.get('email', 'test@example.com')
+            
+            # Test SMTP
+            send_mail(
+                subject='Test Email',
+                message='This is a test email.',
+                from_email=settings.DEFAULT_FROM_EMAIL,
+                recipient_list=[email],
+                fail_silently=False,
+            )
+            
+            return Response({
+                'status': True,
+                'message': f'Test email sent to {email}',
+                'smtp_config': {
+                    'host': settings.EMAIL_HOST,
+                    'port': settings.EMAIL_PORT,
+                    'user': settings.EMAIL_HOST_USER,
+                }
+            })
+        except Exception as e:
+            return Response({
+                'status': False,
+                'message': f'Failed: {str(e)}'
+            }, status=500)
+
 class RequestEmailOTPView(APIView):
     permission_classes = []
     @swagger_auto_schema(

@@ -15,6 +15,7 @@ urlpatterns = [
     path(
         "change-password", views.ChangePasswordAPIView.as_view(), name="change-password"
     ),
+    path("verify-email/", views.VerifyEmailAPIView.as_view(), name="verify-email"),
     path("reset-password", views.ResetPasswordAPIView.as_view(), name="reset-password"),
     # path("request-otp", views.RequestOTPView.as_view(), name="request-otp"),
     path("request-email-otp", views.RequestEmailOTPView.as_view(), name="request-email-otp"),

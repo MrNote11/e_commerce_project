@@ -5569,3 +5569,21 @@ django.contrib.auth.models.User.DoesNotExist: User matching query does not exist
 [21-10-2025 13:17:39] INFO autoreload 16176 - Watching for file changes with StatReloader
 [21-10-2025 14:12:15] INFO autoreload 9232 - Watching for file changes with StatReloader
 [21-10-2025 14:12:15] INFO autoreload 9232 - Watching for file changes with StatReloader
+[21-10-2025 18:19:22] INFO autoreload 11540 - Watching for file changes with StatReloader
+[21-10-2025 18:19:22] INFO autoreload 11540 - Watching for file changes with StatReloader
+[21-10-2025 18:19:51] INFO basehttp 20488 - "GET / HTTP/1.1" 200 41
+[21-10-2025 18:19:51] INFO basehttp 20488 - "GET / HTTP/1.1" 200 41
+[21-10-2025 18:19:51] INFO basehttp 20488 - "GET / HTTP/1.1" 200 41
+[21-10-2025 18:19:51] WARNING log 20488 - Not Found: /favicon.ico
+[21-10-2025 18:19:51] WARNING log 20488 - Not Found: /favicon.ico
+[21-10-2025 18:19:51] WARNING log 20488 - Not Found: /favicon.ico
+[21-10-2025 18:19:51] WARNING basehttp 20488 - "GET /favicon.ico HTTP/1.1" 404 17984
+[21-10-2025 18:19:51] WARNING basehttp 20488 - "GET /favicon.ico HTTP/1.1" 404 17984
+[21-10-2025 18:19:51] WARNING basehttp 20488 - "GET /favicon.ico HTTP/1.1" 404 17984
+[21-10-2025 18:21:14] INFO utils 20524 - {'requestTime': datetime.datetime(2025, 10, 21, 17, 21, 14, 644327, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': '9c0b4a562260232c5117ffed9677566505226cfe8309c1f9157c2acc2f2f', 'status': False, 'message': 'User with this email already exists', 'data': {}}
+[21-10-2025 18:21:14] WARNING log 20524 - Bad Request: /signup
+[21-10-2025 18:21:14] WARNING log 20524 - Bad Request: /signup
+[21-10-2025 18:21:14] WARNING log 20524 - Bad Request: /signup
+[21-10-2025 18:21:14] WARNING basehttp 20524 - "POST /signup HTTP/1.1" 400 227
+[21-10-2025 18:21:14] WARNING basehttp 20524 - "POST /signup HTTP/1.1" 400 227
+[21-10-2025 18:21:14] WARNING basehttp 20524 - "POST /signup HTTP/1.1" 400 227
