@@ -4508,3 +4508,39 @@ ConnectionRefusedError: [WinError 10061] No connection could be made because the
 [20-10-2025 19:37:26] INFO basehttp 18648 - "POST //signup HTTP/1.1" 200 316
 [20-10-2025 19:37:26] INFO basehttp 18648 - "POST //signup HTTP/1.1" 200 316
 [20-10-2025 19:37:29] INFO email_utils 588 -  Verification email sent successfully to alidsulaiman11@gmail.com
+[21-10-2025 07:29:49] INFO autoreload 8584 - Watching for file changes with StatReloader
+[21-10-2025 07:29:49] INFO autoreload 8584 - Watching for file changes with StatReloader
+[21-10-2025 07:30:11] INFO email_utils 16672 -  Verification email sent successfully to alidsulaiman11@gmail.com
+[21-10-2025 07:30:11] INFO utils 16672 - Verification email queued for user 23 (alidsulaiman11@gmail.com)
+[21-10-2025 07:30:11] INFO utils 16672 - {'requestTime': datetime.datetime(2025, 10, 21, 6, 30, 11, 595532, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': 'fa527891a03b24bd41e5fb052132371465079730213bf7b553ec6bcbac3f', 'status': True, 'message': {'message': 'Registration successful! Please check your email to verify your account.', 'user_id': 23, 'email': 'alidsulaiman11@gmail.com'}, 'data': {}}
+[21-10-2025 07:30:11] INFO basehttp 16672 - "POST //signup HTTP/1.1" 200 316
+[21-10-2025 07:30:11] INFO basehttp 16672 - "POST //signup HTTP/1.1" 200 316
+[21-10-2025 07:30:11] INFO basehttp 16672 - "POST //signup HTTP/1.1" 200 316
+[21-10-2025 07:32:42] INFO email_utils 14308 -  Verification email sent successfully to aliyahsulaiman3@gmail.com
+[21-10-2025 07:32:42] INFO utils 14308 - Verification email queued for user 24 (aliyahsulaiman3@gmail.com)
+[21-10-2025 07:32:42] INFO utils 14308 - {'requestTime': datetime.datetime(2025, 10, 21, 6, 32, 42, 14480, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': '4d9230f95d243c95c5d7a13b38abfe555593e1147f2d0759333ed006fc93', 'status': True, 'message': {'message': 'Registration successful! Please check your email to verify your account.', 'user_id': 24, 'email': 'aliyahsulaiman3@gmail.com'}, 'data': {}}
+[21-10-2025 07:32:42] INFO basehttp 14308 - "POST //signup HTTP/1.1" 200 317
+[21-10-2025 07:32:42] INFO basehttp 14308 - "POST //signup HTTP/1.1" 200 317
+[21-10-2025 07:32:42] INFO basehttp 14308 - "POST //signup HTTP/1.1" 200 317
+[21-10-2025 07:33:52] INFO autoreload 8584 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 07:33:52] INFO autoreload 8584 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 07:33:58] INFO autoreload 17076 - Watching for file changes with StatReloader
+[21-10-2025 07:33:58] INFO autoreload 17076 - Watching for file changes with StatReloader
+[21-10-2025 07:34:04] INFO autoreload 17076 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 07:34:04] INFO autoreload 17076 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 07:34:08] INFO autoreload 12496 - Watching for file changes with StatReloader
+[21-10-2025 07:34:08] INFO autoreload 12496 - Watching for file changes with StatReloader
+[21-10-2025 07:34:34] INFO autoreload 12496 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 07:34:34] INFO autoreload 12496 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 07:34:36] INFO autoreload 9080 - Watching for file changes with StatReloader
+[21-10-2025 07:34:36] INFO autoreload 9080 - Watching for file changes with StatReloader
+[21-10-2025 07:34:46] INFO autoreload 9080 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 07:34:46] INFO autoreload 9080 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 07:34:48] INFO autoreload 12348 - Watching for file changes with StatReloader
+[21-10-2025 07:34:48] INFO autoreload 12348 - Watching for file changes with StatReloader
+[21-10-2025 07:34:51] INFO autoreload 12348 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 07:34:51] INFO autoreload 12348 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 07:34:53] INFO autoreload 17252 - Watching for file changes with StatReloader
+[21-10-2025 07:34:53] INFO autoreload 17252 - Watching for file changes with StatReloader
+[21-10-2025 07:34:58] INFO autoreload 17252 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 07:34:58] INFO autoreload 17252 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.

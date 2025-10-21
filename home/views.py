@@ -48,6 +48,8 @@ from rest_framework.generics import ListAPIView
 # # Imports custom permission to restrict access to resource owners
 # from investments.permissions import IsOwner
 
+from e_commerce.modules.email_utils import send_verification_email
+
 # Imports utilities for encrypting/decrypting sensitive data
 from e_commerce.modules.utils import encrypt_text, decrypt_text
 
@@ -270,6 +272,8 @@ class SignupAPIView(APIView):
         serializer = SignupSerializerIn(data=data, context={"request": request})
         serializer.is_valid() or raise_serializer_error_msg(errors=serializer.errors)
         response = serializer.save()
+        if response:
+            send_verification_email(user.id, user.email, verification_url)
         return Response(api_response(message=response, status=True))
 
 

@@ -197,7 +197,7 @@ class SignupSerializerIn(serializers.Serializer):
          
             
             # Send email in thread
-            send_verification_email(user.id, user.email, verification_url)
+            
             # threading.Thread(
             #     target=send_verification_email,
             #     args=(user.id, user.email, verification_url),
