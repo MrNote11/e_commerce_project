@@ -272,8 +272,7 @@ class SignupAPIView(APIView):
         serializer = SignupSerializerIn(data=data, context={"request": request})
         serializer.is_valid() or raise_serializer_error_msg(errors=serializer.errors)
         response = serializer.save()
-        if response:
-            send_verification_email(user.id, user.email, verification_url)
+            
         return Response(api_response(message=response, status=True))
 
 

@@ -4544,3 +4544,1026 @@ ConnectionRefusedError: [WinError 10061] No connection could be made because the
 [21-10-2025 07:34:53] INFO autoreload 17252 - Watching for file changes with StatReloader
 [21-10-2025 07:34:58] INFO autoreload 17252 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
 [21-10-2025 07:34:58] INFO autoreload 17252 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 07:35:00] INFO autoreload 15700 - Watching for file changes with StatReloader
+[21-10-2025 07:35:00] INFO autoreload 15700 - Watching for file changes with StatReloader
+[21-10-2025 07:54:03] INFO autoreload 8572 - Watching for file changes with StatReloader
+[21-10-2025 07:54:03] INFO autoreload 8572 - Watching for file changes with StatReloader
+[21-10-2025 07:54:15] INFO utils 13508 - Verification email queued for user 25 (aliyahsulaiman3@gmail.com)
+[21-10-2025 07:54:15] ERROR log 13508 - Internal Server Error: /signup
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py", line 276, in post
+    send_verification_email(user.id, user.email, verification_url)
+                            ^^^^
+NameError: name 'user' is not defined
+[21-10-2025 07:54:15] ERROR log 13508 - Internal Server Error: /signup
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py", line 276, in post
+    send_verification_email(user.id, user.email, verification_url)
+                            ^^^^
+NameError: name 'user' is not defined
+[21-10-2025 07:54:15] ERROR log 13508 - Internal Server Error: /signup
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py", line 276, in post
+    send_verification_email(user.id, user.email, verification_url)
+                            ^^^^
+NameError: name 'user' is not defined
+[21-10-2025 07:54:15] ERROR basehttp 13508 - "POST //signup HTTP/1.1" 500 122872
+[21-10-2025 07:54:15] ERROR basehttp 13508 - "POST //signup HTTP/1.1" 500 122872
+[21-10-2025 07:54:15] ERROR basehttp 13508 - "POST //signup HTTP/1.1" 500 122872
+[21-10-2025 10:32:25] INFO autoreload 2436 - Watching for file changes with StatReloader
+[21-10-2025 10:32:25] INFO autoreload 2436 - Watching for file changes with StatReloader
+[21-10-2025 10:33:06] INFO utils 1880 - Verification email queued for user 26 (aliyahsulaiman3@gmail.com)
+[21-10-2025 10:33:07] ERROR log 1880 - Internal Server Error: /signup
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py", line 276, in post
+    send_verification_email(user.id, user.email, verification_url)
+                            ^^^^
+NameError: name 'user' is not defined
+[21-10-2025 10:33:07] ERROR log 1880 - Internal Server Error: /signup
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py", line 276, in post
+    send_verification_email(user.id, user.email, verification_url)
+                            ^^^^
+NameError: name 'user' is not defined
+[21-10-2025 10:33:07] ERROR log 1880 - Internal Server Error: /signup
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py", line 276, in post
+    send_verification_email(user.id, user.email, verification_url)
+                            ^^^^
+NameError: name 'user' is not defined
+[21-10-2025 10:33:08] ERROR basehttp 1880 - "POST //signup HTTP/1.1" 500 122873
+[21-10-2025 10:33:08] ERROR basehttp 1880 - "POST //signup HTTP/1.1" 500 122873
+[21-10-2025 10:33:08] ERROR basehttp 1880 - "POST //signup HTTP/1.1" 500 122873
+[21-10-2025 10:34:21] INFO autoreload 2436 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:34:21] INFO autoreload 2436 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:34:35] INFO autoreload 3604 - Watching for file changes with StatReloader
+[21-10-2025 10:34:35] INFO autoreload 3604 - Watching for file changes with StatReloader
+[21-10-2025 10:34:53] INFO autoreload 3604 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:34:53] INFO autoreload 3604 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:35:07] INFO autoreload 6232 - Watching for file changes with StatReloader
+[21-10-2025 10:35:07] INFO autoreload 6232 - Watching for file changes with StatReloader
+[21-10-2025 10:36:20] INFO autoreload 6232 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:36:20] INFO autoreload 6232 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:36:22] INFO autoreload 8104 - Watching for file changes with StatReloader
+[21-10-2025 10:36:22] INFO autoreload 8104 - Watching for file changes with StatReloader
+[21-10-2025 10:36:56] INFO autoreload 8104 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:36:56] INFO autoreload 8104 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:36:57] INFO autoreload 18276 - Watching for file changes with StatReloader
+[21-10-2025 10:36:57] INFO autoreload 18276 - Watching for file changes with StatReloader
+[21-10-2025 10:37:00] INFO autoreload 18276 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:37:00] INFO autoreload 18276 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:37:02] INFO autoreload 6104 - Watching for file changes with StatReloader
+[21-10-2025 10:37:02] INFO autoreload 6104 - Watching for file changes with StatReloader
+[21-10-2025 10:37:22] INFO autoreload 6104 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:37:22] INFO autoreload 6104 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:37:32] INFO autoreload 16640 - Watching for file changes with StatReloader
+[21-10-2025 10:37:32] INFO autoreload 16640 - Watching for file changes with StatReloader
+[21-10-2025 10:37:49] INFO autoreload 16640 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:37:49] INFO autoreload 16640 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:37:51] INFO autoreload 9064 - Watching for file changes with StatReloader
+[21-10-2025 10:37:51] INFO autoreload 9064 - Watching for file changes with StatReloader
+[21-10-2025 10:38:05] INFO autoreload 9064 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:38:05] INFO autoreload 9064 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:38:07] INFO autoreload 17528 - Watching for file changes with StatReloader
+[21-10-2025 10:38:07] INFO autoreload 17528 - Watching for file changes with StatReloader
+[21-10-2025 10:38:25] INFO autoreload 17528 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:38:25] INFO autoreload 17528 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:38:27] INFO autoreload 8672 - Watching for file changes with StatReloader
+[21-10-2025 10:38:27] INFO autoreload 8672 - Watching for file changes with StatReloader
+[21-10-2025 10:38:29] INFO autoreload 8672 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:38:29] INFO autoreload 8672 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:38:30] INFO autoreload 3728 - Watching for file changes with StatReloader
+[21-10-2025 10:38:30] INFO autoreload 3728 - Watching for file changes with StatReloader
+[21-10-2025 10:38:35] INFO autoreload 3728 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:38:35] INFO autoreload 3728 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:38:36] INFO autoreload 17532 - Watching for file changes with StatReloader
+[21-10-2025 10:38:36] INFO autoreload 17532 - Watching for file changes with StatReloader
+[21-10-2025 10:38:42] INFO autoreload 17532 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:38:42] INFO autoreload 17532 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:38:45] INFO autoreload 13176 - Watching for file changes with StatReloader
+[21-10-2025 10:38:45] INFO autoreload 13176 - Watching for file changes with StatReloader
+[21-10-2025 10:38:47] INFO autoreload 13176 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:38:47] INFO autoreload 13176 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:38:49] INFO autoreload 12880 - Watching for file changes with StatReloader
+[21-10-2025 10:38:49] INFO autoreload 12880 - Watching for file changes with StatReloader
+[21-10-2025 10:38:55] INFO autoreload 12880 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:38:55] INFO autoreload 12880 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:38:56] INFO autoreload 12572 - Watching for file changes with StatReloader
+[21-10-2025 10:38:56] INFO autoreload 12572 - Watching for file changes with StatReloader
+[21-10-2025 10:39:26] INFO autoreload 12572 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:39:26] INFO autoreload 12572 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:39:27] INFO autoreload 17660 - Watching for file changes with StatReloader
+[21-10-2025 10:39:27] INFO autoreload 17660 - Watching for file changes with StatReloader
+[21-10-2025 10:39:49] INFO autoreload 17660 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 10:39:49] INFO autoreload 17660 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 10:39:51] INFO autoreload 1348 - Watching for file changes with StatReloader
+[21-10-2025 10:39:51] INFO autoreload 1348 - Watching for file changes with StatReloader
+[21-10-2025 10:40:14] INFO autoreload 1348 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:40:14] INFO autoreload 1348 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:40:22] INFO autoreload 17332 - Watching for file changes with StatReloader
+[21-10-2025 10:40:22] INFO autoreload 17332 - Watching for file changes with StatReloader
+[21-10-2025 10:40:35] INFO utils 16048 - {'requestTime': datetime.datetime(2025, 10, 21, 9, 40, 35, 795036, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': '33d648e90dcb07c5d9d403ae0a8d615a4eb8c47ea36bed214cfe658bda44', 'status': False, 'message': 'User with this email already exists', 'data': {}}
+[21-10-2025 10:40:35] WARNING log 16048 - Bad Request: /signup
+[21-10-2025 10:40:35] WARNING log 16048 - Bad Request: /signup
+[21-10-2025 10:40:35] WARNING log 16048 - Bad Request: /signup
+[21-10-2025 10:40:35] WARNING basehttp 16048 - "POST //signup HTTP/1.1" 400 227
+[21-10-2025 10:40:35] WARNING basehttp 16048 - "POST //signup HTTP/1.1" 400 227
+[21-10-2025 10:40:35] WARNING basehttp 16048 - "POST //signup HTTP/1.1" 400 227
+[21-10-2025 10:44:14] INFO utils 7924 - Verification email queued for user 27 (alidsulaiman11@gmail.com)
+[21-10-2025 10:44:14] ERROR log 7924 - Internal Server Error: /signup
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py", line 279, in post
+    user = response.user
+           ^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'user'
+[21-10-2025 10:44:14] ERROR log 7924 - Internal Server Error: /signup
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py", line 279, in post
+    user = response.user
+           ^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'user'
+[21-10-2025 10:44:14] ERROR log 7924 - Internal Server Error: /signup
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py", line 279, in post
+    user = response.user
+           ^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'user'
+[21-10-2025 10:44:15] ERROR basehttp 7924 - "POST //signup HTTP/1.1" 500 123180
+[21-10-2025 10:44:15] ERROR basehttp 7924 - "POST //signup HTTP/1.1" 500 123180
+[21-10-2025 10:44:15] ERROR basehttp 7924 - "POST //signup HTTP/1.1" 500 123180
+[21-10-2025 10:45:27] INFO autoreload 17332 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:45:27] INFO autoreload 17332 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:45:32] INFO autoreload 3356 - Watching for file changes with StatReloader
+[21-10-2025 10:45:32] INFO autoreload 3356 - Watching for file changes with StatReloader
+[21-10-2025 10:45:51] INFO utils 17404 - {'requestTime': datetime.datetime(2025, 10, 21, 9, 45, 51, 525971, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': 'd1d5894626f4553d25589768271f56db3c5ed2cccb7d8f0a4cdb76fc046b', 'status': False, 'message': 'User with this email already exists', 'data': {}}
+[21-10-2025 10:45:51] WARNING log 17404 - Bad Request: /signup
+[21-10-2025 10:45:51] WARNING log 17404 - Bad Request: /signup
+[21-10-2025 10:45:51] WARNING log 17404 - Bad Request: /signup
+[21-10-2025 10:45:51] WARNING basehttp 17404 - "POST //signup HTTP/1.1" 400 227
+[21-10-2025 10:45:51] WARNING basehttp 17404 - "POST //signup HTTP/1.1" 400 227
+[21-10-2025 10:45:51] WARNING basehttp 17404 - "POST //signup HTTP/1.1" 400 227
+[21-10-2025 10:47:44] INFO utils 12932 - Verification email queued for user 28 (alidsulaiman11@gmail.com)
+[21-10-2025 10:47:53] ERROR log 12932 - Internal Server Error: /signup
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\fields\__init__.py", line 2053, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\contrib\auth\models.py", line 437, in __int__
+    raise TypeError(
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py", line 280, in post
+    user_profile = UserProfile.objects.get(user=user)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\query.py", line 623, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1546, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1577, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1492, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1319, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\fields\related_lookups.py", line 166, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\fields\__init__.py", line 2055, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x0000020BBB6ECC90>.
+[21-10-2025 10:47:53] ERROR log 12932 - Internal Server Error: /signup
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\fields\__init__.py", line 2053, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\contrib\auth\models.py", line 437, in __int__
+    raise TypeError(
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py", line 280, in post
+    user_profile = UserProfile.objects.get(user=user)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\query.py", line 623, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1546, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1577, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1492, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1319, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\fields\related_lookups.py", line 166, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\fields\__init__.py", line 2055, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x0000020BBB6ECC90>.
+[21-10-2025 10:47:53] ERROR log 12932 - Internal Server Error: /signup
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\fields\__init__.py", line 2053, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\contrib\auth\models.py", line 437, in __int__
+    raise TypeError(
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py", line 280, in post
+    user_profile = UserProfile.objects.get(user=user)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\query.py", line 623, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1546, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1577, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1492, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1319, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\fields\related_lookups.py", line 166, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\fields\__init__.py", line 2055, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x0000020BBB6ECC90>.
+[21-10-2025 10:47:55] ERROR basehttp 12932 - "POST //signup HTTP/1.1" 500 192333
+[21-10-2025 10:47:55] ERROR basehttp 12932 - "POST //signup HTTP/1.1" 500 192333
+[21-10-2025 10:47:55] ERROR basehttp 12932 - "POST //signup HTTP/1.1" 500 192333
+[21-10-2025 10:50:08] INFO autoreload 3356 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:50:08] INFO autoreload 3356 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:50:13] INFO autoreload 1128 - Watching for file changes with StatReloader
+[21-10-2025 10:50:13] INFO autoreload 1128 - Watching for file changes with StatReloader
+[21-10-2025 10:51:25] INFO utils 18180 - Verification email queued for user 29 (alidsulaiman11@gmail.com)
+[21-10-2025 10:51:28] ERROR log 18180 - Internal Server Error: /signup
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py", line 280, in post
+    user_profile = UserProfile.objects.get(user=user.id)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+home.models.UserProfile.DoesNotExist: UserProfile matching query does not exist.
+[21-10-2025 10:51:28] ERROR log 18180 - Internal Server Error: /signup
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py", line 280, in post
+    user_profile = UserProfile.objects.get(user=user.id)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+home.models.UserProfile.DoesNotExist: UserProfile matching query does not exist.
+[21-10-2025 10:51:28] ERROR log 18180 - Internal Server Error: /signup
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py", line 280, in post
+    user_profile = UserProfile.objects.get(user=user.id)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+home.models.UserProfile.DoesNotExist: UserProfile matching query does not exist.
+[21-10-2025 10:51:29] ERROR basehttp 18180 - "POST //signup HTTP/1.1" 500 132384
+[21-10-2025 10:51:29] ERROR basehttp 18180 - "POST //signup HTTP/1.1" 500 132384
+[21-10-2025 10:51:29] ERROR basehttp 18180 - "POST //signup HTTP/1.1" 500 132384
+[21-10-2025 10:52:38] INFO autoreload 1128 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:52:38] INFO autoreload 1128 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:52:42] INFO autoreload 16592 - Watching for file changes with StatReloader
+[21-10-2025 10:52:42] INFO autoreload 16592 - Watching for file changes with StatReloader
+[21-10-2025 10:53:10] INFO autoreload 16592 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:53:10] INFO autoreload 16592 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:53:22] INFO autoreload 8744 - Watching for file changes with StatReloader
+[21-10-2025 10:53:22] INFO autoreload 8744 - Watching for file changes with StatReloader
+[21-10-2025 10:53:48] INFO autoreload 8744 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:53:48] INFO autoreload 8744 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:53:53] INFO autoreload 4116 - Watching for file changes with StatReloader
+[21-10-2025 10:53:53] INFO autoreload 4116 - Watching for file changes with StatReloader
+[21-10-2025 10:55:20] INFO autoreload 4116 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:55:20] INFO autoreload 4116 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:55:24] INFO autoreload 12968 - Watching for file changes with StatReloader
+[21-10-2025 10:55:24] INFO autoreload 12968 - Watching for file changes with StatReloader
+[21-10-2025 10:55:27] INFO autoreload 12968 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:55:27] INFO autoreload 12968 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:55:29] INFO autoreload 13936 - Watching for file changes with StatReloader
+[21-10-2025 10:55:29] INFO autoreload 13936 - Watching for file changes with StatReloader
+[21-10-2025 10:55:42] INFO autoreload 13936 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:55:42] INFO autoreload 13936 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:55:44] INFO autoreload 7336 - Watching for file changes with StatReloader
+[21-10-2025 10:55:44] INFO autoreload 7336 - Watching for file changes with StatReloader
+[21-10-2025 10:55:46] INFO autoreload 7336 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:55:46] INFO autoreload 7336 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:55:47] INFO autoreload 16132 - Watching for file changes with StatReloader
+[21-10-2025 10:55:47] INFO autoreload 16132 - Watching for file changes with StatReloader
+[21-10-2025 10:55:53] INFO autoreload 16132 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:55:53] INFO autoreload 16132 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:55:54] INFO autoreload 18104 - Watching for file changes with StatReloader
+[21-10-2025 10:55:54] INFO autoreload 18104 - Watching for file changes with StatReloader
+[21-10-2025 10:56:11] INFO autoreload 18104 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:56:11] INFO autoreload 18104 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:56:13] INFO autoreload 9244 - Watching for file changes with StatReloader
+[21-10-2025 10:56:13] INFO autoreload 9244 - Watching for file changes with StatReloader
+[21-10-2025 10:56:20] INFO autoreload 9244 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:56:20] INFO autoreload 9244 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:56:21] INFO autoreload 14596 - Watching for file changes with StatReloader
+[21-10-2025 10:56:21] INFO autoreload 14596 - Watching for file changes with StatReloader
+[21-10-2025 10:56:27] INFO autoreload 14596 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:56:27] INFO autoreload 14596 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:56:28] INFO autoreload 5580 - Watching for file changes with StatReloader
+[21-10-2025 10:56:28] INFO autoreload 5580 - Watching for file changes with StatReloader
+[21-10-2025 10:58:53] INFO utils 17216 - Verification email queued for user 30 (alidsulaiman11@gmail.com)
+[21-10-2025 10:58:53] ERROR log 17216 - Internal Server Error: /signup
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py", line 283, in post
+    user = User.objects.get(id=user.id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+[21-10-2025 10:58:53] ERROR log 17216 - Internal Server Error: /signup
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py", line 283, in post
+    user = User.objects.get(id=user.id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+[21-10-2025 10:58:53] ERROR log 17216 - Internal Server Error: /signup
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py", line 283, in post
+    user = User.objects.get(id=user.id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+[21-10-2025 10:58:54] ERROR basehttp 17216 - "POST //signup HTTP/1.1" 500 132176
+[21-10-2025 10:58:54] ERROR basehttp 17216 - "POST //signup HTTP/1.1" 500 132176
+[21-10-2025 10:58:54] ERROR basehttp 17216 - "POST //signup HTTP/1.1" 500 132176
+[21-10-2025 10:59:40] INFO autoreload 5580 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:59:40] INFO autoreload 5580 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:59:42] INFO autoreload 1108 - Watching for file changes with StatReloader
+[21-10-2025 10:59:42] INFO autoreload 1108 - Watching for file changes with StatReloader
+[21-10-2025 10:59:47] INFO autoreload 1108 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:59:47] INFO autoreload 1108 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:59:49] INFO autoreload 7104 - Watching for file changes with StatReloader
+[21-10-2025 10:59:49] INFO autoreload 7104 - Watching for file changes with StatReloader
+[21-10-2025 10:59:52] INFO autoreload 7104 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:59:52] INFO autoreload 7104 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 10:59:54] INFO autoreload 9140 - Watching for file changes with StatReloader
+[21-10-2025 10:59:54] INFO autoreload 9140 - Watching for file changes with StatReloader
+[21-10-2025 11:00:05] INFO utils 12752 - {'requestTime': datetime.datetime(2025, 10, 21, 10, 0, 5, 919857, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': '8cecdddc1983a9e09a17f17974f49c81e4cf9d7e2127411a5cc35dda9818', 'status': False, 'message': 'User with this email already exists', 'data': {}}
+[21-10-2025 11:00:06] WARNING log 12752 - Bad Request: /signup
+[21-10-2025 11:00:06] WARNING log 12752 - Bad Request: /signup
+[21-10-2025 11:00:06] WARNING log 12752 - Bad Request: /signup
+[21-10-2025 11:00:06] WARNING basehttp 12752 - "POST //signup HTTP/1.1" 400 227
+[21-10-2025 11:00:06] WARNING basehttp 12752 - "POST //signup HTTP/1.1" 400 227
+[21-10-2025 11:00:06] WARNING basehttp 12752 - "POST //signup HTTP/1.1" 400 227
+[21-10-2025 11:00:57] INFO utils 12752 - Verification email queued for user 31 (alidsulaiman11@gmail.com)
+[21-10-2025 11:00:57] ERROR log 12752 - Internal Server Error: /signup
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py", line 283, in post
+    user = User.objects.get(id=user.id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+[21-10-2025 11:00:57] ERROR log 12752 - Internal Server Error: /signup
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py", line 283, in post
+    user = User.objects.get(id=user.id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+[21-10-2025 11:00:57] ERROR log 12752 - Internal Server Error: /signup
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py", line 283, in post
+    user = User.objects.get(id=user.id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+[21-10-2025 11:00:57] ERROR basehttp 12752 - "POST //signup HTTP/1.1" 500 132088
+[21-10-2025 11:00:57] ERROR basehttp 12752 - "POST //signup HTTP/1.1" 500 132088
+[21-10-2025 11:00:57] ERROR basehttp 12752 - "POST //signup HTTP/1.1" 500 132088
+[21-10-2025 11:01:15] INFO autoreload 9140 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 11:01:15] INFO autoreload 9140 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 11:01:17] INFO autoreload 8460 - Watching for file changes with StatReloader
+[21-10-2025 11:01:17] INFO autoreload 8460 - Watching for file changes with StatReloader
+[21-10-2025 11:01:42] INFO autoreload 8460 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 11:01:42] INFO autoreload 8460 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 11:01:44] INFO autoreload 8900 - Watching for file changes with StatReloader
+[21-10-2025 11:01:44] INFO autoreload 8900 - Watching for file changes with StatReloader
+[21-10-2025 11:01:56] INFO autoreload 8900 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 11:01:56] INFO autoreload 8900 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 11:01:57] INFO autoreload 5772 - Watching for file changes with StatReloader
+[21-10-2025 11:01:57] INFO autoreload 5772 - Watching for file changes with StatReloader
+[21-10-2025 11:02:13] INFO autoreload 5772 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 11:02:13] INFO autoreload 5772 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[21-10-2025 11:02:17] INFO autoreload 3532 - Watching for file changes with StatReloader
+[21-10-2025 11:02:17] INFO autoreload 3532 - Watching for file changes with StatReloader
+[21-10-2025 11:02:38] INFO autoreload 3532 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 11:02:38] INFO autoreload 3532 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 11:02:45] INFO autoreload 6700 - Watching for file changes with StatReloader
+[21-10-2025 11:02:45] INFO autoreload 6700 - Watching for file changes with StatReloader
+[21-10-2025 11:03:26] INFO autoreload 6700 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 11:03:26] INFO autoreload 6700 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 11:03:28] INFO autoreload 16260 - Watching for file changes with StatReloader
+[21-10-2025 11:03:28] INFO autoreload 16260 - Watching for file changes with StatReloader
+[21-10-2025 11:03:33] INFO autoreload 16260 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 11:03:33] INFO autoreload 16260 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 11:03:35] INFO autoreload 3500 - Watching for file changes with StatReloader
+[21-10-2025 11:03:35] INFO autoreload 3500 - Watching for file changes with StatReloader
+[21-10-2025 11:03:37] INFO autoreload 3500 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 11:03:37] INFO autoreload 3500 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[21-10-2025 11:03:40] INFO autoreload 1140 - Watching for file changes with StatReloader
+[21-10-2025 11:03:40] INFO autoreload 1140 - Watching for file changes with StatReloader
+[21-10-2025 11:05:54] INFO basehttp 4016 - "GET / HTTP/1.1" 200 41
+[21-10-2025 11:05:54] INFO basehttp 4016 - "GET / HTTP/1.1" 200 41
+[21-10-2025 11:05:54] INFO basehttp 4016 - "GET / HTTP/1.1" 200 41
+[21-10-2025 11:05:54] WARNING log 4016 - Not Found: /favicon.ico
+[21-10-2025 11:05:54] WARNING log 4016 - Not Found: /favicon.ico
+[21-10-2025 11:05:54] WARNING log 4016 - Not Found: /favicon.ico
+[21-10-2025 11:05:54] WARNING basehttp 4016 - "GET /favicon.ico HTTP/1.1" 404 17802
+[21-10-2025 11:05:54] WARNING basehttp 4016 - "GET /favicon.ico HTTP/1.1" 404 17802
+[21-10-2025 11:05:54] WARNING basehttp 4016 - "GET /favicon.ico HTTP/1.1" 404 17802
+[21-10-2025 11:10:52] INFO basehttp 10844 - "GET / HTTP/1.1" 200 41
+[21-10-2025 11:10:52] INFO basehttp 10844 - "GET / HTTP/1.1" 200 41
+[21-10-2025 11:10:52] INFO basehttp 10844 - "GET / HTTP/1.1" 200 41
+[21-10-2025 11:11:33] INFO basehttp 10844 - "GET / HTTP/1.1" 200 41
+[21-10-2025 11:11:33] INFO basehttp 10844 - "GET / HTTP/1.1" 200 41
+[21-10-2025 11:11:33] INFO basehttp 10844 - "GET / HTTP/1.1" 200 41
+[21-10-2025 11:11:35] INFO basehttp 10844 - "GET / HTTP/1.1" 200 41
+[21-10-2025 11:11:35] INFO basehttp 10844 - "GET / HTTP/1.1" 200 41
+[21-10-2025 11:11:35] INFO basehttp 10844 - "GET / HTTP/1.1" 200 41
+[21-10-2025 11:11:37] INFO basehttp 10844 - "GET / HTTP/1.1" 200 41
+[21-10-2025 11:11:37] INFO basehttp 10844 - "GET / HTTP/1.1" 200 41
+[21-10-2025 11:11:37] INFO basehttp 10844 - "GET / HTTP/1.1" 200 41
+[21-10-2025 11:11:57] INFO basehttp 17536 - "GET / HTTP/1.1" 200 41
+[21-10-2025 11:11:57] INFO basehttp 17536 - "GET / HTTP/1.1" 200 41
+[21-10-2025 11:11:57] INFO basehttp 17536 - "GET / HTTP/1.1" 200 41
+[21-10-2025 11:16:04] INFO autoreload 16724 - Watching for file changes with StatReloader
+[21-10-2025 11:16:04] INFO autoreload 16724 - Watching for file changes with StatReloader
+[21-10-2025 13:12:00] INFO autoreload 5980 - Watching for file changes with StatReloader
+[21-10-2025 13:12:00] INFO autoreload 5980 - Watching for file changes with StatReloader
+[21-10-2025 13:13:43] INFO autoreload 5980 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[21-10-2025 13:13:43] INFO autoreload 5980 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[21-10-2025 13:13:46] INFO autoreload 12048 - Watching for file changes with StatReloader
+[21-10-2025 13:13:46] INFO autoreload 12048 - Watching for file changes with StatReloader
+[21-10-2025 13:14:03] INFO autoreload 12048 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[21-10-2025 13:14:03] INFO autoreload 12048 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[21-10-2025 13:14:17] INFO autoreload 13212 - Watching for file changes with StatReloader
+[21-10-2025 13:14:17] INFO autoreload 13212 - Watching for file changes with StatReloader
+[21-10-2025 13:14:36] INFO autoreload 13212 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[21-10-2025 13:14:36] INFO autoreload 13212 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[21-10-2025 13:14:38] INFO autoreload 19160 - Watching for file changes with StatReloader
+[21-10-2025 13:14:38] INFO autoreload 19160 - Watching for file changes with StatReloader
+[21-10-2025 13:17:39] INFO autoreload 16176 - Watching for file changes with StatReloader
+[21-10-2025 13:17:39] INFO autoreload 16176 - Watching for file changes with StatReloader

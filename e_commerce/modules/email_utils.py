@@ -7,12 +7,25 @@ import logging
 from django.core.mail import send_mail, EmailMultiAlternatives
 from django.template.loader import render_to_string
 from django.conf import settings
-from django.contrib.auth.models import User
 from django.utils.html import strip_tags
 import django
 from django.template.loader import render_to_string
 from threading import Thread
 import logging
+from mailersend import emails
+from home.models import UserProfile, User
+from django.utils.html import strip_tags
+import django
+from home.models import UserProfile
+from django.contrib.auth import get_user_model
+from mailersend.new_emails import NewEmail
+from mailersend import MailerSendClient
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Automatically uses MAILERSEND_API_KEY environment variable
 
 # from investments.models import (
 #         HiVaultInvestment, HiWealthInvestment, EarlyStarterInvestment,
@@ -85,7 +98,7 @@ def send_template_mail_in_thread(subject, template_name, context, from_email, re
         try:
             # Render the HTML template
             html_message = render_to_string(template_name, context)
-            
+            ms = MailerSendClient()
             # Create plain text version (simple strip of HTML tags)
             plain_message = html_message
             
@@ -101,13 +114,7 @@ def send_template_mail_in_thread(subject, template_name, context, from_email, re
     threading.Thread(target=_send, daemon=True).start()
 
 
-import logging
-import threading
-from django.core.mail import send_mail
-from django.conf import settings
-from django.template.loader import render_to_string
-from django.utils.html import strip_tags
-import django
+
 
 logger = logging.getLogger(__name__)
 
@@ -116,8 +123,30 @@ def send_verification_email(user_id, email, verification_url):
     try:
         # Initialize Django for thread safety
         django.setup()
-        
+        ms = MailerSendClient()
+        mailer = emails.NewEmail(settings.MAILSEND_API_KEY)
         subject = "Verify Your Email Address - Action Required"
+        
+        user_email = User.objects.get(email=email)
+        user_email.first_name
+        mail_from = {
+        "email": 'joyoge5897@datoinf.com',
+        "name": 'e_commerce',
+    }
+
+        # Recipient list
+        recipients = [
+            {
+                "email": email,
+                "name": user_email,
+            }
+        ]
+
+        # Subject and body
+        subject = "Welcome to Our Platform!"
+      
+
+        
         
         # Create both HTML and plain text versions
         html_message = f"""
@@ -164,6 +193,14 @@ def send_verification_email(user_id, email, verification_url):
         
         If you didn't create an account, please ignore this email.
         """
+        
+        # Build and send
+        mailer.set_mail_from(mail_from)
+        mailer.set_mail_to(recipients)
+        mailer.set_subject(subject)
+        mailer.set_html_content(html_message)
+        mailer.set_plaintext_content(plain_message)
+        response=mailer.send()
         print(f"subjects:{subject},\nmessage:{plain_message},\nfrom:{settings.EMAIL_HOST_USER},\nrecipient:{email},\nhtml message:{html_message}")
         # Send the email
         send_mail(
@@ -176,6 +213,8 @@ def send_verification_email(user_id, email, verification_url):
         )
         
         logger.info(f" Verification email sent successfully to {email}")
+        logger.info(f"SUCCESS: Verification email sent via MailerSend to {email}")
+        print(f"✅ MailerSend email sent to {email}")
         return True
         
     except Exception as e:
