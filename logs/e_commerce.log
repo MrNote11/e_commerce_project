@@ -5567,3 +5567,5 @@ django.contrib.auth.models.User.DoesNotExist: User matching query does not exist
 [21-10-2025 13:14:38] INFO autoreload 19160 - Watching for file changes with StatReloader
 [21-10-2025 13:17:39] INFO autoreload 16176 - Watching for file changes with StatReloader
 [21-10-2025 13:17:39] INFO autoreload 16176 - Watching for file changes with StatReloader
+[21-10-2025 14:12:15] INFO autoreload 9232 - Watching for file changes with StatReloader
+[21-10-2025 14:12:15] INFO autoreload 9232 - Watching for file changes with StatReloader
