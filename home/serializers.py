@@ -131,7 +131,7 @@ class SignupSerializerIn(serializers.Serializer):
     gender = serializers.CharField(required=False)
 
     def create(self, validated_data):
-        pword = validated_data.get("password")
+        pword = validated_data.get("password") 
         phone_no = validated_data.get("phoneNo")
         first_name = validated_data.get("first_name")
         last_name = validated_data.get("last_name")
@@ -197,11 +197,12 @@ class SignupSerializerIn(serializers.Serializer):
          
             
             # Send email in thread
-            threading.Thread(
-                target=send_verification_email,
-                args=(user.id, user.email, verification_url),
-                daemon=True
-            ).start()
+            send_verification_email(user.id, user.email, verification_url)
+            # threading.Thread(
+            #     target=send_verification_email,
+            #     args=(user.id, user.email, verification_url),
+            #     daemon=True
+            # ).start()
         
             log_request(f"Verification email queued for user {user.id} ({email})")
         except Exception as email_error:

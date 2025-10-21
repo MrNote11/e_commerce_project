@@ -4486,3 +4486,25 @@ ConnectionRefusedError: [WinError 10061] No connection could be made because the
 [20-10-2025 19:28:20] INFO autoreload 5168 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
 [20-10-2025 19:28:22] INFO autoreload 12208 - Watching for file changes with StatReloader
 [20-10-2025 19:28:22] INFO autoreload 12208 - Watching for file changes with StatReloader
+[20-10-2025 19:36:37] INFO autoreload 17468 - Watching for file changes with StatReloader
+[20-10-2025 19:36:37] INFO autoreload 17468 - Watching for file changes with StatReloader
+[20-10-2025 19:36:45] INFO utils 18648 - {'requestTime': datetime.datetime(2025, 10, 20, 18, 36, 45, 410371, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': '7808e7eda3db80d0128c6d4cd074e30ff1289a406b3481c063366c3f3891', 'status': False, 'message': 'User with this email already exists', 'data': {}}
+[20-10-2025 19:36:45] WARNING log 18648 - Bad Request: /signup
+[20-10-2025 19:36:45] WARNING log 18648 - Bad Request: /signup
+[20-10-2025 19:36:45] WARNING log 18648 - Bad Request: /signup
+[20-10-2025 19:36:45] WARNING basehttp 18648 - "POST //signup HTTP/1.1" 400 227
+[20-10-2025 19:36:45] WARNING basehttp 18648 - "POST //signup HTTP/1.1" 400 227
+[20-10-2025 19:36:45] WARNING basehttp 18648 - "POST //signup HTTP/1.1" 400 227
+[20-10-2025 19:36:49] INFO utils 18648 - {'requestTime': datetime.datetime(2025, 10, 20, 18, 36, 49, 327402, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': '121ec9c759e4bd8aa11a23abbb5b415254f8d3c9f619f62cbd070898ba1a', 'status': False, 'message': 'User with this email already exists', 'data': {}}
+[20-10-2025 19:36:49] WARNING log 18648 - Bad Request: /signup
+[20-10-2025 19:36:49] WARNING log 18648 - Bad Request: /signup
+[20-10-2025 19:36:49] WARNING log 18648 - Bad Request: /signup
+[20-10-2025 19:36:49] WARNING basehttp 18648 - "POST //signup HTTP/1.1" 400 227
+[20-10-2025 19:36:49] WARNING basehttp 18648 - "POST //signup HTTP/1.1" 400 227
+[20-10-2025 19:36:49] WARNING basehttp 18648 - "POST //signup HTTP/1.1" 400 227
+[20-10-2025 19:37:25] INFO utils 18648 - Verification email queued for user 22 (alidsulaiman11@gmail.com)
+[20-10-2025 19:37:25] INFO utils 18648 - {'requestTime': datetime.datetime(2025, 10, 20, 18, 37, 25, 976468, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': '5299a5dc3d75cfbb01d2d37244a59fa20147793ef83a5fed5b56322101c5', 'status': True, 'message': {'message': 'Registration successful! Please check your email to verify your account.', 'user_id': 22, 'email': 'alidsulaiman11@gmail.com'}, 'data': {}}
+[20-10-2025 19:37:26] INFO basehttp 18648 - "POST //signup HTTP/1.1" 200 316
+[20-10-2025 19:37:26] INFO basehttp 18648 - "POST //signup HTTP/1.1" 200 316
+[20-10-2025 19:37:26] INFO basehttp 18648 - "POST //signup HTTP/1.1" 200 316
+[20-10-2025 19:37:29] INFO email_utils 588 -  Verification email sent successfully to alidsulaiman11@gmail.com
