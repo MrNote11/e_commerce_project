@@ -1,6 +1,6 @@
 import threading
 from rest_framework import serializers
-from .models import UserProfile, User, UserOTP #, SiteSetting, AccountTier, FinancialTransaction, UserFinancialSummary, BVNVerificationAttempt, BankAccount
+from .models import UserProfile,UserOTP #, SiteSetting, AccountTier, FinancialTransaction, UserFinancialSummary, BVNVerificationAttempt, BankAccount
 from django.contrib.auth.hashers import check_password, make_password
 from django.utils import timezone
 from e_commerce.modules.utils import incoming_request_checks, api_response,log_request,format_phone_number,get_site_details,encrypt_text,decrypt_text,generate_random_otp,get_next_minute
@@ -13,6 +13,7 @@ from django.contrib.auth.password_validation import validate_password
 from e_commerce.modules.email_utils import send_welcome_email_threaded, send_verification_email
    # Import the email function
 from e_commerce.modules.email_utils import send_verification_email
+from django.contrib.auth.models import User
 
 class UserProfileSerializerOut(serializers.ModelSerializer):
     username = serializers.SerializerMethodField()
@@ -181,25 +182,18 @@ class SignupSerializerIn(serializers.Serializer):
             user=user,      
             gender=gender,
             phoneNumber=phone,
-            email=email,
-            is_verified=False
+            email=email 
         )
-        
-        request = self.context.get('request')
-        # Generate verification token and send email
-        verification_token = user_profile.generate_verification_token()
-        verification_url = f"{request.build_absolute_uri('/')}verify-email/?token={verification_token}"
-        
-        print(f"verification url: {verification_url}")
-        
-          # Send verification email - FIXED
         try:
-         
+            request = self.context.get('request')
+            # Generate verification token and send email
+            verification_token = user_profile.generate_verification_token()
+            verification_url = f"{request.build_absolute_uri('/')}verify-email/?token={verification_token}"
             send_verification_email(user.id, user.email, verification_url)
+            print(f"verification url: {verification_url}")
             log_request(f"Verification email queued for user {user.id} ({email})")
         except Exception as email_error:
             log_request(f"Warning: Failed to queue verification email for user {user.id}: {email_error}")
-            
         return {
             "message": "Registration successful! Please check your email to verify your account.",
             "user_id": user.id,

@@ -5723,3 +5723,948 @@ django.contrib.auth.models.User.DoesNotExist: User matching query does not exist
 [21-10-2025 19:28:46] INFO basehttp 18508 - "POST /signup HTTP/1.1" 200 316
 [21-10-2025 19:28:46] INFO basehttp 18508 - "POST /signup HTTP/1.1" 200 316
 [21-10-2025 19:28:46] INFO basehttp 18508 - "POST /signup HTTP/1.1" 200 316
+[21-10-2025 19:33:10] INFO autoreload 6312 - Watching for file changes with StatReloader
+[21-10-2025 19:33:10] INFO autoreload 6312 - Watching for file changes with StatReloader
+[21-10-2025 19:35:09] INFO basehttp 13724 - "GET /admin HTTP/1.1" 301 0
+[21-10-2025 19:35:09] INFO basehttp 13724 - "GET /admin HTTP/1.1" 301 0
+[21-10-2025 19:35:09] INFO basehttp 13724 - "GET /admin HTTP/1.1" 301 0
+[21-10-2025 19:35:09] INFO basehttp 19120 - "GET /admin/ HTTP/1.1" 302 0
+[21-10-2025 19:35:09] INFO basehttp 19120 - "GET /admin/ HTTP/1.1" 302 0
+[21-10-2025 19:35:09] INFO basehttp 19120 - "GET /admin/ HTTP/1.1" 302 0
+[21-10-2025 19:35:09] INFO basehttp 19120 - "GET /admin/login/?next=/admin/ HTTP/1.1" 200 17370
+[21-10-2025 19:35:09] INFO basehttp 19120 - "GET /admin/login/?next=/admin/ HTTP/1.1" 200 17370
+[21-10-2025 19:35:09] INFO basehttp 19120 - "GET /admin/login/?next=/admin/ HTTP/1.1" 200 17370
+[21-10-2025 19:35:09] INFO basehttp 13932 - "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+[21-10-2025 19:35:09] INFO basehttp 13932 - "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+[21-10-2025 19:35:09] INFO basehttp 13932 - "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+[21-10-2025 19:35:09] INFO basehttp 19120 - "GET /static/admin/css/base.css HTTP/1.1" 200 21310
+[21-10-2025 19:35:09] INFO basehttp 19120 - "GET /static/admin/css/base.css HTTP/1.1" 200 21310
+[21-10-2025 19:35:09] INFO basehttp 19120 - "GET /static/admin/css/base.css HTTP/1.1" 200 21310
+[21-10-2025 19:35:09] INFO basehttp 21296 - "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+[21-10-2025 19:35:09] INFO basehttp 21296 - "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+[21-10-2025 19:35:09] INFO basehttp 21296 - "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+[21-10-2025 19:35:09] INFO basehttp 10828 - "GET /static/admin/css/login.css HTTP/1.1" 200 958
+[21-10-2025 19:35:09] INFO basehttp 10828 - "GET /static/admin/css/login.css HTTP/1.1" 200 958
+[21-10-2025 19:35:09] INFO basehttp 10828 - "GET /static/admin/css/login.css HTTP/1.1" 200 958
+[21-10-2025 19:35:09] INFO basehttp 8284 - "GET /static/admin/css/responsive.css HTTP/1.1" 200 18559
+[21-10-2025 19:35:09] INFO basehttp 8284 - "GET /static/admin/css/responsive.css HTTP/1.1" 200 18559
+[21-10-2025 19:35:09] INFO basehttp 8284 - "GET /static/admin/css/responsive.css HTTP/1.1" 200 18559
+[21-10-2025 19:35:09] INFO basehttp 16216 - "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+[21-10-2025 19:35:09] INFO basehttp 16216 - "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+[21-10-2025 19:35:09] INFO basehttp 16216 - "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+[21-10-2025 19:35:09] INFO basehttp 13932 - "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+[21-10-2025 19:35:09] INFO basehttp 13932 - "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+[21-10-2025 19:35:09] INFO basehttp 13932 - "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+[21-10-2025 19:35:09] INFO basehttp 10828 - "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+[21-10-2025 19:35:09] INFO basehttp 10828 - "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+[21-10-2025 19:35:09] INFO basehttp 10828 - "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+[21-10-2025 19:35:09] INFO basehttp 8284 - "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+[21-10-2025 19:35:09] INFO basehttp 8284 - "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+[21-10-2025 19:35:09] INFO basehttp 8284 - "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+[21-10-2025 19:35:09] INFO basehttp 13932 - "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+[21-10-2025 19:35:09] INFO basehttp 13932 - "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+[21-10-2025 19:35:09] INFO basehttp 13932 - "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+[21-10-2025 19:35:09] INFO basehttp 13932 - "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+[21-10-2025 19:35:09] INFO basehttp 13932 - "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+[21-10-2025 19:35:09] INFO basehttp 13932 - "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+[21-10-2025 19:35:20] INFO basehttp 13932 - "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[21-10-2025 19:35:20] INFO basehttp 13932 - "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[21-10-2025 19:35:20] INFO basehttp 13932 - "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[21-10-2025 19:35:20] INFO basehttp 13932 - "GET /admin/ HTTP/1.1" 200 23603
+[21-10-2025 19:35:20] INFO basehttp 13932 - "GET /admin/ HTTP/1.1" 200 23603
+[21-10-2025 19:35:20] INFO basehttp 13932 - "GET /admin/ HTTP/1.1" 200 23603
+[21-10-2025 19:35:21] INFO basehttp 13932 - "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+[21-10-2025 19:35:21] INFO basehttp 13932 - "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+[21-10-2025 19:35:21] INFO basehttp 13932 - "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+[21-10-2025 19:35:21] INFO basehttp 21296 - "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+[21-10-2025 19:35:21] INFO basehttp 21296 - "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+[21-10-2025 19:35:21] INFO basehttp 10828 - "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[21-10-2025 19:35:21] INFO basehttp 10828 - "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[21-10-2025 19:35:21] INFO basehttp 10828 - "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[21-10-2025 19:35:21] INFO basehttp 8284 - "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[21-10-2025 19:35:21] INFO basehttp 8284 - "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[21-10-2025 19:35:21] INFO basehttp 8284 - "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[21-10-2025 19:35:21] INFO basehttp 21296 - "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+[21-10-2025 19:35:33] INFO basehttp 8284 - "GET /admin/auth/user/ HTTP/1.1" 200 27875
+[21-10-2025 19:35:33] INFO basehttp 8284 - "GET /admin/auth/user/ HTTP/1.1" 200 27875
+[21-10-2025 19:35:33] INFO basehttp 8284 - "GET /admin/auth/user/ HTTP/1.1" 200 27875
+[21-10-2025 19:35:33] INFO basehttp 8284 - "GET /static/admin/css/changelists.css HTTP/1.1" 200 6566
+[21-10-2025 19:35:33] INFO basehttp 8284 - "GET /static/admin/css/changelists.css HTTP/1.1" 200 6566
+[21-10-2025 19:35:33] INFO basehttp 8284 - "GET /static/admin/css/changelists.css HTTP/1.1" 200 6566
+[21-10-2025 19:35:33] INFO basehttp 16216 - "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943
+[21-10-2025 19:35:33] INFO basehttp 16216 - "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943
+[21-10-2025 19:35:33] INFO basehttp 16216 - "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943
+[21-10-2025 19:35:33] INFO basehttp 13932 - "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+[21-10-2025 19:35:33] INFO basehttp 19120 - "GET /static/admin/js/core.js HTTP/1.1" 200 5682
+[21-10-2025 19:35:33] INFO basehttp 13932 - "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+[21-10-2025 19:35:33] INFO basehttp 19120 - "GET /static/admin/js/core.js HTTP/1.1" 200 5682
+[21-10-2025 19:35:33] INFO basehttp 19120 - "GET /static/admin/js/core.js HTTP/1.1" 200 5682
+[21-10-2025 19:35:33] INFO basehttp 13932 - "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+[21-10-2025 19:35:33] INFO basehttp 16216 - "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+[21-10-2025 19:35:33] INFO basehttp 16216 - "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+[21-10-2025 19:35:33] INFO basehttp 16216 - "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+[21-10-2025 19:35:33] INFO basehttp 8284 - "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+[21-10-2025 19:35:33] INFO basehttp 8284 - "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+[21-10-2025 19:35:33] INFO basehttp 8284 - "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+[21-10-2025 19:35:33] INFO basehttp 13932 - "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+[21-10-2025 19:35:33] INFO basehttp 13932 - "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+[21-10-2025 19:35:33] INFO basehttp 13932 - "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+[21-10-2025 19:35:33] INFO basehttp 19120 - "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+[21-10-2025 19:35:33] INFO basehttp 19120 - "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+[21-10-2025 19:35:33] INFO basehttp 19120 - "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+[21-10-2025 19:35:33] INFO basehttp 10828 - "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+[21-10-2025 19:35:33] INFO basehttp 10828 - "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+[21-10-2025 19:35:33] INFO basehttp 10828 - "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+[21-10-2025 19:35:33] INFO basehttp 10828 - "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+[21-10-2025 19:35:33] INFO basehttp 10828 - "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+[21-10-2025 19:35:33] INFO basehttp 10828 - "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+[21-10-2025 19:35:33] INFO basehttp 19120 - "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[21-10-2025 19:35:33] INFO basehttp 19120 - "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[21-10-2025 19:35:33] INFO basehttp 19120 - "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[21-10-2025 19:35:33] INFO basehttp 19120 - "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+[21-10-2025 19:35:33] INFO basehttp 19120 - "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+[21-10-2025 19:35:33] INFO basehttp 19120 - "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+[21-10-2025 19:35:33] INFO basehttp 19120 - "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+[21-10-2025 19:35:33] INFO basehttp 19120 - "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+[21-10-2025 19:35:33] INFO basehttp 19120 - "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+[21-10-2025 19:35:35] INFO basehttp 21296 - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[21-10-2025 19:35:35] INFO basehttp 21296 - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[21-10-2025 19:35:35] INFO basehttp 21296 - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[21-10-2025 19:35:35] INFO basehttp 21296 - "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[21-10-2025 19:35:35] INFO basehttp 21296 - "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[21-10-2025 19:35:35] INFO basehttp 21296 - "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[21-10-2025 19:35:35] INFO basehttp 19120 - "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+[21-10-2025 19:35:35] INFO basehttp 19120 - "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+[21-10-2025 19:35:35] INFO basehttp 19120 - "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+[21-10-2025 19:35:44] INFO basehttp 19120 - "POST /admin/auth/user/ HTTP/1.1" 200 22077
+[21-10-2025 19:35:44] INFO basehttp 19120 - "POST /admin/auth/user/ HTTP/1.1" 200 22077
+[21-10-2025 19:35:44] INFO basehttp 19120 - "POST /admin/auth/user/ HTTP/1.1" 200 22077
+[21-10-2025 19:35:44] INFO basehttp 19120 - "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+[21-10-2025 19:35:44] INFO basehttp 19120 - "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+[21-10-2025 19:35:44] INFO basehttp 19120 - "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+[21-10-2025 19:35:51] INFO basehttp 19120 - "POST /admin/auth/user/ HTTP/1.1" 302 0
+[21-10-2025 19:35:51] INFO basehttp 19120 - "POST /admin/auth/user/ HTTP/1.1" 302 0
+[21-10-2025 19:35:51] INFO basehttp 19120 - "POST /admin/auth/user/ HTTP/1.1" 302 0
+[21-10-2025 19:35:52] INFO basehttp 19120 - "GET /admin/auth/user/ HTTP/1.1" 200 27568
+[21-10-2025 19:35:52] INFO basehttp 19120 - "GET /admin/auth/user/ HTTP/1.1" 200 27568
+[21-10-2025 19:35:52] INFO basehttp 19120 - "GET /admin/auth/user/ HTTP/1.1" 200 27568
+[21-10-2025 19:35:53] INFO basehttp 19120 - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[21-10-2025 19:35:53] INFO basehttp 19120 - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[21-10-2025 19:35:53] INFO basehttp 19120 - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[21-10-2025 19:36:23] INFO basehttp 19120 - "GET / HTTP/1.1" 200 41
+[21-10-2025 19:36:23] INFO basehttp 19120 - "GET / HTTP/1.1" 200 41
+[21-10-2025 19:36:23] INFO basehttp 19120 - "GET / HTTP/1.1" 200 41
+[21-10-2025 19:36:36] WARNING log 19120 - Method Not Allowed: /signup
+[21-10-2025 19:36:36] WARNING log 19120 - Method Not Allowed: /signup
+[21-10-2025 19:36:36] WARNING log 19120 - Method Not Allowed: /signup
+[21-10-2025 19:36:36] WARNING basehttp 19120 - "GET /signup HTTP/1.1" 405 23505
+[21-10-2025 19:36:36] WARNING basehttp 19120 - "GET /signup HTTP/1.1" 405 23505
+[21-10-2025 19:36:36] WARNING basehttp 19120 - "GET /signup HTTP/1.1" 405 23505
+[21-10-2025 19:36:36] INFO basehttp 21296 - "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+[21-10-2025 19:36:36] INFO basehttp 21296 - "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+[21-10-2025 19:36:36] INFO basehttp 21296 - "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+[21-10-2025 19:36:36] INFO basehttp 13932 - "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+[21-10-2025 19:36:36] INFO basehttp 13932 - "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+[21-10-2025 19:36:36] INFO basehttp 13932 - "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+[21-10-2025 19:36:36] INFO basehttp 10828 - "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+[21-10-2025 19:36:36] INFO basehttp 16216 - "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+[21-10-2025 19:36:36] INFO basehttp 16216 - "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+[21-10-2025 19:36:36] INFO basehttp 16216 - "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+[21-10-2025 19:36:36] INFO basehttp 10828 - "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+[21-10-2025 19:36:36] INFO basehttp 10828 - "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+[21-10-2025 19:36:36] INFO basehttp 21296 - "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+[21-10-2025 19:36:36] INFO basehttp 21296 - "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+[21-10-2025 19:36:36] INFO basehttp 21296 - "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+[21-10-2025 19:36:36] INFO basehttp 8284 - "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+[21-10-2025 19:36:36] INFO basehttp 8284 - "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+[21-10-2025 19:36:36] INFO basehttp 8284 - "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+[21-10-2025 19:36:36] INFO basehttp 19120 - "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+[21-10-2025 19:36:36] INFO basehttp 19120 - "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+[21-10-2025 19:36:36] INFO basehttp 19120 - "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+[21-10-2025 19:36:36] INFO basehttp 10828 - "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+[21-10-2025 19:36:36] INFO basehttp 10828 - "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+[21-10-2025 19:36:36] INFO basehttp 10828 - "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+[21-10-2025 19:36:36] INFO basehttp 16216 - "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+[21-10-2025 19:36:36] INFO basehttp 16216 - "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+[21-10-2025 19:36:36] INFO basehttp 16216 - "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+[21-10-2025 19:36:36] INFO basehttp 13932 - "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+[21-10-2025 19:36:36] INFO basehttp 13932 - "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+[21-10-2025 19:36:36] INFO basehttp 13932 - "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+[21-10-2025 19:36:36] INFO basehttp 21296 - "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+[21-10-2025 19:36:36] INFO basehttp 21296 - "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+[21-10-2025 19:36:36] INFO basehttp 21296 - "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+[21-10-2025 19:36:36] INFO basehttp 21296 - "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+[21-10-2025 19:36:36] INFO basehttp 21296 - "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+[21-10-2025 19:36:36] INFO basehttp 21296 - "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+[21-10-2025 19:36:57] INFO utils 21296 - {'requestTime': datetime.datetime(2025, 10, 21, 18, 36, 57, 422904, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': 'd535f9008d2e65a5033c447a7190edfa7fa427356ff37310fe0877fb6f50', 'status': False, 'message': "Missing or Incorrect Request-Header field 'X-Api-Key'", 'data': {}}
+[21-10-2025 19:36:57] WARNING log 21296 - Bad Request: /signup
+[21-10-2025 19:36:57] WARNING log 21296 - Bad Request: /signup
+[21-10-2025 19:36:57] WARNING log 21296 - Bad Request: /signup
+[21-10-2025 19:36:57] WARNING basehttp 21296 - "POST /signup HTTP/1.1" 400 23807
+[21-10-2025 19:36:57] WARNING basehttp 21296 - "POST /signup HTTP/1.1" 400 23807
+[21-10-2025 19:36:57] WARNING basehttp 21296 - "POST /signup HTTP/1.1" 400 23807
+[21-10-2025 19:36:57] INFO basehttp 21296 - "GET /__debug__/history_sidebar/?store_id=e660cd2773e940a3b7fd12d27045be7e HTTP/1.1" 200 9851
+[21-10-2025 19:36:57] INFO basehttp 21296 - "GET /__debug__/history_sidebar/?store_id=e660cd2773e940a3b7fd12d27045be7e HTTP/1.1" 200 9851
+[21-10-2025 19:36:57] INFO basehttp 21296 - "GET /__debug__/history_sidebar/?store_id=e660cd2773e940a3b7fd12d27045be7e HTTP/1.1" 200 9851
+[21-10-2025 19:37:06] INFO basehttp 21296 - "GET /__debug__/render_panel/?store_id=e660cd2773e940a3b7fd12d27045be7e&panel_id=HeadersPanel HTTP/1.1" 200 4109
+[21-10-2025 19:37:06] INFO basehttp 21296 - "GET /__debug__/render_panel/?store_id=e660cd2773e940a3b7fd12d27045be7e&panel_id=HeadersPanel HTTP/1.1" 200 4109
+[21-10-2025 19:37:06] INFO basehttp 21296 - "GET /__debug__/render_panel/?store_id=e660cd2773e940a3b7fd12d27045be7e&panel_id=HeadersPanel HTTP/1.1" 200 4109
+[21-10-2025 19:38:28] ERROR email_utils 17908 -  Failed to send verification email to aliyahsulaiman3@gmail.com: API key is required. Either pass it as 'api_key' parameter or set the 'MAILERSEND_API_KEY' environment variable.
+[21-10-2025 19:38:28] INFO utils 3256 - Verification email queued for user 34 (aliyahsulaiman3@gmail.com)
+[21-10-2025 19:38:28] INFO utils 3256 - {'requestTime': datetime.datetime(2025, 10, 21, 18, 38, 28, 242214, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': 'e75016acaed839d0d1d1fa8a44f67cbd8ad3033767b5670595590db2650c', 'status': True, 'message': {'message': 'Registration successful! Please check your email to verify your account.', 'user_id': 34, 'email': 'aliyahsulaiman3@gmail.com'}, 'data': {}}
+[21-10-2025 19:38:28] INFO basehttp 3256 - "POST /signup HTTP/1.1" 200 317
+[21-10-2025 19:38:28] INFO basehttp 3256 - "POST /signup HTTP/1.1" 200 317
+[21-10-2025 19:38:28] INFO basehttp 3256 - "POST /signup HTTP/1.1" 200 317
+[21-10-2025 19:39:25] INFO basehttp 21296 - "GET /verify-email/?token=EyNkiKNoetTshYov5XzTO78elyreaoON9JJ4uZvAJbM HTTP/1.1" 302 0
+[21-10-2025 19:39:25] INFO basehttp 21296 - "GET /verify-email/?token=EyNkiKNoetTshYov5XzTO78elyreaoON9JJ4uZvAJbM HTTP/1.1" 302 0
+[21-10-2025 19:39:25] INFO basehttp 21296 - "GET /verify-email/?token=EyNkiKNoetTshYov5XzTO78elyreaoON9JJ4uZvAJbM HTTP/1.1" 302 0
+[21-10-2025 19:39:27] INFO email_utils 20056 -  Welcome email sent successfully to user 34 (aliyahsulaiman3@gmail.com)
+[22-10-2025 07:52:44] INFO autoreload 13196 - Watching for file changes with StatReloader
+[22-10-2025 07:52:44] INFO autoreload 13196 - Watching for file changes with StatReloader
+[22-10-2025 07:53:49] INFO autoreload 13196 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[22-10-2025 07:53:49] INFO autoreload 13196 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[22-10-2025 07:53:51] INFO autoreload 3304 - Watching for file changes with StatReloader
+[22-10-2025 07:53:51] INFO autoreload 3304 - Watching for file changes with StatReloader
+[22-10-2025 07:55:13] INFO autoreload 3304 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:55:13] INFO autoreload 3304 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:55:14] INFO autoreload 10716 - Watching for file changes with StatReloader
+[22-10-2025 07:55:14] INFO autoreload 10716 - Watching for file changes with StatReloader
+[22-10-2025 07:55:43] INFO autoreload 10716 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:55:43] INFO autoreload 10716 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:55:45] INFO autoreload 6492 - Watching for file changes with StatReloader
+[22-10-2025 07:55:45] INFO autoreload 6492 - Watching for file changes with StatReloader
+[22-10-2025 07:56:15] INFO autoreload 6492 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:56:15] INFO autoreload 6492 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:56:16] INFO autoreload 3788 - Watching for file changes with StatReloader
+[22-10-2025 07:56:16] INFO autoreload 3788 - Watching for file changes with StatReloader
+[22-10-2025 07:56:23] INFO autoreload 3788 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:56:23] INFO autoreload 3788 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:56:26] INFO autoreload 8976 - Watching for file changes with StatReloader
+[22-10-2025 07:56:26] INFO autoreload 8976 - Watching for file changes with StatReloader
+[22-10-2025 07:56:38] INFO autoreload 8976 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:56:38] INFO autoreload 8976 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:56:39] INFO autoreload 9952 - Watching for file changes with StatReloader
+[22-10-2025 07:56:39] INFO autoreload 9952 - Watching for file changes with StatReloader
+[22-10-2025 07:56:46] INFO autoreload 9952 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:56:46] INFO autoreload 9952 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:56:47] INFO autoreload 13004 - Watching for file changes with StatReloader
+[22-10-2025 07:56:47] INFO autoreload 13004 - Watching for file changes with StatReloader
+[22-10-2025 07:56:53] INFO autoreload 13004 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:56:53] INFO autoreload 13004 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:56:55] INFO autoreload 15460 - Watching for file changes with StatReloader
+[22-10-2025 07:56:55] INFO autoreload 15460 - Watching for file changes with StatReloader
+[22-10-2025 07:57:02] INFO autoreload 15460 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:57:02] INFO autoreload 15460 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:57:03] INFO autoreload 10468 - Watching for file changes with StatReloader
+[22-10-2025 07:57:03] INFO autoreload 10468 - Watching for file changes with StatReloader
+[22-10-2025 07:57:09] INFO autoreload 10468 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:57:09] INFO autoreload 10468 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:57:11] INFO autoreload 9000 - Watching for file changes with StatReloader
+[22-10-2025 07:57:11] INFO autoreload 9000 - Watching for file changes with StatReloader
+[22-10-2025 07:57:14] INFO autoreload 9000 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:57:14] INFO autoreload 9000 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:57:16] INFO autoreload 12808 - Watching for file changes with StatReloader
+[22-10-2025 07:57:16] INFO autoreload 12808 - Watching for file changes with StatReloader
+[22-10-2025 07:57:19] INFO autoreload 12808 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:57:19] INFO autoreload 12808 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:57:20] INFO autoreload 15104 - Watching for file changes with StatReloader
+[22-10-2025 07:57:20] INFO autoreload 15104 - Watching for file changes with StatReloader
+[22-10-2025 07:57:25] INFO autoreload 15104 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:57:25] INFO autoreload 15104 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:57:27] INFO autoreload 1568 - Watching for file changes with StatReloader
+[22-10-2025 07:57:27] INFO autoreload 1568 - Watching for file changes with StatReloader
+[22-10-2025 07:57:37] INFO autoreload 1568 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:57:37] INFO autoreload 1568 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:57:38] INFO autoreload 6804 - Watching for file changes with StatReloader
+[22-10-2025 07:57:38] INFO autoreload 6804 - Watching for file changes with StatReloader
+[22-10-2025 07:57:43] INFO autoreload 6804 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:57:43] INFO autoreload 6804 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:57:44] INFO autoreload 2208 - Watching for file changes with StatReloader
+[22-10-2025 07:57:44] INFO autoreload 2208 - Watching for file changes with StatReloader
+[22-10-2025 07:57:49] INFO autoreload 2208 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:57:49] INFO autoreload 2208 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:57:50] INFO autoreload 15904 - Watching for file changes with StatReloader
+[22-10-2025 07:57:50] INFO autoreload 15904 - Watching for file changes with StatReloader
+[22-10-2025 07:57:56] INFO autoreload 15904 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:57:56] INFO autoreload 15904 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:57:58] INFO autoreload 8156 - Watching for file changes with StatReloader
+[22-10-2025 07:57:58] INFO autoreload 8156 - Watching for file changes with StatReloader
+[22-10-2025 07:58:01] INFO autoreload 8156 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:58:01] INFO autoreload 8156 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:58:02] INFO autoreload 13272 - Watching for file changes with StatReloader
+[22-10-2025 07:58:02] INFO autoreload 13272 - Watching for file changes with StatReloader
+[22-10-2025 07:58:10] INFO autoreload 13272 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:58:10] INFO autoreload 13272 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:58:12] INFO autoreload 276 - Watching for file changes with StatReloader
+[22-10-2025 07:58:12] INFO autoreload 276 - Watching for file changes with StatReloader
+[22-10-2025 07:58:15] INFO autoreload 276 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:58:15] INFO autoreload 276 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:58:16] INFO autoreload 13168 - Watching for file changes with StatReloader
+[22-10-2025 07:58:16] INFO autoreload 13168 - Watching for file changes with StatReloader
+[22-10-2025 07:58:24] INFO autoreload 13168 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:58:24] INFO autoreload 13168 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:58:26] INFO autoreload 9720 - Watching for file changes with StatReloader
+[22-10-2025 07:58:26] INFO autoreload 9720 - Watching for file changes with StatReloader
+[22-10-2025 07:58:28] INFO autoreload 9720 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:58:28] INFO autoreload 9720 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:58:30] INFO autoreload 4968 - Watching for file changes with StatReloader
+[22-10-2025 07:58:30] INFO autoreload 4968 - Watching for file changes with StatReloader
+[22-10-2025 07:58:34] INFO autoreload 4968 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:58:34] INFO autoreload 4968 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:58:35] INFO autoreload 15628 - Watching for file changes with StatReloader
+[22-10-2025 07:58:35] INFO autoreload 15628 - Watching for file changes with StatReloader
+[22-10-2025 07:58:48] INFO autoreload 15628 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:58:48] INFO autoreload 15628 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:58:49] INFO autoreload 11608 - Watching for file changes with StatReloader
+[22-10-2025 07:58:49] INFO autoreload 11608 - Watching for file changes with StatReloader
+[22-10-2025 07:58:52] INFO autoreload 11608 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:58:52] INFO autoreload 11608 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:58:54] INFO autoreload 11012 - Watching for file changes with StatReloader
+[22-10-2025 07:58:54] INFO autoreload 11012 - Watching for file changes with StatReloader
+[22-10-2025 07:58:58] INFO autoreload 11012 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:58:58] INFO autoreload 11012 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:58:59] INFO autoreload 11632 - Watching for file changes with StatReloader
+[22-10-2025 07:58:59] INFO autoreload 11632 - Watching for file changes with StatReloader
+[22-10-2025 07:59:03] INFO autoreload 11632 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:59:03] INFO autoreload 11632 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:59:04] INFO autoreload 5552 - Watching for file changes with StatReloader
+[22-10-2025 07:59:04] INFO autoreload 5552 - Watching for file changes with StatReloader
+[22-10-2025 07:59:19] INFO autoreload 5552 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[22-10-2025 07:59:19] INFO autoreload 5552 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[22-10-2025 07:59:21] INFO autoreload 2292 - Watching for file changes with StatReloader
+[22-10-2025 07:59:21] INFO autoreload 2292 - Watching for file changes with StatReloader
+[22-10-2025 07:59:32] INFO autoreload 2292 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[22-10-2025 07:59:32] INFO autoreload 2292 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[22-10-2025 07:59:34] INFO autoreload 13120 - Watching for file changes with StatReloader
+[22-10-2025 07:59:34] INFO autoreload 13120 - Watching for file changes with StatReloader
+[22-10-2025 07:59:57] INFO autoreload 13120 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:59:57] INFO autoreload 13120 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 07:59:59] INFO autoreload 15608 - Watching for file changes with StatReloader
+[22-10-2025 07:59:59] INFO autoreload 15608 - Watching for file changes with StatReloader
+[22-10-2025 08:00:02] INFO autoreload 15608 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 08:00:02] INFO autoreload 15608 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 08:00:03] INFO autoreload 9812 - Watching for file changes with StatReloader
+[22-10-2025 08:00:03] INFO autoreload 9812 - Watching for file changes with StatReloader
+[22-10-2025 08:00:07] INFO autoreload 9812 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 08:00:07] INFO autoreload 9812 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 08:00:08] INFO autoreload 11336 - Watching for file changes with StatReloader
+[22-10-2025 08:00:08] INFO autoreload 11336 - Watching for file changes with StatReloader
+[22-10-2025 08:00:17] INFO autoreload 11336 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 08:00:17] INFO autoreload 11336 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 08:00:18] INFO autoreload 6396 - Watching for file changes with StatReloader
+[22-10-2025 08:00:18] INFO autoreload 6396 - Watching for file changes with StatReloader
+[22-10-2025 08:01:10] WARNING log 7600 - Method Not Allowed: /signup
+[22-10-2025 08:01:10] WARNING log 7600 - Method Not Allowed: /signup
+[22-10-2025 08:01:10] WARNING log 7600 - Method Not Allowed: /signup
+[22-10-2025 08:01:10] WARNING basehttp 7600 - "GET /signup HTTP/1.1" 405 23506
+[22-10-2025 08:01:10] WARNING basehttp 7600 - "GET /signup HTTP/1.1" 405 23506
+[22-10-2025 08:01:10] WARNING basehttp 7600 - "GET /signup HTTP/1.1" 405 23506
+[22-10-2025 08:01:10] INFO basehttp 3516 - "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+[22-10-2025 08:01:10] INFO basehttp 3516 - "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+[22-10-2025 08:01:10] INFO basehttp 3516 - "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+[22-10-2025 08:01:10] INFO basehttp 14260 - "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+[22-10-2025 08:01:10] INFO basehttp 14260 - "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+[22-10-2025 08:01:10] INFO basehttp 14260 - "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+[22-10-2025 08:01:10] INFO basehttp 7600 - "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+[22-10-2025 08:01:10] INFO basehttp 7600 - "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+[22-10-2025 08:01:10] INFO basehttp 7600 - "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+[22-10-2025 08:01:10] INFO basehttp 7600 - "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+[22-10-2025 08:01:10] INFO basehttp 7600 - "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+[22-10-2025 08:01:10] INFO basehttp 7600 - "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+[22-10-2025 08:01:10] INFO basehttp 3516 - "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+[22-10-2025 08:01:10] INFO basehttp 3516 - "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+[22-10-2025 08:01:10] INFO basehttp 3516 - "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+[22-10-2025 08:01:10] INFO basehttp 7600 - "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 16675
+[22-10-2025 08:01:10] INFO basehttp 7600 - "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 16675
+[22-10-2025 08:01:10] INFO basehttp 7600 - "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 16675
+[22-10-2025 08:01:10] INFO basehttp 14260 - "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+[22-10-2025 08:01:10] INFO basehttp 14260 - "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+[22-10-2025 08:01:10] INFO basehttp 14260 - "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+[22-10-2025 08:01:10] INFO basehttp 14260 - "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+[22-10-2025 08:01:10] INFO basehttp 14260 - "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+[22-10-2025 08:01:10] INFO basehttp 14260 - "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+[22-10-2025 08:01:10] INFO basehttp 7600 - "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+[22-10-2025 08:01:10] INFO basehttp 7600 - "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+[22-10-2025 08:01:10] INFO basehttp 7600 - "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+[22-10-2025 08:01:10] INFO basehttp 14260 - "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+[22-10-2025 08:01:10] INFO basehttp 14260 - "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+[22-10-2025 08:01:10] INFO basehttp 14260 - "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+[22-10-2025 08:01:10] INFO basehttp 7600 - "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+[22-10-2025 08:01:10] INFO basehttp 7600 - "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+[22-10-2025 08:01:10] INFO basehttp 7600 - "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+[22-10-2025 08:01:10] INFO basehttp 14260 - "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+[22-10-2025 08:01:10] INFO basehttp 14260 - "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+[22-10-2025 08:01:10] INFO basehttp 14260 - "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+[22-10-2025 08:01:10] INFO basehttp 3516 - "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 14601
+[22-10-2025 08:01:10] INFO basehttp 3516 - "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 14601
+[22-10-2025 08:01:10] INFO basehttp 3516 - "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 14601
+[22-10-2025 08:01:10] INFO basehttp 3516 - "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+[22-10-2025 08:01:10] INFO basehttp 3516 - "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+[22-10-2025 08:01:10] INFO basehttp 3516 - "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+[22-10-2025 08:01:10] INFO basehttp 3516 - "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+[22-10-2025 08:01:10] INFO basehttp 3516 - "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+[22-10-2025 08:01:10] INFO basehttp 3516 - "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+[22-10-2025 08:01:10] INFO basehttp 3516 - "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4742
+[22-10-2025 08:01:10] INFO basehttp 3516 - "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4742
+[22-10-2025 08:01:10] INFO basehttp 3516 - "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4742
+[22-10-2025 08:01:12] WARNING log 3516 - Not Found: /favicon.ico
+[22-10-2025 08:01:12] WARNING log 3516 - Not Found: /favicon.ico
+[22-10-2025 08:01:12] WARNING log 3516 - Not Found: /favicon.ico
+[22-10-2025 08:01:12] WARNING basehttp 3516 - "GET /favicon.ico HTTP/1.1" 404 17985
+[22-10-2025 08:01:12] WARNING basehttp 3516 - "GET /favicon.ico HTTP/1.1" 404 17985
+[22-10-2025 08:01:12] WARNING basehttp 3516 - "GET /favicon.ico HTTP/1.1" 404 17985
+[22-10-2025 08:01:15] INFO basehttp 14260 - "GET /admin/auth/user/ HTTP/1.1" 200 27877
+[22-10-2025 08:01:15] INFO basehttp 14260 - "GET /admin/auth/user/ HTTP/1.1" 200 27877
+[22-10-2025 08:01:15] INFO basehttp 14260 - "GET /admin/auth/user/ HTTP/1.1" 200 27877
+[22-10-2025 08:01:15] INFO basehttp 7600 - "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+[22-10-2025 08:01:15] INFO basehttp 7600 - "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+[22-10-2025 08:01:15] INFO basehttp 7600 - "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+[22-10-2025 08:01:15] INFO basehttp 3516 - "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+[22-10-2025 08:01:15] INFO basehttp 3516 - "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+[22-10-2025 08:01:15] INFO basehttp 3516 - "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+[22-10-2025 08:01:15] INFO basehttp 14260 - "GET /static/admin/css/base.css HTTP/1.1" 200 21310
+[22-10-2025 08:01:15] INFO basehttp 14260 - "GET /static/admin/css/base.css HTTP/1.1" 200 21310
+[22-10-2025 08:01:15] INFO basehttp 14260 - "GET /static/admin/css/base.css HTTP/1.1" 200 21310
+[22-10-2025 08:01:15] INFO basehttp 14260 - "GET /static/admin/css/changelists.css HTTP/1.1" 200 6566
+[22-10-2025 08:01:15] INFO basehttp 14260 - "GET /static/admin/css/changelists.css HTTP/1.1" 200 6566
+[22-10-2025 08:01:15] INFO basehttp 14260 - "GET /static/admin/css/changelists.css HTTP/1.1" 200 6566
+[22-10-2025 08:01:15] INFO basehttp 3516 - "GET /static/admin/css/responsive.css HTTP/1.1" 200 18559
+[22-10-2025 08:01:15] INFO basehttp 3516 - "GET /static/admin/css/responsive.css HTTP/1.1" 200 18559
+[22-10-2025 08:01:15] INFO basehttp 3516 - "GET /static/admin/css/responsive.css HTTP/1.1" 200 18559
+[22-10-2025 08:01:15] INFO basehttp 14260 - "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+[22-10-2025 08:01:15] INFO basehttp 14260 - "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+[22-10-2025 08:01:15] INFO basehttp 14260 - "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+[22-10-2025 08:01:15] INFO basehttp 3516 - "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+[22-10-2025 08:01:15] INFO basehttp 3516 - "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+[22-10-2025 08:01:15] INFO basehttp 3516 - "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+[22-10-2025 08:01:15] INFO basehttp 3516 - "GET /static/admin/js/core.js HTTP/1.1" 200 5682
+[22-10-2025 08:01:15] INFO basehttp 3516 - "GET /static/admin/js/core.js HTTP/1.1" 200 5682
+[22-10-2025 08:01:15] INFO basehttp 3516 - "GET /static/admin/js/core.js HTTP/1.1" 200 5682
+[22-10-2025 08:01:15] INFO basehttp 3516 - "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943
+[22-10-2025 08:01:15] INFO basehttp 3516 - "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943
+[22-10-2025 08:01:15] INFO basehttp 3516 - "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943
+[22-10-2025 08:01:15] INFO basehttp 14260 - "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+[22-10-2025 08:01:15] INFO basehttp 14260 - "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+[22-10-2025 08:01:15] INFO basehttp 14260 - "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+[22-10-2025 08:01:15] INFO basehttp 3516 - "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+[22-10-2025 08:01:15] INFO basehttp 3516 - "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+[22-10-2025 08:01:15] INFO basehttp 3516 - "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+[22-10-2025 08:01:15] INFO basehttp 14260 - "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+[22-10-2025 08:01:15] INFO basehttp 14260 - "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+[22-10-2025 08:01:15] INFO basehttp 14260 - "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+[22-10-2025 08:01:15] INFO basehttp 3516 - "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+[22-10-2025 08:01:15] INFO basehttp 3516 - "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+[22-10-2025 08:01:15] INFO basehttp 3516 - "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+[22-10-2025 08:01:15] INFO basehttp 14260 - "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+[22-10-2025 08:01:15] INFO basehttp 14260 - "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+[22-10-2025 08:01:15] INFO basehttp 14260 - "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+[22-10-2025 08:01:15] INFO basehttp 10056 - "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[22-10-2025 08:01:15] INFO basehttp 10056 - "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[22-10-2025 08:01:15] INFO basehttp 10056 - "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[22-10-2025 08:01:15] INFO basehttp 3516 - "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+[22-10-2025 08:01:15] INFO basehttp 3516 - "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+[22-10-2025 08:01:15] INFO basehttp 3516 - "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+[22-10-2025 08:01:15] INFO basehttp 3516 - "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+[22-10-2025 08:01:15] INFO basehttp 3516 - "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+[22-10-2025 08:01:15] INFO basehttp 3516 - "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+[22-10-2025 08:01:15] INFO basehttp 3516 - "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+[22-10-2025 08:01:15] INFO basehttp 3516 - "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+[22-10-2025 08:01:15] INFO basehttp 3516 - "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+[22-10-2025 08:01:15] INFO basehttp 3516 - "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+[22-10-2025 08:01:15] INFO basehttp 3516 - "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+[22-10-2025 08:01:15] INFO basehttp 3516 - "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+[22-10-2025 08:01:15] INFO basehttp 7600 - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[22-10-2025 08:01:15] INFO basehttp 7600 - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[22-10-2025 08:01:15] INFO basehttp 7600 - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[22-10-2025 08:01:15] INFO basehttp 7600 - "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[22-10-2025 08:01:15] INFO basehttp 7600 - "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[22-10-2025 08:01:15] INFO basehttp 7600 - "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[22-10-2025 08:01:15] INFO basehttp 7600 - "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[22-10-2025 08:01:15] INFO basehttp 7600 - "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[22-10-2025 08:01:15] INFO basehttp 7600 - "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[22-10-2025 08:01:15] INFO basehttp 3516 - "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+[22-10-2025 08:01:15] INFO basehttp 3516 - "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+[22-10-2025 08:01:15] INFO basehttp 3516 - "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+[22-10-2025 08:01:21] WARNING log 3516 - Not Found: /api/
+[22-10-2025 08:01:21] WARNING log 3516 - Not Found: /api/
+[22-10-2025 08:01:21] WARNING log 3516 - Not Found: /api/
+[22-10-2025 08:01:21] WARNING basehttp 3516 - "GET /api/ HTTP/1.1" 404 17956
+[22-10-2025 08:01:21] WARNING basehttp 3516 - "GET /api/ HTTP/1.1" 404 17956
+[22-10-2025 08:01:21] WARNING basehttp 3516 - "GET /api/ HTTP/1.1" 404 17956
+[22-10-2025 08:06:36] INFO utils 7256 - Verification email queued for user 35 (aliyahsulaiman3@gmail.com)
+[22-10-2025 08:06:36] ERROR email_utils 15916 -  Failed to send verification email to aliyahsulaiman3@gmail.com: API key is required. Either pass it as 'api_key' parameter or set the 'MAILERSEND_API_KEY' environment variable.
+[22-10-2025 08:06:36] INFO utils 7256 - {'requestTime': datetime.datetime(2025, 10, 22, 7, 6, 36, 735314, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': 'c87a236463c50fc711efd66512980c04147ed5576c42a1e070c68144f738', 'status': True, 'message': {'message': 'Registration successful! Please check your email to verify your account.', 'user_id': 35, 'email': 'aliyahsulaiman3@gmail.com'}, 'data': {}}
+[22-10-2025 08:06:36] INFO basehttp 7256 - "POST /signup HTTP/1.1" 200 317
+[22-10-2025 08:06:36] INFO basehttp 7256 - "POST /signup HTTP/1.1" 200 317
+[22-10-2025 08:06:36] INFO basehttp 7256 - "POST /signup HTTP/1.1" 200 317
+[22-10-2025 08:07:16] INFO autoreload 6396 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 08:07:16] INFO autoreload 6396 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 08:07:18] INFO autoreload 12160 - Watching for file changes with StatReloader
+[22-10-2025 08:07:18] INFO autoreload 12160 - Watching for file changes with StatReloader
+[22-10-2025 08:07:22] INFO autoreload 12160 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 08:07:22] INFO autoreload 12160 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[22-10-2025 08:07:24] INFO autoreload 17516 - Watching for file changes with StatReloader
+[22-10-2025 08:07:24] INFO autoreload 17516 - Watching for file changes with StatReloader
+[22-10-2025 08:09:03] INFO autoreload 17516 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:09:03] INFO autoreload 17516 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:09:04] INFO autoreload 17080 - Watching for file changes with StatReloader
+[22-10-2025 08:09:04] INFO autoreload 17080 - Watching for file changes with StatReloader
+[22-10-2025 08:09:07] INFO autoreload 17080 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:09:07] INFO autoreload 17080 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:09:10] INFO autoreload 17200 - Watching for file changes with StatReloader
+[22-10-2025 08:09:10] INFO autoreload 17200 - Watching for file changes with StatReloader
+[22-10-2025 08:09:16] INFO autoreload 17200 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:09:16] INFO autoreload 17200 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:09:17] INFO autoreload 17688 - Watching for file changes with StatReloader
+[22-10-2025 08:09:17] INFO autoreload 17688 - Watching for file changes with StatReloader
+[22-10-2025 08:11:04] INFO autoreload 17688 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:11:04] INFO autoreload 17688 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:11:06] INFO autoreload 10056 - Watching for file changes with StatReloader
+[22-10-2025 08:11:06] INFO autoreload 10056 - Watching for file changes with StatReloader
+[22-10-2025 08:11:18] INFO autoreload 10056 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:11:18] INFO autoreload 10056 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:11:20] INFO autoreload 17672 - Watching for file changes with StatReloader
+[22-10-2025 08:11:20] INFO autoreload 17672 - Watching for file changes with StatReloader
+[22-10-2025 08:12:14] INFO autoreload 17672 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:12:14] INFO autoreload 17672 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:12:17] INFO autoreload 1260 - Watching for file changes with StatReloader
+[22-10-2025 08:12:17] INFO autoreload 1260 - Watching for file changes with StatReloader
+[22-10-2025 08:12:23] INFO autoreload 1260 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:12:23] INFO autoreload 1260 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:12:25] INFO autoreload 11708 - Watching for file changes with StatReloader
+[22-10-2025 08:12:25] INFO autoreload 11708 - Watching for file changes with StatReloader
+[22-10-2025 08:12:29] INFO autoreload 11708 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:12:29] INFO autoreload 11708 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:12:31] INFO autoreload 16964 - Watching for file changes with StatReloader
+[22-10-2025 08:12:31] INFO autoreload 16964 - Watching for file changes with StatReloader
+[22-10-2025 08:12:50] INFO autoreload 16964 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:12:50] INFO autoreload 16964 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:12:53] INFO autoreload 17720 - Watching for file changes with StatReloader
+[22-10-2025 08:12:53] INFO autoreload 17720 - Watching for file changes with StatReloader
+[22-10-2025 08:13:00] INFO autoreload 17720 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:13:00] INFO autoreload 17720 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:13:03] INFO autoreload 10768 - Watching for file changes with StatReloader
+[22-10-2025 08:13:03] INFO autoreload 10768 - Watching for file changes with StatReloader
+[22-10-2025 08:13:36] INFO autoreload 10768 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:13:36] INFO autoreload 10768 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:13:38] INFO autoreload 9240 - Watching for file changes with StatReloader
+[22-10-2025 08:13:38] INFO autoreload 9240 - Watching for file changes with StatReloader
+[22-10-2025 08:13:43] INFO autoreload 9240 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:13:43] INFO autoreload 9240 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:13:46] INFO autoreload 17768 - Watching for file changes with StatReloader
+[22-10-2025 08:13:46] INFO autoreload 17768 - Watching for file changes with StatReloader
+[22-10-2025 08:13:52] INFO autoreload 17768 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:13:52] INFO autoreload 17768 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:13:54] INFO autoreload 18152 - Watching for file changes with StatReloader
+[22-10-2025 08:13:54] INFO autoreload 18152 - Watching for file changes with StatReloader
+[22-10-2025 08:14:03] INFO autoreload 18152 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:14:03] INFO autoreload 18152 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:14:06] INFO autoreload 16980 - Watching for file changes with StatReloader
+[22-10-2025 08:14:06] INFO autoreload 16980 - Watching for file changes with StatReloader
+[22-10-2025 08:14:11] INFO autoreload 16980 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:14:11] INFO autoreload 16980 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:14:12] INFO autoreload 17552 - Watching for file changes with StatReloader
+[22-10-2025 08:14:12] INFO autoreload 17552 - Watching for file changes with StatReloader
+[22-10-2025 08:14:23] INFO autoreload 17552 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:14:23] INFO autoreload 17552 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:14:25] INFO autoreload 14892 - Watching for file changes with StatReloader
+[22-10-2025 08:14:25] INFO autoreload 14892 - Watching for file changes with StatReloader
+[22-10-2025 08:15:41] INFO autoreload 14892 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:15:41] INFO autoreload 14892 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:15:42] INFO autoreload 16704 - Watching for file changes with StatReloader
+[22-10-2025 08:15:42] INFO autoreload 16704 - Watching for file changes with StatReloader
+[22-10-2025 08:16:13] INFO autoreload 16704 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:16:13] INFO autoreload 16704 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:16:17] INFO autoreload 7384 - Watching for file changes with StatReloader
+[22-10-2025 08:16:17] INFO autoreload 7384 - Watching for file changes with StatReloader
+[22-10-2025 08:16:26] INFO autoreload 7384 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:16:26] INFO autoreload 7384 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:16:27] INFO autoreload 3644 - Watching for file changes with StatReloader
+[22-10-2025 08:16:27] INFO autoreload 3644 - Watching for file changes with StatReloader
+[22-10-2025 08:16:34] INFO autoreload 3644 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:16:34] INFO autoreload 3644 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:16:35] INFO autoreload 9896 - Watching for file changes with StatReloader
+[22-10-2025 08:16:35] INFO autoreload 9896 - Watching for file changes with StatReloader
+[22-10-2025 08:16:50] INFO autoreload 9896 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:16:50] INFO autoreload 9896 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:16:52] INFO autoreload 3260 - Watching for file changes with StatReloader
+[22-10-2025 08:16:52] INFO autoreload 3260 - Watching for file changes with StatReloader
+[22-10-2025 08:17:02] INFO autoreload 3260 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:17:02] INFO autoreload 3260 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:17:04] INFO autoreload 16816 - Watching for file changes with StatReloader
+[22-10-2025 08:17:04] INFO autoreload 16816 - Watching for file changes with StatReloader
+[22-10-2025 08:17:28] INFO autoreload 16816 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:17:28] INFO autoreload 16816 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:17:33] INFO autoreload 17576 - Watching for file changes with StatReloader
+[22-10-2025 08:17:33] INFO autoreload 17576 - Watching for file changes with StatReloader
+[22-10-2025 08:17:38] INFO autoreload 17576 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:17:38] INFO autoreload 17576 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:17:39] INFO autoreload 10540 - Watching for file changes with StatReloader
+[22-10-2025 08:17:39] INFO autoreload 10540 - Watching for file changes with StatReloader
+[22-10-2025 08:18:02] INFO autoreload 10540 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:18:02] INFO autoreload 10540 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:18:05] INFO autoreload 18376 - Watching for file changes with StatReloader
+[22-10-2025 08:18:05] INFO autoreload 18376 - Watching for file changes with StatReloader
+[22-10-2025 08:19:57] INFO autoreload 18376 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:19:57] INFO autoreload 18376 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:19:58] INFO autoreload 17416 - Watching for file changes with StatReloader
+[22-10-2025 08:19:58] INFO autoreload 17416 - Watching for file changes with StatReloader
+[22-10-2025 08:21:00] INFO autoreload 17416 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:21:00] INFO autoreload 17416 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:21:02] INFO autoreload 8764 - Watching for file changes with StatReloader
+[22-10-2025 08:21:02] INFO autoreload 8764 - Watching for file changes with StatReloader
+[22-10-2025 08:21:09] INFO autoreload 8764 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:21:09] INFO autoreload 8764 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:21:11] INFO autoreload 11752 - Watching for file changes with StatReloader
+[22-10-2025 08:21:11] INFO autoreload 11752 - Watching for file changes with StatReloader
+[22-10-2025 08:21:21] INFO autoreload 11752 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:21:21] INFO autoreload 11752 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:21:23] INFO autoreload 1684 - Watching for file changes with StatReloader
+[22-10-2025 08:21:23] INFO autoreload 1684 - Watching for file changes with StatReloader
+[22-10-2025 08:46:36] INFO autoreload 1684 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:46:36] INFO autoreload 1684 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 08:46:37] INFO autoreload 18136 - Watching for file changes with StatReloader
+[22-10-2025 08:46:37] INFO autoreload 18136 - Watching for file changes with StatReloader
+[22-10-2025 10:47:22] INFO autoreload 10660 - Watching for file changes with StatReloader
+[22-10-2025 10:47:22] INFO autoreload 10660 - Watching for file changes with StatReloader
+[22-10-2025 10:47:56] INFO autoreload 10660 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 10:47:56] INFO autoreload 10660 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 10:47:58] INFO autoreload 15464 - Watching for file changes with StatReloader
+[22-10-2025 10:47:58] INFO autoreload 15464 - Watching for file changes with StatReloader
+[22-10-2025 10:48:05] INFO autoreload 15464 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 10:48:05] INFO autoreload 15464 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 10:48:07] INFO autoreload 8700 - Watching for file changes with StatReloader
+[22-10-2025 10:48:07] INFO autoreload 8700 - Watching for file changes with StatReloader
+[22-10-2025 10:48:21] INFO utils 16324 - Verification email queued for user 36 (aliyahsulaiman3@gmail.com)
+[22-10-2025 10:48:21] ERROR email_utils 2844 -  Failed to send verification email to aliyahsulaiman3@gmail.com: API key is required. Either pass it as 'api_key' parameter or set the 'MAILERSEND_API_KEY' environment variable.
+[22-10-2025 10:48:23] ERROR log 16324 - Internal Server Error: /signup
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py", line 278, in post
+    user = User.objects.get(user=request.user)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\query.py", line 623, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1546, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1577, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1427, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1237, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1725, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'user' into field. Choices are: date_joined, email, first_name, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, outstandingtoken, password, user_permissions, username, userprofile
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py", line 296, in post
+    log_request(f"Warning: Failed to queue verification email for user {user.id}: {email_error}")
+                                                                        ^^^^
+UnboundLocalError: cannot access local variable 'user' where it is not associated with a value
+[22-10-2025 10:48:23] ERROR log 16324 - Internal Server Error: /signup
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py", line 278, in post
+    user = User.objects.get(user=request.user)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\query.py", line 623, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1546, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1577, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1427, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1237, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1725, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'user' into field. Choices are: date_joined, email, first_name, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, outstandingtoken, password, user_permissions, username, userprofile
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py", line 296, in post
+    log_request(f"Warning: Failed to queue verification email for user {user.id}: {email_error}")
+                                                                        ^^^^
+UnboundLocalError: cannot access local variable 'user' where it is not associated with a value
+[22-10-2025 10:48:23] ERROR log 16324 - Internal Server Error: /signup
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py", line 278, in post
+    user = User.objects.get(user=request.user)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\query.py", line 623, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1546, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1577, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1427, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1237, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1725, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'user' into field. Choices are: date_joined, email, first_name, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, outstandingtoken, password, user_permissions, username, userprofile
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py", line 296, in post
+    log_request(f"Warning: Failed to queue verification email for user {user.id}: {email_error}")
+                                                                        ^^^^
+UnboundLocalError: cannot access local variable 'user' where it is not associated with a value
+[22-10-2025 10:48:23] ERROR basehttp 16324 - "POST /signup HTTP/1.1" 500 181444
+[22-10-2025 10:48:23] ERROR basehttp 16324 - "POST /signup HTTP/1.1" 500 181444
+[22-10-2025 10:48:23] ERROR basehttp 16324 - "POST /signup HTTP/1.1" 500 181444
+[22-10-2025 10:49:26] INFO autoreload 8700 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 10:49:26] INFO autoreload 8700 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 10:49:29] INFO autoreload 10892 - Watching for file changes with StatReloader
+[22-10-2025 10:49:29] INFO autoreload 10892 - Watching for file changes with StatReloader
+[22-10-2025 10:49:34] INFO autoreload 10892 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 10:49:34] INFO autoreload 10892 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 10:49:36] INFO autoreload 17140 - Watching for file changes with StatReloader
+[22-10-2025 10:49:36] INFO autoreload 17140 - Watching for file changes with StatReloader
+[22-10-2025 10:49:42] INFO autoreload 17140 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 10:49:42] INFO autoreload 17140 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 10:49:43] INFO autoreload 13564 - Watching for file changes with StatReloader
+[22-10-2025 10:49:43] INFO autoreload 13564 - Watching for file changes with StatReloader
+[22-10-2025 10:52:07] INFO autoreload 13564 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 10:52:07] INFO autoreload 13564 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 10:52:10] INFO autoreload 9792 - Watching for file changes with StatReloader
+[22-10-2025 10:52:10] INFO autoreload 9792 - Watching for file changes with StatReloader
+[22-10-2025 10:52:51] INFO autoreload 9792 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 10:52:51] INFO autoreload 9792 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 10:52:53] INFO autoreload 1940 - Watching for file changes with StatReloader
+[22-10-2025 10:52:53] INFO autoreload 1940 - Watching for file changes with StatReloader
+[22-10-2025 10:52:58] INFO autoreload 1940 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 10:52:58] INFO autoreload 1940 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 10:53:01] INFO autoreload 15692 - Watching for file changes with StatReloader
+[22-10-2025 10:53:01] INFO autoreload 15692 - Watching for file changes with StatReloader
+[22-10-2025 10:53:09] INFO autoreload 15692 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 10:53:09] INFO autoreload 15692 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 10:53:11] INFO autoreload 12124 - Watching for file changes with StatReloader
+[22-10-2025 10:53:11] INFO autoreload 12124 - Watching for file changes with StatReloader
+[22-10-2025 10:53:26] INFO autoreload 12124 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 10:53:26] INFO autoreload 12124 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 10:53:29] INFO autoreload 6304 - Watching for file changes with StatReloader
+[22-10-2025 10:53:29] INFO autoreload 6304 - Watching for file changes with StatReloader
+[22-10-2025 11:02:13] ERROR email_utils 18024 -  Failed to send verification email to aliyahsulaiman3@gmail.com: API key is required. Either pass it as 'api_key' parameter or set the 'MAILERSEND_API_KEY' environment variable.
+[22-10-2025 11:02:13] INFO utils 14104 - Verification email queued for user 37 (aliyahsulaiman3@gmail.com)
+[22-10-2025 11:02:13] INFO utils 14104 - Warning: Failed to queue verification email for user None: Cannot resolve keyword 'user' into field. Choices are: date_joined, email, first_name, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, outstandingtoken, password, user_permissions, username, userprofile
+[22-10-2025 11:02:13] INFO utils 14104 - {'requestTime': datetime.datetime(2025, 10, 22, 10, 2, 13, 107189, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': '3fd3a8fc86b0c3f279ef2efba4da2b2a7bf5762e4186ec64935e4952963b', 'status': True, 'message': {'message': 'Registration successful! Please check your email to verify your account.', 'user_id': 37, 'email': 'aliyahsulaiman3@gmail.com'}, 'data': {}}
+[22-10-2025 11:02:13] INFO basehttp 14104 - "POST /signup HTTP/1.1" 200 317
+[22-10-2025 11:02:13] INFO basehttp 14104 - "POST /signup HTTP/1.1" 200 317
+[22-10-2025 11:02:13] INFO basehttp 14104 - "POST /signup HTTP/1.1" 200 317
+[22-10-2025 11:03:30] INFO autoreload 6304 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 11:03:30] INFO autoreload 6304 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 11:03:33] INFO autoreload 1472 - Watching for file changes with StatReloader
+[22-10-2025 11:03:33] INFO autoreload 1472 - Watching for file changes with StatReloader
+[22-10-2025 11:03:52] INFO autoreload 1472 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 11:03:52] INFO autoreload 1472 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 11:03:54] INFO autoreload 14884 - Watching for file changes with StatReloader
+[22-10-2025 11:03:54] INFO autoreload 14884 - Watching for file changes with StatReloader
+[22-10-2025 11:04:00] INFO autoreload 14884 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 11:04:00] INFO autoreload 14884 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 11:04:02] INFO autoreload 3536 - Watching for file changes with StatReloader
+[22-10-2025 11:04:02] INFO autoreload 3536 - Watching for file changes with StatReloader
+[22-10-2025 11:04:26] INFO autoreload 3536 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 11:04:26] INFO autoreload 3536 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 11:04:30] INFO autoreload 17248 - Watching for file changes with StatReloader
+[22-10-2025 11:04:30] INFO autoreload 17248 - Watching for file changes with StatReloader
+[22-10-2025 11:04:38] INFO autoreload 17248 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 11:04:38] INFO autoreload 17248 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[22-10-2025 11:04:40] INFO autoreload 4624 - Watching for file changes with StatReloader
+[22-10-2025 11:04:40] INFO autoreload 4624 - Watching for file changes with StatReloader
+[22-10-2025 11:07:13] INFO basehttp 18368 - "GET / HTTP/1.1" 200 41
+[22-10-2025 11:07:13] INFO basehttp 18368 - "GET / HTTP/1.1" 200 41
+[22-10-2025 11:07:13] INFO basehttp 18368 - "GET / HTTP/1.1" 200 41
+[22-10-2025 11:23:11] INFO basehttp 16784 - "GET / HTTP/1.1" 200 41
+[22-10-2025 11:23:11] INFO basehttp 16784 - "GET / HTTP/1.1" 200 41
+[22-10-2025 11:23:11] INFO basehttp 16784 - "GET / HTTP/1.1" 200 41
+[22-10-2025 18:44:57] INFO autoreload 19484 - Watching for file changes with StatReloader
+[22-10-2025 18:44:57] INFO autoreload 19484 - Watching for file changes with StatReloader
+[22-10-2025 20:02:14] INFO utils 8524 - Verification email queued for user 38 (aliyahsulaiman3@gmail.com)
+[22-10-2025 20:02:14] INFO utils 8524 - {'requestTime': datetime.datetime(2025, 10, 22, 19, 2, 14, 136635, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': '222b08b7720d4b3c3e36cd5ec35992407626e2d6b7a0745f76ff50f563d1', 'status': True, 'message': {'message': 'Registration successful! Please check your email to verify your account.', 'user_id': 38, 'email': 'aliyahsulaiman3@gmail.com'}, 'data': {}}
+[22-10-2025 20:02:14] INFO basehttp 8524 - "POST /signup HTTP/1.1" 200 317
+[22-10-2025 20:02:14] INFO basehttp 8524 - "POST /signup HTTP/1.1" 200 317
+[22-10-2025 20:02:14] INFO basehttp 8524 - "POST /signup HTTP/1.1" 200 317
+[22-10-2025 20:02:21] INFO email_utils 16124 -  Verification email sent successfully to aliyahsulaiman3@gmail.com
+[22-10-2025 20:02:21] INFO email_utils 16124 - SUCCESS: Verification email sent via MailerSend to aliyahsulaiman3@gmail.com
+[22-10-2025 20:03:30] INFO basehttp 14500 - "GET /verify-email/?token=EixaHPMCswSEoTlk4M55hlf0JqLfLA-SAGtaMRVFpxk HTTP/1.1" 302 0
+[22-10-2025 20:03:30] INFO basehttp 14500 - "GET /verify-email/?token=EixaHPMCswSEoTlk4M55hlf0JqLfLA-SAGtaMRVFpxk HTTP/1.1" 302 0
+[22-10-2025 20:03:30] INFO basehttp 14500 - "GET /verify-email/?token=EixaHPMCswSEoTlk4M55hlf0JqLfLA-SAGtaMRVFpxk HTTP/1.1" 302 0
+[22-10-2025 20:03:34] INFO email_utils 14564 -  Welcome email sent successfully to user 38 (aliyahsulaiman3@gmail.com)
+[22-10-2025 20:04:25] INFO utils 18768 - {'requestTime': datetime.datetime(2025, 10, 22, 19, 4, 25, 295427, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': '91b5f07edf8450bc145b981320d7c17fb13532ad27d6cda72c7a52c26fe6', 'status': False, 'message': 'Invalid verification token', 'data': {}}
+[22-10-2025 20:04:25] WARNING log 18768 - Bad Request: /verify-email/
+[22-10-2025 20:04:25] WARNING log 18768 - Bad Request: /verify-email/
+[22-10-2025 20:04:25] WARNING log 18768 - Bad Request: /verify-email/
+[22-10-2025 20:04:25] WARNING basehttp 18768 - "GET /verify-email/?token=EixaHPMCswSEoTlk4M55hlf0JqLfLA-SAGtaMRVFpxk HTTP/1.1" 400 23822
+[22-10-2025 20:04:25] WARNING basehttp 18768 - "GET /verify-email/?token=EixaHPMCswSEoTlk4M55hlf0JqLfLA-SAGtaMRVFpxk HTTP/1.1" 400 23822
+[22-10-2025 20:04:25] WARNING basehttp 18768 - "GET /verify-email/?token=EixaHPMCswSEoTlk4M55hlf0JqLfLA-SAGtaMRVFpxk HTTP/1.1" 400 23822
+[22-10-2025 20:04:25] INFO basehttp 7780 - "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+[22-10-2025 20:04:25] INFO basehttp 7780 - "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+[22-10-2025 20:04:25] INFO basehttp 7780 - "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+[22-10-2025 20:04:25] INFO basehttp 19796 - "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+[22-10-2025 20:04:25] INFO basehttp 19796 - "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+[22-10-2025 20:04:25] INFO basehttp 19796 - "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+[22-10-2025 20:04:25] INFO basehttp 18768 - "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+[22-10-2025 20:04:25] INFO basehttp 18768 - "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+[22-10-2025 20:04:25] INFO basehttp 18768 - "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+[22-10-2025 20:04:25] INFO basehttp 18376 - "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+[22-10-2025 20:04:25] INFO basehttp 18376 - "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+[22-10-2025 20:04:25] INFO basehttp 18376 - "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+[22-10-2025 20:04:25] INFO basehttp 12296 - "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 16675
+[22-10-2025 20:04:25] INFO basehttp 7780 - "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+[22-10-2025 20:04:25] INFO basehttp 12296 - "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 16675
+[22-10-2025 20:04:25] INFO basehttp 7780 - "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+[22-10-2025 20:04:25] INFO basehttp 7780 - "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+[22-10-2025 20:04:25] INFO basehttp 12296 - "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 16675
+[22-10-2025 20:04:25] INFO basehttp 19796 - "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+[22-10-2025 20:04:25] INFO basehttp 19796 - "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+[22-10-2025 20:04:25] INFO basehttp 19796 - "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+[22-10-2025 20:04:25] INFO basehttp 10516 - "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+[22-10-2025 20:04:25] INFO basehttp 10516 - "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+[22-10-2025 20:04:25] INFO basehttp 10516 - "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+[22-10-2025 20:04:25] INFO basehttp 18768 - "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+[22-10-2025 20:04:25] INFO basehttp 18768 - "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+[22-10-2025 20:04:25] INFO basehttp 18768 - "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+[22-10-2025 20:04:25] INFO basehttp 18376 - "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+[22-10-2025 20:04:25] INFO basehttp 18376 - "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+[22-10-2025 20:04:25] INFO basehttp 18376 - "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+[22-10-2025 20:04:25] INFO basehttp 7780 - "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+[22-10-2025 20:04:25] INFO basehttp 7780 - "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+[22-10-2025 20:04:25] INFO basehttp 7780 - "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+[22-10-2025 20:04:25] INFO basehttp 12296 - "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+[22-10-2025 20:04:25] INFO basehttp 12296 - "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+[22-10-2025 20:04:25] INFO basehttp 12296 - "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+[22-10-2025 20:04:25] INFO basehttp 10516 - "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 14601
+[22-10-2025 20:04:25] INFO basehttp 10516 - "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 14601
+[22-10-2025 20:04:25] INFO basehttp 10516 - "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 14601
+[22-10-2025 20:04:25] INFO basehttp 19796 - "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+[22-10-2025 20:04:25] INFO basehttp 19796 - "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+[22-10-2025 20:04:25] INFO basehttp 19796 - "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+[22-10-2025 20:04:25] INFO basehttp 19796 - "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+[22-10-2025 20:04:25] INFO basehttp 19796 - "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+[22-10-2025 20:04:25] INFO basehttp 19796 - "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+[22-10-2025 20:04:25] INFO basehttp 19796 - "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4742
+[22-10-2025 20:04:25] INFO basehttp 19796 - "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4742
+[22-10-2025 20:04:25] INFO basehttp 19796 - "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4742
+[22-10-2025 20:04:26] WARNING log 19796 - Not Found: /favicon.ico
+[22-10-2025 20:04:26] WARNING log 19796 - Not Found: /favicon.ico
+[22-10-2025 20:04:26] WARNING log 19796 - Not Found: /favicon.ico
+[22-10-2025 20:04:26] WARNING basehttp 19796 - "GET /favicon.ico HTTP/1.1" 404 17983
+[22-10-2025 20:04:26] WARNING basehttp 19796 - "GET /favicon.ico HTTP/1.1" 404 17983
+[22-10-2025 20:04:26] WARNING basehttp 19796 - "GET /favicon.ico HTTP/1.1" 404 17983

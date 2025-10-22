@@ -26,7 +26,7 @@ class UserProfile(models.Model):
     dob = models.DateField(null=True, blank=True)
     phoneNumber = models.CharField(max_length=15, blank=True, null=True)
     address = models.CharField(max_length=300, blank=True, null=True)
-    is_verified = models.BooleanField(default=False)
+    is_verified = models.BooleanField(default=True)
     verification_token = models.CharField(max_length=255, null=True, blank=True)
     verification_sent_at = models.DateTimeField(null=True, blank=True)
     

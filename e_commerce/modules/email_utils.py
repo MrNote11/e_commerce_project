@@ -124,26 +124,11 @@ def send_verification_email(user_id, email, verification_url):
         try:
             # Initialize Django for thread safety
             django.setup()
-            ms = MailerSendClient()
-            # mailer = emails.NewEmail(settings.MAILSEND_API_KEY)
+      
             subject = "Verify Your Email Address - Action Required"
             
             user_email = User.objects.get(email=email)
             user_email.first_name
-        #     mail_from = {
-        #     "email": 'joyoge5897@datoinf.com',
-        #     "name": 'e_commerce',
-        # }
-
-            # Recipient list
-            # recipients = [
-            #     {
-            #         "email": email,
-            #         "name": user_email,
-            #     }
-            # ]
-
-            # Subject and body
             subject = "Welcome to Our Platform!"
         
 
@@ -195,13 +180,6 @@ def send_verification_email(user_id, email, verification_url):
             If you didn't create an account, please ignore this email.
             """
             
-            # # Build and send
-            # mailer.set_mail_from(mail_from)
-            # mailer.set_mail_to(recipients)
-            # mailer.set_subject(subject)
-            # mailer.set_html_content(html_message)
-            # mailer.set_plaintext_content(plain_message)
-            # response=mailer.send()
             print(f"subjects:{subject},\nmessage:{plain_message},\nfrom:{settings.EMAIL_HOST_USER},\nrecipient:{email},\nhtml message:{html_message}")
             # Send the email
             send_mail(
@@ -276,6 +254,7 @@ def send_welcome_email_threaded(user_id, first_name, email):
                 html_message=html_message,
                 fail_silently=False,
             )
+            
             
             logger.info(f" Welcome email sent successfully to user {user_id} ({email})")
         except Exception as e:

@@ -71,13 +71,12 @@ import logging
 # Imports admin activity logger
 # from admin_panel.utils import log_admin_activity
 
-# Imports Django's built-in User model for authentication
-from django.contrib.auth.models import User
 
 # Imports Decimal for precise financial calculations
 from decimal import Decimal 
 from e_commerce.modules.email_utils import send_welcome_email_threaded
-
+from .models import UserProfile
+from django.contrib.auth.models import User
 
 
 
@@ -272,7 +271,8 @@ class SignupAPIView(APIView):
         serializer = SignupSerializerIn(data=data, context={"request": request})
         serializer.is_valid() or raise_serializer_error_msg(errors=serializer.errors)
         response = serializer.save()
-            
+        user = request.user
+        print(f"user:{user}")
         return Response(api_response(message=response, status=True))
 
 
@@ -321,7 +321,8 @@ class VerifyEmailAPIView(APIView):
             user = user_profile.user
             user.is_active = True
             user.save()
-            
+            data = request.user
+            print(f"user:{data}")
             user_profile.is_verified = True
             user_profile.verification_token = None  # Clear the used token
             user_profile.save()
