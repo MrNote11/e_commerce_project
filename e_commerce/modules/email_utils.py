@@ -200,7 +200,7 @@ def send_verification_email(user_id, email, verification_url):
             logger.error(f" Failed to send verification email to {email}: {str(e)}")
             return False
     
-    thread = threading.Thread(target=_send, daemon=True)
+    thread = threading.Thread(target=_send)
     thread.start()
 
 def send_welcome_email_threaded(user_id, first_name, email):

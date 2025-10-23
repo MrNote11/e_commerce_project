@@ -6668,3 +6668,70 @@ UnboundLocalError: cannot access local variable 'user' where it is not associate
 [22-10-2025 20:04:26] WARNING basehttp 19796 - "GET /favicon.ico HTTP/1.1" 404 17983
 [22-10-2025 20:04:26] WARNING basehttp 19796 - "GET /favicon.ico HTTP/1.1" 404 17983
 [22-10-2025 20:04:26] WARNING basehttp 19796 - "GET /favicon.ico HTTP/1.1" 404 17983
+[23-10-2025 12:00:23] INFO autoreload 17280 - Watching for file changes with StatReloader
+[23-10-2025 12:00:23] INFO autoreload 17280 - Watching for file changes with StatReloader
+[23-10-2025 12:01:30] INFO utils 15936 - Verification email queued for user 48 (alidsulaiman11@gmail.com)
+[23-10-2025 12:01:30] INFO utils 15936 - {'requestTime': datetime.datetime(2025, 10, 23, 11, 1, 30, 470811, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': '68a13d10b6f3644d1063c9074bfbefd14cbfac63ecfe8569bbbe45518b18', 'status': True, 'message': {'message': 'Registration successful! Please check your email to verify your account.', 'user_id': 48, 'email': 'alidsulaiman11@gmail.com'}, 'data': {}}
+[23-10-2025 12:01:30] INFO basehttp 15936 - "POST /signup HTTP/1.1" 200 316
+[23-10-2025 12:01:30] INFO basehttp 15936 - "POST /signup HTTP/1.1" 200 316
+[23-10-2025 12:01:30] INFO basehttp 15936 - "POST /signup HTTP/1.1" 200 316
+[23-10-2025 12:01:41] INFO email_utils 21448 -  Verification email sent successfully to alidsulaiman11@gmail.com
+[23-10-2025 12:01:41] INFO email_utils 21448 - SUCCESS: Verification email sent via MailerSend to alidsulaiman11@gmail.com
+[23-10-2025 12:04:31] INFO basehttp 14460 - "GET /verify-email/?token=Au-rPOl0CK50G9rcBWXOMcf-U_vn79DO5ow_X-OuGEk HTTP/1.1" 302 0
+[23-10-2025 12:04:31] INFO basehttp 14460 - "GET /verify-email/?token=Au-rPOl0CK50G9rcBWXOMcf-U_vn79DO5ow_X-OuGEk HTTP/1.1" 302 0
+[23-10-2025 12:04:31] INFO basehttp 14460 - "GET /verify-email/?token=Au-rPOl0CK50G9rcBWXOMcf-U_vn79DO5ow_X-OuGEk HTTP/1.1" 302 0
+[23-10-2025 12:04:34] INFO email_utils 17524 -  Welcome email sent successfully to user 48 (alidsulaiman11@gmail.com)
+[23-10-2025 12:13:48] INFO autoreload 13760 - Watching for file changes with StatReloader
+[23-10-2025 12:13:48] INFO autoreload 13760 - Watching for file changes with StatReloader
+[23-10-2025 12:16:45] INFO autoreload 10932 - Watching for file changes with StatReloader
+[23-10-2025 12:16:45] INFO autoreload 10932 - Watching for file changes with StatReloader
+[23-10-2025 12:37:09] INFO utils 8904 - Verification email queued for user 50 (alidsulaiman11@gmail.com)
+[23-10-2025 12:37:09] INFO utils 8904 - {'requestTime': datetime.datetime(2025, 10, 23, 11, 37, 9, 526076, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': '14f15ca5a4a617e43d02eb434b292a2b903c6e80d72e34c2eeac46b2d016', 'status': True, 'message': {'message': 'Registration successful! Please check your email to verify your account.', 'user_id': 50, 'email': 'alidsulaiman11@gmail.com'}, 'data': {}}
+[23-10-2025 12:37:10] INFO basehttp 8904 - "POST /signup HTTP/1.1" 200 316
+[23-10-2025 12:37:10] INFO basehttp 8904 - "POST /signup HTTP/1.1" 200 316
+[23-10-2025 12:37:10] INFO basehttp 8904 - "POST /signup HTTP/1.1" 200 316
+[23-10-2025 12:37:19] INFO email_utils 12980 -  Verification email sent successfully to alidsulaiman11@gmail.com
+[23-10-2025 12:37:19] INFO email_utils 12980 - SUCCESS: Verification email sent via MailerSend to alidsulaiman11@gmail.com
+[23-10-2025 12:38:05] INFO autoreload 10932 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[23-10-2025 12:38:05] INFO autoreload 10932 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\serializers.py changed, reloading.
+[23-10-2025 12:38:12] INFO autoreload 7632 - Watching for file changes with StatReloader
+[23-10-2025 12:38:12] INFO autoreload 7632 - Watching for file changes with StatReloader
+[23-10-2025 12:41:58] INFO utils 284 - Verification email queued for user 51 (alidsulaiman11r@gmail.com)
+[23-10-2025 12:41:58] INFO utils 284 - {'requestTime': datetime.datetime(2025, 10, 23, 11, 41, 58, 659095, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': 'c74426b1d720bcb71d87ffcf5ae19827f31d29ee3f50b4d23719081943df', 'status': True, 'message': {'message': 'Registration successful! Please check your email to verify your account.', 'user_id': 51, 'email': 'alidsulaiman11r@gmail.com'}, 'data': {}}
+[23-10-2025 12:41:59] INFO basehttp 284 - "POST /signup HTTP/1.1" 200 317
+[23-10-2025 12:41:59] INFO basehttp 284 - "POST /signup HTTP/1.1" 200 317
+[23-10-2025 12:41:59] INFO basehttp 284 - "POST /signup HTTP/1.1" 200 317
+[23-10-2025 12:54:23] INFO utils 2224 - Verification email queued for user 52 (alidsulaisman11r@gmail.com)
+[23-10-2025 12:54:23] INFO utils 2224 - {'requestTime': datetime.datetime(2025, 10, 23, 11, 54, 23, 939957, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': '680674b0789508f560748b714738f70107d5e770def9e7d8ae5687615aa3', 'status': True, 'message': {'message': 'Registration successful! Please check your email to verify your account.', 'user_id': 52, 'email': 'alidsulaisman11r@gmail.com'}, 'data': {}}
+[23-10-2025 12:54:24] INFO basehttp 2224 - "POST /signup HTTP/1.1" 200 318
+[23-10-2025 12:54:24] INFO basehttp 2224 - "POST /signup HTTP/1.1" 200 318
+[23-10-2025 12:54:24] INFO basehttp 2224 - "POST /signup HTTP/1.1" 200 318
+[23-10-2025 12:57:29] INFO autoreload 7632 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[23-10-2025 12:57:29] INFO autoreload 7632 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[23-10-2025 12:57:38] INFO autoreload 13696 - Watching for file changes with StatReloader
+[23-10-2025 12:57:38] INFO autoreload 13696 - Watching for file changes with StatReloader
+[23-10-2025 14:59:39] INFO autoreload 9196 - Watching for file changes with StatReloader
+[23-10-2025 14:59:39] INFO autoreload 9196 - Watching for file changes with StatReloader
+[23-10-2025 15:10:12] INFO utils 17052 - Verification email queued for user 53 (alidsulaisman11@gmail.com)
+[23-10-2025 15:10:12] INFO utils 17052 - {'requestTime': datetime.datetime(2025, 10, 23, 14, 10, 12, 326932, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': 'b3dd1bc0d55be290f22436cdfe9f64f805ce261a8d2e69a4b1f731528e56', 'status': True, 'message': {'message': 'Registration successful! Please check your email to verify your account.', 'user_id': 53, 'email': 'alidsulaisman11@gmail.com'}, 'data': {}}
+[23-10-2025 15:10:12] INFO basehttp 17052 - "POST /signup HTTP/1.1" 200 317
+[23-10-2025 15:10:12] INFO basehttp 17052 - "POST /signup HTTP/1.1" 200 317
+[23-10-2025 15:10:12] INFO basehttp 17052 - "POST /signup HTTP/1.1" 200 317
+[23-10-2025 15:10:17] INFO email_utils 7276 -  Verification email sent successfully to alidsulaisman11@gmail.com
+[23-10-2025 15:10:17] INFO email_utils 7276 - SUCCESS: Verification email sent via MailerSend to alidsulaisman11@gmail.com
+[23-10-2025 15:13:02] INFO autoreload 9196 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\models.py changed, reloading.
+[23-10-2025 15:13:02] INFO autoreload 9196 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\models.py changed, reloading.
+[23-10-2025 15:13:04] INFO autoreload 16056 - Watching for file changes with StatReloader
+[23-10-2025 15:13:04] INFO autoreload 16056 - Watching for file changes with StatReloader
+[23-10-2025 15:13:22] INFO autoreload 16056 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\models.py changed, reloading.
+[23-10-2025 15:13:22] INFO autoreload 16056 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\models.py changed, reloading.
+[23-10-2025 15:13:24] INFO autoreload 9908 - Watching for file changes with StatReloader
+[23-10-2025 15:13:24] INFO autoreload 9908 - Watching for file changes with StatReloader
+[23-10-2025 15:14:48] INFO autoreload 9908 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\signals.py changed, reloading.
+[23-10-2025 15:14:48] INFO autoreload 9908 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\signals.py changed, reloading.
+[23-10-2025 15:14:50] INFO autoreload 16392 - Watching for file changes with StatReloader
+[23-10-2025 15:14:50] INFO autoreload 16392 - Watching for file changes with StatReloader
+[23-10-2025 15:15:15] INFO autoreload 16392 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\signals.py changed, reloading.
+[23-10-2025 15:15:15] INFO autoreload 16392 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\signals.py changed, reloading.
+[23-10-2025 15:15:17] INFO autoreload 15040 - Watching for file changes with StatReloader
+[23-10-2025 15:15:17] INFO autoreload 15040 - Watching for file changes with StatReloader

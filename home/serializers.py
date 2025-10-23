@@ -14,6 +14,8 @@ from e_commerce.modules.email_utils import send_welcome_email_threaded, send_ver
    # Import the email function
 from e_commerce.modules.email_utils import send_verification_email
 from django.contrib.auth.models import User
+import time
+
 
 class UserProfileSerializerOut(serializers.ModelSerializer):
     username = serializers.SerializerMethodField()
@@ -178,14 +180,31 @@ class SignupSerializerIn(serializers.Serializer):
         user.save()
 
         # Create UserProfile
-        user_profile = UserProfile.objects.create(
-            user=user,      
-            gender=gender,
-            phoneNumber=phone,
-            email=email 
-        )
+        # user_profile = UserProfile.objects.create(
+        #     user=user,      
+        #     gender=gender,
+        #     phoneNumber=phone,
+        #     email=email 
+        # )
+        
+         # Wait a moment for the signal to create UserProfile
+        max_retries = 5
+        for i in range(max_retries):
+            try:
+                user_profile = UserProfile.objects.get(user=user)
+                break
+            except UserProfile.DoesNotExist:
+                if i == max_retries - 1:
+                    time.sleep(0.1)  # Wait 100ms before retry
+                    continue
+                else:
+                    print("userprofile issue occured")  # Wait 100ms before retry
+                    break
         try:
             request = self.context.get('request')
+            user_profile = UserProfile.objects.get(user=user)
+            user_profile.gender = gender
+            user_profile.phoneNumber = phone
             # Generate verification token and send email
             verification_token = user_profile.generate_verification_token()
             verification_url = f"{request.build_absolute_uri('/')}verify-email/?token={verification_token}"

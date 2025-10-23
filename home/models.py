@@ -26,7 +26,7 @@ class UserProfile(models.Model):
     dob = models.DateField(null=True, blank=True)
     phoneNumber = models.CharField(max_length=15, blank=True, null=True)
     address = models.CharField(max_length=300, blank=True, null=True)
-    is_verified = models.BooleanField(default=True)
+    is_verified = models.BooleanField(default=False)
     verification_token = models.CharField(max_length=255, null=True, blank=True)
     verification_sent_at = models.DateTimeField(null=True, blank=True)
     
@@ -35,7 +35,7 @@ class UserProfile(models.Model):
     country = models.CharField(max_length=200, blank=True, null=True)
 
     image = models.ImageField(upload_to="profile-picture", blank=True, null=True)
-    active = models.BooleanField(default=False)
+    active = models.BooleanField(default=True)
     dateCreated = models.DateTimeField(auto_now_add=True)
 
     # Track login
