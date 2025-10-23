@@ -8,6 +8,6 @@ from .models import UserProfile
 def create_user_profile(sender, instance, created, **kwargs):
     """Create empty UserProfile when User is created"""
     if created and not hasattr(instance, 'userprofile'):
-        UserProfile.objects.create(user=instance.first_name, email=instance.email)
+        UserProfile.objects.create(user=instance, email=instance.email)
         
 # Don't forget to import signals in your apps.py
