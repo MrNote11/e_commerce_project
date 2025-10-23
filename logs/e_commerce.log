@@ -6735,3 +6735,36 @@ UnboundLocalError: cannot access local variable 'user' where it is not associate
 [23-10-2025 15:15:15] INFO autoreload 16392 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\signals.py changed, reloading.
 [23-10-2025 15:15:17] INFO autoreload 15040 - Watching for file changes with StatReloader
 [23-10-2025 15:15:17] INFO autoreload 15040 - Watching for file changes with StatReloader
+[23-10-2025 15:39:51] INFO autoreload 19364 - Watching for file changes with StatReloader
+[23-10-2025 15:39:51] INFO autoreload 19364 - Watching for file changes with StatReloader
+[23-10-2025 15:40:03] INFO utils 3560 - Verification email queued for user 56 (alidsulaisman11@gmail.com)
+[23-10-2025 15:40:03] INFO utils 3560 - {'requestTime': datetime.datetime(2025, 10, 23, 14, 40, 3, 468731, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': 'e4f7c8e452489815b10561985aa40f9ef58e517a6d9b0d3d26e899e5e823', 'status': True, 'message': {'message': 'Registration successful! Please check your email to verify your account.', 'user_id': 56, 'email': 'alidsulaisman11@gmail.com'}, 'data': {}}
+[23-10-2025 15:40:03] INFO basehttp 3560 - "POST /signup HTTP/1.1" 200 317
+[23-10-2025 15:40:03] INFO basehttp 3560 - "POST /signup HTTP/1.1" 200 317
+[23-10-2025 15:40:03] INFO basehttp 3560 - "POST /signup HTTP/1.1" 200 317
+[23-10-2025 15:40:12] INFO email_utils 14244 -  Verification email sent successfully to alidsulaisman11@gmail.com
+[23-10-2025 15:40:12] INFO email_utils 14244 - SUCCESS: Verification email sent via MailerSend to alidsulaisman11@gmail.com
+[23-10-2025 15:41:44] INFO autoreload 19364 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[23-10-2025 15:41:44] INFO autoreload 19364 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[23-10-2025 15:42:11] INFO autoreload 18816 - Watching for file changes with StatReloader
+[23-10-2025 15:42:11] INFO autoreload 18816 - Watching for file changes with StatReloader
+[23-10-2025 15:42:22] INFO autoreload 19080 - Watching for file changes with StatReloader
+[23-10-2025 15:42:22] INFO autoreload 19080 - Watching for file changes with StatReloader
+[23-10-2025 15:42:57] INFO utils 11492 - Verification email queued for user 57 (alidsulaisman11@gmail.com)
+[23-10-2025 15:42:57] INFO utils 11492 - {'requestTime': datetime.datetime(2025, 10, 23, 14, 42, 57, 779863, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': 'd94039745e66a0a6ddcc429aa3b519a7d52b04a3730ac257c1f85297e5d7', 'status': True, 'message': {'message': 'Registration successful! Please check your email to verify your account.', 'user_id': 57, 'email': 'alidsulaisman11@gmail.com'}, 'data': {}}
+[23-10-2025 15:42:58] INFO basehttp 11492 - "POST /signup HTTP/1.1" 200 317
+[23-10-2025 15:42:58] INFO basehttp 11492 - "POST /signup HTTP/1.1" 200 317
+[23-10-2025 15:42:58] INFO basehttp 11492 - "POST /signup HTTP/1.1" 200 317
+[23-10-2025 15:43:05] INFO email_utils 7012 -  Verification email sent successfully to alidsulaisman11@gmail.com
+[23-10-2025 15:43:05] INFO email_utils 7012 - SUCCESS: Verification email sent via MailerSend to alidsulaisman11@gmail.com
+[23-10-2025 15:43:15] INFO autoreload 19080 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[23-10-2025 15:43:15] INFO autoreload 19080 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[23-10-2025 15:43:17] INFO autoreload 11304 - Watching for file changes with StatReloader
+[23-10-2025 15:43:17] INFO autoreload 11304 - Watching for file changes with StatReloader
+[23-10-2025 15:44:31] INFO utils 8020 - Verification email queued for user 58 (alidsulaiman11@gmail.com)
+[23-10-2025 15:44:31] INFO utils 8020 - {'requestTime': datetime.datetime(2025, 10, 23, 14, 44, 31, 589400, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': '99c00745a74fc71c54124874febf3ecbdd7f504e249af2539df515f9a0e5', 'status': True, 'message': {'message': 'Registration successful! Please check your email to verify your account.', 'user_id': 58, 'email': 'alidsulaiman11@gmail.com'}, 'data': {}}
+[23-10-2025 15:44:31] INFO basehttp 8020 - "POST /signup HTTP/1.1" 200 316
+[23-10-2025 15:44:31] INFO basehttp 8020 - "POST /signup HTTP/1.1" 200 316
+[23-10-2025 15:44:31] INFO basehttp 8020 - "POST /signup HTTP/1.1" 200 316
+[23-10-2025 15:44:38] INFO email_utils 18488 -  Verification email sent successfully to alidsulaiman11@gmail.com
+[23-10-2025 15:44:38] INFO email_utils 18488 - SUCCESS: Verification email sent via MailerSend to alidsulaiman11@gmail.com
