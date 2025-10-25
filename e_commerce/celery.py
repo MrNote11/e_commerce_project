@@ -43,7 +43,7 @@ app = Celery('e_commerce')
 # Load Celery settings from Django settings
 # Using a string means the worker doesn't have to serialize the configuration object,
 # improving performance and reducing potential serialization issues
-app.config_from_object('django.e_commerce:settings', namespace='CELERY')
+app.config_from_object('e_commerce:settings', namespace='CELERY')
 
 # Fallback Redis configuration if not set in Django settings
 # This ensures the application has a working message broker and result backend
