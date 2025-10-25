@@ -203,7 +203,7 @@ class SignupSerializerIn(serializers.Serializer):
             # Build absolute URL
             
         
-            log_request(f"🔗 Verification URL: {verification_url}")
+            
             user_profile = UserProfile.objects.get(user=user)
             user_profile.gender = gender
             user_profile.phoneNumber = phone
@@ -212,6 +212,7 @@ class SignupSerializerIn(serializers.Serializer):
             base_url = request.build_absolute_uri('/').rstrip('/')
             verification_token = user_profile.generate_verification_token()
             verification_url = f"{base_url}/verify-email/?token={verification_token}"
+            log_request(f"🔗 Verification URL: {verification_url}")
             send_verification_email(email, verification_url)
             # send_verification_email_async.delay(user.email, verification_url)
             print(f"verification url: {verification_url}")

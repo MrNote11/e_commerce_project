@@ -22,6 +22,7 @@ from django.contrib.auth import get_user_model
 from mailersend import MailerSendClient
 from dotenv import load_dotenv
 
+User = get_user_model()
 # Load environment variables from .env file
 load_dotenv()
 
@@ -123,29 +124,19 @@ import time
 logger = logging.getLogger(__name__)
 
 
-def send_verification_email(email, verification_url):
-    """Send account verification email asynchronously using threading."""
-    
-    def _send():
-        # CRITICAL: Setup Django in thread
-        try:
-            django.setup()
-        except RuntimeError:
-            pass  # Django already setup
-        
-        max_retries = 3
-        retry_count = 0
-        
-        while retry_count < max_retries:
-            try:
-                # Import inside thread after Django setup
-                from django.contrib.auth import get_user_model
-                User = get_user_model()
-                
-                user = User.objects.get(email=email)
 
-                subject = f"Welcome {user.first_name}! Verify Your Email Address"
-                plain_message = f"""
+def send_verification_email(email, verification_url):
+    """Send account verification email SYNCHRONOUSLY."""
+    
+    max_retries = 2
+    retry_count = 0
+    
+    while retry_count <= max_retries:
+        try:
+            user = User.objects.get(email=email)
+
+            subject = f"Welcome {user.first_name}! Verify Your Email Address"
+            plain_message = f"""
 Hi {user.first_name},
 
 Thank you for registering with our platform!
@@ -155,9 +146,9 @@ Please verify your email by clicking this link:
 This link expires in 24 hours.
 
 If you didn't create this account, please ignore this email.
-                """
+            """
 
-                html_message = f"""
+            html_message = f"""
 <!DOCTYPE html>
 <html>
 <head>
@@ -181,44 +172,44 @@ If you didn't create this account, please ignore this email.
     </div>
 </body>
 </html>
-                """
+            """
 
-                result = send_mail(
-                    subject,
-                    plain_message,
-                    settings.DEFAULT_FROM_EMAIL,
-                    [email],
-                    html_message=html_message,
-                    fail_silently=False,
-                )
+            print(f"📧 Sending verification email to: {email}")
+            
+            result = send_mail(
+                subject,
+                plain_message,
+                settings.DEFAULT_FROM_EMAIL,
+                [email],
+                html_message=html_message,
+                fail_silently=False,
+            )
 
-                if result == 1:
-                    logger.info(f"✅ Verification email sent successfully to {email}")
-                    print(f"✅ Verification email sent to {email}")
-                    return
-                else:
-                    logger.warning(f"⚠️ Email send returned {result} for {email}")
-                    
-            except Exception as e:
-                retry_count += 1
-                logger.error(f"❌ Attempt {retry_count}/{max_retries} failed to send verification email to {email}: {e}")
-                print(f"❌ Email send attempt {retry_count} failed: {e}")
+            if result == 1:
+                logger.info(f"✅ Verification email sent successfully to {email}")
+                print(f"✅ Verification email sent to {email}")
+                return True
+            else:
+                logger.warning(f"⚠️ Email send returned {result} for {email}")
+                return False
                 
-                if retry_count < max_retries:
-                    time.sleep(2 ** retry_count)  # Exponential backoff: 2s, 4s, 8s
-                else:
-                    logger.error(f"❌ All retries exhausted for verification email to {email}")
-
-    # Start thread with daemon=False to ensure it completes
-    thread = threading.Thread(target=_send, daemon=False)
-    thread.start()
-    
-    # Optional: Wait a moment to ensure thread starts
-    time.sleep(0.1)
-    
-    logger.info(f"📧 Verification email thread started for {email}")
-
-
+        except User.DoesNotExist:
+            logger.error(f"❌ User with email {email} does not exist")
+            print(f"❌ User not found: {email}")
+            return False
+            
+        except Exception as e:
+            retry_count += 1
+            logger.error(f"❌ Attempt {retry_count}/{max_retries} failed to send verification email to {email}: {e}")
+            print(f"❌ Email send attempt {retry_count} failed: {e}")
+            
+            if retry_count <= max_retries:
+                time.sleep(1)  # Wait 1 second before retry
+            else:
+                logger.error(f"❌ All retries exhausted for verification email to {email}")
+                return False
+            
+            
 def send_welcome_email_threaded(user_id, first_name, email):
     """Send welcome email in background thread"""
     
