@@ -226,7 +226,7 @@ class SignupSerializerIn(serializers.Serializer):
                 [email],
                 fail_silently=False,
             )
-            send_verification_email(email, verification_url)
+            # send_verification_email(email, verification_url)
             # send_verification_email_async.delay(user.email, verification_url)
             print(f"verification url: {verification_url}")
             log_request(f"Verification email queued for user {user.id} ({email})")
