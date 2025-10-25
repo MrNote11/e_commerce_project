@@ -6782,3 +6782,9 @@ UnboundLocalError: cannot access local variable 'user' where it is not associate
 [25-10-2025 02:43:22] INFO autoreload 14556 - Watching for file changes with StatReloader
 [25-10-2025 02:57:22] INFO autoreload 15840 - Watching for file changes with StatReloader
 [25-10-2025 02:57:22] INFO autoreload 15840 - Watching for file changes with StatReloader
+[25-10-2025 03:11:56] INFO autoreload 12344 - Watching for file changes with StatReloader
+[25-10-2025 03:11:56] INFO autoreload 12344 - Watching for file changes with StatReloader
+[25-10-2025 03:12:29] INFO utils 20600 - {'requestTime': datetime.datetime(2025, 10, 25, 2, 12, 29, 74716, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': '9365b21d4fea270da0a051bd64b5ab946ff75d93930faf07b1d9b47c3149', 'status': True, 'message': {'message': 'Registration successful! Please check your email to verify your account.', 'user_id': 64, 'email': 'aliyahsulaiman3@gmail.com'}, 'data': {}}
+[25-10-2025 03:12:29] INFO basehttp 20600 - "POST /signup HTTP/1.1" 200 317
+[25-10-2025 03:12:29] INFO basehttp 20600 - "POST /signup HTTP/1.1" 200 317
+[25-10-2025 03:12:29] INFO basehttp 20600 - "POST /signup HTTP/1.1" 200 317

@@ -161,7 +161,6 @@ def send_verification_email(email, verification_url):
 
         except Exception as e:
             print(f"❌ Email thread failed: {e}")
-            traceback.print_exc()
             logger.error(f"❌ Failed to send verification email to {email}: {e}")
 
     thread = threading.Thread(target=_send)
