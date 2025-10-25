@@ -84,7 +84,7 @@ app.conf.update(
     task_time_limit=3600,  # Hard limit: Kill task after 1 hour
     task_soft_time_limit=3300,  # Soft limit: Allow graceful shutdown after 55 minutes
 )
-
+django.setup()
 # Auto-discover tasks from all Django apps
 # This searches for and registers tasks.py files in each Django app
 app.autodiscover_tasks()
