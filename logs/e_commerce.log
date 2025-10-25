@@ -6788,3 +6788,5 @@ UnboundLocalError: cannot access local variable 'user' where it is not associate
 [25-10-2025 03:12:29] INFO basehttp 20600 - "POST /signup HTTP/1.1" 200 317
 [25-10-2025 03:12:29] INFO basehttp 20600 - "POST /signup HTTP/1.1" 200 317
 [25-10-2025 03:12:29] INFO basehttp 20600 - "POST /signup HTTP/1.1" 200 317
+[25-10-2025 04:02:09] INFO autoreload 16144 - Watching for file changes with StatReloader
+[25-10-2025 04:02:09] INFO autoreload 16144 - Watching for file changes with StatReloader

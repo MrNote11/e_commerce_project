@@ -114,119 +114,208 @@ def send_template_mail_in_thread(subject, template_name, context, from_email, re
     threading.Thread(target=_send, daemon=True).start()
 
 
+"""
+Email utilities for sending emails in background threads.
+"""
+import django
+import time
 
-User = get_user_model()
+logger = logging.getLogger(__name__)
+
 
 def send_verification_email(email, verification_url):
-    """Send account verification email asynchronously."""
-
+    """Send account verification email asynchronously using threading."""
+    
     def _send():
+        # CRITICAL: Setup Django in thread
         try:
-            user = User.objects.get(email=email)
+            django.setup()
+        except RuntimeError:
+            pass  # Django already setup
+        
+        max_retries = 3
+        retry_count = 0
+        
+        while retry_count < max_retries:
+            try:
+                # Import inside thread after Django setup
+                from django.contrib.auth import get_user_model
+                User = get_user_model()
+                
+                user = User.objects.get(email=email)
 
-            subject = f"Welcome {user.first_name}! Verify Your Email Address"
-            plain_message = f"""
-            Hi {user.first_name},
-            
-            Thank you for registering with our platform!
-            Please verify your email by clicking this link:
-            {verification_url}
-            
-            This link expires in 24 hours.
-            """
+                subject = f"Welcome {user.first_name}! Verify Your Email Address"
+                plain_message = f"""
+Hi {user.first_name},
 
-            html_message = f"""
-            <html>
-              <body>
-                <h2>Welcome, {user.first_name}!</h2>
-                <p>Thanks for registering with us. Please verify your email below:</p>
-                <a href="{verification_url}" style="background:#007bff;color:white;padding:10px 20px;text-decoration:none;border-radius:4px;">Verify Email</a>
-                <p>If that doesn't work, copy this link:</p>
-                <p><a href="{verification_url}">{verification_url}</a></p>
-              </body>
-            </html>
-            """
+Thank you for registering with our platform!
+Please verify your email by clicking this link:
+{verification_url}
 
-            send_mail(
-                subject,
-                plain_message,
-                settings.DEFAULT_FROM_EMAIL,
-                [email],
-                html_message=html_message,
-                fail_silently=False,
-            )
+This link expires in 24 hours.
 
-            logger.info(f"✅ Verification email sent to {email}")
-            print(f"✅ Email sent successfully to {email}")
+If you didn't create this account, please ignore this email.
+                """
 
-        except Exception as e:
-            print(f"❌ Email thread failed: {e}")
-            logger.error(f"❌ Failed to send verification email to {email}: {e}")
+                html_message = f"""
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {{ font-family: Arial, sans-serif; line-height: 1.6; color: #333; }}
+        .container {{ max-width: 600px; margin: 0 auto; padding: 20px; background: #f9f9f9; }}
+        .button {{ background:#007bff; color:white; padding:12px 24px; text-decoration:none; border-radius:4px; display:inline-block; }}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 style="color: #2c3e50;">Welcome, {user.first_name}! 👋</h2>
+        <p>Thanks for registering with us. Please verify your email to get started:</p>
+        <p style="text-align: center; margin: 30px 0;">
+            <a href="{verification_url}" class="button">Verify Email Address</a>
+        </p>
+        <p style="color: #666; font-size: 14px;">If the button doesn't work, copy and paste this link:</p>
+        <p style="word-break: break-all; color: #007bff;">{verification_url}</p>
+        <hr style="margin: 20px 0; border: none; border-top: 1px solid #ddd;">
+        <p style="color: #999; font-size: 12px;">If you didn't create this account, please ignore this email.</p>
+    </div>
+</body>
+</html>
+                """
 
-    thread = threading.Thread(target=_send)
+                result = send_mail(
+                    subject,
+                    plain_message,
+                    settings.DEFAULT_FROM_EMAIL,
+                    [email],
+                    html_message=html_message,
+                    fail_silently=False,
+                )
+
+                if result == 1:
+                    logger.info(f"✅ Verification email sent successfully to {email}")
+                    print(f"✅ Verification email sent to {email}")
+                    return
+                else:
+                    logger.warning(f"⚠️ Email send returned {result} for {email}")
+                    
+            except Exception as e:
+                retry_count += 1
+                logger.error(f"❌ Attempt {retry_count}/{max_retries} failed to send verification email to {email}: {e}")
+                print(f"❌ Email send attempt {retry_count} failed: {e}")
+                
+                if retry_count < max_retries:
+                    time.sleep(2 ** retry_count)  # Exponential backoff: 2s, 4s, 8s
+                else:
+                    logger.error(f"❌ All retries exhausted for verification email to {email}")
+
+    # Start thread with daemon=False to ensure it completes
+    thread = threading.Thread(target=_send, daemon=False)
     thread.start()
+    
+    # Optional: Wait a moment to ensure thread starts
+    time.sleep(0.1)
+    
+    logger.info(f"📧 Verification email thread started for {email}")
 
 
 def send_welcome_email_threaded(user_id, first_name, email):
     """Send welcome email in background thread"""
-    def _send():
-        try:
-            django.setup()  # Ensure Django is properly initialized in thread
-            
-            subject = "Welcome to Our E-Commerce Store! 🎉"
-            
-            html_message = f"""
-            <!DOCTYPE html>
-            <html>
-            <head>
-                <style>
-                    body {{ font-family: Arial, sans-serif; line-height: 1.6; color: #333; }}
-                    .container {{ max-width: 600px; margin: 0 auto; padding: 20px; }}
-                </style>
-            </head>
-            <body>
-                <div class="container">
-                    <h1 style="color: #2c3e50;">Welcome to Our Store! 🎉</h1>
-                    <p>Hi <strong>{first_name}</strong>!</p>
-                    <p>We're excited to have you on board!</p>
-                    <p>Your account <strong>({email})</strong> has been successfully verified.</p>
-                    <p>You can now login and start shopping!</p>
-                    <p>Best regards,<br>The E-Commerce Team</p>
-                </div>
-            </body>
-            </html>
-            """
-            
-            plain_message = f"""
-            Welcome to Our E-Commerce Store, {first_name}!
-            
-            We're excited to have you on board!
-            Your account ({email}) has been successfully verified.
-            
-            You can now login and start shopping!
-            
-            Best regards,
-            The E-Commerce Team
-            """
-            print(f"subjects:{subject},\nmessage:{plain_message},\nfrom:{settings.EMAIL_HOST_USER},\nrecipient:{email},\nhtml message:{html_message}")
-            
-            send_mail(
-                subject=subject,
-                message=plain_message,
-                from_email=settings.DEFAULT_FROM_EMAIL,
-                recipient_list=[email],
-                html_message=html_message,
-                fail_silently=False,
-            )
-            
-            
-            logger.info(f" Welcome email sent successfully to user {user_id} ({email})")
-        except Exception as e:
-            logger.error(f" Failed to send welcome email to user {user_id}: {e}")
     
-    # Start the thread
-    thread = threading.Thread(target=_send, daemon=True)
+    def _send():
+        # CRITICAL: Setup Django in thread
+        try:
+            django.setup()
+        except RuntimeError:
+            pass  # Django already setup
+        
+        max_retries = 3
+        retry_count = 0
+        
+        while retry_count < max_retries:
+            try:
+                subject = "Welcome to Our E-Commerce Store! 🎉"
+                
+                html_message = f"""
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {{ font-family: Arial, sans-serif; line-height: 1.6; color: #333; }}
+        .container {{ max-width: 600px; margin: 0 auto; padding: 20px; background: #f9f9f9; }}
+        .header {{ background: #007bff; color: white; padding: 20px; text-align: center; border-radius: 8px 8px 0 0; }}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 style="margin: 0;">🎉 Welcome to Our Store!</h1>
+        </div>
+        <div style="padding: 20px; background: white;">
+            <p>Hi <strong>{first_name}</strong>!</p>
+            <p>We're thrilled to have you on board! 🚀</p>
+            <p>Your account <strong>({email})</strong> has been successfully verified and is ready to use.</p>
+            <p>You can now:</p>
+            <ul>
+                <li>Browse our products</li>
+                <li>Add items to your cart</li>
+                <li>Place orders</li>
+                <li>Track your deliveries</li>
+            </ul>
+            <p>Happy shopping!</p>
+            <p style="margin-top: 30px;">Best regards,<br><strong>The E-Commerce Team</strong></p>
+        </div>
+    </div>
+</body>
+</html>
+                """
+                
+                plain_message = f"""
+Welcome to Our E-Commerce Store, {first_name}! 🎉
+
+We're excited to have you on board!
+Your account ({email}) has been successfully verified.
+
+You can now login and start shopping!
+
+Best regards,
+The E-Commerce Team
+                """
+                
+                result = send_mail(
+                    subject=subject,
+                    message=plain_message,
+                    from_email=settings.DEFAULT_FROM_EMAIL,
+                    recipient_list=[email],
+                    html_message=html_message,
+                    fail_silently=False,
+                )
+                
+                if result == 1:
+                    logger.info(f"✅ Welcome email sent successfully to user {user_id} ({email})")
+                    print(f"✅ Welcome email sent to {email}")
+                    return
+                else:
+                    logger.warning(f"⚠️ Welcome email send returned {result} for {email}")
+                    
+            except Exception as e:
+                retry_count += 1
+                logger.error(f"❌ Attempt {retry_count}/{max_retries} failed to send welcome email to user {user_id}: {e}")
+                print(f"❌ Welcome email attempt {retry_count} failed: {e}")
+                
+                if retry_count < max_retries:
+                    time.sleep(2 ** retry_count)
+                else:
+                    logger.error(f"❌ All retries exhausted for welcome email to user {user_id}")
+    
+    # Start thread with daemon=False
+    thread = threading.Thread(target=_send, daemon=False)
     thread.start()
+    
+    # Optional: Wait a moment to ensure thread starts
+    time.sleep(0.1)
+    
+    logger.info(f"📧 Welcome email thread started for user {user_id} ({email})")
     
 # #investment created email
 # def send_investment_created_email_threaded(user_id, investment_id, investment_type, transaction_reference):

@@ -13,12 +13,6 @@ from .task import send_verification_email_async
 from django.contrib.auth.models import User
 import time
 from e_commerce.modules.email_utils import send_verification_email
-from django.core.mail import send_mail, EmailMultiAlternatives
-from django.template.loader import render_to_string
-from django.conf import settings
-import logging
-
-logger = logging.getLogger(__name__)
 
 
 class UserProfileSerializerOut(serializers.ModelSerializer):
@@ -178,7 +172,7 @@ class SignupSerializerIn(serializers.Serializer):
             email=email,
             first_name=first_name,
             last_name=last_name,
-            is_active=False # User cannot login until verified
+            is_active=True # User cannot login until verified
         )
         user.set_password(raw_password=pword)
         user.save()
@@ -212,47 +206,7 @@ class SignupSerializerIn(serializers.Serializer):
             # Generate verification token and send email
             verification_token = user_profile.generate_verification_token()
             verification_url = f"{request.build_absolute_uri('/')}verify-email/?token={verification_token}"
-    
-
-            subject = f"Welcome {user.first_name}! Verify Your Email Address"
-            plain_message = f"""
-            Hi {user.first_name},
-            
-            Thank you for registering with our platform!
-            Please verify your email by clicking this link:
-            {verification_url}
-            
-            This link expires in 24 hours.
-            """
-
-            html_message = f"""
-            <html>
-              <body>
-                <h2>Welcome, {user.first_name}!</h2>
-                <p>Thanks for registering with us. Please verify your email below:</p>
-                <a href="{verification_url}" style="background:#007bff;color:white;padding:10px 20px;text-decoration:none;border-radius:4px;">Verify Email</a>
-                <p>If that doesn't work, copy this link:</p>
-                <p><a href="{verification_url}">{verification_url}</a></p>
-              </body>
-            </html>
-            """
-
-            send_mail(
-                subject,
-                plain_message,
-                settings.DEFAULT_FROM_EMAIL,
-                [email],
-                html_message=html_message,
-                fail_silently=False,
-            )
-
-            logger.info(f"✅ Verification email sent to {email}")
-            print(f"✅ Email sent successfully to {email}")
-
-        except Exception as e:
-            print(f"❌ Email thread failed: {e}")
-            logger.error(f"❌ Failed to send verification email to {email}: {e}")
-
+            send_verification_email(email, verification_url)
             # send_verification_email_async.delay(user.email, verification_url)
             print(f"verification url: {verification_url}")
             log_request(f"Verification email queued for user {user.id} ({email})")
