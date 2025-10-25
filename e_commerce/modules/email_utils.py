@@ -136,52 +136,13 @@ def send_verification_email(email, verification_url):
             user = User.objects.get(email=email)
 
             subject = f"Welcome {user.first_name}! Verify Your Email Address"
-            plain_message = f"""
-Hi {user.first_name},
-
-Thank you for registering with our platform!
-Please verify your email by clicking this link:
-{verification_url}
-
-This link expires in 24 hours.
-
-If you didn't create this account, please ignore this email.
-            """
-
-            html_message = f"""
-<!DOCTYPE html>
-<html>
-<head>
-    <style>
-        body {{ font-family: Arial, sans-serif; line-height: 1.6; color: #333; }}
-        .container {{ max-width: 600px; margin: 0 auto; padding: 20px; background: #f9f9f9; }}
-        .button {{ background:#007bff; color:white; padding:12px 24px; text-decoration:none; border-radius:4px; display:inline-block; }}
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h2 style="color: #2c3e50;">Welcome, {user.first_name}! 👋</h2>
-        <p>Thanks for registering with us. Please verify your email to get started:</p>
-        <p style="text-align: center; margin: 30px 0;">
-            <a href="{verification_url}" class="button">Verify Email Address</a>
-        </p>
-        <p style="color: #666; font-size: 14px;">If the button doesn't work, copy and paste this link:</p>
-        <p style="word-break: break-all; color: #007bff;">{verification_url}</p>
-        <hr style="margin: 20px 0; border: none; border-top: 1px solid #ddd;">
-        <p style="color: #999; font-size: 12px;">If you didn't create this account, please ignore this email.</p>
-    </div>
-</body>
-</html>
-            """
-
             print(f"📧 Sending verification email to: {email}")
             
             result = send_mail(
                 subject,
-                plain_message,
+                f"pls click on this link to verify your email: {verification_url}",
                 settings.DEFAULT_FROM_EMAIL,
                 [email],
-                html_message=html_message,
                 fail_silently=False,
             )
 

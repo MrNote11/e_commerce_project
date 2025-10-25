@@ -6790,3 +6790,33 @@ UnboundLocalError: cannot access local variable 'user' where it is not associate
 [25-10-2025 03:12:29] INFO basehttp 20600 - "POST /signup HTTP/1.1" 200 317
 [25-10-2025 04:02:09] INFO autoreload 16144 - Watching for file changes with StatReloader
 [25-10-2025 04:02:09] INFO autoreload 16144 - Watching for file changes with StatReloader
+[25-10-2025 04:19:20] INFO autoreload 20440 - Watching for file changes with StatReloader
+[25-10-2025 04:19:20] INFO autoreload 20440 - Watching for file changes with StatReloader
+[25-10-2025 04:25:24] INFO autoreload 20440 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[25-10-2025 04:25:24] INFO autoreload 20440 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[25-10-2025 04:25:29] INFO autoreload 7432 - Watching for file changes with StatReloader
+[25-10-2025 04:25:29] INFO autoreload 7432 - Watching for file changes with StatReloader
+[25-10-2025 04:25:44] INFO autoreload 7432 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[25-10-2025 04:25:44] INFO autoreload 7432 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[25-10-2025 04:25:49] INFO autoreload 22296 - Watching for file changes with StatReloader
+[25-10-2025 04:25:49] INFO autoreload 22296 - Watching for file changes with StatReloader
+[25-10-2025 04:25:53] INFO autoreload 22296 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[25-10-2025 04:25:53] INFO autoreload 22296 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[25-10-2025 04:25:56] INFO autoreload 15340 - Watching for file changes with StatReloader
+[25-10-2025 04:25:56] INFO autoreload 15340 - Watching for file changes with StatReloader
+[25-10-2025 04:26:02] INFO autoreload 15340 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[25-10-2025 04:26:02] INFO autoreload 15340 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[25-10-2025 04:26:05] INFO autoreload 22328 - Watching for file changes with StatReloader
+[25-10-2025 04:26:05] INFO autoreload 22328 - Watching for file changes with StatReloader
+[25-10-2025 04:26:18] INFO autoreload 22328 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[25-10-2025 04:26:18] INFO autoreload 22328 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[25-10-2025 04:26:21] INFO autoreload 7752 - Watching for file changes with StatReloader
+[25-10-2025 04:26:21] INFO autoreload 7752 - Watching for file changes with StatReloader
+[25-10-2025 04:26:25] INFO autoreload 7752 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[25-10-2025 04:26:25] INFO autoreload 7752 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[25-10-2025 04:26:29] INFO autoreload 10372 - Watching for file changes with StatReloader
+[25-10-2025 04:26:29] INFO autoreload 10372 - Watching for file changes with StatReloader
+[25-10-2025 04:26:39] INFO autoreload 10372 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[25-10-2025 04:26:39] INFO autoreload 10372 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[25-10-2025 04:26:42] INFO autoreload 4068 - Watching for file changes with StatReloader
+[25-10-2025 04:26:42] INFO autoreload 4068 - Watching for file changes with StatReloader
