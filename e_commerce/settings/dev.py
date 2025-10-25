@@ -199,25 +199,27 @@ except Exception as e:
 print(f"🎯 FINAL DATABASES config: {DATABASES}")
 print(f"🎯 Database ENGINE: {DATABASES['default'].get('ENGINE', 'MISSING ENGINE!')}")
 
-# REDIS_HOST = 'localhost'
-# REDIS_PORT = 6379
-# REDIS_DB = 0
-
-# # Celery Configuration Options
-# CELERY_TIMEZONE = "UTC"
-# CELERY_TASK_TRACK_STARTED = True
-# CELERY_TASK_TIME_LIMIT = 30 * 60
-
-# CELERY_BROKER_URL = f'redis://{REDIS_HOST}:{REDIS_PORT}/1'
-# CELERY_RESULT_BACKEND = f'redis://{REDIS_HOST}:{REDIS_PORT}/1'
-# CELERY_ACCEPT_CONTENT = ['application/json']
+REDIS_HOST = 'localhost'
+REDIS_PORT = 6379
+REDIS_DB = 0
 
 
-# CELERY_ACCEPT_CONTENT = ["json"]
-# CELERY_TASK_SERIALIZER = "json"
-# CELERY_RESULT_SERIALIZER = "json"
+RENDER_REDIS = env('RENDER_REDIS', default=None)
+# Celery Configuration Options
+CELERY_TIMEZONE = "UTC"
+CELERY_TASK_TRACK_STARTED = True
+CELERY_TASK_TIME_LIMIT = 30 * 60
 
-# # Email settings
+CELERY_BROKER_URL =  RENDER_REDIS
+CELERY_RESULT_BACKEND = RENDER_REDIS
+CELERY_ACCEPT_CONTENT = ['application/json']
+
+
+CELERY_ACCEPT_CONTENT = ["json"]
+CELERY_TASK_SERIALIZER = "json"
+CELERY_RESULT_SERIALIZER = "json"
+
+# Email settings
 # EMAIL_BACKEND = 'config.email_config.CustomEmailBackend'
 
 # EMAIL_HOST = os.environ.get('EMAIL_HOST', 'smtp.mailgun.org') # noqa
@@ -233,29 +235,29 @@ print(f"🎯 Database ENGINE: {DATABASES['default'].get('ENGINE', 'MISSING ENGIN
 # EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 # DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', EMAIL_HOST_USER)
 
-# EMAIL_SSL_CONTEXT = ssl._create_unverified_context()
+EMAIL_SSL_CONTEXT = ssl._create_unverified_context()
 
-# # Cache settings
-# CACHES = {
-#     'default': {
-#         'BACKEND': 'django_redis.cache.RedisCache',
-#         'LOCATION': f'redis://{REDIS_HOST}:{REDIS_PORT}/{REDIS_DB}',
-#         'OPTIONS': {
-#             'CLIENT_CLASS': 'django_redis.client.DefaultClient',
-#             'SOCKET_CONNECT_TIMEOUT': 5,
-#             'SOCKET_TIMEOUT': 5,
-#             'RETRY_ON_TIMEOUT': True,
-#             'MAX_CONNECTIONS': 1000,
-#             'CONNECTION_POOL_KWARGS': {'max_connections': 100},
-#         }
-#     }
-# }
+# Cache settings
+CACHES = {
+    'default': {
+        'BACKEND': 'django_redis.cache.RedisCache',
+        'LOCATION': f'redis://{REDIS_HOST}:{REDIS_PORT}/{REDIS_DB}',
+        'OPTIONS': {
+            'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+            'SOCKET_CONNECT_TIMEOUT': 5,
+            'SOCKET_TIMEOUT': 5,
+            'RETRY_ON_TIMEOUT': True,
+            'MAX_CONNECTIONS': 1000,
+            'CONNECTION_POOL_KWARGS': {'max_connections': 100},
+        }
+    }
+}
 
-# # Cache timeouts
-# CACHE_TIMEOUT_SHORT = 300  # 5 minutes for frequently changing data
-# CACHE_TIMEOUT_MEDIUM = 1800  # 30 minutes for moderately changing data
-# CACHE_TIMEOUT_LONG = 3600  # 1 hour for analytics and rarely changing data
-# CACHE_TIMEOUT_VERY_LONG = 86400  # 24 hours for static data
+# Cache timeouts
+CACHE_TIMEOUT_SHORT = 300  # 5 minutes for frequently changing data
+CACHE_TIMEOUT_MEDIUM = 1800  # 30 minutes for moderately changing data
+CACHE_TIMEOUT_LONG = 3600  # 1 hour for analytics and rarely changing data
+CACHE_TIMEOUT_VERY_LONG = 86400  # 24 hours for static data
 
 # # Use Redis for session storage
 # SESSION_ENGINE = 'django.contrib.sessions.backends.cache'

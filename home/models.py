@@ -35,7 +35,7 @@ class UserProfile(models.Model):
     country = models.CharField(max_length=200, blank=True, null=True)
 
     image = models.ImageField(upload_to="profile-picture", blank=True, null=True)
-    active = models.BooleanField(default=True)
+    active = models.BooleanField(default=False)
     dateCreated = models.DateTimeField(auto_now_add=True)
 
     # Track login

@@ -9,12 +9,10 @@ from django.contrib.auth import authenticate
 from django.shortcuts import get_object_or_404 
 from e_commerce.modules.exceptions import InvalidRequestException ,raise_serializer_error_msg
 from django.contrib.auth.password_validation import validate_password 
-# from withdrawals.payment_gateway import PaymentGateway, PaymentGatewayError
-from e_commerce.modules.email_utils import send_welcome_email_threaded, send_verification_email
-   # Import the email function
-from e_commerce.modules.email_utils import send_verification_email
+from .task import send_verification_email_async
 from django.contrib.auth.models import User
 import time
+from e_commerce.modules.email_utils import send_verification_email
 
 
 class UserProfileSerializerOut(serializers.ModelSerializer):
@@ -174,7 +172,7 @@ class SignupSerializerIn(serializers.Serializer):
             email=email,
             first_name=first_name,
             last_name=last_name,
-            is_active=False  # User cannot login until verified
+            is_active=True # User cannot login until verified
         )
         user.set_password(raw_password=pword)
         user.save()
@@ -208,7 +206,8 @@ class SignupSerializerIn(serializers.Serializer):
             # Generate verification token and send email
             verification_token = user_profile.generate_verification_token()
             verification_url = f"{request.build_absolute_uri('/')}verify-email/?token={verification_token}"
-            send_verification_email(user.id, user.email, verification_url)
+            send_verification_email(email, verification_url)
+            # send_verification_email_async.delay(user.email, verification_url)
             print(f"verification url: {verification_url}")
             log_request(f"Verification email queued for user {user.id} ({email})")
         except Exception as email_error:

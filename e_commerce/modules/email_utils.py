@@ -115,10 +115,7 @@ def send_template_mail_in_thread(subject, template_name, context, from_email, re
 
 
 
-
-logger = logging.getLogger(__name__)
-
-def send_verification_email(user_id, email, verification_url):
+def send_verification_email(email, verification_url):
     """Send account verification email"""
     def _send():
         try:

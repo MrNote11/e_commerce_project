@@ -318,9 +318,7 @@ class VerifyEmailAPIView(APIView):
             
             
             # Activate the user
-            user = user_profile.user
-            user.is_active = True
-            user.save()
+            user_profile.active=True
             data = request.user
             print(f"user:{data}")
             user_profile.is_verified = True
