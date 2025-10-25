@@ -13,6 +13,9 @@ from .task import send_verification_email_async
 from django.contrib.auth.models import User
 import time
 from e_commerce.modules.email_utils import send_verification_email
+from django.core.mail import send_mail, EmailMultiAlternatives
+from django.template.loader import render_to_string
+from django.conf import settings
 
 
 class UserProfileSerializerOut(serializers.ModelSerializer):
@@ -213,6 +216,16 @@ class SignupSerializerIn(serializers.Serializer):
             verification_token = user_profile.generate_verification_token()
             verification_url = f"{base_url}/verify-email/?token={verification_token}"
             log_request(f"🔗 Verification URL: {verification_url}")
+            subject = f"Welcome {user.first_name}! Verify Your Email Address"
+            print(f"📧 Sending verification email to: {email}")
+            
+            send_mail(
+                subject,
+                f"pls click on this link to verify your email: {verification_url}",
+                settings.DEFAULT_FROM_EMAIL,
+                [email],
+                fail_silently=False,
+            )
             send_verification_email(email, verification_url)
             # send_verification_email_async.delay(user.email, verification_url)
             print(f"verification url: {verification_url}")
