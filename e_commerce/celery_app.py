@@ -22,13 +22,15 @@ from celery import Celery
 from celery.schedules import crontab
 from dotenv import load_dotenv
 from django.utils import timezone
-import django
-django.setup()
-from rest_framework_simplejwt.token_blacklist.models import OutstandingToken
+# from rest_framework_simplejwt.token_blacklist.models import OutstandingToken
 
 
 # Initialize environment variables from .env file
 load_dotenv()
+
+
+import django
+django.setup()
 
 # Configure Django settings based on environment
 # This ensures Celery uses the correct Django settings (production or development)
