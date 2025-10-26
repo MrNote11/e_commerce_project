@@ -162,7 +162,7 @@ try:
                     'PORT': env('SUPABASE_PORT'),
                     'OPTIONS': {
                         'sslmode': 'require',
-                        'pool_mode': env('PORT_MODE'),
+                        # 'pool_mode': env('PORT_MODE'),
                     },
                 }
             }
