@@ -14,8 +14,7 @@ def create_user_profile(sender, instance, created, **kwargs):
 @receiver(post_save, sender=UserProfile)
 def create_user_otp(sender, instance, created, **kwargs):
     if created:
-        UserOTP.objects.create(userprofile=instance)
-        
-        
-        
-# Don't forget to import signals in your apps.py 
+        UserOTP.objects.create(userprofile=instance, email=instance.email, phoneNumber=instance.phoneNumber)
+
+
+# Don't forget to import signals in your apps.py

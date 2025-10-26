@@ -136,7 +136,7 @@ def send_verification_email(email, verification_url):
             user = User.objects.get(email=email)
 
             subject = f"Welcome {user.first_name}! Verify Your Email Address"
-            print(f"📧 Sending verification email to: {email}")
+            print(f"Sending verification email to: {email}")
             
             result = send_mail(
                 subject,
@@ -151,23 +151,23 @@ def send_verification_email(email, verification_url):
                 print(f"✅ Verification email sent to {email}")
                 return True
             else:
-                logger.warning(f"⚠️ Email send returned {result} for {email}")
+                logger.warning(f"Email send returned {result} for {email}")
                 return False
                 
         except User.DoesNotExist:
-            logger.error(f"❌ User with email {email} does not exist")
-            print(f"❌ User not found: {email}")
+            logger.error(f"User with email {email} does not exist")
+            print(f"User not found: {email}")
             return False
             
         except Exception as e:
             retry_count += 1
-            logger.error(f"❌ Attempt {retry_count}/{max_retries} failed to send verification email to {email}: {e}")
-            print(f"❌ Email send attempt {retry_count} failed: {e}")
-            
+            logger.error(f"Attempt {retry_count}/{max_retries} failed to send verification email to {email}: {e}")
+            print(f"Email send attempt {retry_count} failed: {e}")
+
             if retry_count <= max_retries:
                 time.sleep(1)  # Wait 1 second before retry
             else:
-                logger.error(f"❌ All retries exhausted for verification email to {email}")
+                logger.error(f"All retries exhausted for verification email to {email}")
                 return False
             
             
@@ -244,21 +244,21 @@ The E-Commerce Team
                 )
                 
                 if result == 1:
-                    logger.info(f"✅ Welcome email sent successfully to user {user_id} ({email})")
+                    logger.info(f"Welcome email sent successfully to user {user_id} ({email})")
                     print(f"✅ Welcome email sent to {email}")
                     return
                 else:
-                    logger.warning(f"⚠️ Welcome email send returned {result} for {email}")
+                    logger.warning(f" Welcome email send returned {result} for {email}")
                     
             except Exception as e:
                 retry_count += 1
-                logger.error(f"❌ Attempt {retry_count}/{max_retries} failed to send welcome email to user {user_id}: {e}")
-                print(f"❌ Welcome email attempt {retry_count} failed: {e}")
+                logger.error(f" Attempt {retry_count}/{max_retries} failed to send welcome email to user {user_id}: {e}")
+                print(f"Welcome email attempt {retry_count} failed: {e}")
                 
                 if retry_count < max_retries:
                     time.sleep(2 ** retry_count)
                 else:
-                    logger.error(f"❌ All retries exhausted for welcome email to user {user_id}")
+                    logger.error(f"All retries exhausted for welcome email to user {user_id}")
     
     # Start thread with daemon=False
     thread = threading.Thread(target=_send, daemon=False)
@@ -267,7 +267,7 @@ The E-Commerce Team
     # Optional: Wait a moment to ensure thread starts
     time.sleep(0.1)
     
-    logger.info(f"📧 Welcome email thread started for user {user_id} ({email})")
+    logger.info(f"Welcome email thread started for user {user_id} ({email})")
     
 # #investment created email
 # def send_investment_created_email_threaded(user_id, investment_id, investment_type, transaction_reference):

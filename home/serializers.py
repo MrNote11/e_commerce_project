@@ -215,8 +215,7 @@ class SignupSerializerIn(serializers.Serializer):
             base_url = request.build_absolute_uri('/').rstrip('/')
             verification_token = user_profile.generate_verification_token()
             verification_url = f"{base_url}/verify-email/?token={verification_token}"
-            log_request(f"🔗 Verification URL: {verification_url}")
-            subject = f"Welcome {user.first_name}! Verify Your Email Address"
+            log_request(f" Verification URL: {verification_url}")
             print(f"📧 Sending verification email to: {email}")
             
             # send_verification_email(email, verification_url)
