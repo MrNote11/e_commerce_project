@@ -219,13 +219,6 @@ class SignupSerializerIn(serializers.Serializer):
             subject = f"Welcome {user.first_name}! Verify Your Email Address"
             print(f"📧 Sending verification email to: {email}")
             
-            send_mail(
-                subject,
-                f"pls click on this link to verify your email: {verification_url}",
-                settings.DEFAULT_FROM_EMAIL,
-                [email],
-                fail_silently=False,
-            )
             # send_verification_email(email, verification_url)
             # send_verification_email_async.delay(user.email, verification_url)
             print(f"verification url: {verification_url}")
@@ -235,7 +228,8 @@ class SignupSerializerIn(serializers.Serializer):
         return {
             "message": "Registration successful! Please check your email to verify your account.",
             "user_id": user.id,
-            "email": email
+            "email": email,
+            "verification_button": verification_url  # Include verification URL in response for testing
         }
 
        
