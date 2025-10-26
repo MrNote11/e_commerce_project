@@ -203,7 +203,7 @@ REDIS_HOST = 'localhost'
 REDIS_PORT = 6379
 REDIS_DB = 0
 
-
+# redis://red-d2d3qi8dl3ps73d3r8og:6379
 RENDER_REDIS = env('RENDER_REDIS', default=None)
 # Celery Configuration Options
 CELERY_TIMEZONE = "UTC"
@@ -241,7 +241,7 @@ EMAIL_SSL_CONTEXT = ssl._create_unverified_context()
 CACHES = {
     'default': {
         'BACKEND': 'django_redis.cache.RedisCache',
-        'LOCATION': f'redis://{REDIS_HOST}:{REDIS_PORT}/{REDIS_DB}',
+        'LOCATION': RENDER_REDIS,
         'OPTIONS': {
             'CLIENT_CLASS': 'django_redis.client.DefaultClient',
             'SOCKET_CONNECT_TIMEOUT': 5,

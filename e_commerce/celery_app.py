@@ -39,9 +39,9 @@ app.config_from_object('django.conf:settings', namespace='CELERY')
 # 4️⃣ Fallback Redis Config (for Render)
 # ------------------------------------------------
 if not app.conf.get('broker_url'):
-    app.conf.broker_url = os.getenv("REDIS_URL", "redis://localhost:6379/1")
+    app.conf.broker_url = os.getenv("RENDER_REDIS", "redis://localhost:6379/1")
 if not app.conf.get('result_backend'):
-    app.conf.result_backend = os.getenv("REDIS_URL", "redis://localhost:6379/1")
+    app.conf.result_backend = os.getenv("RENDER_REDIS", "redis://localhost:6379/1")
 
 # ------------------------------------------------
 # 5️⃣ Celery Extra Configuration
