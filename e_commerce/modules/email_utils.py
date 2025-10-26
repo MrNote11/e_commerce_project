@@ -206,7 +206,7 @@ def send_welcome_email_threaded(user_id, first_name, email, token):
         <div style="padding: 20px; background: white;">
             <p>Hi <strong>{first_name}</strong>!</p>
             <p>We're thrilled to have you on board! 🚀</p>
-            <p>Your account <strong>({email})</strong> has been successfully verified and is ready to use.</p>
+            <p>Use this token ({token}) to successfully verify your email.</p>
             <p>You can now:</p>
             <ul>
                 <li>Browse our products</li>
@@ -239,7 +239,7 @@ The E-Commerce Team
                     message=plain_message,
                     from_email=settings.DEFAULT_FROM_EMAIL,
                     recipient_list=[email],
-                    # html_message=html_message, 
+                    html_message=html_message, 
                     fail_silently=False,
                 )
                 
@@ -261,7 +261,7 @@ The E-Commerce Team
                     logger.error(f"All retries exhausted for welcome email to user {user_id}")
     
     # Start thread with daemon=False
-    thread = threading.Thread(target=_send, daemon=False)
+    thread = threading.Thread(target=_send, daemon=True)
     thread.start()
     
     # Optional: Wait a moment to ensure thread starts

@@ -7310,3 +7310,278 @@ redis.exceptions.ConnectionError: Error 11001 connecting to red-d2d3qi8dl3ps73d3
 [26-10-2025 23:05:36] INFO autoreload 8340 - Watching for file changes with StatReloader
 [26-10-2025 23:29:49] INFO autoreload 9372 - Watching for file changes with StatReloader
 [26-10-2025 23:29:49] INFO autoreload 9372 - Watching for file changes with StatReloader
+[26-10-2025 23:39:30] INFO autoreload 6452 - Watching for file changes with StatReloader
+[26-10-2025 23:39:30] INFO autoreload 6452 - Watching for file changes with StatReloader
+[26-10-2025 23:39:45] INFO utils 11432 -  Verification URL: http://127.0.0.1:8000/verify-email/?token=KygtOXtG5yJMqJLDq7pNblOQcQfvM3IlCD_m_MgoymM
+[26-10-2025 23:39:45] INFO utils 11432 - Verification email queued for user 87 (alidsulaiman11@gmail.com)
+[26-10-2025 23:39:45] INFO utils 11432 - {'requestTime': datetime.datetime(2025, 10, 26, 23, 39, 45, 809776, tzinfo=datetime.timezone.utc), 'requestType': 'outbound', 'referenceId': '1132127a12bba9090a7edfbf545cac8ef1ca61e2dd925d2740c3cf6b7d9d', 'status': True, 'message': {'message': 'Registration successful! Please check your email to verify your account.', 'user_id': 87, 'email': 'alidsulaiman11@gmail.com', 'verification_button': 'http://127.0.0.1:8000/verify-email/?token=KygtOXtG5yJMqJLDq7pNblOQcQfvM3IlCD_m_MgoymM'}, 'data': {}}
+[26-10-2025 23:39:46] INFO basehttp 11432 - "POST /signup HTTP/1.1" 200 426
+[26-10-2025 23:39:46] INFO basehttp 11432 - "POST /signup HTTP/1.1" 200 426
+[26-10-2025 23:39:46] INFO basehttp 11432 - "POST /signup HTTP/1.1" 200 426
+[26-10-2025 23:39:56] ERROR log 11432 - Internal Server Error: /verify-email/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django_redis\cache.py", line 29, in _decorator
+    return method(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django_redis\cache.py", line 99, in _get
+    return self.client.get(key, default=default, version=version, client=client)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django_redis\client\default.py", line 260, in get
+    raise ConnectionInterrupted(connection=client) from e
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 11001 connecting to red-d2d3qi8dl3ps73d3r8og:6379. getaddrinfo failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 503, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 422, in initial
+    self.check_throttles(request)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 365, in check_throttles
+    if not throttle.allow_request(request, self):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\throttling.py", line 123, in allow_request
+    self.history = self.cache.get(self.key, [])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\panels\cache.py", line 42, in wrapper
+    return panel._record_call(cache, name, original_method, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\panels\cache.py", line 149, in _record_call
+    value = original_method(*args, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django_redis\cache.py", line 92, in get
+    value = self._get(key, default, version, client)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django_redis\cache.py", line 36, in _decorator
+    raise e.__cause__
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django_redis\client\default.py", line 258, in get
+    value = client.get(key)
+            ^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\redis\commands\core.py", line 1822, in get
+    return self.execute_command("GET", name, keys=[name])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\redis\client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\redis\client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\redis\connection.py", line 1422, in get_connection
+    connection.connect()
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\redis\connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 11001 connecting to red-d2d3qi8dl3ps73d3r8og:6379. getaddrinfo failed.
+[26-10-2025 23:39:56] ERROR log 11432 - Internal Server Error: /verify-email/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django_redis\cache.py", line 29, in _decorator
+    return method(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django_redis\cache.py", line 99, in _get
+    return self.client.get(key, default=default, version=version, client=client)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django_redis\client\default.py", line 260, in get
+    raise ConnectionInterrupted(connection=client) from e
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 11001 connecting to red-d2d3qi8dl3ps73d3r8og:6379. getaddrinfo failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 503, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 422, in initial
+    self.check_throttles(request)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 365, in check_throttles
+    if not throttle.allow_request(request, self):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\throttling.py", line 123, in allow_request
+    self.history = self.cache.get(self.key, [])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\panels\cache.py", line 42, in wrapper
+    return panel._record_call(cache, name, original_method, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\panels\cache.py", line 149, in _record_call
+    value = original_method(*args, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django_redis\cache.py", line 92, in get
+    value = self._get(key, default, version, client)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django_redis\cache.py", line 36, in _decorator
+    raise e.__cause__
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django_redis\client\default.py", line 258, in get
+    value = client.get(key)
+            ^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\redis\commands\core.py", line 1822, in get
+    return self.execute_command("GET", name, keys=[name])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\redis\client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\redis\client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\redis\connection.py", line 1422, in get_connection
+    connection.connect()
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\redis\connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 11001 connecting to red-d2d3qi8dl3ps73d3r8og:6379. getaddrinfo failed.
+[26-10-2025 23:39:56] ERROR log 11432 - Internal Server Error: /verify-email/
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django_redis\cache.py", line 29, in _decorator
+    return method(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django_redis\cache.py", line 99, in _get
+    return self.client.get(key, default=default, version=version, client=client)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django_redis\client\default.py", line 260, in get
+    raise ConnectionInterrupted(connection=client) from e
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 11001 connecting to red-d2d3qi8dl3ps73d3r8og:6379. getaddrinfo failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 503, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 422, in initial
+    self.check_throttles(request)
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\views.py", line 365, in check_throttles
+    if not throttle.allow_request(request, self):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\rest_framework\throttling.py", line 123, in allow_request
+    self.history = self.cache.get(self.key, [])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\panels\cache.py", line 42, in wrapper
+    return panel._record_call(cache, name, original_method, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\debug_toolbar\panels\cache.py", line 149, in _record_call
+    value = original_method(*args, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django_redis\cache.py", line 92, in get
+    value = self._get(key, default, version, client)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django_redis\cache.py", line 36, in _decorator
+    raise e.__cause__
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\django_redis\client\default.py", line 258, in get
+    value = client.get(key)
+            ^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\redis\commands\core.py", line 1822, in get
+    return self.execute_command("GET", name, keys=[name])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\redis\client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\redis\client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\redis\connection.py", line 1422, in get_connection
+    connection.connect()
+  File "C:\Users\User\Desktop\e_commerce_project\e_commerce\.venv\Lib\site-packages\redis\connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 11001 connecting to red-d2d3qi8dl3ps73d3r8og:6379. getaddrinfo failed.
+[26-10-2025 23:39:56] ERROR basehttp 11432 - "GET /verify-email/?token=KygtOXtG5yJMqJLDq7pNblOQcQfvM3IlCD_m_MgoymM HTTP/1.1" 500 194605
+[26-10-2025 23:39:56] ERROR basehttp 11432 - "GET /verify-email/?token=KygtOXtG5yJMqJLDq7pNblOQcQfvM3IlCD_m_MgoymM HTTP/1.1" 500 194605
+[26-10-2025 23:39:56] ERROR basehttp 11432 - "GET /verify-email/?token=KygtOXtG5yJMqJLDq7pNblOQcQfvM3IlCD_m_MgoymM HTTP/1.1" 500 194605
+[26-10-2025 23:44:33] INFO autoreload 6452 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[26-10-2025 23:44:33] INFO autoreload 6452 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[26-10-2025 23:44:36] INFO autoreload 22948 - Watching for file changes with StatReloader
+[26-10-2025 23:44:36] INFO autoreload 22948 - Watching for file changes with StatReloader
+[26-10-2025 23:45:49] INFO autoreload 22948 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[26-10-2025 23:45:49] INFO autoreload 22948 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[26-10-2025 23:45:54] INFO autoreload 12428 - Watching for file changes with StatReloader
+[26-10-2025 23:45:54] INFO autoreload 12428 - Watching for file changes with StatReloader
+[26-10-2025 23:45:57] INFO autoreload 12428 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[26-10-2025 23:45:57] INFO autoreload 12428 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[26-10-2025 23:46:22] INFO autoreload 19380 - Watching for file changes with StatReloader
+[26-10-2025 23:46:22] INFO autoreload 19380 - Watching for file changes with StatReloader
+[26-10-2025 23:47:12] INFO autoreload 19380 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[26-10-2025 23:47:12] INFO autoreload 19380 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[26-10-2025 23:47:14] INFO autoreload 15260 - Watching for file changes with StatReloader
+[26-10-2025 23:47:14] INFO autoreload 15260 - Watching for file changes with StatReloader
+[26-10-2025 23:47:18] INFO autoreload 15260 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[26-10-2025 23:47:18] INFO autoreload 15260 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[26-10-2025 23:47:21] INFO autoreload 1412 - Watching for file changes with StatReloader
+[26-10-2025 23:47:21] INFO autoreload 1412 - Watching for file changes with StatReloader
+[26-10-2025 23:47:24] INFO autoreload 1412 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[26-10-2025 23:47:24] INFO autoreload 1412 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[26-10-2025 23:47:26] INFO autoreload 6356 - Watching for file changes with StatReloader
+[26-10-2025 23:47:26] INFO autoreload 6356 - Watching for file changes with StatReloader
+[26-10-2025 23:47:30] INFO autoreload 6356 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[26-10-2025 23:47:30] INFO autoreload 6356 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[26-10-2025 23:47:32] INFO autoreload 23376 - Watching for file changes with StatReloader
+[26-10-2025 23:47:32] INFO autoreload 23376 - Watching for file changes with StatReloader
+[26-10-2025 23:47:36] INFO autoreload 23376 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[26-10-2025 23:47:36] INFO autoreload 23376 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[26-10-2025 23:47:38] INFO autoreload 10188 - Watching for file changes with StatReloader
+[26-10-2025 23:47:38] INFO autoreload 10188 - Watching for file changes with StatReloader
+[26-10-2025 23:47:43] INFO autoreload 10188 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[26-10-2025 23:47:43] INFO autoreload 10188 - C:\Users\User\Desktop\e_commerce_project\e_commerce\e_commerce\modules\email_utils.py changed, reloading.
+[26-10-2025 23:47:45] INFO autoreload 25040 - Watching for file changes with StatReloader
+[26-10-2025 23:47:45] INFO autoreload 25040 - Watching for file changes with StatReloader
+[26-10-2025 23:50:20] INFO autoreload 25040 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[26-10-2025 23:50:20] INFO autoreload 25040 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[26-10-2025 23:50:22] INFO autoreload 3656 - Watching for file changes with StatReloader
+[26-10-2025 23:50:22] INFO autoreload 3656 - Watching for file changes with StatReloader
+[26-10-2025 23:50:45] INFO autoreload 3656 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[26-10-2025 23:50:45] INFO autoreload 3656 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[26-10-2025 23:50:49] INFO autoreload 13188 - Watching for file changes with StatReloader
+[26-10-2025 23:50:49] INFO autoreload 13188 - Watching for file changes with StatReloader
+[26-10-2025 23:50:57] INFO autoreload 13188 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[26-10-2025 23:50:57] INFO autoreload 13188 - C:\Users\User\Desktop\e_commerce_project\e_commerce\home\views.py changed, reloading.
+[26-10-2025 23:51:02] INFO autoreload 10176 - Watching for file changes with StatReloader
+[26-10-2025 23:51:02] INFO autoreload 10176 - Watching for file changes with StatReloader

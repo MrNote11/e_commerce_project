@@ -326,15 +326,14 @@ class VerifyEmailAPIView(APIView):
             user_profile.is_verified = True
             user_profile.verification_token = None  # Clear the used token
             user_profile.save()
-            token=UserOTP.objects.get_or_create(userprofile=user_profile)
-            token.generate_otp_token()
+            token=UserOTP.objects.get(userprofile=user_profile)
              # Send welcome email
             try:
                 send_welcome_email_threaded(
                     user_id=user.id,
                     first_name=user.first_name,
                     email=user.email, 
-                    token=token
+                    token=token.generate_otp_token()
                 )
             except Exception as email_error:
                 log_request(f"Warning: Failed to send welcome email: {email_error}")
