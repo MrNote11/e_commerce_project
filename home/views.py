@@ -75,7 +75,7 @@ import logging
 # Imports Decimal for precise financial calculations
 from decimal import Decimal 
 from e_commerce.modules.email_utils import send_welcome_email_threaded
-from .models import UserProfile
+from .models import UserProfile, UserOTP
 from django.contrib.auth.models import User
 
 
@@ -326,13 +326,15 @@ class VerifyEmailAPIView(APIView):
             user_profile.is_verified = True
             user_profile.verification_token = None  # Clear the used token
             user_profile.save()
-            
+            token=UserOTP.objects.get_or_create(userprofile=user_profile)
+            token.generate_otp_token()
              # Send welcome email
             try:
                 send_welcome_email_threaded(
                     user_id=user.id,
                     first_name=user.first_name,
-                    email=user.email
+                    email=user.email, 
+                    token=token
                 )
             except Exception as email_error:
                 log_request(f"Warning: Failed to send welcome email: {email_error}")
@@ -351,6 +353,31 @@ class VerifyEmailAPIView(APIView):
                 api_response(message="Error verifying email", status=False),
                 status=status.HTTP_400_BAD_REQUEST
             )
+
+
+class ConfirmOTPView(APIView):
+    permission_classes = [] 
+    
+    @swagger_auto_schema(
+        request_body=ConfirmOTPSerializerIn,
+        responses={200: openapi.Response(description="OTP verified successfully")},
+    )
+    def post(self, request):
+        status_, data = incoming_request_checks(request)
+        if not status_:
+            return Response(
+                api_response(message=data, status=False),
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        serializer = ConfirmOTPSerializerIn(data=data, context={"request": request})
+        serializer.is_valid() or raise_serializer_error_msg(errors=serializer.errors)
+        response = serializer.save()
+        return Response(
+            api_response(
+                message="OTP verified successfully", data=response, status=True
+            )
+        )
 
 class ResendVerificationAPIView(APIView):
     permission_classes = []

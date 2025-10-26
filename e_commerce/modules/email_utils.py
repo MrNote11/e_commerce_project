@@ -171,7 +171,7 @@ def send_verification_email(email, verification_url):
                 return False
             
             
-def send_welcome_email_threaded(user_id, first_name, email):
+def send_welcome_email_threaded(user_id, first_name, email, token):
     """Send welcome email in background thread"""
     
     def _send():
@@ -227,7 +227,7 @@ Welcome to Our E-Commerce Store, {first_name}! 🎉
 
 We're excited to have you on board!
 Your account ({email}) has been successfully verified.
-
+Use this token ({token}) to successfully verified.
 You can now login and start shopping!
 
 Best regards,

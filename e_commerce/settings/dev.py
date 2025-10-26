@@ -154,14 +154,15 @@ try:
         if supabase_host and supabase_password:
             DATABASES = {
                 'default': {
-                    'ENGINE': 'django.db.backends.postgresql',
-                    'NAME': 'postgres',
-                    'USER': 'postgres',
+                    'ENGINE': env('ENGINE'),
+                    'NAME': env('SUPABASE_DB_NAME', 'NAME'),
+                    'USER': env('SUPABASE_USER'),
                     'PASSWORD': supabase_password,
                     'HOST': supabase_host,
-                    'PORT': '5432',
+                    'PORT': env('SUPABASE_PORT'),
                     'OPTIONS': {
                         'sslmode': 'require',
+                        'pool_mode': env('PORT_MODE'),
                     },
                 }
             }

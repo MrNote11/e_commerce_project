@@ -2,7 +2,8 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 from datetime import timedelta
-
+import random
+from django.utils.crypto import get_random_string
 GENDER_TYPE_CHOICES = (
     ("male", "Male"),
     ("female", "Female"),
@@ -35,7 +36,7 @@ class UserProfile(models.Model):
     country = models.CharField(max_length=200, blank=True, null=True)
 
     image = models.ImageField(upload_to="profile-picture", blank=True, null=True)
-    active = models.BooleanField(default=True)
+    active = models.BooleanField(default=False)
     dateCreated = models.DateTimeField(auto_now_add=True)
 
     # Track login
@@ -74,6 +75,7 @@ class UserProfile(models.Model):
         return f"{self.user.username}"
 
 class UserOTP(models.Model):
+    userprofile = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
     phoneNumber = models.CharField(max_length=24, blank=True, null=True)
     email = models.EmailField(max_length=255, blank=True, null=True)
     otp = models.TextField(help_text="Encrypted OTP Value", blank=True, null=True)
@@ -86,3 +88,13 @@ class UserOTP(models.Model):
         if self.phoneNumber:
             return f"{self.phoneNumber}"
         return f"{self.email}"
+    
+    def generate_otp_token(self):
+        """Generate a unique verification token"""
+        random.randint(k=6)
+        token = get_random_string(length=6, allowed_chars="1234567890")
+        self.otp = token
+        self.dateCreated = timezone.now()
+        self.save()
+        return token
+    
