@@ -328,7 +328,6 @@ class VerifyEmailAPIView(APIView):
             user_profile.save()
             token=UserOTP.objects.get(userprofile=user_profile)
             token.generate_otp_token()
-            token.save()
              # Send welcome email
             try:
                 send_welcome_email_threaded(
