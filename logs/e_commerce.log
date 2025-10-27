@@ -7824,3 +7824,5 @@ redis.exceptions.ConnectionError: Error 11001 connecting to red-d2d3qi8dl3ps73d3
 [27-10-2025 18:37:41] INFO basehttp 13600 - "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4742
 [27-10-2025 18:37:41] INFO basehttp 13600 - "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4742
 [27-10-2025 18:37:41] INFO basehttp 13600 - "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4742
+[27-10-2025 23:11:45] INFO autoreload 18780 - Watching for file changes with StatReloader
+[27-10-2025 23:11:45] INFO autoreload 18780 - Watching for file changes with StatReloader

@@ -4,17 +4,12 @@ from django.contrib.auth.models import User
 from datetime import timedelta
 import random
 from django.utils.crypto import get_random_string
+
 GENDER_TYPE_CHOICES = (
     ("male", "Male"),
     ("female", "Female"),
     ("other", "Other"),
 )
-
-# class User(AbstractUser):
-#     is_active = models.BooleanField(default=False)  # Important: default=False
-   
-#     class Meta:
-#         db_table = 'home_user'  # Explicitly set the table name
 
 
 class UserProfile(models.Model):
@@ -39,12 +34,13 @@ class UserProfile(models.Model):
     active = models.BooleanField(default=False)
     dateCreated = models.DateTimeField(auto_now_add=True)
 
-    # Track login
+    # Track login attempts
     failed_login_attempts = models.PositiveIntegerField(default=0)
     locked_until = models.DateTimeField(null=True, blank=True)
     last_failed_login = models.DateTimeField(null=True, blank=True)
 
     def is_locked(self):
+        """Check if account is currently locked"""
         if self.locked_until and timezone.now() < self.locked_until:
             return True
         return False
@@ -66,6 +62,7 @@ class UserProfile(models.Model):
         return timezone.now() > expiration_time
     
     def get_lockout_remaining(self):
+        """Get remaining lockout time in seconds"""
         if self.is_locked():
             remaining = self.locked_until - timezone.now()
             return max(0, int(remaining.total_seconds()))
@@ -74,8 +71,9 @@ class UserProfile(models.Model):
     def __str__(self):
         return f"{self.user.username}"
 
+
 class UserOTP(models.Model):
-    userprofile = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+    userprofile = models.ForeignKey(UserProfile, on_delete=models.CASCADE, null=True, blank=True)
     phoneNumber = models.CharField(max_length=24, blank=True, null=True)
     email = models.EmailField(max_length=255, blank=True, null=True)
     otp = models.TextField(help_text="Encrypted OTP Value", blank=True, null=True)
@@ -90,11 +88,13 @@ class UserOTP(models.Model):
         return f"{self.email}"
     
     def generate_otp_token(self):
-        """Generate a unique verification token"""
-        random.randint(k=6)
+        """Generate a 6-digit OTP token"""
         token = get_random_string(length=6, allowed_chars="1234567890")
         self.otp = token
         self.dateCreated = timezone.now()
         self.save()
         return token
-    
+
+    class Meta:
+        verbose_name = "User OTP"
+        verbose_name_plural = "User OTPs"

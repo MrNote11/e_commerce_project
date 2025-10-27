@@ -18,14 +18,13 @@ from django.template.loader import render_to_string
 from django.conf import settings
 
 
+
 class UserProfileSerializerOut(serializers.ModelSerializer):
     username = serializers.SerializerMethodField()
     full_name = serializers.SerializerMethodField()
     phone_number = serializers.SerializerMethodField()
     email = serializers.SerializerMethodField()
     gender = serializers.SerializerMethodField()
-    # current_tier = serializers.SerializerMethodField()
-    # all_tier_details = serializers.SerializerMethodField()
 
     def get_username(self, obj):
         return obj.user.username
@@ -43,27 +42,6 @@ class UserProfileSerializerOut(serializers.ModelSerializer):
     
     def get_gender(self, obj):
         return obj.gender or None
-    
-    # def get_current_tier(self,obj):
-    #     return {
-    #         "tier": obj.tier.tier,
-    #         "depositLimit": obj.tier.depositLimit,
-    #         "withdrawalLimit": obj.tier.withdrawalLimit
-    #     }
-    
-    # def get_all_tier_details(self,obj):
-    #     tier_details = []
-    #     tiers = obj.tier.objects.all()
-    #     for tier in tiers:
-    #         tier_name = tier.tier
-    #         tier_withdrawal = tier.withdrawalLimit
-    #         tier_deposit = tier.depositLimit
-    #         tier_details.append({
-    #             "tier": tier_name,
-    #             "withdrawalLimit": tier_withdrawal,
-    #             "depositLimit": tier_deposit
-    #         })
-    #     return tier_details
 
     class Meta:
         model = UserProfile
@@ -125,7 +103,6 @@ class LoginSerializerIn(serializers.Serializer):
         return user
 
 
-# serializers.py
 class SignupSerializerIn(serializers.Serializer):
     password = serializers.CharField()
     phoneNo = serializers.CharField(required=False)
@@ -165,114 +142,76 @@ class SignupSerializerIn(serializers.Serializer):
             validate_password(password=pword)
         except Exception as err:
             log_request(f"Password Validation Error:\nError: {err}")
-            raise InvalidRequestException(api_response(message=err, status=False))
+            raise InvalidRequestException(api_response(message=str(err), status=False))
                
         phone = format_phone_number(phone_no) if phone_no else None
 
-        # Create User but mark as inactive
+        # Create User but mark as inactive until email verification
         user = User.objects.create_user(
             username=email,
             email=email,
             first_name=first_name,
             last_name=last_name,
-            is_active=True # User cannot login until verified
+            is_active=False  # CRITICAL: User cannot login until verified
         )
         user.set_password(raw_password=pword)
         user.save()
 
-        # Create UserProfile
-        # user_profile = UserProfile.objects.create(
-        #     user=user,      
-        #     gender=gender,
-        #     phoneNumber=phone,
-        #     email=email 
-        # )
-        
-         # Wait a moment for the signal to create UserProfile
+        # Wait for signal to create UserProfile
         max_retries = 5
+        user_profile = None
         for i in range(max_retries):
             try:
                 user_profile = UserProfile.objects.get(user=user)
                 break
             except UserProfile.DoesNotExist:
                 if i == max_retries - 1:
-                    time.sleep(0.1)  # Wait 100ms before retry
-                    continue
+                    # Last retry failed, create manually
+                    user_profile = UserProfile.objects.create(
+                        user=user,
+                        email=email
+                    )
+                    # logger.warning(f"Had to manually create UserProfile for user {user.id}")
                 else:
-                    print("userprofile issue occured")  # Wait 100ms before retry
-                    break
-        try:
-            request = self.context.get('request')
-            # Build absolute URL
-            
-        
-            
-            user_profile = UserProfile.objects.get(user=user)
+                    time.sleep(0.1)  # Wait 100ms before retry
+
+        # Update profile with additional info
+        if user_profile:
             user_profile.gender = gender
             user_profile.phoneNumber = phone
-            # Generate verification token and send email
-            
-            base_url = request.build_absolute_uri('/').rstrip('/')
-            verification_token = user_profile.generate_verification_token()
-            verification_url = f"{base_url}/verify-email/?token={verification_token}"
-            log_request(f" Verification URL: {verification_url}")
-            print(f"Sending verification email to: {email}")
+            user_profile.save()
 
-            thread = threading.Thread(target=send_verification_email, args=[email, verification_url])
-            thread.start()
-            # send_verification_email_async.delay(user.email, verification_url)
-            print(f"verification url: {verification_url}")
-            log_request(f"Verification email queued for user {user.id} ({email})")
-        except Exception as email_error:
-            log_request(f"Warning: Failed to queue verification email for user {user.id}: {email_error}")
+        try:
+            request = self.context.get('request')
+            
+            # Generate verification token
+            verification_token = user_profile.generate_verification_token()
+            base_url = request.build_absolute_uri('/').rstrip('/')
+            verification_url = f"{base_url}/verify-email/?token={verification_token}"
+            
+            log_request(f"Verification URL: {verification_url}")
+            
+            # Send verification email SYNCHRONOUSLY (no threading)
+            # In production, use Celery instead
+            try:
+                email_sent = send_verification_email(email, verification_url)
+                if email_sent:
+                    log_request(f"✅ Verification email sent successfully to {email}")
+                else:
+                    log_request(f"⚠️ Verification email may have failed for {email}")
+            except Exception as email_error:
+                log_request(f"❌ Failed to send verification email: {email_error}")
+                # Don't fail registration if email fails
+                
+        except Exception as e:
+            log_request(f"Warning: Error in verification email process for user {user.id}: {e}")
+        
         return {
             "message": "Registration successful! Please check your email to verify your account.",
             "user_id": user.id,
             "email": email,
-            "verification_button": verification_url  # Include verification URL in response for testing
+            "verification_url": verification_url  # For testing only - remove in production
         }
-
-       
-            
-# class RequestOTPSerializerIn(serializers.Serializer):
-#     phone_number = serializers.CharField(required=True)
-
-#     def create(self, validated_data):
-#         phone_number = validated_data.get("phone_number")
-      
-        
-#         phone_no = format_phone_number(phone_number)
-#         log_request(f"Creating OTP for phone number: {phone_no}")
-#         expiry = get_next_minute(timezone.now(), 15)
-#         random_otp = generate_random_otp()
-#         log_request(random_otp)
-#         encrypted_otp = encrypt_text(random_otp)
-
-#         user_otp, _ = UserOTP.objects.get_or_create(phoneNumber=phone_no)
-#         log_request(f"OTP creation status: {_}")
-#         user_otp.otp = encrypted_otp
-#         user_otp.expiry = expiry
-#         user_otp.save()
-
-#         # Send OTP to user
-#         # Thread(target=send_token_to_email, args=[user_detail]).start()
-#         # Send via TMSaaS
-
-#         bank = get_site_details()
-
-#         # new_content = f"Dear {first_name},Your password reset token is {random_otp}. It expires in 10 minutes."
-#         # log_request(new_content)
-
-#         # TMSaaSAPI.send_tmsaas_sms(bank,new_content,phone_no,log_sms_response_to_server)
-
-#         # Thread(target=send_tmsaas_sms, args=[bank, new_content, phone_number, log_sms_response_to_server]).start()
-
-#         return {
-#             "otp": random_otp,
-#             "hint": "data object containing OTP will be removed when sms service start working",
-#         }
-
-
 
 
 class RequestEmailOTPSerializerIn(serializers.Serializer):
@@ -284,7 +223,7 @@ class RequestEmailOTPSerializerIn(serializers.Serializer):
         log_request(f"Creating OTP for email: {email}")
         expiry = get_next_minute(timezone.now(), 15)
         random_otp = generate_random_otp()
-        log_request(random_otp)
+        log_request(f"Generated OTP: {random_otp}")
         encrypted_otp = encrypt_text(random_otp)
 
         user_otp, _ = UserOTP.objects.get_or_create(email=email)
@@ -293,13 +232,9 @@ class RequestEmailOTPSerializerIn(serializers.Serializer):
         user_otp.expiry = expiry
         user_otp.save()
 
-        # Send OTP to user's email
-        # This will be implemented later
-        # For now, we just return the OTP in the response
-
         return {
             "otp": random_otp,
-            "hint": "data object containing OTP will be removed when email service starts working",
+            "hint": "data object containing OTP will be removed when email service is fully configured",
         }
 
 
@@ -354,100 +289,3 @@ class ConfirmOTPSerializerIn(serializers.Serializer):
             raise InvalidRequestException(response)
 
         return {}
-
-
-class ChangePasswordSerializerIn(serializers.Serializer):
-    user = serializers.HiddenField(default=serializers.CurrentUserDefault())
-    currentPassword = serializers.CharField()
-    newPassword = serializers.CharField()
-
-    def create(self, validated_data):
-        user = validated_data.get("user")
-        old_password = validated_data.get("currentPassword")
-        new_password = validated_data.get("newPassword")
-
-        if not check_password(password=old_password, encoded=user.password):
-            raise InvalidRequestException(
-                api_response(message="Incorrect old password", status=False)
-            )
-
-        try:
-            validate_password(password=new_password)
-        except Exception as err:
-            log_request(f"Password Validation Error:\nError: {err}")
-            raise InvalidRequestException(api_response(message=err, status=False))
-
-        if old_password == new_password:
-            raise InvalidRequestException(
-                api_response(message="Passwords cannot be same", status=False)
-            )
-
-        user.password = make_password(password=new_password)
-        user.save()
-
-        return "Password Change Successful"
-
-
-class ForgetPasswordSerializerIn(serializers.Serializer):
-    email = serializers.EmailField()
-    otp = serializers.CharField()
-    password = serializers.CharField()
-
-    def create(self, validated_data):
-        email = validated_data.get("email")
-        otp = validated_data.get("otp")
-        new_password = validated_data.get("password")
-
-        try:
-            user = User.objects.get(email=email)
-        except User.DoesNotExist:
-            raise InvalidRequestException(
-                api_response(message="User not found", status=False)
-            )
-
-        try:
-            validate_password(password=new_password)
-        except Exception as err:
-            log_request(f"Password Validation Error:\nError: {err}")
-            raise InvalidRequestException(api_response(message=err, status=False))
-
-        try:
-            user_otp = UserOTP.objects.get(phoneNumber=user.userprofile.phoneNumber)
-        except UserOTP.DoesNotExist:
-            raise InvalidRequestException(
-                api_response(message="OTP request is required", status=False)
-            )
-
-        if timezone.now() > user_otp.expiry:
-            raise InvalidRequestException(
-                api_response(message="OTP is expired", status=False)
-            )
-
-        decrypted_otp = decrypt_text(user_otp.otp)
-        if str(decrypted_otp) != str(otp):
-            raise InvalidRequestException(
-                api_response(message="You have submitted an invalid OTP", status=False)
-            )
-
-        user.password = make_password(password=new_password)
-        user.save()
-        
-        return "Password Reset Successful"
-
-
-class NewUserProfileSerializer(serializers.ModelSerializer):
-    first_name = serializers.SerializerMethodField()
-    last_name = serializers.SerializerMethodField()
-    full_name = serializers.SerializerMethodField()
-    class Meta:
-        model = UserProfile
-        fields = ["otherName", "gender", "dob", "phoneNumber","nin", "address","first_name", "last_name","full_name"]
-
-    def get_first_name(self,obj):
-        return obj.user.first_name
-    
-    def get_last_name(self,obj):
-        return obj.user.last_name
-    
-    def get_full_name(self,obj):
-        return f"{obj.user.first_name} {obj.user.last_name}"
