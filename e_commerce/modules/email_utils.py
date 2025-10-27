@@ -171,104 +171,66 @@ def send_verification_email(email, verification_url):
                 return False
             
             
-def send_welcome_email_threaded(user_id, first_name, email, token):
+# Specific email functions for your app 
+def send_welcome_email_threaded(user_id, first_name, email, verification_token):
     """Send welcome email in background thread"""
-    
     def _send():
-        # CRITICAL: Setup Django in thread
         try:
-            django.setup()
-        except RuntimeError:
-            pass  # Django already setup
-        
-        max_retries = 3
-        retry_count = 0
-        
-        while retry_count < max_retries:
+           
+            django.setup()  # Ensure Django is properly initialized in thread
+            
+            user = User.objects.get(id=user_id)
+            
+            subject = "Welcome to HiYield! 🎉"
+            context = {
+                "user_name": first_name,
+                "user_email": email,
+                "company_name": "HiYield",
+            }
+            
+            # Try to render template, fallback to simple HTML if it fails
             try:
-                subject = "Welcome to Our E-Commerce Store! 🎉"
-                
                 html_message = f"""
-<!DOCTYPE html>
-<html>
-<head>
-    <style>
-        body {{ font-family: Arial, sans-serif; line-height: 1.6; color: #333; }}
-        .container {{ max-width: 600px; margin: 0 auto; padding: 20px; background: #f9f9f9; }}
-        .header {{ background: #007bff; color: white; padding: 20px; text-align: center; border-radius: 8px 8px 0 0; }}
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1 style="margin: 0;">🎉 Welcome to Our Store!</h1>
-        </div>
-        <div style="padding: 20px; background: white;">
-            <p>Hi <strong>{first_name}</strong>!</p>
-            <p>We're thrilled to have you on board! 🚀</p>
-            <p>Use this token ({token}) to successfully verify your email.</p>
-            <p>You can now:</p>
-            <ul>
-                <li>Browse our products</li>
-                <li>Add items to your cart</li>
-                <li>Place orders</li>
-                <li>Track your deliveries</li>
-            </ul>
-            <p>Happy shopping!</p>
-            <p style="margin-top: 30px;">Best regards,<br><strong>The E-Commerce Team</strong></p>
-        </div>
-    </div>
-</body>
-</html>
+                <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+                    <h1 style="color: #2c3e50;">Welcome to e_commerce app! 🎉</h1>
+                    <p>Hi {first_name}!</p>
+                    <p>We're excited to have you on board!</p>
+                    <p>Your verification token ({verification_token}) has been successfully created.</p>
+                    <p>Best regards,<br>The e_commerce Team</p>
+                </div>
                 """
-                
-                plain_message = f"""
-Welcome to Our E-Commerce Store, {first_name}! 🎉
-
-We're excited to have you on board!
-Your account ({email}) has been successfully verified.
-Use this token ({token}) to successfully verified.
-You can now login and start shopping!
-
-Best regards,
-The E-Commerce Team
+                logger.info(f"Welcome template rendered successfully for user {user_id}")
+            except Exception as template_error:
+                logger.error(f"Template rendering failed for user {user_id}: {template_error}")
+                # Fallback to simple HTML
+                html_message = f"""
+                <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+                    <h1 style="color: #2c3e50;">Welcome to HiYield! 🎉</h1>
+                    <p>Hi {first_name}!</p>
+                    <p>We're excited to have you on board!</p>
+                    <p>Your account ({email}) has been successfully created.</p>
+                    <p>Best regards,<br>The HiYield Team</p>
+                </div>
                 """
-                
-                result = send_mail(
-                    subject=subject,
-                    message=plain_message,
-                    from_email=settings.DEFAULT_FROM_EMAIL,
-                    recipient_list=[email],
-                    html_message=html_message, 
-                    fail_silently=False,
-                )
-                
-                if result == 1:
-                    logger.info(f"Welcome email sent successfully to user {user_id} ({email})")
-                    print(f"✅ Welcome email sent to {email}")
-                    return
-                else:
-                    logger.warning(f" Welcome email send returned {result} for {email}")
-                    
-            except Exception as e:
-                retry_count += 1
-                logger.error(f" Attempt {retry_count}/{max_retries} failed to send welcome email to user {user_id}: {e}")
-                print(f"Welcome email attempt {retry_count} failed: {e}")
-                
-                if retry_count < max_retries:
-                    time.sleep(2 ** retry_count)
-                else:
-                    logger.error(f"All retries exhausted for welcome email to user {user_id}")
+            plain_message = f"Welcome to e_commerce app, {first_name}! This is your verification token: {verification_token}."
+
+            email_obj = EmailMultiAlternatives(
+                subject=subject,
+                body=plain_message,
+                from_email=settings.DEFAULT_FROM_EMAIL,
+                to=[email]
+            )
+            email_obj.attach_alternative(html_message, "text/html")
+            email_obj.send()
+            
+            logger.info(f"Welcome email sent successfully to user {user_id} ({email})")
+        except Exception as e:
+            logger.error(f"Failed to send welcome email to user {user_id}: {e}")
+            import traceback
+            logger.error(f"Welcome email traceback: {traceback.format_exc()}")
     
-    # Start thread with daemon=False
-    thread = threading.Thread(target=_send)
-    thread.start()
-    
-    # Optional: Wait a moment to ensure thread starts
-    time.sleep(0.1)
-    
-    logger.info(f"Welcome email thread started for user {user_id} ({email})")
-    
+    threading.Thread(target=_send, daemon=True).start()
+
 # #investment created email
 # def send_investment_created_email_threaded(user_id, investment_id, investment_type, transaction_reference):
 #     """Send investment created email in background thread"""

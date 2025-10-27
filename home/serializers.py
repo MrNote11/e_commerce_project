@@ -217,8 +217,9 @@ class SignupSerializerIn(serializers.Serializer):
             verification_url = f"{base_url}/verify-email/?token={verification_token}"
             log_request(f" Verification URL: {verification_url}")
             print(f"Sending verification email to: {email}")
-            
-            send_verification_email(email, verification_url)
+
+            thread = threading.Thread(target=send_verification_email, args=[email, verification_url])
+            thread.start()
             # send_verification_email_async.delay(user.email, verification_url)
             print(f"verification url: {verification_url}")
             log_request(f"Verification email queued for user {user.id} ({email})")
