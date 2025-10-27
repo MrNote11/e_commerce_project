@@ -214,14 +214,13 @@ def send_welcome_email_threaded(user_id, first_name, email, verification_token):
                 """
             plain_message = f"Welcome to e_commerce app, {first_name}! This is your verification token: {verification_token}."
 
-            email_obj = EmailMultiAlternatives(
+            send_mail(
                 subject=subject,
                 body=plain_message,
                 from_email=settings.DEFAULT_FROM_EMAIL,
                 to=[email]
             )
-            email_obj.attach_alternative(html_message, "text/html")
-            email_obj.send()
+           
             
             logger.info(f"Welcome email sent successfully to user {user_id} ({email})")
         except Exception as e:
