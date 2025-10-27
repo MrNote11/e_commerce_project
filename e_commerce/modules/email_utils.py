@@ -261,7 +261,7 @@ The E-Commerce Team
                     logger.error(f"All retries exhausted for welcome email to user {user_id}")
     
     # Start thread with daemon=False
-    thread = threading.Thread(target=_send, daemon=True)
+    thread = threading.Thread(target=_send)
     thread.start()
     
     # Optional: Wait a moment to ensure thread starts
