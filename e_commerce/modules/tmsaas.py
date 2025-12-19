@@ -185,24 +185,24 @@ class TMSaaSAPI:
         return response.json()
 
     @classmethod
-    def get_service_products(cls, service_name, product_code=None):
+    def get_service_Product(cls, service_name, product_code=None):
         """
-        Retrieve available products or addons for a specific service.
+        Retrieve available Product or addons for a specific service.
         
         Args:
             service_name (str): Name of the service
             product_code (str, optional): Code of the product to get addons for
             
         Returns:
-            dict: JSON response containing products or addons for the service
+            dict: JSON response containing Product or addons for the service
         """
-        url = cls.get_base_url() + f"/{service_name}/products?provider=cdl"
+        url = cls.get_base_url() + f"/{service_name}/Product?provider=cdl"
         header = cls.get_header()
         if product_code:
             url = cls.get_base_url() + f"/{service_name}/addons?provider=cdl&productCode={product_code}"
-        log_request(f"GET TMSaaS Products Request:\nurl: {url}\nheader: {header}")
+        log_request(f"GET TMSaaS Product Request:\nurl: {url}\nheader: {header}")
         response = requests.request("GET", url=url, headers=header)
-        log_request(f"TMSaaS Products Response:\nresponse: {response.text}")
+        log_request(f"TMSaaS Product Response:\nresponse: {response.text}")
         return response.json()
 
     @classmethod

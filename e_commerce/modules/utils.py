@@ -668,8 +668,56 @@ def incoming_request_checks(request, require_data_field: bool = True) -> tuple:
         x_api_key = request.headers.get("X-Api-Key", None) or request.META.get(
             "HTTP_X_API_KEY", None
         )
-        request_type = request.data.get("requestType", None)
-        data = request.data.get("data", {})
+        
+        # Check if it's FormData by looking at content type or request.POST
+        if request.content_type and 'multipart/form-data' in request.content_type:
+            # Handle FormData
+            request_type = request.POST.get("requestType")
+            data = {}
+            
+            # Process all POST fields that start with 'data['
+            for key, value in request.POST.items():
+                if key == 'requestType':
+                    continue
+                    
+                if key.startswith('data['):
+                    # Convert data[field][nested] to nested dictionary
+                    import re
+                    field_path = key[5:-1]  # Remove 'data[' and ']'
+                    
+                    if '][' in field_path:
+                        parts = field_path.split('][')
+                        current = data
+                        for i, part in enumerate(parts):
+                            if i == len(parts) - 1:
+                                current[part] = value
+                            else:
+                                if part not in current:
+                                    current[part] = {}
+                                current = current[part]
+                    else:
+                        data[field_path] = value
+            
+            # Process files
+            for key, file_obj in request.FILES.items():
+                if key.startswith('data['):
+                    field_path = key[5:-1]
+                    if '][' in field_path:
+                        parts = field_path.split('][')
+                        current = data
+                        for i, part in enumerate(parts):
+                            if i == len(parts) - 1:
+                                current[part] = file_obj
+                            else:
+                                if part not in current:
+                                    current[part] = {}
+                                current = current[part]
+                    else:
+                        data[field_path] = file_obj
+        else:
+            # Handle JSON
+            request_type = request.data.get("requestType", None)
+            data = request.data.get("data", {})
 
         if not x_api_key:
             return False, "Missing or Incorrect Request-Header field 'X-Api-Key'"
@@ -691,8 +739,9 @@ def incoming_request_checks(request, require_data_field: bool = True) -> tuple:
                 )
 
         return True, data
-    except (Exception,) as err:
+    except (Exception,) as err:    
         return False, f"{err}"
+    
 
 
 def get_incoming_request_checks(request) -> tuple:

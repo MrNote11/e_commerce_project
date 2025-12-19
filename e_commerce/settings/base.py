@@ -4,7 +4,7 @@ print('base.py')
 from datetime import timedelta
 import os  # noqa: E402
 from pathlib import Path  # noqa: E402
-
+import cloudinary
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+   
     #Third parties app
     "rest_framework",
     "rest_framework_simplejwt",
@@ -44,11 +44,21 @@ INSTALLED_APPS = [
     "drf_yasg",
     "corsheaders",
     "django_filters",
+    'cloudinary_storage',
+    'cloudinary',
+    "whitenoise.runserver_nostatic",
+    'django.contrib.postgres',
+    'admin_honeypot',
+    'django_celery_beat',
     
     # Local apps
+    "honey",
     "account",
     "admin_panel",
     "home",
+    "stock",
+    "vendors",
+    "payment",
 ]
 
 MIDDLEWARE = [
@@ -61,6 +71,9 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "stock.middleware.CartMiddleware",
+    "stock.middleware.ProductCacheMiddleware",
+    "stock.middleware.CartSyncMiddleware",
 ]
 
 
@@ -148,14 +161,31 @@ os.makedirs(os.path.join(BASE_DIR, "static"), exist_ok=True)
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
+DEFAULT_FILE_STORAGE=env('DEFAULT_FILE_STORAGE')
+supabase_url = env('DB_SUPABASE_ENGINE', default=None)
+if DEFAULT_FILE_STORAGE and supabase_url:
+    CLOUDINARY_STORAGE = {
+        'CLOUD_NAME': os.getenv('CLOUD_API_NAME'),
+        'API_KEY': os.getenv('CLOUD_API_KEY'),
+        'API_SECRET': os.getenv('CLOUD_API_SECRET')
+    }
+    cloudinary.config(
+        cloud_name=CLOUDINARY_STORAGE['CLOUD_NAME'],
+        api_key=CLOUDINARY_STORAGE['API_KEY'],
+        api_secret=CLOUDINARY_STORAGE['API_SECRET']
+    )
+    
+else:
+    MEDIA_URL = '/media/'
+    
 # Default primary key field type
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # REST Framework settings
 REST_FRAMEWORK = {
-    # "DEFAULT_PERMISSION_CLASSES": [
-    #     "rest_framework.permissions.IsAuthenticated",
-    # ],
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.AllowAny",
+    ],
     "DEFAULT_AUTHENTICATION_CLASSES": [
         "rest_framework_simplejwt.authentication.JWTAuthentication",
     ],
@@ -173,6 +203,11 @@ REST_FRAMEWORK = {
         # "config.modules.throttling.BurstRateThrottle",
         # "config.modules.throttling.SustainedRateThrottle",
     ],
+    'DEFAULT_FILTER_BACKENDS': [
+        'django_filters.rest_framework.DjangoFilterBackend',
+        # 'rest_framework.filters.SearchFilter',
+        # 'rest_framework.filters.OrderingFilter',
+    ],
     "DEFAULT_THROTTLE_RATES": {
         "anon": "100/day",  # Anonymous users: 100 requests per day
         "user": "1000/day",  # Authenticated users: 1000 requests per day
@@ -185,6 +220,11 @@ REST_FRAMEWORK = {
         "admin": "1000/hour",  # Admin operations
     },
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer',
+    ],
+    # 'EXCEPTION_HANDLER': 'e_commerce.exceptions.custom_exception_handler',
 }
 
 SPECTACULAR_SETTINGS = {
@@ -233,7 +273,7 @@ SWAGGER_SETTINGS = {
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=60),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
-    "ROTATE_REFRESH_TOKENS": True,
+    "ROTATE_REFRESH_TOKENS": False,
     "BLACKLIST_AFTER_ROTATION": True,
     "UPDATE_LAST_LOGIN": True,
     "AUTH_HEADER_TYPES": ("Bearer",),
@@ -251,4 +291,9 @@ SIMPLE_JWT = {
 SITE_ID = 1
 
 
+# settings.py
 # AUTH_USER_MODEL = 'home.User'
+
+ACCOUNT_USERNAME_BLACKLIST = ['admin', 'alid']
+
+AUTH_USER_MODEL = 'home.User'

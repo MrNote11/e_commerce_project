@@ -90,7 +90,7 @@ def  send_verification_email_async(email, verification_url):
             
         logger.info(f" Verification email sent successfully to {email}")
         logger.info(f"SUCCESS: Verification email sent via MailerSend to {email}")
-        print(f"✅ MailerSend email sent to {email}")
+        print(f" MailerSend email sent to {email}")
         return True
             
     except Exception as e:

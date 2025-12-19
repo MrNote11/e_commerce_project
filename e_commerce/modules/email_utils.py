@@ -7,8 +7,8 @@ import time
 from django.core.mail import send_mail, EmailMultiAlternatives
 from django.template.loader import render_to_string
 from django.conf import settings
-from django.contrib.auth.models import User
-
+from home.models import User, UserProfile, UserOTP
+import threading
 logger = logging.getLogger(__name__)
 
 
@@ -56,16 +56,211 @@ def send_verification_email(email, verification_url):
     Send account verification email SYNCHRONOUSLY.
     For production, this should be called via Celery task.
     """
-    max_retries = 2
-    retry_count = 0
-    
-    while retry_count <= max_retries:
-        try:
-            user = User.objects.get(email=email)
+    def _send():
+        max_retries = 2
+        retry_count = 0
+        
+        while retry_count <= max_retries:
+            try:
+                user = User.objects.get(email=email)
 
-            subject = f"Welcome {user.first_name}! Verify Your Email Address"
+                subject = f"Welcome {user.first_name}! Verify Your Email Address"
+                
+                # Create HTML email content
+                html_message = f"""
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <meta charset="utf-8">
+                    <style>
+                        body {{ font-family: Arial, sans-serif; line-height: 1.6; color: #333; }}
+                        .container {{ max-width: 600px; margin: 0 auto; padding: 20px; }}
+                        .button {{ 
+                            display: inline-block; 
+                            padding: 12px 24px; 
+                            background-color: #4CAF50; 
+                            color: white; 
+                            text-decoration: none; 
+                            border-radius: 4px;
+                            margin: 20px 0;
+                        }}
+                        .footer {{ margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666; }}
+                    </style>
+                </head>
+                <body>
+                    <div class="container">
+                        <h2>Welcome to E-Commerce Platform, {user.first_name}!</h2>
+                        <p>Thank you for signing up. Please verify your email address to activate your account.</p>
+                        <p>Click the button below to verify your email:</p>
+                        <a href="{verification_url}" class="button">Verify Email Address</a>
+                        <p>Or copy and paste this link into your browser:</p>
+                        <p style="word-break: break-all; color: #0066cc;">{verification_url}</p>
+                        <p>This link will expire in 24 hours.</p>
+                        <div class="footer">
+                            <p>If you didn't create an account, please ignore this email.</p>
+                            <p>&copy; 2025 E-Commerce Platform. All rights reserved.</p>
+                        </div>
+                    </div>
+                </body>
+                </html>
+                """
+                
+                # Plain text version
+                plain_message = f"""
+                Welcome to E-Commerce Platform, {user.first_name}!
+                
+                Thank you for signing up. Please verify your email address to activate your account.
+                
+                Click this link to verify your email:
+                {verification_url}
+                
+                This link will expire in 24 hours.
+                
+                If you didn't create an account, please ignore this email.
+                """
+
+                # Send email with both HTML and plain text versions
+                email_obj = EmailMultiAlternatives(
+                    subject=subject,
+                    body=plain_message,
+                    from_email=settings.DEFAULT_FROM_EMAIL,
+                    to=[email]
+                )
+                email_obj.attach_alternative(html_message, "text/html")
+                result = email_obj.send(fail_silently=False)
+
+                if result == 1:
+                    logger.info(f"Verification email sent successfully to {email}")
+                    return True
+                else:
+                    logger.warning(f"Email send returned {result} for {email}")
+                    return False
+                    
+            except User.DoesNotExist:
+                logger.error(f"User with email {email} does not exist")
+                return False
+                
+            except Exception as e:
+                retry_count += 1
+                logger.error(f"Attempt {retry_count}/{max_retries} failed to send verification email to {email}: {e}")
+
+                if retry_count <= max_retries:
+                    time.sleep(1)  # Wait 1 second before retry
+                else:
+                    logger.error(f"All retries exhausted for verification email to {email}")
+                    return False
+    thread = threading.Thread(target=_send, daemon=True)
+    thread.start()
+
+
+
+def send_vendor_verification_email(email, verification_url):
+    """
+    Send account verification email SYNCHRONOUSLY.
+    For production, this should be called via Celery task.
+    """
+    def _send():
+       
+        
+            try:
+                user = User.objects.get(email=email)
+
+                subject = f"Welcome {user.first_name}! Verify Your Email Address"
+                
+                # Create HTML email content
+                html_message = f"""
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <meta charset="utf-8">
+                    <style>
+                        body {{ font-family: Arial, sans-serif; line-height: 1.6; color: #333; }}
+                        .container {{ max-width: 600px; margin: 0 auto; padding: 20px; }}
+                        .button {{ 
+                            display: inline-block; 
+                            padding: 12px 24px; 
+                            background-color: #4CAF50; 
+                            color: white; 
+                            text-decoration: none; 
+                            border-radius: 4px;
+                            margin: 20px 0;
+                        }}
+                        .footer {{ margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666; }}
+                    </style>
+                </head>
+                <body>
+                    <div class="container">
+                        <h2>A Vendor needs activation to E-Commerce Platform, {user.first_name}!</h2>
+                        <p>Please verify the email address to activate the account.</p>
+                        <p>Click the button below to verify the email:</p>
+                        <a href="{verification_url}" class="button">Verify Email Address</a>
+                        <p>Or copy and paste this link into your browser:</p>
+                        <p style="word-break: break-all; color: #0066cc;">{verification_url}</p>
+                        <p>This link will expire in 24 hours.</p>
+                        <div class="footer">
+                            <p>If you didn't create an account, please ignore this email.</p>
+                            <p>&copy; 2025 E-Commerce Platform. All rights reserved.</p>
+                        </div>
+                    </div>
+                </body>
+                </html>
+                """
+                
+                # Plain text version
+                plain_message = f"""
+                Welcome to E-Commerce Platform, {user.first_name}!
+                
+                Thank you for signing up. Please verify your email address to activate your account.
+                
+                Click this link to verify your email:
+                {verification_url}
+                
+                This link will expire in 24 hours.
+                
+                If you didn't create an account, please ignore this email.
+                """
+
+                # Send email with both HTML and plain text versions
+                email_obj = EmailMultiAlternatives(
+                    subject=subject,
+                    body=plain_message,
+                    from_email=settings.DEFAULT_FROM_EMAIL,
+                    to=[settings.DEFAULT_FROM_EMAIL]
+                )
+                email_obj.attach_alternative(html_message, "text/html")
+                result = email_obj.send(fail_silently=False)
+
+                if result:
+                    logger.info(f"Verification email sent successfully to {email}")
             
-            # Create HTML email content
+                else:
+                    logger.warning(f"Email send returned {result} for {email}")
+                    return False
+                    
+            except User.DoesNotExist:
+                logger.error(f"User with email {email} does not exist")
+                return False
+                
+            except Exception as e:
+                
+                logger.error(f"Attempt failed to send verification email to {email}: {e}")
+
+    thread = threading.Thread(target=_send, daemon=True)
+    thread.start()
+    
+    
+def send_welcome_email(user_id, first_name, email):
+
+    def _send():
+        """
+        Send welcome email SYNCHRONOUSLY.
+        For production, this should be called via Celery task.
+        """
+        try:
+            user = User.objects.get(id=user_id)
+            
+            subject = "Welcome to E-Commerce! 🎉"
+            
             html_message = f"""
             <!DOCTYPE html>
             <html>
@@ -73,30 +268,23 @@ def send_verification_email(email, verification_url):
                 <meta charset="utf-8">
                 <style>
                     body {{ font-family: Arial, sans-serif; line-height: 1.6; color: #333; }}
-                    .container {{ max-width: 600px; margin: 0 auto; padding: 20px; }}
-                    .button {{ 
-                        display: inline-block; 
-                        padding: 12px 24px; 
-                        background-color: #4CAF50; 
-                        color: white; 
-                        text-decoration: none; 
-                        border-radius: 4px;
-                        margin: 20px 0;
-                    }}
+                    .container {{ max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f9f9f9; }}
+                    .content {{ background-color: white; padding: 30px; border-radius: 8px; }}
+                    h1 {{ color: #2c3e50; }}
                     .footer {{ margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666; }}
                 </style>
             </head>
             <body>
                 <div class="container">
-                    <h2>Welcome to E-Commerce Platform, {user.first_name}!</h2>
-                    <p>Thank you for signing up. Please verify your email address to activate your account.</p>
-                    <p>Click the button below to verify your email:</p>
-                    <a href="{verification_url}" class="button">Verify Email Address</a>
-                    <p>Or copy and paste this link into your browser:</p>
-                    <p style="word-break: break-all; color: #0066cc;">{verification_url}</p>
-                    <p>This link will expire in 24 hours.</p>
+                    <div class="content">
+                        <h1>Welcome to E-Commerce! 🎉</h1>
+                        <p>Hi {first_name}!</p>
+                        <p>We're excited to have you on board!</p>
+                        <p>Your account ({email}) has been successfully verified and activated.</p>
+                        <p>You can now start shopping and exploring our platform.</p>
+                        <p>Best regards,<br>The E-Commerce Team</p>
+                    </div>
                     <div class="footer">
-                        <p>If you didn't create an account, please ignore this email.</p>
                         <p>&copy; 2025 E-Commerce Platform. All rights reserved.</p>
                     </div>
                 </div>
@@ -104,21 +292,18 @@ def send_verification_email(email, verification_url):
             </html>
             """
             
-            # Plain text version
             plain_message = f"""
-            Welcome to E-Commerce Platform, {user.first_name}!
+            Welcome to E-Commerce, {first_name}!
             
-            Thank you for signing up. Please verify your email address to activate your account.
+            We're excited to have you on board!
             
-            Click this link to verify your email:
-            {verification_url}
+            Your account ({email}) has been successfully verified and activated.
+            You can now start shopping and exploring our platform.
             
-            This link will expire in 24 hours.
-            
-            If you didn't create an account, please ignore this email.
+            Best regards,
+            The E-Commerce Team
             """
 
-            # Send email with both HTML and plain text versions
             email_obj = EmailMultiAlternatives(
                 subject=subject,
                 body=plain_message,
@@ -126,96 +311,79 @@ def send_verification_email(email, verification_url):
                 to=[email]
             )
             email_obj.attach_alternative(html_message, "text/html")
-            result = email_obj.send(fail_silently=False)
-
-            if result == 1:
-                logger.info(f"✅ Verification email sent successfully to {email}")
-                return True
-            else:
-                logger.warning(f"Email send returned {result} for {email}")
-                return False
-                
-        except User.DoesNotExist:
-            logger.error(f"User with email {email} does not exist")
-            return False
+            email_obj.send(fail_silently=False)
             
+            logger.info(f"Welcome email sent successfully to user {user_id} ({email})")
+            return True
         except Exception as e:
-            retry_count += 1
-            logger.error(f"Attempt {retry_count}/{max_retries} failed to send verification email to {email}: {e}")
+            logger.error(f"Failed to send welcome email to user {user_id}: {e}")
+            import traceback
+            logger.error(f"Welcome email traceback: {traceback.format_exc()}")
+            return False
+    thread = threading.Thread(target=_send, daemon=True)
+    thread.start()
+    
+    
+    
+def send_request_email(email, otp):
 
-            if retry_count <= max_retries:
-                time.sleep(1)  # Wait 1 second before retry
-            else:
-                logger.error(f"All retries exhausted for verification email to {email}")
-                return False
-
-
-def send_welcome_email(user_id, first_name, email, verification_token):
-    """
-    Send welcome email SYNCHRONOUSLY.
-    For production, this should be called via Celery task.
-    """
-    try:
-        user = User.objects.get(id=user_id)
-        
-        subject = "Welcome to E-Commerce! 🎉"
-        
-        html_message = f"""
-        <!DOCTYPE html>
-        <html>
-        <head>
-            <meta charset="utf-8">
-            <style>
-                body {{ font-family: Arial, sans-serif; line-height: 1.6; color: #333; }}
-                .container {{ max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f9f9f9; }}
-                .content {{ background-color: white; padding: 30px; border-radius: 8px; }}
-                h1 {{ color: #2c3e50; }}
-                .footer {{ margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666; }}
-            </style>
-        </head>
-        <body>
-            <div class="container">
-                <div class="content">
-                    <h1>Welcome to E-Commerce! 🎉</h1>
-                    <p>Hi {first_name}!</p>
-                    <p>We're excited to have you on board!</p>
-                    <p>Your account ({email}) has been successfully verified and activated.</p>
-                    <p>You can now start shopping and exploring our platform.</p>
-                    <p>Best regards,<br>The E-Commerce Team</p>
-                </div>
-                <div class="footer">
-                    <p>&copy; 2025 E-Commerce Platform. All rights reserved.</p>
-                </div>
-            </div>
-        </body>
-        </html>
+    def _send():
         """
-        
-        plain_message = f"""
-        Welcome to E-Commerce, {first_name}!
-        
-        We're excited to have you on board!
-        
-        Your account ({email}) has been successfully verified and activated.
-        You can now start shopping and exploring our platform.
-        
-        Best regards,
-        The E-Commerce Team
+        Send request email SYNCHRONOUSLY.
+        For production, this should be called via Celery task.
         """
+        try:
 
-        email_obj = EmailMultiAlternatives(
-            subject=subject,
-            body=plain_message,
-            from_email=settings.DEFAULT_FROM_EMAIL,
-            to=[email]
-        )
-        email_obj.attach_alternative(html_message, "text/html")
-        email_obj.send(fail_silently=False)
-        
-        logger.info(f"Welcome email sent successfully to user {user_id} ({email})")
-        return True
-    except Exception as e:
-        logger.error(f"Failed to send welcome email to user {user_id}: {e}")
-        import traceback
-        logger.error(f"Welcome email traceback: {traceback.format_exc()}")
-        return False
+            subject = "Your OTP for E-Commerce Verification 🎉"
+
+            html_message = f"""
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <meta charset="utf-8">
+                <style>
+                    body {{ font-family: Arial, sans-serif; line-height: 1.6; color: #333; }}
+                    .container {{ max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f9f9f9; }}
+                    .content {{ background-color: white; padding: 30px; border-radius: 8px; }}
+                    h1 {{ color: #2c3e50; }}
+                    .footer {{ margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666; }}
+                </style>
+            </head>
+            <body>
+                <div class="container">
+                    <div class="content">
+                        <h1>OTP! 🎉</h1>
+                        <p>Your OTP verification is: <strong>{otp}</strong></p>
+                    </div>
+                    <div class="footer">
+                        <p>&copy; 2025 E-Commerce Platform. All rights reserved.</p>
+                    </div>
+                </div>
+            </body>
+            </html>
+            """
+            
+            plain_message = f"""
+            Your OTP for E-Commerce Verification is: {otp}.
+            Best regards,
+            The E-Commerce Team
+            """
+
+            email_obj = EmailMultiAlternatives(
+                subject=subject,
+                body=plain_message,
+                from_email=settings.DEFAULT_FROM_EMAIL,
+                to=[email]
+            )
+            email_obj.attach_alternative(html_message, "text/html")
+            email_obj.send(fail_silently=False)
+            
+            logger.info(f"OTP sent successfully to user ({email})")
+            return True
+        except Exception as e:
+            logger.error(f"Failed to send OTP to user ({email}): {e}")
+            import traceback
+            logger.error(f"OTP email traceback: {traceback.format_exc()}")
+            return False
+    thread = threading.Thread(target=_send, daemon=True)
+    thread.start()

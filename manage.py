@@ -6,6 +6,7 @@ import sys
 # from decouple import config
 from dotenv import load_dotenv
 
+
 with open('.env', 'a+') as f:
     f.close()
 

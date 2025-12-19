@@ -10,14 +10,18 @@ from django.shortcuts import get_object_or_404
 from e_commerce.modules.exceptions import InvalidRequestException ,raise_serializer_error_msg
 from django.contrib.auth.password_validation import validate_password 
 from .task import send_verification_email_async
-from django.contrib.auth.models import User
+from home.models import User, UserProfile, UserOTP
 import time
-from e_commerce.modules.email_utils import send_verification_email
+from e_commerce.modules.email_utils import send_vendor_verification_email, send_verification_email, send_request_email
 from django.core.mail import send_mail, EmailMultiAlternatives
 from django.template.loader import render_to_string
 from django.conf import settings
+import logging
+from django.db import IntegrityError
+from django.db import transaction
+from vendors.models import VendorProfile
 
-
+logger = logging.getLogger(__name__)
 
 class UserProfileSerializerOut(serializers.ModelSerializer):
     username = serializers.SerializerMethodField()
@@ -45,7 +49,11 @@ class UserProfileSerializerOut(serializers.ModelSerializer):
 
     class Meta:
         model = UserProfile
-        exclude = ["user", "image"]
+        exclude = ["user", "profile_image", "verification_token", "verification_sent_at", "failed_login_attempts", "locked_until", "last_failed_login"]
+        extra_kwargs ={
+            'user':{'read_only': True},
+            'is_verified': {'read_only': True},
+        }
         depth = 1
 
 
@@ -56,9 +64,9 @@ class UserSerializerOut(serializers.ModelSerializer):
    
     def get_profilePicture(self, obj):
         try:
-            if obj.userprofile and obj.userprofile.image:
+            if obj.userprofile and obj.userprofile.profile_image:
                 request = self.context.get("request")
-                return request.build_absolute_uri(obj.userprofile.image.url)
+                return request.build_absolute_uri(obj.userprofile.profile_image.url)
         except:
             pass
         return None
@@ -92,127 +100,150 @@ class LoginSerializerIn(serializers.Serializer):
             raise InvalidRequestException(
                 api_response(message="Invalid email or password", status=False)
             )
-
+        request = self.context["request"]
         # Authenticate with username and password
         user = authenticate(username=user.username, password=password)
         if not user:
             raise InvalidRequestException(
                 api_response(message="Invalid email or password", status=False)
             )
-        
         return user
+        
+        
+        
 
+logger = logging.getLogger(__name__)
 
 class SignupSerializerIn(serializers.Serializer):
-    password = serializers.CharField()
-    phoneNo = serializers.CharField(required=False)
+    password = serializers.CharField(write_only=True)
+    phoneNo = serializers.CharField(required=False, allow_blank=True)
     first_name = serializers.CharField()
     last_name = serializers.CharField()
     email = serializers.EmailField()
-    gender = serializers.CharField(required=False)
+    gender = serializers.CharField(required=False, allow_blank=True)
+    role = serializers.ChoiceField(choices=User.Role.choices, required=True)
+
+    def validate_email(self, value):
+        """Validate email uniqueness"""
+        if User.objects.filter(username=value).exists():
+            raise serializers.ValidationError("User with this email already exists")
+        if UserProfile.objects.filter(email=value).exists():
+            raise serializers.ValidationError("Customer with this email already registered")
+        return value
+
+    def validate(self, attrs):
+        phone_no = attrs.get('phoneNo')
+        
+        # Check phone number uniqueness if provided
+        if phone_no and UserProfile.objects.filter(phoneNumber=phone_no).exists():
+            raise serializers.ValidationError({
+                "phoneNo": "Customer with this phone number already registered"
+            })
+        
+        # Validate password
+        password = attrs.get('password')
+        try:
+            validate_password(password=password)
+        except Exception as err:
+            raise serializers.ValidationError({"password": str(err)})
+        
+        return attrs
 
     def create(self, validated_data):
-        pword = validated_data.get("password") 
-        phone_no = validated_data.get("phoneNo")
-        first_name = validated_data.get("first_name")
-        last_name = validated_data.get("last_name")
-        email = validated_data.get("email")
-        gender = validated_data.get("gender")
+        pword = validated_data.pop("password")
+        phone_no = validated_data.pop("phoneNo", None)
+        first_name = validated_data.pop("first_name")
+        last_name = validated_data.pop("last_name")
+        email = validated_data.pop("email")
+        gender = validated_data.pop("gender", None)
+        role = validated_data.pop("role")
 
-        # Check if user with this email already exists
-        if User.objects.filter(username=email).exists():
-            raise InvalidRequestException(
-                api_response(message="User with this email already exists", status=False)
-            )
-
-        if UserProfile.objects.filter(email=email).exists():
-            raise InvalidRequestException(
-                api_response(message="Customer with this email already registered", status=False)
-            )
-        
-        # Check if user with this phone number already exists
-        if phone_no and UserProfile.objects.filter(phoneNumber=phone_no).exists():
-            raise InvalidRequestException(
-                api_response(
-                    message="Customer with this phone number already registered", status=False
-                )
-            )
-
-        try:
-            validate_password(password=pword)
-        except Exception as err:
-            log_request(f"Password Validation Error:\nError: {err}")
-            raise InvalidRequestException(api_response(message=str(err), status=False))
-               
         phone = format_phone_number(phone_no) if phone_no else None
 
-        # Create User but mark as inactive until email verification
-        user = User.objects.create_user(
-            username=email,
-            email=email,
-            first_name=first_name,
-            last_name=last_name,
-            is_active=False  # CRITICAL: User cannot login until verified
-        )
-        user.set_password(raw_password=pword)
-        user.save()
-
-        # Wait for signal to create UserProfile
-        max_retries = 5
-        user_profile = None
-        for i in range(max_retries):
+        with transaction.atomic():
             try:
-                user_profile = UserProfile.objects.get(user=user)
-                break
-            except UserProfile.DoesNotExist:
-                if i == max_retries - 1:
-                    # Last retry failed, create manually
-                    user_profile = UserProfile.objects.create(
-                        user=user,
-                        email=email
-                    )
-                    # logger.warning(f"Had to manually create UserProfile for user {user.id}")
-                else:
-                    time.sleep(0.1)  # Wait 100ms before retry
+                # Create User
+                user = User.objects.create_user(
+                    username=email,
+                    email=email,
+                    first_name=first_name,
+                    last_name=last_name,
+                    is_active=False,
+                    role=role,
+                    password=pword  # Set password here to avoid extra save
+                )
+                
+                # Wait briefly for signal to create profiles (if using signals)
+                # Better approach: create profiles directly
+                try:
+                    user_profile = UserProfile.objects.get(user=user)
+                except UserProfile.DoesNotExist:
+                        return{"profile doesnt exists"}
+                
+                vendor_profile = None
+                if user.role == User.Role.VENDOR:
+                    try:
+                        vendor_profile = VendorProfile.objects.get(user=user)
+                    except VendorProfile.DoesNotExist:
+                        # If signal didn't create it, create it manually
+                        return {"vendorprofile doesnt exists"}
+                
+                # Update profile with additional info
+                user_profile.gender = gender
+                user_profile.phoneNumber = phone
+                user_profile.save()
+                
+                if vendor_profile:
+                    vendor_profile.contact_phone = phone
+                    vendor_profile.contact_email = email
+                    vendor_profile.save()
 
-        # Update profile with additional info
-        if user_profile:
-            user_profile.gender = gender
-            user_profile.phoneNumber = phone
-            user_profile.save()
+            except IntegrityError as e:
+                logger.error(f"Integrity error during user creation: {e}")
+                raise serializers.ValidationError("User creation failed due to database constraint")
+            except Exception as e:
+                logger.error(f"Error during user creation: {e}")
+                raise serializers.ValidationError(f"User creation failed: {str(e)}")
 
+        # Send verification emails
         try:
             request = self.context.get('request')
             
-            # Generate verification token
+            # Generate verification tokens
             verification_token = user_profile.generate_verification_token()
+            verification_token_vendor = vendor_profile.generate_vendor_verification_token() if vendor_profile else None
+            
             base_url = request.build_absolute_uri('/').rstrip('/')
-            verification_url = f"{base_url}/verify-email/?token={verification_token}"
+            verification_url = f"{base_url}/verify-email/?token={verification_token}" 
+            verification_url_vendor = f"{base_url}/verify-email/?token={verification_token_vendor}" if verification_token_vendor else None
+
+            logger.info(f"Verification URL: {verification_url}")
             
-            log_request(f"Verification URL: {verification_url}")
-            
-            # Send verification email SYNCHRONOUSLY (no threading)
-            # In production, use Celery instead
-            try:
-                email_sent = send_verification_email(email, verification_url)
-                if email_sent:
-                    log_request(f"✅ Verification email sent successfully to {email}")
-                else:
-                    log_request(f"⚠️ Verification email may have failed for {email}")
-            except Exception as email_error:
-                log_request(f"❌ Failed to send verification email: {email_error}")
-                # Don't fail registration if email fails
+            # Send appropriate email based on role
+            if user.role == User.Role.VENDOR:
+                send_vendor_verification_email(email, verification_url_vendor)
+                logger.info(f"Vendor verification email sent successfully to {email}")
+                return {
+                    "approval": "Email approval shall be sent within a day",
+                    "email": email,
+                    "role": user.role,
+                }
+                
+            else:    
+                send_verification_email(email, verification_url)
+                logger.info(f"Verification email sent successfully to {email}")
                 
         except Exception as e:
-            log_request(f"Warning: Error in verification email process for user {user.id}: {e}")
-        
+            logger.error(f"Error in verification email process for user {user.id}: {e}")
+            # Registration succeeded but email failed
         return {
-            "message": "Registration successful! Please check your email to verify your account.",
-            "user_id": user.id,
-            "email": email,
-            "verification_url": verification_url  # For testing only - remove in production
+                "message": "verification Email send...",
+                "user_id": user.id,
+                "email": email,
+                "role": user.role,
+                "verification_token": verification_url,
         }
-
+   
 
 class RequestEmailOTPSerializerIn(serializers.Serializer):
     email = serializers.EmailField(required=True)
@@ -220,6 +251,12 @@ class RequestEmailOTPSerializerIn(serializers.Serializer):
     def create(self, validated_data):
         email = validated_data.get("email")
         
+        user =User.objects.get(email=email)  # Ensure user exists; will raise if not
+        
+        if not user:
+            raise InvalidRequestException(
+                api_response(message="User with this email does not exist", status=False)
+            )
         log_request(f"Creating OTP for email: {email}")
         expiry = get_next_minute(timezone.now(), 15)
         random_otp = generate_random_otp()
@@ -230,7 +267,9 @@ class RequestEmailOTPSerializerIn(serializers.Serializer):
         log_request(f"OTP creation status: {_}")
         user_otp.otp = encrypted_otp
         user_otp.expiry = expiry
+        user_otp.is_verified = True
         user_otp.save()
+        send_request_email(email, random_otp)
 
         return {
             "otp": random_otp,
@@ -238,54 +277,185 @@ class RequestEmailOTPSerializerIn(serializers.Serializer):
         }
 
 
+# serializers.py
+class UpdateProfileSerializer(serializers.ModelSerializer):
+    # User model fields - for updating User table
+    email = serializers.EmailField(source='user.email', required=False)
+    first_name = serializers.CharField(source='user.first_name', required=False)
+    last_name = serializers.CharField(source='user.last_name', required=False)
+    username = serializers.CharField(source='user.username', required=False)
+    
+    # UserProfile fields - for updating UserProfile table
+    profile_image = serializers.ImageField(required=False)
+
+    class Meta:
+        model = UserProfile
+        fields = [
+            # User fields
+            'email', 'first_name', 'last_name', 'username',
+            # UserProfile fields  
+            'profile_image', 'otherName', 'gender', 'dob',
+            'phoneNumber', 'address', 'city', 'state', 'country'
+        ]
+        extra_kwargs = {
+            'user':{'read_only': True},
+            'is_verified': {'read_only': True},
+        }
+
+    def update(self, instance, validated_data):
+        """
+        Update both User and UserProfile models
+        """
+        print(f"Starting profile update for: {instance.user.username}")
+        
+        # Extract user data from validated_data
+        user_data = validated_data.pop('user', {})
+        print(f"User data to update: {user_data}")
+        print(f"Profile data to update: {validated_data}")
+        
+        with transaction.atomic():
+            # Update User model first
+            if user_data:
+                user = instance.user
+                for attr, value in user_data.items():
+                    setattr(user, attr, value)
+                    print(f"Setting user.{attr} = {value}")
+                user.save()
+                print(f"User updated: {user.username} ({user.email})")
+            
+            # Update UserProfile model
+            instance = super().update(instance, validated_data)
+            print(f"Profile updated successfully")
+        
+        return instance
+
+    def to_representation(self, instance):
+        """
+        Return formatted output using your existing serializer
+        """
+        data = UserProfileSerializerOut(instance, context=self.context).data    
+        return {
+            "details":data,
+            "profilePicture": instance.profile_image.url
+        }
+
 class ConfirmOTPSerializerIn(serializers.Serializer):
     otp = serializers.CharField()
-    phoneNumber = serializers.CharField(required=False)
-    email = serializers.EmailField(required=False)
+    email = serializers.EmailField()
 
     def validate(self, data):
-        # Either phoneNumber or email must be provided
-        if not data.get('phoneNumber') and not data.get('email'):
-            raise serializers.ValidationError("Either phoneNumber or email is required")
+        # Both are required to check OTP
+        if not data.get("otp"):
+            raise serializers.ValidationError("OTP is required.")
+        if not data.get("email"):
+            raise serializers.ValidationError("Email is required.")
         return data
 
-    def create(self, validated_data):
-        phone_number = validated_data.get("phoneNumber")
-        email = validated_data.get("email")
-        otp = validated_data.get("otp")
+    def validate_email(self, value):
+        if not User.objects.filter(email=value).exists():
+            raise serializers.ValidationError("User with this email does not exist.")
+        return value
 
-        if phone_number:
-            phone = format_phone_number(phone_number)
-            try:
-                user_otp = UserOTP.objects.get(phoneNumber=phone)
-            except UserOTP.DoesNotExist:
-                response = api_response(
-                    message="Request not valid, please request another OTP", status=False
-                )
-                raise InvalidRequestException(response)
-        elif email:
-            try:
-                user_otp = UserOTP.objects.get(email=email)
-            except UserOTP.DoesNotExist:
-                response = api_response(
-                    message="Request not valid, please request another OTP", status=False
-                )
-                raise InvalidRequestException(response)
-        else:
-            response = api_response(
-                message="Either phoneNumber or email is required", status=False
+    def create(self, validated_data):
+        email = validated_data["email"]
+        otp = validated_data["otp"]
+
+        user = User.objects.filter(email=email).first()
+
+        user_otp = UserOTP.objects.filter(email=email).first()
+        if not user_otp:
+            raise InvalidRequestException(
+                api_response("Request not valid, please request another OTP", False)
             )
-            raise InvalidRequestException(response)
 
         if otp != decrypt_text(user_otp.otp):
-            response = api_response(message="Invalid OTP", status=False)
-            raise InvalidRequestException(response)
-
-        # If OTP has expired
-        if timezone.now() > user_otp.expiry:
-            response = api_response(
-                message="OTP has expired, kindly request for another one", status=False
+            raise InvalidRequestException(
+                api_response("Invalid OTP", False)
             )
-            raise InvalidRequestException(response)
+
+        if timezone.now() > user_otp.expiry:
+            raise InvalidRequestException(
+                api_response("OTP expired, request a new one", False)
+            )
 
         return {}
+
+class ChangePasswordSerializerIn(serializers.Serializer):
+    user = serializers.HiddenField(default=serializers.CurrentUserDefault())
+    currentPassword = serializers.CharField()
+    newPassword = serializers.CharField()
+
+    def create(self, validated_data):
+        request = self.context.get('request')
+        user = validated_data["user"] = request.user
+        old_password = validated_data.get("currentPassword")
+        new_password = validated_data.get("newPassword")
+
+        if not check_password(password=old_password, encoded=user.password):
+            raise InvalidRequestException(
+                api_response(message="Incorrect old password", status=False)
+            )
+
+        try:
+            validate_password(password=new_password)
+        except Exception as err:
+            log_request(f"Password Validation Error:\nError: {err}")
+            raise InvalidRequestException(api_response(message=err, status=False))
+
+        if old_password == new_password:
+            raise InvalidRequestException(
+                api_response(message="Passwords cannot be same", status=False)
+            )
+
+        user.password = make_password(password=new_password)
+        user.save()
+
+        return "Password Change Successful"
+
+
+class ForgetPasswordSerializerIn(serializers.Serializer):
+    email = serializers.EmailField()
+    otp = serializers.CharField()
+    password = serializers.CharField()
+
+    def create(self, validated_data):
+        email = validated_data.get("email")
+        otp = validated_data.get("otp")
+        new_password = validated_data.get("password")
+
+        try:
+            user = User.objects.get(email=email)
+        except User.DoesNotExist:
+            raise InvalidRequestException(
+                api_response(message="User not found", status=False)
+            )
+
+        try:
+            validate_password(password=new_password)
+        except Exception as err:
+            log_request(f"Password Validation Error:\nError: {err}")
+            raise InvalidRequestException(api_response(message=err, status=False))
+
+        try:
+            user_otp = UserOTP.objects.get(email=user.email)
+        except UserOTP.DoesNotExist:
+            raise InvalidRequestException(
+                api_response(message="OTP request is required", status=False)
+            )
+
+        if timezone.now() > user_otp.expiry:
+            raise InvalidRequestException(
+                api_response(message="OTP is expired", status=False)
+            )
+
+        decrypted_otp = decrypt_text(user_otp.otp)
+        if str(decrypted_otp) != str(otp):
+            raise InvalidRequestException(
+                api_response(message="You have submitted an invalid OTP", status=False)
+            )
+
+        user.password = make_password(password=new_password)
+        user.save()
+        user_otp.delete()
+        
+        return "Password Reset Successful"

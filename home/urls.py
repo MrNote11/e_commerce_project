@@ -15,6 +15,8 @@ urlpatterns = [
     path(
         "change-password", views.ChangePasswordAPIView.as_view(), name="change-password"
     ),
+    path("profile", views.UserProfileDetails.as_view(), name="profile"),
+    path("update-profile", views.UpdateProfileAPIView.as_view(), name="update-profile"),
     path("verify-email/", views.VerifyEmailAPIView.as_view(), name="verify-email"),
     path("reset-password", views.ResetPasswordAPIView.as_view(), name="reset-password"),
     # path("request-otp", views.RequestOTPView.as_view(), name="request-otp"),
@@ -24,3 +26,4 @@ urlpatterns = [
     path('auth/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('auth/token/verify/', TokenVerifyView.as_view(), name='token_verify'),
 ]
+# 322520, 288126, 586445

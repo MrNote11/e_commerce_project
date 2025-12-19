@@ -1,0 +1,17 @@
+Get-ChildItem . -Recurse -Filter "migrations" | ForEach-Object { 
+    Get-ChildItem $_.FullName -Filter "*.py" | Where-Object { $_.Name -ne "__init__.py" } | Remove-Item 
+}: to delete all migrations "caution you will need to reinstall django again"
+
+python manage.py flush --no-input: to delete all migrate
+
+# 2. Or if you want to keep some data, migrate back
+python manage.py migrate stock zero
+
+#deleting all db
+DROP SCHEMA public CASCADE;
+CREATE SCHEMA public;
+GRANT ALL ON SCHEMA public TO postgres;
+GRANT ALL ON SCHEMA public TO public;
+
+#delete a specific migration file
+rm stock/migrations/0003_rename_paystack_checkout_id__order_paystack_checkout_id.py
