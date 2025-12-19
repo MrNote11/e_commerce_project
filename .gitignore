@@ -7,4 +7,5 @@ staticfiles
 __pycache__/
 *.pyc
 static
-.env
+e_commerce_project/.env
+/.env
