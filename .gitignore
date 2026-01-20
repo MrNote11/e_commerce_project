@@ -1,3 +1,14 @@
+.venv
+.env
+python
+env
+venv
+staticfiles
+__pycache__/
+*.pyc
+static
+e_commerce_project/.env
+/.env
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

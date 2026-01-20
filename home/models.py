@@ -1,0 +1,128 @@
+from django.db import models
+from django.utils import timezone
+from datetime import timedelta
+import random
+from django.utils.crypto import get_random_string
+import uuid
+from cloudinary.models import CloudinaryField
+from django.contrib.auth.models import AbstractUser
+GENDER_TYPE_CHOICES = (
+    ("male", "Male"),
+    ("female", "Female"),
+    ("other", "Other"),
+)
+
+# models.py
+
+class User(AbstractUser):
+    class Role(models.TextChoices):
+        CUSTOMER = 'customer', 'Customer'
+        VENDOR = 'vendor', 'Vendor'
+        ADMIN = 'admin', 'Admin'  # Optional: keep admin role
+    
+    role = models.CharField(
+        max_length=20,
+        choices=Role.choices,
+        default=Role.CUSTOMER
+    )
+    
+    class Meta:
+        db_table = 'auth_user' 
+        
+    def __str__(self):
+        return f"{self.username} ({self.role})"
+    
+    @property
+    def is_vendor(self):
+        return self.role == self.Role.VENDOR
+    
+    @property
+    def is_customer(self):
+        return self.role == self.Role.CUSTOMER
+
+class UserProfile(models.Model):
+    profile_image = CloudinaryField('image', default='v1762354266/undefined_vie1q5.jpg', folder='profile_pictures/', blank=True, null=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="userprofile")
+    email = models.EmailField(max_length=255, blank=True, null=True)
+    otherName = models.CharField(max_length=100, blank=True, null=True)
+    gender = models.CharField(
+        max_length=20, choices=GENDER_TYPE_CHOICES, blank=True, null=True
+    )
+    dob = models.DateField(null=True, blank=True)
+    phoneNumber = models.CharField(max_length=15, blank=True, null=True)
+    address = models.CharField(max_length=300, blank=True, null=True)
+    is_verified = models.BooleanField(default=True)
+    verification_token = models.CharField(max_length=255, null=True, blank=True)
+    verification_sent_at = models.DateTimeField(null=True, blank=True)
+    city = models.CharField(max_length=200, blank=True, null=True)
+    state = models.CharField(max_length=200, blank=True, null=True)
+    country = models.CharField(max_length=200, blank=True, null=True)
+    # active = models.BooleanField(default=False)
+    dateCreated = models.DateTimeField(auto_now_add=True)
+
+    # Track login attempts
+    failed_login_attempts = models.PositiveIntegerField(default=0)
+    locked_until = models.DateTimeField(null=True, blank=True)
+    last_failed_login = models.DateTimeField(null=True, blank=True)
+
+    def is_locked(self):
+        """Check if account is currently locked"""
+        if self.locked_until and timezone.now() < self.locked_until:
+            return True
+        return False
+    
+    def generate_verification_token(self):
+        """Generate a unique verification token"""
+        import secrets
+        token = secrets.token_urlsafe(32)
+        self.verification_token = token
+        self.verification_sent_at = timezone.now()
+        self.save()
+        return token
+    
+    def is_verification_token_expired(self):
+        """Check if verification token is expired (24 hours)"""
+        if not self.verification_sent_at:
+            return True
+        expiration_time = self.verification_sent_at + timedelta(hours=24)
+        return timezone.now() > expiration_time
+    
+    def get_lockout_remaining(self):
+        """Get remaining lockout time in seconds"""
+        if self.is_locked():
+            remaining = self.locked_until - timezone.now()
+            return max(0, int(remaining.total_seconds()))
+        return 0
+    
+    def __str__(self):
+        return f"{self.user.username}"
+
+
+class UserOTP(models.Model):
+    userprofile = models.ForeignKey(UserProfile, on_delete=models.CASCADE, null=True, blank=True)
+    phoneNumber = models.CharField(max_length=24, blank=True, null=True)
+    email = models.EmailField(max_length=255, blank=True, null=True)
+    otp = models.TextField(help_text="Encrypted OTP Value", blank=True, null=True)
+    expiry = models.DateTimeField(blank=True, null=True)
+    dateCreated = models.DateTimeField(auto_now_add=True)
+    dateUpdated = models.DateTimeField(auto_now=True)
+    is_verified = models.BooleanField(default=False)
+
+    def __str__(self):
+        if self.phoneNumber:
+            return f"{self.phoneNumber}"
+        return f"{self.email}"
+    
+    def generate_otp_token(self):
+        """Generate a 6-digit OTP token"""
+        token = get_random_string(length=6, allowed_chars="1234567890")
+        self.otp = token
+        self.dateCreated = timezone.now()
+        self.save()
+        return token
+
+    class Meta:
+        verbose_name = "User OTP"
+        verbose_name_plural = "User OTPs"
+        
+        
